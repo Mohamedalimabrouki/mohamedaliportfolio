@@ -1,0 +1,202 @@
+ /* Reset and Global Styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #EBEBEB;
+    color: #6D6D6D;
+    line-height: 1.6;
+}
+
+/* Prophet Section */
+.Prophet {
+    padding: 15px;
+    font-size: 14px;
+    color: #323232;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+/* Navigation */
+nav {
+    background-color: #b1b1b1;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 2rem;
+}
+
+nav a {
+    color: #242d30;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #000B4F;
+}
+
+nav button {
+    padding: 8px 20px;
+    background-color: #000B4F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #001380;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000B4F;
+    color: #fff;
+    padding: 2rem;
+    min-height: 90vh;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+header h2 {
+    font-size: 2rem;
+    color: #EBEBEB;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    border-left: 3px solid #fff;
+    padding-left: 1rem;
+    line-height: 1.8;
+    margin-top: 2rem;
+    color: #fff;
+}
+
+header img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 2rem;
+}
+
+/* Experience Section */
+#experience {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.job-title {
+    color: #20368F;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.job-duration {
+    color: #777;
+    font-style: italic;
+}
+
+.experience-item ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.experience-item li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.experience-item li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000B4F;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    header img {
+        margin: 2rem 0;
+        max-width: 300px;
+    }
+
+    .contact-info {
+        margin: 2rem auto;
+        text-align: left;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+    }
+
+    .experience-item {
+        padding: 1rem;
+    }
+}

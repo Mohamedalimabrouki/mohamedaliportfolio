@@ -70,3 +70,18 @@ ul li {
     margin-bottom: 10px;
     color: #000B4F;
 }
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header img {
+    margin: 20px 0;
+    width: 70%;
+  }
+  .h2style {
+    font-size: 14px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
