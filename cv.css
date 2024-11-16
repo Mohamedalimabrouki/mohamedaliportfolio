@@ -24,7 +24,7 @@ body {
 /* Navigation */
 nav {
     background-color: #b1b1b1;
-    padding: 1rem;
+    padding: 0.5rem;
     position: sticky;
     top: 0;
     z-index: 1000;
