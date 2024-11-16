@@ -119,6 +119,8 @@ header img {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid #eee;
+   text-align: justify;
+    text-justify: auto;
 }
 
 .job-title {
