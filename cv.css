@@ -39,7 +39,7 @@ nav ul {
 }
 
 nav li {
-    margin-left: 2rem;
+    margin-left: 2rem; /* Default margin */
 }
 
 nav a {
@@ -173,7 +173,7 @@ header img {
     }
 
     nav li {
-        margin: 0 1rem;
+        margin: 0 0.5rem; /* Smaller margin between items on mobile */
     }
 }
 
@@ -185,7 +185,7 @@ header img {
 
     nav li {
         display: block;
-        margin: 0.5rem 0;
+        margin: 0.5rem 0; /* Less margin on smaller screens */
     }
 
     header h1 {
