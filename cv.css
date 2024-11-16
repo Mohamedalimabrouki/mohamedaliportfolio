@@ -40,6 +40,7 @@ nav ul {
 
 nav li {
     margin-left: 2rem; /* Default margin */
+    padding-right: 5px;
 }
 
 nav a {
