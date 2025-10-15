@@ -1,0 +1,881 @@
+{
+  "generatedAt": "2025-10-15T18:28:24.957Z",
+  "widths": [
+    320,
+    640,
+    960,
+    1280,
+    1600
+  ],
+  "formats": [
+    "avif",
+    "webp",
+    "jpg"
+  ],
+  "images": {
+    "assets/brake-caliper.jpg": {
+      "original": "assets/brake-caliper.jpg",
+      "focus": "50% 50%",
+      "aspectRatio": 1.7778,
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAgABsDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgUEB//EACYQAAIBAwMDBAMAAAAAAAAAAAECAwAEEQUSMSFBURMUImFScZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABcRAQEBAQAAAAAAAAAAAAAAAAAxARH/2gAMAwEAAhEDEQA/AL+tasunQqqYaeRgqLzz3o0LaFpmYiSeYvl2ZRljzz4+qo3aLLetPdxlJFBfJ5ReAP3WWKWLa7q21UGSjKcJnz91Oqr6diKTexzKRwfFWlIZQRwa5/LLOs4vQZVG4+kWPTA7CmMF3mFSD0IzSGsmtJ6d1Ayj4zblkzwcDpRbUzce5ZXLegJPiOBxTTWLV7i2V4l3SQsHUeR3H8qJqdpFdRJJuKgDt38UmjDd3XubCxso0w0Q29DncT4pZbWuLdAcdBijug6WvuBIxMkijp+K/dLgAoAHApUf/9k=",
+      "formats": {
+        "avif": {
+          "srcset": "assets/optimized/brake-caliper-320.avif 320w, assets/optimized/brake-caliper-640.avif 640w, assets/optimized/brake-caliper-960.avif 960w, assets/optimized/brake-caliper-1280.avif 1280w, assets/optimized/brake-caliper-1600.avif 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/brake-caliper-320.avif"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/brake-caliper-640.avif"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/brake-caliper-960.avif"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/brake-caliper-1280.avif"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/brake-caliper-1600.avif"
+            }
+          ]
+        },
+        "webp": {
+          "srcset": "assets/optimized/brake-caliper-320.webp 320w, assets/optimized/brake-caliper-640.webp 640w, assets/optimized/brake-caliper-960.webp 960w, assets/optimized/brake-caliper-1280.webp 1280w, assets/optimized/brake-caliper-1600.webp 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/brake-caliper-320.webp"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/brake-caliper-640.webp"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/brake-caliper-960.webp"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/brake-caliper-1280.webp"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/brake-caliper-1600.webp"
+            }
+          ]
+        },
+        "jpg": {
+          "srcset": "assets/optimized/brake-caliper-320.jpg 320w, assets/optimized/brake-caliper-640.jpg 640w, assets/optimized/brake-caliper-960.jpg 960w, assets/optimized/brake-caliper-1280.jpg 1280w, assets/optimized/brake-caliper-1600.jpg 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/brake-caliper-320.jpg"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/brake-caliper-640.jpg"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/brake-caliper-960.jpg"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/brake-caliper-1280.jpg"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/brake-caliper-1600.jpg"
+            }
+          ]
+        }
+      },
+      "fallback": "assets/optimized/brake-caliper-1600.jpg"
+    },
+    "assets/brake-pads.jpg": {
+      "original": "assets/brake-pads.jpg",
+      "focus": "50% 50%",
+      "aspectRatio": 1.499,
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAMACADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAwUGAf/EACAQAAICAgIDAQEAAAAAAAAAAAECAwQFEQASIVFhMXH/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/EABkRAAIDAQAAAAAAAAAAAAAAAAABAhExEv/aAAwDAQACEQMRAD8A3IX8pFdlV5XjYHfRG2APnCUc/cSZFmIlRmAO/BG/vKSzjqlp+80IZ9a7fh4qrYusmYZCGdEXsFc788bqLWA8yUtJvIGWLITo0jFlcjfY++MsNl7FeZEnld4CQCCOxHKuapXnBE0KPv2OBp4yrRkZ66FS33ev5yHJNYJVM//Z",
+      "formats": {
+        "avif": {
+          "srcset": "assets/optimized/brake-pads-320.avif 320w, assets/optimized/brake-pads-640.avif 640w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/brake-pads-320.avif"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/brake-pads-640.avif"
+            }
+          ]
+        },
+        "webp": {
+          "srcset": "assets/optimized/brake-pads-320.webp 320w, assets/optimized/brake-pads-640.webp 640w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/brake-pads-320.webp"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/brake-pads-640.webp"
+            }
+          ]
+        },
+        "jpg": {
+          "srcset": "assets/optimized/brake-pads-320.jpg 320w, assets/optimized/brake-pads-640.jpg 640w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/brake-pads-320.jpg"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/brake-pads-640.jpg"
+            }
+          ]
+        }
+      },
+      "fallback": "assets/optimized/brake-pads-640.jpg"
+    },
+    "assets/citroen-c3-cc21.jpg": {
+      "original": "assets/citroen-c3-cc21.jpg",
+      "focus": "50% 50%",
+      "aspectRatio": 1.7778,
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASACADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAJRAAAgICAgECBwAAAAAAAAAAAQIAAwQREiExQVETIiRCcZHB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//EABsRAQEAAgMBAAAAAAAAAAAAAAEAAhESMTJB/9oADAMBAAIRAxEAPwDnPZYmKKmfYXfk/wBmdca3Ir+noezjsEBh1FW/FKa1yUe5i6MpsfbqzIVPj1meJqvjj9qNRYrfOhVlPiU4NskAjZ9Zqys9skVFrUB46YAd/uNoqL1qwcEkfd1G7ITF80oSVHZ8SLkUuNqD17QhJKnqSyqrdKB+BGY5PMDfUIRsF//Z",
+      "formats": {
+        "avif": {
+          "srcset": "assets/optimized/citroen-c3-cc21-320.avif 320w, assets/optimized/citroen-c3-cc21-640.avif 640w, assets/optimized/citroen-c3-cc21-960.avif 960w, assets/optimized/citroen-c3-cc21-1280.avif 1280w, assets/optimized/citroen-c3-cc21-1600.avif 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/citroen-c3-cc21-320.avif"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/citroen-c3-cc21-640.avif"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/citroen-c3-cc21-960.avif"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/citroen-c3-cc21-1280.avif"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/citroen-c3-cc21-1600.avif"
+            }
+          ]
+        },
+        "webp": {
+          "srcset": "assets/optimized/citroen-c3-cc21-320.webp 320w, assets/optimized/citroen-c3-cc21-640.webp 640w, assets/optimized/citroen-c3-cc21-960.webp 960w, assets/optimized/citroen-c3-cc21-1280.webp 1280w, assets/optimized/citroen-c3-cc21-1600.webp 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/citroen-c3-cc21-320.webp"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/citroen-c3-cc21-640.webp"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/citroen-c3-cc21-960.webp"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/citroen-c3-cc21-1280.webp"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/citroen-c3-cc21-1600.webp"
+            }
+          ]
+        },
+        "jpg": {
+          "srcset": "assets/optimized/citroen-c3-cc21-320.jpg 320w, assets/optimized/citroen-c3-cc21-640.jpg 640w, assets/optimized/citroen-c3-cc21-960.jpg 960w, assets/optimized/citroen-c3-cc21-1280.jpg 1280w, assets/optimized/citroen-c3-cc21-1600.jpg 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/citroen-c3-cc21-320.jpg"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/citroen-c3-cc21-640.jpg"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/citroen-c3-cc21-960.jpg"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/citroen-c3-cc21-1280.jpg"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/citroen-c3-cc21-1600.jpg"
+            }
+          ]
+        }
+      },
+      "fallback": "assets/optimized/citroen-c3-cc21-1600.jpg"
+    },
+    "assets/hub-bearing-gen3.jpg": {
+      "original": "assets/hub-bearing-gen3.jpg",
+      "focus": "50% 50%",
+      "aspectRatio": 1.7778,
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAgABYDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUCAwYE/8QAJRAAAgEDBAEEAwAAAAAAAAAAAQIDAAQRBRIhMUETFFGRMqHB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAXEQEAAwAAAAAAAAAAAAAAAAAAARES/9oADAMBAAIRAxEAPwB1q07tKURsBPg+ajdajBeW6LDKCyNmTxjjr7pXIk0ks1w0jOd44JOOajsRyu+Md584z80GqtbqG7i9SBgyg7TjwR2KK4tKmXYwySWJPHQxxRQJ7j3FtJPAUY5cbWHgA8H90vvpTBIEYEAjOM4NafVoW3pMgYjpgBmqYLC3uIma9ty7P0GH4j+GgT6SkjkGyeQNs5XdxjPdFaaysbWyz7W39MkYJ5JP3RUzC2//2Q==",
+      "formats": {
+        "avif": {
+          "srcset": "assets/optimized/hub-bearing-gen3-320.avif 320w, assets/optimized/hub-bearing-gen3-640.avif 640w, assets/optimized/hub-bearing-gen3-960.avif 960w, assets/optimized/hub-bearing-gen3-1280.avif 1280w, assets/optimized/hub-bearing-gen3-1600.avif 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/hub-bearing-gen3-320.avif"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/hub-bearing-gen3-640.avif"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/hub-bearing-gen3-960.avif"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/hub-bearing-gen3-1280.avif"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/hub-bearing-gen3-1600.avif"
+            }
+          ]
+        },
+        "webp": {
+          "srcset": "assets/optimized/hub-bearing-gen3-320.webp 320w, assets/optimized/hub-bearing-gen3-640.webp 640w, assets/optimized/hub-bearing-gen3-960.webp 960w, assets/optimized/hub-bearing-gen3-1280.webp 1280w, assets/optimized/hub-bearing-gen3-1600.webp 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/hub-bearing-gen3-320.webp"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/hub-bearing-gen3-640.webp"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/hub-bearing-gen3-960.webp"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/hub-bearing-gen3-1280.webp"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/hub-bearing-gen3-1600.webp"
+            }
+          ]
+        },
+        "jpg": {
+          "srcset": "assets/optimized/hub-bearing-gen3-320.jpg 320w, assets/optimized/hub-bearing-gen3-640.jpg 640w, assets/optimized/hub-bearing-gen3-960.jpg 960w, assets/optimized/hub-bearing-gen3-1280.jpg 1280w, assets/optimized/hub-bearing-gen3-1600.jpg 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/hub-bearing-gen3-320.jpg"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/hub-bearing-gen3-640.jpg"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/hub-bearing-gen3-960.jpg"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/hub-bearing-gen3-1280.jpg"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/hub-bearing-gen3-1600.jpg"
+            }
+          ]
+        }
+      },
+      "fallback": "assets/optimized/hub-bearing-gen3-1600.jpg"
+    },
+    "assets/mabrouki-headshot.JPG": {
+      "original": "assets/mabrouki-headshot.JPG",
+      "focus": "50% 50%",
+      "aspectRatio": 1,
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAgACADASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAMFAf/EACkQAAEEAQEHAwUAAAAAAAAAAAEAAgMRBCEFEhMiMUGBFFFhIzNjcaH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgD/xAAYEQADAQEAAAAAAAAAAAAAAAAAAhEhMf/aAAwDAQACEQMRAD8AzQFoYmzWZGMZZJCLOjQa8oITmzwnALeEHTtY5t3VNUtZhaS6Alj4cpa128zsbulJwVeLFL9pm6B1/am5K8BpcOySiKMuOvwlbLZHlsYcmKQCebhROj6ihbvHRZmY7kaPm1pNy/QQxbpF42NyD8smpPgH+JJB7Xlixc302AAIYCQe+87valHlMk0PK72KETrZNk+6nf1AbArXqsY//9k=",
+      "formats": {
+        "avif": {
+          "srcset": "assets/optimized/mabrouki-headshot-320.avif 320w, assets/optimized/mabrouki-headshot-640.avif 640w, assets/optimized/mabrouki-headshot-960.avif 960w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/mabrouki-headshot-320.avif"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/mabrouki-headshot-640.avif"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/mabrouki-headshot-960.avif"
+            }
+          ]
+        },
+        "webp": {
+          "srcset": "assets/optimized/mabrouki-headshot-320.webp 320w, assets/optimized/mabrouki-headshot-640.webp 640w, assets/optimized/mabrouki-headshot-960.webp 960w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/mabrouki-headshot-320.webp"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/mabrouki-headshot-640.webp"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/mabrouki-headshot-960.webp"
+            }
+          ]
+        },
+        "jpg": {
+          "srcset": "assets/optimized/mabrouki-headshot-320.jpg 320w, assets/optimized/mabrouki-headshot-640.jpg 640w, assets/optimized/mabrouki-headshot-960.jpg 960w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/mabrouki-headshot-320.jpg"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/mabrouki-headshot-640.jpg"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/mabrouki-headshot-960.jpg"
+            }
+          ]
+        }
+      },
+      "fallback": "assets/optimized/mabrouki-headshot-960.jpg"
+    },
+    "assets/mkc2.jpg": {
+      "original": "assets/mkc2.jpg",
+      "focus": "50% 50%",
+      "aspectRatio": 1.7778,
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASACADASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAEFAwQG/8QAJBAAAgIBAwIHAAAAAAAAAAAAAQIAAxEEITEFEhM0QVFxcoH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A9Pdp3ellqfw3PDYzJ+n6dZRbm1VrqY5dgdy3pn9lpZnfXZYvbW4XPORmAlRWUcZxuImqHtJluvbp2sXT2B71VAzOqjKg5A+eJYBDKGHBGYDEcIQODqSKU7ioLdp3xvN9L5Wr6iEIH//Z",
+      "formats": {
+        "avif": {
+          "srcset": "assets/optimized/mkc2-320.avif 320w, assets/optimized/mkc2-640.avif 640w, assets/optimized/mkc2-960.avif 960w, assets/optimized/mkc2-1280.avif 1280w, assets/optimized/mkc2-1600.avif 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/mkc2-320.avif"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/mkc2-640.avif"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/mkc2-960.avif"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/mkc2-1280.avif"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/mkc2-1600.avif"
+            }
+          ]
+        },
+        "webp": {
+          "srcset": "assets/optimized/mkc2-320.webp 320w, assets/optimized/mkc2-640.webp 640w, assets/optimized/mkc2-960.webp 960w, assets/optimized/mkc2-1280.webp 1280w, assets/optimized/mkc2-1600.webp 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/mkc2-320.webp"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/mkc2-640.webp"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/mkc2-960.webp"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/mkc2-1280.webp"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/mkc2-1600.webp"
+            }
+          ]
+        },
+        "jpg": {
+          "srcset": "assets/optimized/mkc2-320.jpg 320w, assets/optimized/mkc2-640.jpg 640w, assets/optimized/mkc2-960.jpg 960w, assets/optimized/mkc2-1280.jpg 1280w, assets/optimized/mkc2-1600.jpg 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/mkc2-320.jpg"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/mkc2-640.jpg"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/mkc2-960.jpg"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/mkc2-1280.jpg"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/mkc2-1600.jpg"
+            }
+          ]
+        }
+      },
+      "fallback": "assets/optimized/mkc2-1600.jpg"
+    },
+    "assets/og-image.jpg": {
+      "original": "assets/og-image.jpg",
+      "focus": "50% 50%",
+      "aspectRatio": 1.7778,
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOACADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAwUAAQQG/8QAIxABAAICAAUFAQAAAAAAAAAAAQIDABEEBSExQRIUQ4GRkv/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABgRAAMBAQAAAAAAAAAAAAAAAAABETFB/9oADAMBAAIRAxEAPwDnauW328HPio+kri60vV+sBVVZJWNcpA6dG8ccHbCXKZxbLYxdsgDv51iYulFWLrbvLH0OPDSUWvxT/lyNNkRZVzA7rF6YD3NiaXeU3SfL+4MQ/9k=",
+      "formats": {
+        "avif": {
+          "srcset": "assets/optimized/og-image-320.avif 320w, assets/optimized/og-image-640.avif 640w, assets/optimized/og-image-960.avif 960w, assets/optimized/og-image-1280.avif 1280w, assets/optimized/og-image-1600.avif 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/og-image-320.avif"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/og-image-640.avif"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/og-image-960.avif"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/og-image-1280.avif"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/og-image-1600.avif"
+            }
+          ]
+        },
+        "webp": {
+          "srcset": "assets/optimized/og-image-320.webp 320w, assets/optimized/og-image-640.webp 640w, assets/optimized/og-image-960.webp 960w, assets/optimized/og-image-1280.webp 1280w, assets/optimized/og-image-1600.webp 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/og-image-320.webp"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/og-image-640.webp"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/og-image-960.webp"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/og-image-1280.webp"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/og-image-1600.webp"
+            }
+          ]
+        },
+        "jpg": {
+          "srcset": "assets/optimized/og-image-320.jpg 320w, assets/optimized/og-image-640.jpg 640w, assets/optimized/og-image-960.jpg 960w, assets/optimized/og-image-1280.jpg 1280w, assets/optimized/og-image-1600.jpg 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/og-image-320.jpg"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/og-image-640.jpg"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/og-image-960.jpg"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/og-image-1280.jpg"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/og-image-1600.jpg"
+            }
+          ]
+        }
+      },
+      "fallback": "assets/optimized/og-image-1600.jpg"
+    },
+    "assets/opel-combo.jpg": {
+      "original": "assets/opel-combo.jpg",
+      "focus": "60% 50%",
+      "aspectRatio": 1.7778,
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASACADASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAABAAGAQX/xAAoEAABBAECBAYDAAAAAAAAAAABAAIDEQQhMQUTMlESFSIlUnGBkaH/xAAWAQEBAQAAAAAAAAAAAAAAAAADAAL/xAAaEQADAAMBAAAAAAAAAAAAAAAAAQIRMUED/9oADAMBAAIRAxEAPwDXVSLl8NxMwXkY7HO+QFO/YSnuLWktFnsg5HEJIY3HkOJA09JKlnhPHTxs3gOLjG25TI72bKa/qH5eeWCdjrvoVQZrsyb3CJ8tHpkgBNfe6eWRCCWSaJ2OXUWNBN/m002walcNBKdB9o7yQ40aUpEhTjXO8HUdu6zGc5xmNknXupS3Gw/TR//Z",
+      "formats": {
+        "avif": {
+          "srcset": "assets/optimized/opel-combo-320.avif 320w, assets/optimized/opel-combo-640.avif 640w, assets/optimized/opel-combo-960.avif 960w, assets/optimized/opel-combo-1280.avif 1280w, assets/optimized/opel-combo-1600.avif 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/opel-combo-320.avif"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/opel-combo-640.avif"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/opel-combo-960.avif"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/opel-combo-1280.avif"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/opel-combo-1600.avif"
+            }
+          ]
+        },
+        "webp": {
+          "srcset": "assets/optimized/opel-combo-320.webp 320w, assets/optimized/opel-combo-640.webp 640w, assets/optimized/opel-combo-960.webp 960w, assets/optimized/opel-combo-1280.webp 1280w, assets/optimized/opel-combo-1600.webp 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/opel-combo-320.webp"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/opel-combo-640.webp"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/opel-combo-960.webp"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/opel-combo-1280.webp"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/opel-combo-1600.webp"
+            }
+          ]
+        },
+        "jpg": {
+          "srcset": "assets/optimized/opel-combo-320.jpg 320w, assets/optimized/opel-combo-640.jpg 640w, assets/optimized/opel-combo-960.jpg 960w, assets/optimized/opel-combo-1280.jpg 1280w, assets/optimized/opel-combo-1600.jpg 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/opel-combo-320.jpg"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/opel-combo-640.jpg"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/opel-combo-960.jpg"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/opel-combo-1280.jpg"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/opel-combo-1600.jpg"
+            }
+          ]
+        }
+      },
+      "fallback": "assets/optimized/opel-combo-1600.jpg"
+    },
+    "assets/proace-city.jpg": {
+      "original": "assets/proace-city.jpg",
+      "focus": "60% 50%",
+      "aspectRatio": 1.7778,
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASACADASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAIFAQME/8QAJhAAAQMDAgUFAAAAAAAAAAAAAQACAwQRMSFREhMUQZEiI1Kh8P/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/8QAGBEBAAMBAAAAAAAAAAAAAAAAAAERIUH/2gAMAwEAAhEDEQA/AK3UyzEN5hJPYGy80tZDFOIZJCHntYn7U9sIiIfA5zXtwS64RNJXk+3MxgOT+GU50aq81nyHlI6Rm7fKkNp3S+urk4pd2m2i3pYWiwc/Fsoo3JATuU1zpqUISGEndcyTfJQhRf/Z",
+      "formats": {
+        "avif": {
+          "srcset": "assets/optimized/proace-city-320.avif 320w, assets/optimized/proace-city-640.avif 640w, assets/optimized/proace-city-960.avif 960w, assets/optimized/proace-city-1280.avif 1280w, assets/optimized/proace-city-1600.avif 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/proace-city-320.avif"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/proace-city-640.avif"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/proace-city-960.avif"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/proace-city-1280.avif"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/proace-city-1600.avif"
+            }
+          ]
+        },
+        "webp": {
+          "srcset": "assets/optimized/proace-city-320.webp 320w, assets/optimized/proace-city-640.webp 640w, assets/optimized/proace-city-960.webp 960w, assets/optimized/proace-city-1280.webp 1280w, assets/optimized/proace-city-1600.webp 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/proace-city-320.webp"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/proace-city-640.webp"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/proace-city-960.webp"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/proace-city-1280.webp"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/proace-city-1600.webp"
+            }
+          ]
+        },
+        "jpg": {
+          "srcset": "assets/optimized/proace-city-320.jpg 320w, assets/optimized/proace-city-640.jpg 640w, assets/optimized/proace-city-960.jpg 960w, assets/optimized/proace-city-1280.jpg 1280w, assets/optimized/proace-city-1600.jpg 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/proace-city-320.jpg"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/proace-city-640.jpg"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/proace-city-960.jpg"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/proace-city-1280.jpg"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/proace-city-1600.jpg"
+            }
+          ]
+        }
+      },
+      "fallback": "assets/optimized/proace-city-1600.jpg"
+    },
+    "assets/renault-master.jpg": {
+      "original": "assets/renault-master.jpg",
+      "focus": "50% 50%",
+      "aspectRatio": 1.7778,
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASACADASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFAQP/xAAkEAACAQQCAgIDAQAAAAAAAAABAgMABBEhBRIxURNBQnGRof/EABYBAQEBAAAAAAAAAAAAAAAAAAACAf/EABcRAQEBAQAAAAAAAAAAAAAAAAABEUH/2gAMAwEAAhEDEQA/ALILSKUBYpQR66YqG/NrZuFllc51lFBx/tXcUssMiIwPxyezvH8rKveOvraV5UhLgkkHR+9VUTd45iFohNb3YIz+Q6kUXkJ5VVDiaMuE770f3inGW07TotxDIi5yW7aHrVbB4e1MSqjsvWQOMH7AxTRDZSP80Y7tgaG/Aq66Zihyx8+6UoPFPFUIT7pSsU//2Q==",
+      "formats": {
+        "avif": {
+          "srcset": "assets/optimized/renault-master-320.avif 320w, assets/optimized/renault-master-640.avif 640w, assets/optimized/renault-master-960.avif 960w, assets/optimized/renault-master-1280.avif 1280w, assets/optimized/renault-master-1600.avif 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/renault-master-320.avif"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/renault-master-640.avif"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/renault-master-960.avif"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/renault-master-1280.avif"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/renault-master-1600.avif"
+            }
+          ]
+        },
+        "webp": {
+          "srcset": "assets/optimized/renault-master-320.webp 320w, assets/optimized/renault-master-640.webp 640w, assets/optimized/renault-master-960.webp 960w, assets/optimized/renault-master-1280.webp 1280w, assets/optimized/renault-master-1600.webp 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/renault-master-320.webp"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/renault-master-640.webp"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/renault-master-960.webp"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/renault-master-1280.webp"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/renault-master-1600.webp"
+            }
+          ]
+        },
+        "jpg": {
+          "srcset": "assets/optimized/renault-master-320.jpg 320w, assets/optimized/renault-master-640.jpg 640w, assets/optimized/renault-master-960.jpg 960w, assets/optimized/renault-master-1280.jpg 1280w, assets/optimized/renault-master-1600.jpg 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/renault-master-320.jpg"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/renault-master-640.jpg"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/renault-master-960.jpg"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/renault-master-1280.jpg"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/renault-master-1600.jpg"
+            }
+          ]
+        }
+      },
+      "fallback": "assets/optimized/renault-master-1600.jpg"
+    },
+    "assets/rifter.jpg": {
+      "original": "assets/rifter.jpg",
+      "focus": "60% 50%",
+      "aspectRatio": 1.7778,
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASACADASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAECAwQFBv/EACgQAAIBAwIEBgMAAAAAAAAAAAECAwAEEQUSISIxURMVMkFxkYKh0f/EABYBAQEBAAAAAAAAAAAAAAAAAAECA//EABoRAQACAwEAAAAAAAAAAAAAAAABEQIhQWH/2gAMAwEAAhEDEQA/ALYuNQX1Wqt+JFPGoyK+yS2UPjO0NxxUXnc7jlgHztP9rNvDd3dzJL4I5wB7DpRFmvG1bapDcNiOIueysM1aumaS1kRLWQF1xljgffWuTaC9aUyNCzN3Dbc/VbMeqaisEcTQryqAWZck/uq0iYy4qoTuqdaKKzbFz0p2eFFFBf/Z",
+      "formats": {
+        "avif": {
+          "srcset": "assets/optimized/rifter-320.avif 320w, assets/optimized/rifter-640.avif 640w, assets/optimized/rifter-960.avif 960w, assets/optimized/rifter-1280.avif 1280w, assets/optimized/rifter-1600.avif 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/rifter-320.avif"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/rifter-640.avif"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/rifter-960.avif"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/rifter-1280.avif"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/rifter-1600.avif"
+            }
+          ]
+        },
+        "webp": {
+          "srcset": "assets/optimized/rifter-320.webp 320w, assets/optimized/rifter-640.webp 640w, assets/optimized/rifter-960.webp 960w, assets/optimized/rifter-1280.webp 1280w, assets/optimized/rifter-1600.webp 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/rifter-320.webp"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/rifter-640.webp"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/rifter-960.webp"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/rifter-1280.webp"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/rifter-1600.webp"
+            }
+          ]
+        },
+        "jpg": {
+          "srcset": "assets/optimized/rifter-320.jpg 320w, assets/optimized/rifter-640.jpg 640w, assets/optimized/rifter-960.jpg 960w, assets/optimized/rifter-1280.jpg 1280w, assets/optimized/rifter-1600.jpg 1600w",
+          "sources": [
+            {
+              "width": 320,
+              "path": "assets/optimized/rifter-320.jpg"
+            },
+            {
+              "width": 640,
+              "path": "assets/optimized/rifter-640.jpg"
+            },
+            {
+              "width": 960,
+              "path": "assets/optimized/rifter-960.jpg"
+            },
+            {
+              "width": 1280,
+              "path": "assets/optimized/rifter-1280.jpg"
+            },
+            {
+              "width": 1600,
+              "path": "assets/optimized/rifter-1600.jpg"
+            }
+          ]
+        }
+      },
+      "fallback": "assets/optimized/rifter-1600.jpg"
+    }
+  }
+}
