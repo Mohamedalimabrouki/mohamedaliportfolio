@@ -21,7 +21,7 @@
       "Coordination marquages VIN, e-markings et conformité FCM.",
       "Interface UTAC/CNRV et consolidation du dossier de preuves."
     ],
-    "slug": "ec-homologation-toyota-proace-city",
+    "slug": "ec-homologation-toyota-proace-city-k9t-n1",
     "details": {
       "overview": "Whole Vehicle Type Approval programme for Toyota's compact van derivative; documentation sets, annex evidence, markings, and CoP traceability.",
       "overview_fr": "Programme WVTA pour le fourgon compact Toyota ; constitution des dossiers, preuves annexes, marquages et traçabilité CoP.",
@@ -73,7 +73,7 @@
       "Synthèses conformité éclairage, freinage et direction sur les annexes.",
       "Collecte des déclarations fournisseurs et suivi DoC."
     ],
-    "slug": "ec-homologation-peugeot-rifter-citroen-berlingo",
+    "slug": "ec-homologation-psa-k9g-n1",
     "details": {
       "overview": "Stellantis compact van branch; aligning test evidence and dossiers across Peugeot Rifter and Citroën Berlingo programmes.",
       "overview_fr": "Branche fourgons compacts Stellantis ; alignement des preuves d'essais et dossiers pour Peugeot Rifter et Citroën Berlingo.",
@@ -280,7 +280,7 @@
       "Suivi QCDP du freeze design au lancement ; préparation fournisseurs.",
       "Maîtrise couple/faux-rond ; gouvernance mesures fin de ligne."
     ],
-    "slug": "renault-master-axles-wheel-assembly",
+    "slug": "renault-master-xdd-axles",
     "details": {
       "overview": "Axles and wheel-end industrialisation support on Renault Master; supplier readiness and torque/runout assurance for launch.",
       "overview_fr": "Industrialisation essieux et roue sur Renault Master ; préparation fournisseurs et tenue couple/faux-rond pour le lancement.",

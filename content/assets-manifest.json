@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-15T18:28:24.957Z",
+  "generatedAt": "2025-10-15T22:16:03.671Z",
   "widths": [
     320,
     640,
@@ -317,10 +317,10 @@
       "original": "assets/mabrouki-headshot.JPG",
       "focus": "50% 50%",
       "aspectRatio": 1,
-      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAgACADASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAMFAf/EACkQAAEEAQEHAwUAAAAAAAAAAAEAAgMRBCEFEhMiMUGBFFFhIzNjcaH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgD/xAAYEQADAQEAAAAAAAAAAAAAAAAAAhEhMf/aAAwDAQACEQMRAD8AzQFoYmzWZGMZZJCLOjQa8oITmzwnALeEHTtY5t3VNUtZhaS6Alj4cpa128zsbulJwVeLFL9pm6B1/am5K8BpcOySiKMuOvwlbLZHlsYcmKQCebhROj6ihbvHRZmY7kaPm1pNy/QQxbpF42NyD8smpPgH+JJB7Xlixc302AAIYCQe+87valHlMk0PK72KETrZNk+6nf1AbArXqsY//9k=",
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAgAB0DASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAwQFAv/EACoQAAEDAwIFAgcAAAAAAAAAAAECAxEABCEFEhMiIzFxgaEzQVFSYYKR/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEDAv/EABoRAQACAwEAAAAAAAAAAAAAAAABMQIDESH/2gAMAwEAAhEDEQA/AErdoOvoQowknJ/FUb1Fgi3lBb2nCYHekLV3g3Dbh7JOfFG1C9b3tLDKAxmMjM/OKnnHquuiARskTInl8VkiiFW/miJyPFYNbik5sN272r4baStcx61bRp2nXAfLri0i0+K2ZACoyf7NRdISlWqJecEoYCnlfqJHvFM398tOkoYnq3birh6PoTgesU+F1OXfrVdOLKemo4T9oGB7UdL7bglKh4OKnYHehKMmgP/Z",
       "formats": {
         "avif": {
-          "srcset": "assets/optimized/mabrouki-headshot-320.avif 320w, assets/optimized/mabrouki-headshot-640.avif 640w, assets/optimized/mabrouki-headshot-960.avif 960w",
+          "srcset": "assets/optimized/mabrouki-headshot-320.avif 320w, assets/optimized/mabrouki-headshot-640.avif 640w",
           "sources": [
             {
               "width": 320,
@@ -329,15 +329,11 @@
             {
               "width": 640,
               "path": "assets/optimized/mabrouki-headshot-640.avif"
-            },
-            {
-              "width": 960,
-              "path": "assets/optimized/mabrouki-headshot-960.avif"
             }
           ]
         },
         "webp": {
-          "srcset": "assets/optimized/mabrouki-headshot-320.webp 320w, assets/optimized/mabrouki-headshot-640.webp 640w, assets/optimized/mabrouki-headshot-960.webp 960w",
+          "srcset": "assets/optimized/mabrouki-headshot-320.webp 320w, assets/optimized/mabrouki-headshot-640.webp 640w",
           "sources": [
             {
               "width": 320,
@@ -346,15 +342,11 @@
             {
               "width": 640,
               "path": "assets/optimized/mabrouki-headshot-640.webp"
-            },
-            {
-              "width": 960,
-              "path": "assets/optimized/mabrouki-headshot-960.webp"
             }
           ]
         },
         "jpg": {
-          "srcset": "assets/optimized/mabrouki-headshot-320.jpg 320w, assets/optimized/mabrouki-headshot-640.jpg 640w, assets/optimized/mabrouki-headshot-960.jpg 960w",
+          "srcset": "assets/optimized/mabrouki-headshot-320.jpg 320w, assets/optimized/mabrouki-headshot-640.jpg 640w",
           "sources": [
             {
               "width": 320,
@@ -363,15 +355,11 @@
             {
               "width": 640,
               "path": "assets/optimized/mabrouki-headshot-640.jpg"
-            },
-            {
-              "width": 960,
-              "path": "assets/optimized/mabrouki-headshot-960.jpg"
             }
           ]
         }
       },
-      "fallback": "assets/optimized/mabrouki-headshot-960.jpg"
+      "fallback": "assets/optimized/mabrouki-headshot-640.jpg"
     },
     "assets/mkc2.jpg": {
       "original": "assets/mkc2.jpg",

@@ -304,6 +304,11 @@ function enableFocusDev(context = document) {
 function refreshImageEnhancements(context = document) {
   observeReveals(context);
   enableFocusDev(context);
+  context.querySelectorAll('picture.focus-img').forEach(pic => {
+    if (!pic.dataset.optimized) {
+      pic.dataset.optimized = '1';
+    }
+  });
 }
 
 function initFocusPanel() {
