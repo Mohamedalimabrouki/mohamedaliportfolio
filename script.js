@@ -566,6 +566,8 @@ function wireCTAs() {
 }
 
 async function bootstrap() {
+  // Defer decorative gradients until after DOM is interactive for faster FCP
+  document.documentElement.classList.add('has-grad');
   setupTheme();
   setupMenu();
   setupFilters();

@@ -74,11 +74,16 @@ body{
   font-size:16px;
   line-height:1.6;
   color:var(--ink-body);
+  background:var(--bg-900);
+  transition:background 0.4s ease,color 0.4s ease;
+}
+
+/* Apply decorative gradients after interactive to improve FCP */
+.has-grad body{
   background:
     radial-gradient(1200px 800px at 10% -10%, rgba(63,214,162,0.22), transparent 70%),
     radial-gradient(900px 700px at 90% 0%, rgba(92,115,255,0.14), transparent 70%),
     var(--bg-900);
-  transition:background 0.4s ease,color 0.4s ease;
 }
 
 main{

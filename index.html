@@ -8,23 +8,39 @@
   <meta name="theme-color" content="#07090d">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link id="canonical" rel="canonical" href="/">
-  <link rel="alternate" hreflang="en" href="/">
-  <link rel="alternate" hreflang="fr" href="/?lang=fr">
+  <link id="canonical" rel="canonical" href="https://mohamedalimabrouki.com/">
+  <link rel="alternate" hreflang="en" href="https://mohamedalimabrouki.com/">
+  <link rel="alternate" hreflang="fr" href="https://mohamedalimabrouki.com/?lang=fr">
   <link rel="icon" href="/favicon.ico">
   <link rel="preload" as="font" href="assets/fonts/Inter-latin.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/avif" href="assets/optimized/mabrouki-headshot-640.avif" imagesrcset="assets/optimized/mabrouki-headshot-320.avif 320w, assets/optimized/mabrouki-headshot-640.avif 640w">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+  <style>
+    /* Critical: minimal layout for fast first paint */
+    :root{--spacing-4:16px;--spacing-7:32px;--ink-strong:#f6f9ff;--ink-body:rgba(237,243,255,0.88)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;font-family:'Inter',system-ui,-apple-system,'Segoe UI','Roboto',sans-serif;line-height:1.6;color:var(--ink-body);background:#03060d}
+    .wrap{width:min(1120px,calc(100% - 48px));margin:0 auto}
+    .site-header{position:sticky;top:0}
+    .header-bar{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:16px}
+    .brand-avatar{width:88px;aspect-ratio:1/1;border-radius:50%;overflow:hidden}
+    .hero{padding:24px 0}
+    .hero-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:center}
+    .hero-portrait{width:min(380px,100%);aspect-ratio:5/6;border-radius:20px;overflow:hidden}
+    .hero-content h2{margin:0 0 16px;font-size:2.2rem;color:var(--ink-strong);letter-spacing:-0.01em}
+  </style>
   <meta property="og:site_name" content="Mohamed Ali Mabrouki">
   <meta property="og:title" content="Mohamed Ali Mabrouki | Automotive Homologation &amp; Chassis Leader">
   <meta property="og:description" content="Mohamed aligns Type Approval dossiers, Euro 7 braking, and wheel-end launches for multi-brand commercial vehicle platforms.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mohamedalimabrouki.com/">
-  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:image" content="https://mohamedalimabrouki.com/assets/og-image.jpg">
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Mohamed Ali Mabrouki | Automotive Homologation &amp; Chassis Leader">
   <meta property="twitter:description" content="Automotive engineering leader aligning homologation evidence, brake-by-wire integration, and chassis launches.">
-  <meta property="twitter:image" content="assets/og-image.jpg">
+  <meta property="twitter:image" content="https://mohamedalimabrouki.com/assets/og-image.jpg">
   <meta property="twitter:url" content="https://mohamedalimabrouki.com/">
   <script>
     (function(){
@@ -221,17 +237,29 @@
         <div id="project-grid" class="grid project-grid" aria-live="polite" data-ssr>
           <!-- SSR fallback (will be replaced if JSON loads) -->
           <a class="card" href="project.html?p=ec-homologation-toyota-proace-city-k9t-n1">
-            <picture class="focus-img"><img src="assets/proace-city.jpg" alt="EC Homologation — Toyota ProAce City"></picture>
+            <picture class="focus-img">
+              <source srcset="assets/optimized/proace-city-320.avif 320w, assets/optimized/proace-city-640.avif 640w, assets/optimized/proace-city-960.avif 960w" type="image/avif">
+              <source srcset="assets/optimized/proace-city-320.webp 320w, assets/optimized/proace-city-640.webp 640w, assets/optimized/proace-city-960.webp 960w" type="image/webp">
+              <img src="assets/proace-city.jpg" alt="EC Homologation — Toyota ProAce City" loading="lazy" sizes="(min-width: 900px) 33vw, 100vw">
+            </picture>
             <h4>EC Homologation — Toyota ProAce City (K9T-N1)</h4>
             <p>WVTA/CoP stream, annexes &amp; evidence packs.</p>
           </a>
           <a class="card" href="project.html?p=ec-homologation-psa-k9g-n1">
-            <picture class="focus-img"><img src="assets/rifter.jpg" alt="EC Homologation — PSA K9G-N1"></picture>
+            <picture class="focus-img">
+              <source srcset="assets/optimized/rifter-320.avif 320w, assets/optimized/rifter-640.avif 640w, assets/optimized/rifter-960.avif 960w" type="image/avif">
+              <source srcset="assets/optimized/rifter-320.webp 320w, assets/optimized/rifter-640.webp 640w, assets/optimized/rifter-960.webp 960w" type="image/webp">
+              <img src="assets/rifter.jpg" alt="EC Homologation — PSA K9G-N1" loading="lazy" sizes="(min-width: 900px) 33vw, 100vw">
+            </picture>
             <h4>EC Homologation — PSA K9G-N1</h4>
             <p>Rifter/Berlingo stream; variant matrix &amp; DoC.</p>
           </a>
           <a class="card" href="project.html?p=renault-master-xdd-axles">
-            <picture class="focus-img"><img src="assets/renault-master.jpg" alt="XDD — Axles &amp; Wheel-End (Renault Master)"></picture>
+            <picture class="focus-img">
+              <source srcset="assets/optimized/renault-master-320.avif 320w, assets/optimized/renault-master-640.avif 640w, assets/optimized/renault-master-960.avif 960w" type="image/avif">
+              <source srcset="assets/optimized/renault-master-320.webp 320w, assets/optimized/renault-master-640.webp 640w, assets/optimized/renault-master-960.webp 960w" type="image/webp">
+              <img src="assets/renault-master.jpg" alt="XDD — Axles &amp; Wheel-End (Renault Master)" loading="lazy" sizes="(min-width: 900px) 33vw, 100vw">
+            </picture>
             <h4>XDD — Axles &amp; Wheel-End (Renault Master)</h4>
             <p>Gen3 hub bearing, QCDP, EoL checks.</p>
           </a>
