@@ -5,41 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Project — Mohamed Ali Mabrouki</title>
   <meta name="description" content="Case study showcase from Mohamed Ali Mabrouki covering EC Type Approval, Euro 7 braking integration, and chassis programs.">
-  <meta name="theme-color" content="#0b0c10">
+  <meta name="theme-color" content="#07090d">
+  <link rel="canonical" href="https://mohamedalimabrouki.com/project.html">
+  <link rel="alternate" hreflang="en" href="https://mohamedalimabrouki.com/project.html">
+  <link rel="alternate" hreflang="fr" href="https://mohamedalimabrouki.com/project.html?lang=fr">
   <link rel="icon" href="/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="assets/mabrouki-headshot.jpg" imagesrcset="assets/mabrouki-headshot.jpg">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="font" href="assets/fonts/Inter-latin.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/avif" href="assets/optimized/mabrouki-headshot-640.avif" imagesrcset="assets/optimized/mabrouki-headshot-320.avif 320w, assets/optimized/mabrouki-headshot-640.avif 640w, assets/optimized/mabrouki-headshot-960.avif 960w">
   <link rel="stylesheet" href="styles.css">
   <meta property="og:title" content="Project — Mohamed Ali Mabrouki">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Mohamed Ali Mabrouki">
-  <meta property="og:description" content="Automotive engineering leader delivering EC Type Approval (RCE) programs, Euro 7 braking integration, and chassis industrialization for multi-brand platforms.">
+  <meta property="og:description" content="Automotive engineering leader delivering EC Type Approval, Euro 7 braking integration, and chassis industrialisation for multi-brand platforms.">
   <meta property="og:image" content="https://mohamedalimabrouki.com/assets/og-image.jpg">
   <meta property="og:url" content="https://mohamedalimabrouki.com/project.html">
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Project — Mohamed Ali Mabrouki">
-  <meta property="twitter:description" content="Automotive engineering leader delivering EC Type Approval (RCE) programs, Euro 7 braking integration, and chassis industrialization for multi-brand platforms.">
+  <meta property="twitter:description" content="Automotive engineering leader delivering EC Type Approval, Euro 7 braking integration, and chassis industrialisation for multi-brand platforms.">
   <meta property="twitter:image" content="https://mohamedalimabrouki.com/assets/og-image.jpg">
   <meta property="twitter:url" content="https://mohamedalimabrouki.com/project.html">
-  <script>(function(){const pref=localStorage.getItem('theme'); if(pref) document.documentElement.dataset.theme=pref;})();</script>
-
+  <script>
+    (function(){
+      try{
+        const stored = localStorage.getItem('theme');
+        if(stored){
+          document.documentElement.dataset.theme = stored;
+        }else{
+          const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+          document.documentElement.dataset.theme = prefersLight ? 'light' : 'dark';
+        }
+      }catch(err){}
+    })();
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mohamed Ali Mabrouki","jobTitle":"Automotive Engineering Leader","url":"https://mohamedalimabrouki.com","image":"https://mohamedalimabrouki.com/assets/optimized/mabrouki-headshot-960.jpg","email":"mailto:contact@mohamedalimabrouki.com","telephone":"+21625910020","sameAs":["https://www.linkedin.com/in/mohamedalimabrouki/"]}</script>
+  <script type="application/ld+json" id="ld-breadcrumb">{}</script>
   <script defer data-domain="mohamedalimabrouki.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#content">Skip to case study</a>
+  <a class="skip-link" href="#content" data-i18n-key="skip_to_content">Skip to main content</a>
   <header class="site-header" id="top">
-    <div class="wrap">
-      <div class="brand">
-        <img class="avatar-img" src="assets/mabrouki-headshot.jpg" alt="Mohamed Ali Mabrouki">
-        <div>
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html#top">
+        <picture class="brand-avatar focus-img" style="--focus:50% 42%" data-src="assets/mabrouki-headshot.JPG">
+          <source type="image/avif" srcset="assets/optimized/mabrouki-headshot-320.avif 320w, assets/optimized/mabrouki-headshot-640.avif 640w, assets/optimized/mabrouki-headshot-960.avif 960w" sizes="120px">
+          <source type="image/webp" srcset="assets/optimized/mabrouki-headshot-320.webp 320w, assets/optimized/mabrouki-headshot-640.webp 640w, assets/optimized/mabrouki-headshot-960.webp 960w" sizes="120px">
+          <source type="image/jpeg" srcset="assets/optimized/mabrouki-headshot-320.jpg 320w, assets/optimized/mabrouki-headshot-640.jpg 640w, assets/optimized/mabrouki-headshot-960.jpg 960w" sizes="120px">
+          <img src="assets/mabrouki-headshot.JPG" alt="Portrait of Mohamed Ali Mabrouki" loading="eager" decoding="async">
+        </picture>
+        <div class="brand-meta">
           <p class="brand-label" data-i18n-key="brand_label">Automotive Engineering Leader</p>
           <h1 class="brand-name" data-i18n-key="brand_name">Mohamed Ali Mabrouki</h1>
-          <p class="brand-sub" data-i18n-key="brand_subtitle">Type Approval / Braking / Chassis Integration</p>
+          <p class="brand-sub" data-i18n-key="brand_subtitle">Homologation · Braking · Chassis Launch</p>
         </div>
-      </div>
-      <button id="menuToggle" class="menu-toggle chip" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">☰</button>
+      </a>
+      <button id="menuToggle" class="menu-toggle chip" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+        <span aria-hidden="true">☰</span>
+      </button>
       <nav id="primaryNav" class="main-nav" aria-label="Primary">
         <a href="index.html#about" data-i18n-key="nav_about">About</a>
         <a href="index.html#expertise" data-i18n-key="nav_expertise">Expertise</a>
@@ -48,50 +69,52 @@
         <a href="index.html#contact" data-i18n-key="nav_contact">Contact</a>
         <div class="nav-actions">
           <button id="themeToggle" class="chip" aria-pressed="false" aria-label="Toggle theme">🌓</button>
-          <button id="langToggle" class="chip" aria-pressed="false" aria-label="Switch language">EN / FR</button>
+          <button id="langToggle" class="chip" aria-pressed="false" aria-label="Switch language">FR</button>
         </div>
       </nav>
     </div>
   </header>
 
-  <main id="content" class="section">
-    <div class="wrap">
-      <article id="project-article" class="card project-detail reveal">
-        <div class="project-header">
-          <p class="muted" id="p-tags"></p>
-          <h1 id="p-title">Project</h1>
-          <p id="p-summary" class="lead"></p>
+  <main id="content">
+    <section class="section">
+      <div class="wrap">
+        <a class="link-cta" href="index.html#projects" data-i18n-key="project_back">← Back to projects</a>
+        <article id="project-article" class="card project-detail reveal">
+          <div class="project-header">
+            <p class="muted" id="p-tags"></p>
+            <h1 id="p-title">Project</h1>
+            <p id="p-summary" class="lead"></p>
+          </div>
+          <div id="p-gallery" class="project-gallery grid" style="margin-top:16px"></div>
+          <div class="project-columns">
+            <section>
+              <h3 data-i18n-key="project_highlights">Key Highlights</h3>
+              <ul id="p-highlights"></ul>
+            </section>
+            <section>
+              <h3 data-i18n-key="project_kpis">KPIs</h3>
+              <ul id="p-kpis"></ul>
+            </section>
+          </div>
+          <section id="p-details"></section>
+        </article>
+        <div class="project-actions cta-group">
+          <button class="btn" type="button" onclick="window.print()" data-i18n-key="project_download_pdf">Download PDF</button>
         </div>
-        <div id="p-gallery" class="grid" style="margin-top:12px"></div>
-        <div class="project-columns">
-          <section>
-            <h3 data-i18n-key="project_highlights">Key Highlights</h3>
-            <ul id="p-highlights"></ul>
-          </section>
-          <section>
-            <h3 data-i18n-key="project_kpis">KPIs</h3>
-            <ul id="p-kpis"></ul>
-          </section>
-        </div>
-        <section id="p-details"></section>
-      </article>
-      <div class="project-actions">
-        <a class="btn ghost" href="index.html#projects" data-i18n-key="project_back">← Back to projects</a>
-        <button class="btn" type="button" onclick="window.print()" data-i18n-key="project_download_pdf" data-cta="download-pdf">Download PDF</button>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
-      <p>© 2025 Mohamed Ali Mabrouki.</p>
+      <p data-i18n-key="footer_note">Built for clarity, compliance, and launch-readiness.</p>
       <a class="chip ghost" href="#top" data-i18n-key="footer_back_to_top">Back to top ↑</a>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
   <script>
-    (async function(){
+    window.addEventListener('DOMContentLoaded', async () => {
       const params = new URLSearchParams(location.search);
       const slug = params.get('p');
       const data = await loadJSON('content/projects.json');
@@ -111,16 +134,40 @@
         localize(project, 'summary') ||
         project.summary ||
         '';
-      document.title = `${title} — Mohamed Ali Mabrouki`;
+      const domain = 'https://mohamedalimabrouki.com';
+      const canonicalUrl = `${domain}/project.html?p=${encodeURIComponent(project.slug)}${currentLang === 'fr' ? '&lang=fr' : ''}`;
+      document.title = `${title} - Case Study | Mohamed Ali Mabrouki`;
+      document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
+      const alternates = document.querySelectorAll('link[rel="alternate"]');
+      alternates.forEach(link => {
+        if(link.getAttribute('hreflang') === 'fr'){
+          link.setAttribute('href', `${domain}/project.html?p=${encodeURIComponent(project.slug)}&lang=fr`);
+        }else if(link.getAttribute('hreflang') === 'en'){
+          link.setAttribute('href', `${domain}/project.html?p=${encodeURIComponent(project.slug)}`);
+        }
+      });
+      document.querySelector('meta[name="description"]').setAttribute('content', summary);
+      document.querySelector('meta[property="og:title"]').setAttribute('content', `${title} - Case Study | Mohamed Ali Mabrouki`);
+      document.querySelector('meta[property="og:description"]').setAttribute('content', summary);
+      document.querySelector('meta[property="og:url"]').setAttribute('content', canonicalUrl);
+      document.querySelector('meta[property="twitter:title"]').setAttribute('content', `${title} - Case Study | Mohamed Ali Mabrouki`);
+      document.querySelector('meta[property="twitter:description"]').setAttribute('content', summary);
+      document.querySelector('meta[property="twitter:url"]').setAttribute('content', canonicalUrl);
+
       document.getElementById('p-title').textContent = title;
       document.getElementById('p-summary').textContent = summary;
-      document.getElementById('p-tags').textContent = (project.tags || []).join(' | ');
+      const tagLine = (project.tags || []).join(' • ');
+      document.getElementById('p-tags').textContent = tagLine;
 
       const galleryEl = document.getElementById('p-gallery');
       const gallery = Array.isArray(project.details?.gallery) && project.details.gallery.length
         ? project.details.gallery
         : [project.image];
       const focus = localize(project.details, 'focus') || project.focus;
+      const heroImage = gallery[0] || project.image;
+      const absoluteImage = `${domain}/${heroImage.replace(/^\//, '')}`;
+      document.querySelector('meta[property="og:image"]').setAttribute('content', absoluteImage);
+      document.querySelector('meta[property="twitter:image"]').setAttribute('content', absoluteImage);
       galleryEl.innerHTML = gallery
         .map((img, index) => imgBlock(img, {
           alt: `${title} visual ${index + 1}`,
@@ -171,7 +218,36 @@
 
       refreshImageEnhancements(document);
       trackEvent('Project View', { slug: project.slug });
-    })();
+
+      const breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": domain + '/'
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": domain + '/#projects'
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": title,
+            "item": canonicalUrl
+          }
+        ]
+      };
+      const ld = document.getElementById('ld-breadcrumb');
+      if(ld){
+        ld.textContent = JSON.stringify(breadcrumb);
+      }
+    });
   </script>
 </body>
 </html>

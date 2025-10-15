@@ -1,23 +1,34 @@
 {
   "name": "mohamedaliportfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "description": "Mohamed Ali Mabrouki — premium automotive engineering portfolio",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:images": "node tools/image-pipeline.mjs",
+    "test": "npm run test:ui",
+    "test:ui": "playwright test",
+    "lighthouse": "lhci autorun"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mohamedalimabrouki/mohamedaliportfolio.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "portfolio",
+    "automotive",
+    "homologation",
+    "chassis"
+  ],
+  "author": "Mohamed Ali Mabrouki",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Mohamedalimabrouki/mohamedaliportfolio/issues"
   },
-  "homepage": "https://github.com/Mohamedalimabrouki/mohamedaliportfolio#readme",
-  "dependencies": {
+  "homepage": "https://mohamedalimabrouki.com",
+  "engines": {
+    "node": ">=18.20.0"
+  },
+  "devDependencies": {
     "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.56.0",
     "sharp": "^0.34.4"

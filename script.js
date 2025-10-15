@@ -2,14 +2,23 @@ const DEFAULT_CARD_SIZES = '(min-width: 1280px) 360px, (min-width: 900px) 45vw, 
 const DEFAULT_GALLERY_SIZES = '(min-width: 960px) 600px, (min-width: 720px) 48vw, 92vw';
 const DEFAULT_FOCUS = '50% 50%';
 
+const queryParams = new URLSearchParams(window.location.search);
+const storedLang = localStorage.getItem('lang');
+const queryLang = queryParams.get('lang');
+const normalizedLang = queryLang && ['en', 'fr'].includes(queryLang) ? queryLang : null;
+const initialLang = normalizedLang || storedLang || 'en';
+if (normalizedLang && normalizedLang !== storedLang) {
+  localStorage.setItem('lang', normalizedLang);
+}
+
 const state = {
   projects: [],
   activeTag: 'all',
-  lang: localStorage.getItem('lang') || 'en',
+  lang: initialLang,
   i18n: { ui: {} },
   assetManifest: null,
   revealObserver: null,
-  devMode: new URLSearchParams(window.location.search).get('dev') === '1'
+  devMode: queryParams.get('dev') === '1'
 };
 
 const translationsCache = {};
