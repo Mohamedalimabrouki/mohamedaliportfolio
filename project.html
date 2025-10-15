@@ -140,7 +140,7 @@
         project.bullets ||
         [];
       document.getElementById('p-highlights').innerHTML = highlights
-        .map(item => `<li>${item}</li>`)
+        .map(item => `<li>${escapeHTML(item)}</li>`)
         .join('');
 
       const kpis =
@@ -149,10 +149,10 @@
         [];
       const kpiContainer = document.getElementById('p-kpis');
       if(kpis.length){
-        kpiContainer.innerHTML = kpis.map(item => `<li>${item}</li>`).join('');
+        kpiContainer.innerHTML = kpis.map(item => `<li>${escapeHTML(item)}</li>`).join('');
       }else{
         const fallback = (state.i18n && state.i18n.ui && state.i18n.ui.project_kpis_fallback) || 'KPIs available on request.';
-        kpiContainer.innerHTML = `<li>${fallback}</li>`;
+        kpiContainer.innerHTML = `<li>${escapeHTML(fallback)}</li>`;
       }
 
       const extra =
@@ -162,7 +162,7 @@
       const detailSection = document.getElementById('p-details');
       if(extra.length){
         const extraHeading = (state.i18n && state.i18n.ui && state.i18n.ui.project_additional) || 'Additional Notes';
-        detailSection.innerHTML = `<h3 data-i18n-key="project_additional">${extraHeading}</h3><ul>${extra.map(item => `<li>${item}</li>`).join('')}</ul>`;
+        detailSection.innerHTML = `<h3 data-i18n-key="project_additional">${escapeHTML(extraHeading)}</h3><ul>${extra.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul>`;
       }
 
       if(state.i18n && state.i18n.ui){
