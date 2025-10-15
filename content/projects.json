@@ -1,0 +1,272 @@
+[
+  {
+    "title": "EC Homologation — Toyota ProAce City (K9T‑N1)",
+    "tags": [
+      "Homologation",
+      "N1",
+      "K9"
+    ],
+    "summary": "Whole Vehicle Type Approval (EC RCE) stream for Toyota K9 family derivative; documentation set, test evidence coordination, markings/FCM, and CoP traceability.",
+    "image": "assets/proace-city.jpg",
+    "credit": "Toyota media placeholder",
+    "bullets": [
+      "EC WVTA for N1 category; emissions/safety/lighting conformity checks",
+      "VIN/labeling, e-markings, and FCM conformity coordination",
+      "UTAC/CNRV interactions and evidence pack consolidation"
+    ],
+    "slug": "ec-homologation-toyota-proace-city-k9t-n1",
+    "details": {
+      "overview": "Whole Vehicle Type Approval (EC RCE) stream for Toyota K9 family derivative; documentation set, test evidence coordination, markings/FCM, and CoP traceability.",
+      "highlights": [
+        "EC WVTA for N1 category; emissions/safety/lighting conformity checks",
+        "VIN/labeling, e-markings, and FCM conformity coordination",
+        "UTAC/CNRV interactions and evidence pack consolidation"
+      ],
+      "kpis": [
+        "On-time approval milestones (OTD)",
+        "Defect leakage < target",
+        "Supplier PPAP/CoP compliance 100%"
+      ],
+      "gallery": [
+        "assets/proace-city.jpg"
+      ],
+      "focus": "60% 50%"
+    }
+  },
+  {
+    "title": "EC Homologation — PSA K9G‑N1 (Peugeot Rifter / Citroën Berlingo)",
+    "tags": [
+      "Homologation",
+      "PSA",
+      "K9"
+    ],
+    "summary": "K9 PSA branch (Rifter/Berlingo) streamlining test evidence & dossiers; alignment to multi-brand specifications within Stellantis framework.",
+    "image": "assets/rifter.jpg",
+    "credit": "Peugeot/Citroën media placeholder",
+    "bullets": [
+      "Variant matrix definition & CoC data population",
+      "Lighting/Braking/Steering systems conformity summary (per annexes)",
+      "Supplier declarations collation & DoC tracking"
+    ],
+    "slug": "ec-homologation-psa-k9g-n1-peugeot-rifter-citroën-berlingo",
+    "details": {
+      "overview": "K9 PSA branch (Rifter/Berlingo) streamlining test evidence & dossiers; alignment to multi-brand specifications within Stellantis framework.",
+      "highlights": [
+        "Variant matrix definition & CoC data population",
+        "Lighting/Braking/Steering systems conformity summary (per annexes)",
+        "Supplier declarations collation & DoC tracking"
+      ],
+      "kpis": [
+        "On-time approval milestones (OTD)",
+        "Defect leakage < target",
+        "Supplier PPAP/CoP compliance 100%"
+      ],
+      "gallery": [
+        "assets/rifter.jpg"
+      ],
+      "focus": "60% 50%"
+    }
+  },
+  {
+    "title": "EC Homologation — Opel Combo (P1V0)",
+    "tags": [
+      "Homologation",
+      "Opel",
+      "K9"
+    ],
+    "summary": "Opel branch of the compact-van family; type-approval consistency across body lengths and powertrains.",
+    "image": "assets/opel-combo.jpg",
+    "credit": "Opel media placeholder",
+    "bullets": [
+      "CoP & VIN label audits; variant harmonization",
+      "Axle/brake/steering data alignment with homologation dossier",
+      "Stakeholder sync across engineering, quality and validation"
+    ],
+    "slug": "ec-homologation-opel-combo-p1v0",
+    "details": {
+      "overview": "Opel branch of the compact-van family; type-approval consistency across body lengths and powertrains.",
+      "highlights": [
+        "CoP & VIN label audits; variant harmonization",
+        "Axle/brake/steering data alignment with homologation dossier",
+        "Stakeholder sync across engineering, quality and validation"
+      ],
+      "kpis": [
+        "On-time approval milestones (OTD)",
+        "Defect leakage < target",
+        "Supplier PPAP/CoP compliance 100%"
+      ],
+      "gallery": [
+        "assets/opel-combo.jpg"
+      ],
+      "focus": "60% 50%"
+    }
+  },
+  {
+    "title": "Euro 7 Braking — MK C2 (Brake‑by‑Wire) & ESP10",
+    "tags": [
+      "Braking",
+      "Euro7",
+      "MKC2",
+      "ESP10"
+    ],
+    "summary": "Integration context and documentation for Euro 7 braking: Continental MK C2 one‑box and Bosch ESP10/VDC interactions.",
+    "image": "assets/mkc2.jpg",
+    "credit": "Continental press placeholder",
+    "bullets": [
+      "System architecture & redundancy review with ABS/ESC/iBooster interactions",
+      "Euro 7 particulate focus: discs/pads materials and wear monitoring",
+      "Bench/vehicle test evidence aggregation (E‑reg scope)"
+    ],
+    "slug": "euro-7-braking-mk-c2-brake-by-wire-esp10",
+    "details": {
+      "overview": "Integration context and documentation for Euro 7 braking: Continental MK C2 one‑box and Bosch ESP10/VDC interactions.",
+      "highlights": [
+        "System architecture & redundancy review with ABS/ESC/iBooster interactions",
+        "Euro 7 particulate focus: discs/pads materials and wear monitoring",
+        "Bench/vehicle test evidence aggregation (E‑reg scope)"
+      ],
+      "kpis": [
+        "On-time approval milestones (OTD)",
+        "Defect leakage < target",
+        "Supplier PPAP/CoP compliance 100%"
+      ],
+      "gallery": [
+        "assets/mkc2.jpg"
+      ],
+      "focus": "50% 50%"
+    }
+  },
+  {
+    "title": "Brake Hardware — Calipers, Pads, Carriers",
+    "tags": [
+      "Braking",
+      "Hardware"
+    ],
+    "summary": "Etriers (calipers), plaquettes (pads), support étrier (carrier): component conformity, material specs, and endurance validation.",
+    "image": "assets/brake-caliper.jpg",
+    "credit": "Brembo/TRW generic placeholder",
+    "bullets": [
+      "Pad/shim/noise countermeasures and bedding protocols",
+      "Thermal cycles & fade; rotor thickness variation limits",
+      "Supplier PPAP and traceability packages"
+    ],
+    "slug": "brake-hardware-calipers-pads-carriers",
+    "details": {
+      "overview": "Etriers (calipers), plaquettes (pads), support étrier (carrier): component conformity, material specs, and endurance validation.",
+      "highlights": [
+        "Pad/shim/noise countermeasures and bedding protocols",
+        "Thermal cycles & fade; rotor thickness variation limits",
+        "Supplier PPAP and traceability packages"
+      ],
+      "kpis": [
+        "On-time approval milestones (OTD)",
+        "Defect leakage < target",
+        "Supplier PPAP/CoP compliance 100%"
+      ],
+      "gallery": [
+        "assets/brake-caliper.jpg"
+      ],
+      "focus": "50% 50%"
+    }
+  },
+  {
+    "title": "XDD — Axles & Wheel Assembly (Renault Master)",
+    "tags": [
+      "Chassis",
+      "XDD",
+      "Axles"
+    ],
+    "summary": "Front & rear axles, wheel-end (porte-fusée, disque, roulement Gen3) industrialization support on the new Renault Master (IVOTY 2025).",
+    "image": "assets/renault-master.jpg",
+    "credit": "Renault press placeholder",
+    "bullets": [
+      "Gen3 hub-bearing units: preload, sealing, ABS sensor integration",
+      "QCDP tracking from design freeze to launch; supplier readiness",
+      "Torque & runout specs validation; end-of-line checks"
+    ],
+    "slug": "xdd-axles-wheel-assembly-renault-master",
+    "details": {
+      "overview": "Front & rear axles, wheel-end (porte-fusée, disque, roulement Gen3) industrialization support on the new Renault Master (IVOTY 2025).",
+      "highlights": [
+        "Gen3 hub-bearing units: preload, sealing, ABS sensor integration",
+        "QCDP tracking from design freeze to launch; supplier readiness",
+        "Torque & runout specs validation; end-of-line checks"
+      ],
+      "kpis": [
+        "On-time approval milestones (OTD)",
+        "Defect leakage < target",
+        "Supplier PPAP/CoP compliance 100%"
+      ],
+      "gallery": [
+        "assets/renault-master.jpg"
+      ],
+      "focus": "50% 50%"
+    }
+  },
+  {
+    "title": "Wheel-End — Hub Bearing Unit (Gen3)",
+    "tags": [
+      "Chassis",
+      "Wheel-End"
+    ],
+    "summary": "Gen-3 hub bearing units (HBU3): integrated flanges, sensor-ready designs, and assembly robustness for LCV duty cycles.",
+    "image": "assets/hub-bearing-gen3.jpg",
+    "credit": "SKF technical placeholder",
+    "bullets": [
+      "DTV/runout control for brake rotor mating",
+      "Bearing life targets vs. duty cycle; sealing & grease spec",
+      "ABS encoder signal integrity and diagnostics"
+    ],
+    "slug": "wheel-end-hub-bearing-unit-gen3",
+    "details": {
+      "overview": "Gen-3 hub bearing units (HBU3): integrated flanges, sensor-ready designs, and assembly robustness for LCV duty cycles.",
+      "highlights": [
+        "DTV/runout control for brake rotor mating",
+        "Bearing life targets vs. duty cycle; sealing & grease spec",
+        "ABS encoder signal integrity and diagnostics"
+      ],
+      "kpis": [
+        "On-time approval milestones (OTD)",
+        "Defect leakage < target",
+        "Supplier PPAP/CoP compliance 100%"
+      ],
+      "gallery": [
+        "assets/hub-bearing-gen3.jpg"
+      ],
+      "focus": "50% 50%"
+    }
+  },
+  {
+    "title": "SMART CAR (CC21/CC24) — Exteriors & Mounting",
+    "tags": [
+      "Design",
+      "Integration"
+    ],
+    "summary": "Tail lamp bracket · Rear bumper upper/lower skins · Skid plate · Tow hook · Side/Sensor brackets · Parking sensor bracket (central) · Side reinforcer.",
+    "image": "assets/citroen-c3-cc21.jpg",
+    "credit": "Citroën India media placeholder",
+    "bullets": [
+      "CAD to tooling: GD&T, draft, parting, ribs/bosses/min wall",
+      "Fixation strategy: tolerances, stack-up, corrosion mitigation",
+      "DFMEA/PFMEA and validation plan coordination"
+    ],
+    "slug": "smart-car-cc21-cc24-exteriors-mounting",
+    "details": {
+      "overview": "Tail lamp bracket · Rear bumper upper/lower skins · Skid plate · Tow hook · Side/Sensor brackets · Parking sensor bracket (central) · Side reinforcer.",
+      "highlights": [
+        "CAD to tooling: GD&T, draft, parting, ribs/bosses/min wall",
+        "Fixation strategy: tolerances, stack-up, corrosion mitigation",
+        "DFMEA/PFMEA and validation plan coordination"
+      ],
+      "kpis": [
+        "On-time approval milestones (OTD)",
+        "Defect leakage < target",
+        "Supplier PPAP/CoP compliance 100%"
+      ],
+      "gallery": [
+        "assets/citroen-c3-cc21.jpg"
+      ],
+      "focus": "50% 50%"
+    }
+  }
+]
