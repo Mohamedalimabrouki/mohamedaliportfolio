@@ -97,22 +97,56 @@
       const data = await loadJSON('content/projects.json');
       if(!data || !Array.isArray(data) || !data.length) return;
       const project = data.find(x => x.slug === slug) || data[0];
-      document.title = project.title + " — Mohamed Ali Mabrouki";
-      document.getElementById('p-title').textContent = project.title;
-      document.getElementById('p-summary').textContent = (project.details && project.details.overview) || project.summary;
-      const tags = (project.tags || []).join(' | ');
-      document.getElementById('p-tags').textContent = tags;
+
+      const currentLang = state.lang || 'en';
+      const localize = (obj, key) => {
+        if(!obj) return undefined;
+        if(currentLang === 'fr' && obj[`${key}_fr`]) return obj[`${key}_fr`];
+        return obj[key];
+      };
+
+      const title = localize(project, 'title') || project.title;
+      const summary =
+        localize(project.details, 'overview') ||
+        localize(project, 'summary') ||
+        project.summary ||
+        '';
+      document.title = `${title} — Mohamed Ali Mabrouki`;
+      document.getElementById('p-title').textContent = title;
+      document.getElementById('p-summary').textContent = summary;
+      document.getElementById('p-tags').textContent = (project.tags || []).join(' | ');
 
       const galleryEl = document.getElementById('p-gallery');
-      const gallery = (project.details && Array.isArray(project.details.gallery) && project.details.gallery.length)
+      const gallery = Array.isArray(project.details?.gallery) && project.details.gallery.length
         ? project.details.gallery
         : [project.image];
-      galleryEl.innerHTML = gallery.map(img => imgBlock(img, project.title, (project.details&&project.details.focus)||project.focus||'50% 50%')).join('');
+      const focus = localize(project.details, 'focus') || project.focus;
+      galleryEl.innerHTML = gallery
+        .map((img, index) => imgBlock(img, {
+          alt: `${title} visual ${index + 1}`,
+          context: 'gallery',
+          focus,
+          slug: project.slug,
+          index,
+          sizes: '(min-width: 960px) 600px, (min-width: 720px) 48vw, 92vw'
+        }))
+        .join('');
+      refreshImageEnhancements(galleryEl);
 
-      const highlights = (project.details && project.details.highlights) || project.bullets || [];
-      document.getElementById('p-highlights').innerHTML = highlights.map(item => `<li>${item}</li>`).join('');
+      const highlights =
+        localize(project.details, 'highlights') ||
+        localize(project, 'bullets') ||
+        project.details?.highlights ||
+        project.bullets ||
+        [];
+      document.getElementById('p-highlights').innerHTML = highlights
+        .map(item => `<li>${item}</li>`)
+        .join('');
 
-      const kpis = (project.details && project.details.kpis) || [];
+      const kpis =
+        localize(project.details, 'kpis') ||
+        project.details?.kpis ||
+        [];
       const kpiContainer = document.getElementById('p-kpis');
       if(kpis.length){
         kpiContainer.innerHTML = kpis.map(item => `<li>${item}</li>`).join('');
@@ -121,7 +155,10 @@
         kpiContainer.innerHTML = `<li>${fallback}</li>`;
       }
 
-      const extra = (project.details && project.details.extra) || [];
+      const extra =
+        localize(project.details, 'extra') ||
+        project.details?.extra ||
+        [];
       const detailSection = document.getElementById('p-details');
       if(extra.length){
         const extraHeading = (state.i18n && state.i18n.ui && state.i18n.ui.project_additional) || 'Additional Notes';
@@ -132,8 +169,8 @@
         setTranslations(state.i18n, state.lang);
       }
 
-      observeReveals(document);
-      applyFilters('all');
+      refreshImageEnhancements(document);
+      trackEvent('Project View', { slug: project.slug });
     })();
   </script>
 </body>
