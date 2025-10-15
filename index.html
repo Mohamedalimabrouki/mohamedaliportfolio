@@ -6,9 +6,11 @@
   <title>Mohamed Ali Mabrouki | Automotive Homologation &amp; Chassis Leader</title>
   <meta name="description" content="Automotive engineering leader aligning homologation dossiers, Euro 7 braking, and wheel-end launches for multi-brand commercial vehicle platforms.">
   <meta name="theme-color" content="#07090d">
-  <link rel="canonical" href="https://mohamedalimabrouki.com/">
-  <link rel="alternate" hreflang="en" href="https://mohamedalimabrouki.com/">
-  <link rel="alternate" hreflang="fr" href="https://mohamedalimabrouki.com/?lang=fr">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="canonical" rel="canonical" href="/">
+  <link rel="alternate" hreflang="en" href="/">
+  <link rel="alternate" hreflang="fr" href="/?lang=fr">
   <link rel="icon" href="/favicon.ico">
   <link rel="preload" as="font" href="assets/fonts/Inter-latin.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/avif" href="assets/optimized/mabrouki-headshot-640.avif" imagesrcset="assets/optimized/mabrouki-headshot-320.avif 320w, assets/optimized/mabrouki-headshot-640.avif 640w, assets/optimized/mabrouki-headshot-960.avif 960w">
@@ -18,11 +20,11 @@
   <meta property="og:description" content="Mohamed aligns Type Approval dossiers, Euro 7 braking, and wheel-end launches for multi-brand commercial vehicle platforms.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mohamedalimabrouki.com/">
-  <meta property="og:image" content="https://mohamedalimabrouki.com/assets/og-image.jpg">
+  <meta property="og:image" content="assets/og-image.jpg">
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Mohamed Ali Mabrouki | Automotive Homologation &amp; Chassis Leader">
   <meta property="twitter:description" content="Automotive engineering leader aligning homologation evidence, brake-by-wire integration, and chassis launches.">
-  <meta property="twitter:image" content="https://mohamedalimabrouki.com/assets/og-image.jpg">
+  <meta property="twitter:image" content="assets/og-image.jpg">
   <meta property="twitter:url" content="https://mohamedalimabrouki.com/">
   <script>
     (function(){
@@ -41,12 +43,12 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Mohamed Ali Mabrouki Portfolio","url":"https://mohamedalimabrouki.com","inLanguage":["en","fr"],"potentialAction":{"@type":"SearchAction","target":"https://mohamedalimabrouki.com/?search={search_term_string}","query-input":"required name=search_term_string"}}</script>
   <script defer data-domain="mohamedalimabrouki.com" src="https://plausible.io/js/script.js"></script>
 </head>
-<body>
+<body data-page="home">
   <a class="skip-link" href="#projects" data-i18n-key="skip_to_content">Skip to main content</a>
   <header class="site-header" id="top">
     <div class="wrap header-bar">
       <a class="brand" href="#top">
-        <picture class="brand-avatar focus-img" style="--focus:50% 42%" data-src="assets/mabrouki-headshot.JPG">
+        <picture class="brand-avatar focus-img" style="--focus:50% 36%" data-src="assets/mabrouki-headshot.JPG">
           <source type="image/avif" srcset="assets/optimized/mabrouki-headshot-320.avif 320w, assets/optimized/mabrouki-headshot-640.avif 640w, assets/optimized/mabrouki-headshot-960.avif 960w" sizes="120px">
           <source type="image/webp" srcset="assets/optimized/mabrouki-headshot-320.webp 320w, assets/optimized/mabrouki-headshot-640.webp 640w, assets/optimized/mabrouki-headshot-960.webp 960w" sizes="120px">
           <source type="image/jpeg" srcset="assets/optimized/mabrouki-headshot-320.jpg 320w, assets/optimized/mabrouki-headshot-640.jpg 640w, assets/optimized/mabrouki-headshot-960.jpg 960w" sizes="120px">
@@ -79,7 +81,7 @@
     <section class="hero" id="about">
       <div class="wrap hero-grid">
         <div class="hero-media">
-          <picture class="hero-portrait focus-img" style="--focus:50% 38%" data-src="assets/mabrouki-headshot.JPG">
+          <picture class="hero-portrait focus-img" style="--focus:50% 28%" data-src="assets/mabrouki-headshot.JPG">
             <source type="image/avif" srcset="assets/optimized/mabrouki-headshot-320.avif 320w, assets/optimized/mabrouki-headshot-640.avif 640w, assets/optimized/mabrouki-headshot-960.avif 960w" sizes="(min-width: 960px) 420px, 90vw">
             <source type="image/webp" srcset="assets/optimized/mabrouki-headshot-320.webp 320w, assets/optimized/mabrouki-headshot-640.webp 640w, assets/optimized/mabrouki-headshot-960.webp 960w" sizes="(min-width: 960px) 420px, 90vw">
             <source type="image/jpeg" srcset="assets/optimized/mabrouki-headshot-320.jpg 320w, assets/optimized/mabrouki-headshot-640.jpg 640w, assets/optimized/mabrouki-headshot-960.jpg 960w" sizes="(min-width: 960px) 420px, 90vw">
@@ -216,7 +218,25 @@
           </div>
         </div>
         <p id="filterStatus" class="muted" role="status" aria-live="polite" data-i18n-key="filter_status_default">Loading projects…</p>
-        <div id="project-grid" class="grid project-grid" aria-live="polite"></div>
+        <div id="project-grid" class="grid project-grid" aria-live="polite" data-ssr>
+          <!-- SSR fallback (will be replaced if JSON loads) -->
+          <a class="card" href="project.html?p=ec-homologation-toyota-proace-city">
+            <picture class="focus-img"><img src="assets/proace-city.jpg" alt="EC Homologation — Toyota ProAce City"></picture>
+            <h4>EC Homologation — Toyota ProAce City</h4>
+            <p>WVTA/CoP stream, annexes &amp; evidence packs.</p>
+          </a>
+          <a class="card" href="project.html?p=ec-homologation-peugeot-rifter-citroen-berlingo">
+            <picture class="focus-img"><img src="assets/rifter.jpg" alt="EC Homologation — Peugeot Rifter &amp; Citroën Berlingo"></picture>
+            <h4>EC Homologation — Peugeot Rifter &amp; Citroën Berlingo</h4>
+            <p>Rifter/Berlingo stream; variant matrix &amp; DoC.</p>
+          </a>
+          <a class="card" href="project.html?p=renault-master-axles-wheel-assembly">
+            <picture class="focus-img"><img src="assets/renault-master.jpg" alt="XDD — Axles &amp; Wheel-End (Renault Master)"></picture>
+            <h4>XDD — Axles &amp; Wheel-End (Renault Master)</h4>
+            <p>Gen3 hub bearing, QCDP, EoL checks.</p>
+          </a>
+        </div>
+        <noscript><p class="muted">Enable JavaScript to see all projects.</p></noscript>
       </div>
     </section>
 
@@ -257,7 +277,7 @@
           </div>
           <div>
             <h4 data-i18n-key="contact_phone_label">Phone / WhatsApp</h4>
-            <a href="https://wa.me/21625910020" target="_blank" rel="noopener">+216 25 910 020 GO</a>
+            <a href="https://wa.me/21625910020" target="_blank" rel="noopener">+216 25 910 020</a>
           </div>
           <div>
             <h4 data-i18n-key="contact_linkedin_label">LinkedIn</h4>

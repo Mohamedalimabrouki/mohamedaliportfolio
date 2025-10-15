@@ -1,4 +1,4 @@
-const DEFAULT_CARD_SIZES = '(min-width: 1280px) 360px, (min-width: 900px) 45vw, 92vw';
+const DEFAULT_CARD_SIZES = '(min-width: 900px) 33vw, 100vw';
 const DEFAULT_GALLERY_SIZES = '(min-width: 960px) 600px, (min-width: 720px) 48vw, 92vw';
 const DEFAULT_FOCUS = '50% 50%';
 
@@ -16,7 +16,6 @@ const state = {
   activeTag: 'all',
   lang: initialLang,
   i18n: { ui: {} },
-  assetManifest: null,
   revealObserver: null,
   devMode: queryParams.get('dev') === '1'
 };
@@ -55,101 +54,75 @@ function escapeHTML(value) {
     .replace(/>/g, '&gt;');
 }
 
-async function loadJSON(url, { cache = 'no-store' } = {}) {
+async function loadJSON(url) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 8000);
   try {
-    const response = await fetch(url, { cache });
+    const response = await fetch(url, { cache: 'no-store', signal: ctrl.signal });
+    clearTimeout(timer);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (err) {
-    console.warn('Could not load', url, err);
+    console.warn('Failed to load', url, err);
     return null;
   }
 }
 
-async function loadManifest() {
-  const manifest = await loadJSON('content/assets-manifest.json');
-  if (manifest && manifest.images) {
-    state.assetManifest = manifest;
+function optimizedBasePath(path) {
+  if (!path) return '';
+  const cleaned = String(path).replace(/^\.?\//, '');
+  const withoutExt = cleaned.replace(/\.(avif|webp|jpe?g|png)$/i, '');
+  const normalized = withoutExt.replace(/-(320|640|960|1280|1600)$/i, '');
+  if (normalized.startsWith('assets/optimized/')) {
+    return normalized;
   }
+  const name = normalized.split('/').pop();
+  return name ? `assets/optimized/${name}` : '';
 }
 
-function getManifestEntry(path) {
-  return state.assetManifest?.images?.[path];
+function buildSrcset(base, ext) {
+  if (!base) return '';
+  const sizes = [320, 640, 960];
+  return sizes.map(size => `${base}-${size}.${ext} ${size}w`).join(', ');
 }
 
-function imgBlock(src, opts, legacyFocus) {
-  let options = {};
-  if (typeof opts === 'string' || opts === undefined) {
-    options.alt = opts || '';
-    options.focus = legacyFocus;
-  } else {
-    options = opts || {};
-  }
-
-  const entry = getManifestEntry(src);
-  const alt = options.alt ?? '';
-  const focus = options.focus || entry?.focus || DEFAULT_FOCUS;
-  const sizes =
-    options.sizes || (options.context === 'gallery' ? DEFAULT_GALLERY_SIZES : DEFAULT_CARD_SIZES);
-  const loading = options.loading === 'eager' ? 'eager' : 'lazy';
-  const decoding = options.decoding || 'async';
-  const className = options.className ? `focus-img ${options.className}` : 'focus-img';
-  const fetchPriority = options.fetchPriority;
-  const slugAttr = options.slug ? ` data-slug="${escapeAttr(options.slug)}"` : '';
+function imgBlock(path, alt = '', focus = DEFAULT_FOCUS, options = {}) {
+  const opts = typeof options === 'object' && options !== null ? options : {};
+  const focusValue = focus || DEFAULT_FOCUS;
+  const slugAttr = opts.slug ? ` data-slug="${escapeAttr(opts.slug)}"` : '';
   const indexAttr =
-    options.index !== undefined ? ` data-index="${escapeAttr(String(options.index))}"` : '';
-  const sizeAttr = sizes ? ` sizes="${escapeAttr(sizes)}"` : '';
-  const fetchAttr = fetchPriority ? ` fetchpriority="${escapeAttr(fetchPriority)}"` : '';
-  const pictureAttrs = [
-    `class="${className}"`,
-    `style="--focus:${escapeAttr(focus)}"`,
-    `data-src="${escapeAttr(src)}"`,
-    `data-focus="${escapeAttr(focus)}"`,
-    slugAttr,
-    indexAttr
-  ]
-    .filter(Boolean)
-    .join(' ');
-
-  const extraAttrs = [];
-  if (entry?.aspectRatio) extraAttrs.push(`data-aspect="${entry.aspectRatio}"`);
-  if (entry?.placeholder) extraAttrs.push(`data-placeholder="${entry.placeholder}"`);
-  if (entry) extraAttrs.push('data-optimized="1"');
+    opts.index !== undefined ? ` data-index="${escapeAttr(String(opts.index))}"` : '';
+  const dataFocusAttr = ` data-focus="${escapeAttr(focusValue)}"`;
+  const styleAttr = ` style="--focus:${escapeAttr(focusValue)}"`;
+  const optimizedBase = optimizedBasePath(path);
+  const avifSet = buildSrcset(optimizedBase, 'avif');
+  const webpSet = buildSrcset(optimizedBase, 'webp');
+  const sizes = opts.sizes || (opts.context === 'gallery' ? DEFAULT_GALLERY_SIZES : DEFAULT_CARD_SIZES);
+  const loading = opts.loading === 'eager' ? 'eager' : 'lazy';
+  const decoding = opts.decoding || 'async';
+  const fetchPriority = opts.fetchPriority
+    ? ` fetchpriority="${escapeAttr(opts.fetchPriority)}"`
+    : '';
 
   const sources = [];
-  if (entry?.formats?.avif) {
-    sources.push(
-      `<source type="image/avif" srcset="${escapeAttr(entry.formats.avif.srcset)}"${sizeAttr}>`
-    );
+  if (avifSet) {
+    sources.push(`<source srcset="${escapeAttr(avifSet)}" type="image/avif">`);
   }
-  if (entry?.formats?.webp) {
-    sources.push(
-      `<source type="image/webp" srcset="${escapeAttr(entry.formats.webp.srcset)}"${sizeAttr}>`
-    );
-  }
-  if (entry?.formats?.jpg) {
-    sources.push(
-      `<source type="image/jpeg" srcset="${escapeAttr(entry.formats.jpg.srcset)}"${sizeAttr}>`
-    );
-  }
-  if (!sources.length) {
-    const webp = src.replace(/\.(jpe?g|png)$/i, '.webp');
-    if (webp !== src) {
-      sources.push(`<source type="image/webp" srcset="${escapeAttr(webp)}"${sizeAttr}>`);
+  if (webpSet) {
+    sources.push(`<source srcset="${escapeAttr(webpSet)}" type="image/webp">`);
+  } else {
+    const fallbackWebp = path.replace(/\.(jpe?g|png)$/i, '.webp');
+    if (fallbackWebp !== path) {
+      sources.push(`<source srcset="${escapeAttr(fallbackWebp)}" type="image/webp">`);
     }
   }
 
-  const fallback = entry?.fallback || src;
-  const loadingAttr = ` loading="${loading}"`;
-  const decodingAttr = decoding ? ` decoding="${escapeAttr(decoding)}"` : '';
-  const placeholderAttr = entry?.placeholder
-    ? ` style="background-image:url(${entry.placeholder});"`
-    : '';
-
-  const img = `<img src="${escapeAttr(fallback)}" alt="${escapeAttr(alt)}"${loadingAttr}${decodingAttr}${sizeAttr}${fetchAttr}${placeholderAttr}>`;
-  return `<picture ${pictureAttrs}${extraAttrs.length ? ' ' + extraAttrs.join(' ') : ''}>${sources.join(
-    ''
-  )}${img}</picture>`;
+  return `<picture class="focus-img"${slugAttr}${indexAttr}${dataFocusAttr}${styleAttr}>
+    ${sources.join('\n    ')}
+    <img src="${escapeAttr(path)}" alt="${escapeAttr(alt)}" loading="${loading}" decoding="${escapeAttr(
+    decoding
+  )}" sizes="${escapeAttr(sizes)}"${fetchPriority}>
+  </picture>`;
 }
 
 function localizeValue(base, key) {
@@ -163,40 +136,27 @@ function localizeDetails(details, key) {
   return details[key];
 }
 
-function renderProjectCard(project) {
+function cardHTML(project) {
   const title = localizeValue(project, 'title') || project.title;
-  const summary = localizeValue(project, 'summary') || project.summary || '';
+  const summary =
+    localizeDetails(project.details, 'overview') ||
+    localizeValue(project, 'summary') ||
+    project.summary ||
+    '';
   const bullets =
     localizeValue(project, 'bullets') ||
     (Array.isArray(project.bullets) ? project.bullets : []);
+  const focus = localizeDetails(project.details, 'focus') || project.focus || DEFAULT_FOCUS;
   const tags = project.tags || [];
-  const focus = localizeDetails(project.details, 'focus') || project.focus || undefined;
+  const bulletItems = (bullets || []).slice(0, 2).map(item => `<li>${escapeHTML(item)}</li>`).join('');
 
   return `<a class="card reveal" href="project.html?p=${encodeURIComponent(
     project.slug
   )}" data-project="${escapeAttr(project.slug)}" data-tags="${escapeAttr(tags.join(','))}">
-    ${imgBlock(project.image, {
-      alt: title,
-      focus,
-      slug: project.slug
-    })}
-    <div class="card-body">
-      <h4>${escapeHTML(title)}</h4>
-      <p class="muted">${escapeHTML(summary)}</p>
-      ${
-        bullets && bullets.length
-          ? `<ul>${bullets.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul>`
-          : ''
-      }
-      ${
-        tags.length
-          ? `<div class="pill-row">${tags
-              .map(tag => `<span class="pill pill--small">${escapeHTML(tag)}</span>`)
-              .join('')}</div>`
-          : ''
-      }
-      ${project.credit ? `<small class="muted">${escapeHTML(project.credit)}</small>` : ''}
-    </div>
+    ${imgBlock(project.image, title, focus, { slug: project.slug })}
+    <h4>${escapeHTML(title)}</h4>
+    <p>${escapeHTML(summary)}</p>
+    ${bulletItems ? `<ul>${bulletItems}</ul>` : ''}
   </a>`;
 }
 
@@ -204,14 +164,14 @@ function renderProjects() {
   const grid = document.getElementById('project-grid');
   if (!grid) return;
   if (!state.projects.length) {
-    grid.innerHTML =
-      '<div class="card muted" role="note">Case studies will appear once content is published.</div>';
-    refreshImageEnhancements(grid);
+    console.warn('Using SSR fallback cards.');
     return;
   }
-  grid.innerHTML = state.projects.map(renderProjectCard).join('');
+  grid.innerHTML = state.projects.map(cardHTML).join('');
+  grid.removeAttribute('data-ssr');
   refreshImageEnhancements(grid);
   applyFilters(state.activeTag);
+  updateFilterStatus(state.activeTag, getVisibleCount());
 }
 
 function initRevealObserver() {
@@ -382,7 +342,7 @@ function updateFilterStatus(tag, visible) {
   const total = state.projects.length;
   const ui = state.i18n.ui || {};
   if (!total) {
-    status.textContent = ui.filter_status_empty || 'Case studies will appear soon.';
+    status.textContent = ui.filter_status_default || 'Loading projects…';
     return;
   }
   if (!visible) {
@@ -473,6 +433,32 @@ function setupMenu() {
   });
 }
 
+function applyI18nFallbacks(dict) {
+  if (!dict) return;
+  const ui = dict.ui || dict;
+  const projectsHeading = document.querySelector('#projects .section-head h3');
+  if (ui.projects && projectsHeading) projectsHeading.textContent = ui.projects;
+  const contactHeading = document.querySelector('#contact h3');
+  if (ui.contact && contactHeading) contactHeading.textContent = ui.contact;
+  const contactCards = document.querySelectorAll('#contact .contact-grid > div');
+  if (contactCards[0]) {
+    const emailLabel = contactCards[0].querySelector('h4');
+    if (emailLabel && ui.email) emailLabel.textContent = ui.email;
+  }
+  if (contactCards[1]) {
+    const phoneLabel = contactCards[1].querySelector('h4');
+    if (phoneLabel && ui.phone) phoneLabel.textContent = ui.phone;
+  }
+  if (contactCards[2]) {
+    const linkedinLabel = contactCards[2].querySelector('h4');
+    if (linkedinLabel && ui.linkedin) linkedinLabel.textContent = ui.linkedin;
+  }
+  if (contactCards[3]) {
+    const websiteLabel = contactCards[3].querySelector('h4');
+    if (websiteLabel && ui.website) websiteLabel.textContent = ui.website;
+  }
+}
+
 function setTranslations(data, lang) {
   state.i18n = data || { ui: {} };
   state.lang = lang;
@@ -493,6 +479,7 @@ function setTranslations(data, lang) {
     langBtn.setAttribute('aria-label', lang === 'en' ? 'Passer en français' : 'Switch to English');
     langBtn.setAttribute('aria-pressed', String(lang === 'fr'));
   }
+  applyI18nFallbacks(state.i18n);
   renderProjects();
   updateFilterStatus(state.activeTag, getVisibleCount());
 }
@@ -520,26 +507,57 @@ function setupLang() {
   applyI18n(state.lang);
 }
 
-async function loadProjects() {
-  const projects = await loadJSON('content/projects.json');
-  if (projects && Array.isArray(projects)) {
-    state.projects = projects;
+async function applyHeadMetaHome() {
+  if (!document.body || document.body.dataset.page !== 'home') return;
+  const cfg = await loadJSON('content/config.json');
+  if (!cfg) return;
+  const domain = (cfg.portfolio || cfg.website || location.origin).replace(/\/$/, '');
+  const can = document.querySelector('#canonical');
+  if (can) can.href = `${domain}/`;
+  const og = document.querySelector('meta[property="og:image"]');
+  if (og) og.setAttribute('content', `${domain}/assets/og-image.jpg`);
+  const tw = document.querySelector('meta[name="twitter:image"]');
+  if (tw) tw.setAttribute('content', `${domain}/assets/og-image.jpg`);
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute('content', `${domain}/`);
+  const twUrl = document.querySelector('meta[property="twitter:url"]');
+  if (twUrl) twUrl.setAttribute('content', `${domain}/`);
+}
+
+async function mountProjects() {
+  const grid = document.getElementById('project-grid');
+  const data = await loadJSON('content/projects.json');
+  if (data && Array.isArray(data) && data.length) {
+    state.projects = data;
     renderProjects();
+  } else {
+    if (grid) {
+      grid.dataset.ssr = grid.dataset.ssr || '1';
+    }
+    console.warn('Using SSR fallback cards.');
   }
 }
 
-function setupCtaTracking() {
-  document.addEventListener(
-    'click',
-    evt => {
-      const target = evt.target.closest('[data-cta]');
-      if (!target) return;
-      const label = target.dataset.cta;
-      if (!label) return;
-      trackEvent('CTA Click', { button: label });
-    },
-    { capture: true }
-  );
+function trackCTA(name) {
+  try {
+    if (window.plausible) window.plausible('CTA Click', { props: { button: name } });
+  } catch (err) {
+    /* no-op */
+  }
+}
+
+function wireCTAs() {
+  const map = [
+    ['a.btn[href$=".docx"]', 'Download CV'],
+    ['a[href^="mailto:"]', 'Email'],
+    ['a[href^="https://wa.me"], a[href*="whatsapp"]', 'WhatsApp'],
+    ['a[href*="linkedin.com"]', 'LinkedIn']
+  ];
+  map.forEach(([selector, label]) => {
+    document.querySelectorAll(selector).forEach(anchor => {
+      anchor.addEventListener('click', () => trackCTA(label));
+    });
+  });
 }
 
 async function bootstrap() {
@@ -547,10 +565,10 @@ async function bootstrap() {
   setupMenu();
   setupFilters();
   setupLang();
-  setupCtaTracking();
   initFocusPanel();
-  await loadManifest();
-  await loadProjects();
+  await applyHeadMetaHome();
+  await mountProjects();
+  wireCTAs();
   refreshImageEnhancements(document);
   updateFilterStatus(state.activeTag, getVisibleCount());
 }

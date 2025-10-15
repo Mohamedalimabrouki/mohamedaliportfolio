@@ -84,12 +84,16 @@ body{
 img{max-width:100%;display:block;}
 
 a{
-  color:inherit;
+  color:var(--ink);
   text-decoration:none;
   transition:var(--transition);
 }
-a:hover{opacity:0.88;}
-a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
+a:hover{opacity:0.92;}
+a.card,a.card *{
+  color:var(--ink);
+  text-decoration:none;
+}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}
 
 .skip-link{
   position:absolute;
@@ -197,7 +201,7 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
 .chip.ghost{background:transparent;}
 
 .hero{
-  padding:var(--spacing-10) 0 var(--spacing-9);
+  padding:var(--spacing-8) 0 var(--spacing-7);
 }
 .hero-grid{
   display:grid;
@@ -218,7 +222,7 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
 
 .hero-content h2{
   margin:0 0 var(--spacing-4);
-  font-size:2.5rem;
+  font-size:2.2rem;
   line-height:1.2;
   color:var(--ink-strong);
   letter-spacing:-0.01em;
@@ -269,7 +273,7 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
   box-shadow:0 14px 30px rgba(63,214,162,0.28);
 }
 .btn:hover{transform:translateY(-2px);box-shadow:0 24px 40px rgba(63,214,162,0.32);}
-.btn:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}
 .btn.ghost{
   background:color-mix(in srgb, var(--accent-soft) 70%, transparent);
   color:var(--ink-strong);
@@ -322,7 +326,6 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
 }
 .grid--cols-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
 .project-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--spacing-6);}
-.project-grid .focus-img{aspect-ratio:7/5;}
 .project-columns{
   display:grid;
   gap:var(--spacing-6);
@@ -332,6 +335,7 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
 .project-detail{min-height:60vh;}
 .project-gallery .focus-img{
   aspect-ratio:16/9;
+  height:auto;
 }
 .project-gallery{min-height:240px;}
 .project-actions{
@@ -369,9 +373,10 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
   position:relative;
   display:block;
   width:100%;
-  border-radius:var(--radius-lg);
+  height:320px;
+  border-radius:12px;
+  border:1px solid var(--stroke);
   overflow:hidden;
-  border:1px solid rgba(255,255,255,0.04);
   background:rgba(255,255,255,0.02);
 }
 .focus-img img{
@@ -445,7 +450,7 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
 .reveal{opacity:0;transform:translateY(14px);transition:opacity 0.6s ease,transform 0.6s ease;}
 .reveal.visible{opacity:1;transform:none;}
 
-:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}
 
 /* Dev focus tuner */
 #focusDevPanel{
@@ -502,20 +507,14 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
   }
   .main-nav.open{display:flex;}
   .nav-actions{width:100%;justify-content:space-between;}
-  .hero{padding:var(--spacing-9) 0;}
+  .hero{padding:var(--spacing-7) 0;}
   .hero-grid{grid-template-columns:1fr;gap:var(--spacing-7);}
   .hero-portrait{width:min(320px,100%);}
   .section{padding:var(--spacing-8) 0;}
 }
 
-@media (min-width:960px){
-  .project-grid .focus-img{
-    height:420px;
-    aspect-ratio:auto;
-  }
-  .project-grid .focus-img img{
-    height:100%;
-  }
+@media (min-width:900px){
+  .focus-img{height:420px;}
 }
 
 @media (max-width:640px){
@@ -525,9 +524,9 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
 }
 
 @media print{
+  header,nav,.site-header,.site-footer,.filters,.chip,.cta-group,.nav-actions,.link-cta,#focusDevPanel{display:none !important;}
   body{background:#fff;color:#000;}
-  .site-header,.site-footer,.cta-group,.nav-actions,.filters,.link-cta,#focusDevPanel{display:none !important;}
+  .card,.wrap,.section{border:none;box-shadow:none;padding:0;margin:0;background:#fff;color:#000;}
+  .focus-img{height:auto;border:none;}
   .hero-portrait{box-shadow:none;border:none;}
-  .section{padding:32px 0;}
-  .card{box-shadow:none;border:1px solid #ccc;background:#fff;color:#000;}
 }

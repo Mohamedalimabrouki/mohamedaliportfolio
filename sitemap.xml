@@ -1,64 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mohamedalimabrouki.com/</loc>
-    <lastmod>2025-10-15</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://mohamedalimabrouki.com/project.html?p=ec-homologation-toyota-proace-city</loc>
-    <image:image>
-      <image:loc>https://mohamedalimabrouki.com/assets/proace-city.jpg</image:loc>
-      <image:title>EC Homologation — Toyota ProAce City</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://mohamedalimabrouki.com/project.html?p=ec-homologation-peugeot-rifter-citroen-berlingo</loc>
-    <image:image>
-      <image:loc>https://mohamedalimabrouki.com/assets/rifter.jpg</image:loc>
-      <image:title>EC Homologation — Peugeot Rifter &amp; Citroën Berlingo</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://mohamedalimabrouki.com/project.html?p=ec-homologation-opel-combo</loc>
-    <image:image>
-      <image:loc>https://mohamedalimabrouki.com/assets/opel-combo.jpg</image:loc>
-      <image:title>EC Homologation — Opel Combo</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://mohamedalimabrouki.com/project.html?p=euro-7-braking-brake-by-wire-integration</loc>
-    <image:image>
-      <image:loc>https://mohamedalimabrouki.com/assets/mkc2.jpg</image:loc>
-      <image:title>Euro 7 Braking — Brake-by-Wire Integration</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://mohamedalimabrouki.com/project.html?p=brake-hardware-calipers-pads-carriers</loc>
-    <image:image>
-      <image:loc>https://mohamedalimabrouki.com/assets/brake-caliper.jpg</image:loc>
-      <image:title>Brake Hardware — Calipers, Pads, Carriers</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://mohamedalimabrouki.com/project.html?p=renault-master-axles-wheel-assembly</loc>
-    <image:image>
-      <image:loc>https://mohamedalimabrouki.com/assets/renault-master.jpg</image:loc>
-      <image:title>Renault Master — Axles &amp; Wheel Assembly Launch</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://mohamedalimabrouki.com/project.html?p=wheel-end-hub-bearing-unit-gen3</loc>
-    <image:image>
-      <image:loc>https://mohamedalimabrouki.com/assets/hub-bearing-gen3.jpg</image:loc>
-      <image:title>Wheel-End — Hub Bearing Unit (Gen3)</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://mohamedalimabrouki.com/project.html?p=citroen-c3-exteriors-mounting</loc>
-    <image:image>
-      <image:loc>https://mohamedalimabrouki.com/assets/citroen-c3-cc21.jpg</image:loc>
-      <image:title>Citroën C3 Programme — Exteriors &amp; Mounting</image:title>
-    </image:image>
   </url>
 </urlset>

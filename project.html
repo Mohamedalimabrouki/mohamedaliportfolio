@@ -6,23 +6,21 @@
   <title>Project — Mohamed Ali Mabrouki</title>
   <meta name="description" content="Case study showcase from Mohamed Ali Mabrouki covering EC Type Approval, Euro 7 braking integration, and chassis programs.">
   <meta name="theme-color" content="#07090d">
-  <link rel="canonical" href="https://mohamedalimabrouki.com/project.html">
-  <link rel="alternate" hreflang="en" href="https://mohamedalimabrouki.com/project.html">
-  <link rel="alternate" hreflang="fr" href="https://mohamedalimabrouki.com/project.html?lang=fr">
+  <link id="canonical" rel="canonical" href="/">
   <link rel="icon" href="/favicon.ico">
   <link rel="preload" as="font" href="assets/fonts/Inter-latin.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/avif" href="assets/optimized/mabrouki-headshot-640.avif" imagesrcset="assets/optimized/mabrouki-headshot-320.avif 320w, assets/optimized/mabrouki-headshot-640.avif 640w, assets/optimized/mabrouki-headshot-960.avif 960w">
   <link rel="stylesheet" href="styles.css">
-  <meta property="og:title" content="Project — Mohamed Ali Mabrouki">
+  <meta property="og:title" content="">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Mohamed Ali Mabrouki">
-  <meta property="og:description" content="Automotive engineering leader delivering EC Type Approval, Euro 7 braking integration, and chassis industrialisation for multi-brand platforms.">
-  <meta property="og:image" content="https://mohamedalimabrouki.com/assets/og-image.jpg">
-  <meta property="og:url" content="https://mohamedalimabrouki.com/project.html">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:url" content="">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Project — Mohamed Ali Mabrouki">
-  <meta property="twitter:description" content="Automotive engineering leader delivering EC Type Approval, Euro 7 braking integration, and chassis industrialisation for multi-brand platforms.">
-  <meta property="twitter:image" content="https://mohamedalimabrouki.com/assets/og-image.jpg">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="assets/og-image.jpg">
   <meta property="twitter:url" content="https://mohamedalimabrouki.com/project.html">
   <script>
     (function(){
@@ -41,7 +39,7 @@
   <script type="application/ld+json" id="ld-breadcrumb">{}</script>
   <script defer data-domain="mohamedalimabrouki.com" src="https://plausible.io/js/script.js"></script>
 </head>
-<body>
+<body data-page="project">
   <a class="skip-link" href="#content" data-i18n-key="skip_to_content">Skip to main content</a>
   <header class="site-header" id="top">
     <div class="wrap header-bar">
@@ -134,25 +132,10 @@
         localize(project, 'summary') ||
         project.summary ||
         '';
-      const domain = 'https://mohamedalimabrouki.com';
+      const domain = location.origin.replace(/\/$/, '');
       const canonicalUrl = `${domain}/project.html?p=${encodeURIComponent(project.slug)}${currentLang === 'fr' ? '&lang=fr' : ''}`;
-      document.title = `${title} - Case Study | Mohamed Ali Mabrouki`;
-      document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
-      const alternates = document.querySelectorAll('link[rel="alternate"]');
-      alternates.forEach(link => {
-        if(link.getAttribute('hreflang') === 'fr'){
-          link.setAttribute('href', `${domain}/project.html?p=${encodeURIComponent(project.slug)}&lang=fr`);
-        }else if(link.getAttribute('hreflang') === 'en'){
-          link.setAttribute('href', `${domain}/project.html?p=${encodeURIComponent(project.slug)}`);
-        }
-      });
-      document.querySelector('meta[name="description"]').setAttribute('content', summary);
-      document.querySelector('meta[property="og:title"]').setAttribute('content', `${title} - Case Study | Mohamed Ali Mabrouki`);
-      document.querySelector('meta[property="og:description"]').setAttribute('content', summary);
-      document.querySelector('meta[property="og:url"]').setAttribute('content', canonicalUrl);
-      document.querySelector('meta[property="twitter:title"]').setAttribute('content', `${title} - Case Study | Mohamed Ali Mabrouki`);
-      document.querySelector('meta[property="twitter:description"]').setAttribute('content', summary);
-      document.querySelector('meta[property="twitter:url"]').setAttribute('content', canonicalUrl);
+      project.__title = title;
+      project.__summary = summary;
 
       document.getElementById('p-title').textContent = title;
       document.getElementById('p-summary').textContent = summary;
@@ -165,18 +148,19 @@
         : [project.image];
       const focus = localize(project.details, 'focus') || project.focus;
       const heroImage = gallery[0] || project.image;
-      const absoluteImage = `${domain}/${heroImage.replace(/^\//, '')}`;
-      document.querySelector('meta[property="og:image"]').setAttribute('content', absoluteImage);
-      document.querySelector('meta[property="twitter:image"]').setAttribute('content', absoluteImage);
+      project.__shareImage = heroImage;
+      window.__currentProject = project;
+      window.__currentProjectLang = currentLang;
+      window.__projectCanonical = canonicalUrl;
       galleryEl.innerHTML = gallery
-        .map((img, index) => imgBlock(img, {
-          alt: `${title} visual ${index + 1}`,
-          context: 'gallery',
-          focus,
-          slug: project.slug,
-          index,
-          sizes: '(min-width: 960px) 600px, (min-width: 720px) 48vw, 92vw'
-        }))
+        .map((img, index) =>
+          imgBlock(img, `${title} visual ${index + 1}`, focus, {
+            context: 'gallery',
+            slug: project.slug,
+            index,
+            sizes: '(min-width: 960px) 600px, (min-width: 720px) 48vw, 92vw'
+          })
+        )
         .join('');
       refreshImageEnhancements(galleryEl);
 
@@ -248,6 +232,47 @@
         ld.textContent = JSON.stringify(breadcrumb);
       }
     });
+  </script>
+  <script>
+    (async function setMeta(){
+      const cfg = await fetch('content/config.json', {cache:'no-store'}).then(r=>r.json()).catch(()=>({portfolio: location.origin}));
+      const url = new URL(location.href);
+      const slug = url.searchParams.get('p') || '';
+      const domain = (cfg.portfolio || cfg.website || location.origin).replace(/\/$/, '');
+      const canonical = `${domain}/project.html?p=${encodeURIComponent(slug)}`;
+      const canEl = document.getElementById('canonical');
+      if(canEl) canEl.href = canonical;
+      window.__portfolioDomain = domain;
+      window.__projectCanonical = canonical;
+      const set = (sel, val) => {
+        const el = document.querySelector(sel);
+        if(el) el.setAttribute('content', val);
+      };
+      const waitP = ()=> new Promise(res=>{
+        const i = setInterval(()=>{
+          if(window.__currentProject){
+            clearInterval(i);
+            res(window.__currentProject);
+          }
+        }, 20);
+      });
+      const p = await waitP();
+      const title = p.__title || p.title || 'Project';
+      document.title = `${title} — Mohamed Ali Mabrouki`;
+      const desc = p.__summary || p.summary || 'Automotive engineering project';
+      const share = (p.__shareImage || p.image || 'assets/og-image.jpg').replace(/^\//, '');
+      const shareUrl = `${domain}/${share}`;
+      set('meta[name="description"]', desc);
+      set('meta[property="og:title"]', document.title);
+      set('meta[name="twitter:title"]', document.title);
+      set('meta[property="og:description"]', desc);
+      set('meta[name="twitter:description"]', desc);
+      set('meta[property="og:url"]', canonical);
+      set('meta[name="twitter:image"]', shareUrl);
+      set('meta[property="og:image"]', shareUrl);
+      const twitterUrl = document.querySelector('meta[property="twitter:url"]');
+      if(twitterUrl) twitterUrl.setAttribute('content', canonical);
+    })();
   </script>
 </body>
 </html>
