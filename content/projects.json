@@ -1,14 +1,14 @@
 [
   {
-    "title": "EC Homologation — Toyota ProAce City",
-    "title_fr": "Homologation CE — Toyota ProAce City",
+    "title": "EC Homologation — Toyota ProAce City (K9T-N1)",
+    "title_fr": "Homologation CE — Toyota ProAce City (K9T-N1)",
     "tags": [
       "Homologation",
       "Toyota",
       "LCV"
     ],
-    "summary": "Whole Vehicle Type Approval programme for Toyota's compact van derivative; documentation sets, annex evidence, markings, and CoP traceability.",
-    "summary_fr": "Programme WVTA pour le fourgon compact Toyota ; constitution des dossiers, preuves annexes, marquages et traçabilité CoP.",
+    "summary": "WVTA stream for Toyota's K9T-N1 derivative; annex evidence packs, markings, and CoP traceability.",
+    "summary_fr": "Flux WVTA pour la dérivation K9T-N1 de Toyota ; preuves annexes, marquages et traçabilité CoP.",
     "image": "assets/proace-city.jpg",
     "credit": "Toyota media placeholder",
     "bullets": [
@@ -21,10 +21,10 @@
       "Coordination marquages VIN, e-markings et conformité FCM.",
       "Interface UTAC/CNRV et consolidation du dossier de preuves."
     ],
-    "slug": "ec-homologation-toyota-proace-city",
+    "slug": "ec-homologation-toyota-proace-city-k9t-n1",
     "details": {
-      "overview": "Whole Vehicle Type Approval programme for Toyota's compact van derivative; documentation sets, annex evidence, markings, and CoP traceability.",
-      "overview_fr": "Programme WVTA pour le fourgon compact Toyota ; constitution des dossiers, preuves annexes, marquages et traçabilité CoP.",
+      "overview": "WVTA stream for Toyota's K9T-N1 derivative; annex evidence packs, markings, and CoP traceability.",
+      "overview_fr": "Flux WVTA pour la dérivation K9T-N1 de Toyota ; preuves annexes, marquages et traçabilité CoP.",
       "highlights": [
         "EC WVTA completion covering emissions, safety, and lighting annexes.",
         "VIN labelling, e-markings, and FCM conformity coordination.",
@@ -52,15 +52,15 @@
     }
   },
   {
-    "title": "EC Homologation — Peugeot Rifter & Citroën Berlingo",
-    "title_fr": "Homologation CE — Peugeot Rifter & Citroën Berlingo",
+    "title": "EC Homologation — PSA K9G-N1",
+    "title_fr": "Homologation CE — PSA K9G-N1",
     "tags": [
       "Homologation",
       "Stellantis",
       "LCV"
     ],
-    "summary": "Stellantis compact van branch; aligning test evidence and dossiers across Peugeot Rifter and Citroën Berlingo programmes.",
-    "summary_fr": "Branche fourgons compacts Stellantis ; alignement des preuves d'essais et dossiers pour Peugeot Rifter et Citroën Berlingo.",
+    "summary": "Rifter/Berlingo branch of PSA's K9G-N1 stream; annex evidence, variant matrix, and DoC governance.",
+    "summary_fr": "Branche Rifter/Berlingo du flux K9G-N1 de PSA ; preuves annexes, matrice variantes et pilotage DoC.",
     "image": "assets/rifter.jpg",
     "credit": "Peugeot/Citroën media placeholder",
     "bullets": [
@@ -73,10 +73,10 @@
       "Synthèses conformité éclairage, freinage et direction sur les annexes.",
       "Collecte des déclarations fournisseurs et suivi DoC."
     ],
-    "slug": "ec-homologation-peugeot-rifter-citroen-berlingo",
+    "slug": "ec-homologation-psa-k9g-n1",
     "details": {
-      "overview": "Stellantis compact van branch; aligning test evidence and dossiers across Peugeot Rifter and Citroën Berlingo programmes.",
-      "overview_fr": "Branche fourgons compacts Stellantis ; alignement des preuves d'essais et dossiers pour Peugeot Rifter et Citroën Berlingo.",
+      "overview": "Rifter/Berlingo branch of PSA's K9G-N1 stream; annex evidence, variant matrix, and DoC governance.",
+      "overview_fr": "Branche Rifter/Berlingo du flux K9G-N1 de PSA ; preuves annexes, matrice variantes et pilotage DoC.",
       "highlights": [
         "Variant matrix definition and Certificate of Conformity data population.",
         "Lighting, braking, and steering conformity summaries across annexes.",
@@ -259,15 +259,15 @@
     }
   },
   {
-    "title": "Renault Master — Axles & Wheel Assembly Launch",
-    "title_fr": "Renault Master — Lancement essieux & roue",
+    "title": "XDD — Axles & Wheel-End (Renault Master)",
+    "title_fr": "XDD — Essieux & roue (Renault Master)",
     "tags": [
       "Chassis",
       "Renault",
       "Industrialisation"
     ],
-    "summary": "Axles and wheel-end industrialisation support on Renault Master; supplier readiness and torque/runout assurance for launch.",
-    "summary_fr": "Industrialisation essieux et roue sur Renault Master ; préparation fournisseurs et tenue couple/faux-rond pour le lancement.",
+    "summary": "XDD stream on Renault Master: Gen3 hub bearing launch, supplier readiness, and torque/runout governance.",
+    "summary_fr": "Flux XDD sur Renault Master : lancement roulement Gen3, préparation fournisseurs et pilotage couple/faux-rond.",
     "image": "assets/renault-master.jpg",
     "credit": "Renault press placeholder",
     "bullets": [
@@ -280,10 +280,10 @@
       "Suivi QCDP du freeze design au lancement ; préparation fournisseurs.",
       "Maîtrise couple/faux-rond ; gouvernance mesures fin de ligne."
     ],
-    "slug": "renault-master-axles-wheel-assembly",
+    "slug": "renault-master-xdd-axles",
     "details": {
-      "overview": "Axles and wheel-end industrialisation support on Renault Master; supplier readiness and torque/runout assurance for launch.",
-      "overview_fr": "Industrialisation essieux et roue sur Renault Master ; préparation fournisseurs et tenue couple/faux-rond pour le lancement.",
+      "overview": "XDD stream on Renault Master: Gen3 hub bearing launch, supplier readiness, and torque/runout governance.",
+      "overview_fr": "Flux XDD sur Renault Master : lancement roulement Gen3, préparation fournisseurs et pilotage couple/faux-rond.",
       "highlights": [
         "Gen3 hub-bearing units: preload, sealing, ABS sensor integration.",
         "QCDP tracking from design freeze to launch; supplier readiness.",

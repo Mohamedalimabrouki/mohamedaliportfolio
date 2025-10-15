@@ -55,14 +55,20 @@ function escapeHTML(value) {
     .replace(/>/g, '&gt;');
 }
 
-async function loadJSON(url, { cache = 'no-store' } = {}) {
+async function loadJSON(url, options = {}) {
+  const cache = options.cache ?? 'no-store';
+  const timeout = typeof options.timeout === 'number' ? options.timeout : 8000;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeout);
   try {
-    const response = await fetch(url, { cache });
+    const response = await fetch(url, { cache, signal: controller.signal });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (err) {
-    console.warn('Could not load', url, err);
+    console.warn('Failed to load', url, err);
     return null;
+  } finally {
+    clearTimeout(timer);
   }
 }
 
@@ -133,9 +139,11 @@ function imgBlock(src, opts, legacyFocus) {
     );
   }
   if (!sources.length) {
-    const webp = src.replace(/\.(jpe?g|png)$/i, '.webp');
-    if (webp !== src) {
-      sources.push(`<source type="image/webp" srcset="${escapeAttr(webp)}"${sizeAttr}>`);
+    const match = src.match(/\.(jpe?g|png)$/i);
+    if (match) {
+      const base = src.replace(/\.(jpe?g|png)$/i, '');
+      sources.push(`<source srcset="${escapeAttr(base + '.avif')}" type="image/avif"${sizeAttr}>`);
+      sources.push(`<source srcset="${escapeAttr(base + '.webp')}" type="image/webp"${sizeAttr}>`);
     }
   }
 
@@ -200,18 +208,49 @@ function renderProjectCard(project) {
   </a>`;
 }
 
+function cardHTML(project) {
+  return renderProjectCard(project);
+}
+
 function renderProjects() {
   const grid = document.getElementById('project-grid');
   if (!grid) return;
   if (!state.projects.length) {
-    grid.innerHTML =
-      '<div class="card muted" role="note">Case studies will appear once content is published.</div>';
+    if (!grid.hasAttribute('data-ssr')) {
+      grid.innerHTML =
+        '<div class="card muted" role="note">Case studies will appear once content is published.</div>';
+    }
     refreshImageEnhancements(grid);
     return;
   }
+  grid.removeAttribute('data-ssr');
   grid.innerHTML = state.projects.map(renderProjectCard).join('');
   refreshImageEnhancements(grid);
   applyFilters(state.activeTag);
+}
+
+async function applyHeadMetaHome() {
+  const cfg = await loadJSON('content/config.json');
+  if (!cfg) return;
+  const domain = (cfg.portfolio || cfg.website || location.origin).replace(/\/$/, '');
+  const can = document.querySelector('#canonical');
+  if (can) can.setAttribute('href', `${domain}/`);
+  const og = document.querySelector('meta[property="og:image"]');
+  const tw = document.querySelector('meta[name="twitter:image"], meta[property="twitter:image"]');
+  if (og) og.setAttribute('content', `${domain}/assets/og-image.jpg`);
+  if (tw) tw.setAttribute('content', `${domain}/assets/og-image.jpg`);
+}
+
+async function mountProjects() {
+  const grid = document.getElementById('project-grid');
+  if (!grid) return;
+  const data = await loadJSON('content/projects.json');
+  if (data && Array.isArray(data) && data.length) {
+    state.projects = data;
+    renderProjects();
+  } else {
+    console.warn('Using SSR fallback cards.');
+  }
 }
 
 function initRevealObserver() {
@@ -433,6 +472,32 @@ function setupFilters() {
   });
 }
 
+function trackCTA(name) {
+  if (!name) return;
+  try {
+    trackEvent('CTA Click', { button: name });
+  } catch (err) {
+    console.warn('CTA tracking failed', err);
+  }
+}
+
+function wireCTAs() {
+  const map = [
+    ['a.btn[href$=".docx"]', 'Download CV'],
+    ['a[href^="mailto:"]', 'Email'],
+    ['a[href^="https://wa.me"], a[href*="whatsapp"]', 'WhatsApp'],
+    ['a[href*="linkedin.com"]', 'LinkedIn']
+  ];
+  map.forEach(([selector, label]) => {
+    document.querySelectorAll(selector).forEach(link => {
+      if (link.dataset.ctaBound) return;
+      if (link.hasAttribute('data-cta')) return;
+      link.dataset.ctaBound = '1';
+      link.addEventListener('click', () => trackCTA(label));
+    });
+  });
+}
+
 function setupTheme() {
   const btn = document.getElementById('themeToggle');
   if (!btn) return;
@@ -520,15 +585,8 @@ function setupLang() {
   applyI18n(state.lang);
 }
 
-async function loadProjects() {
-  const projects = await loadJSON('content/projects.json');
-  if (projects && Array.isArray(projects)) {
-    state.projects = projects;
-    renderProjects();
-  }
-}
-
 function setupCtaTracking() {
+  wireCTAs();
   document.addEventListener(
     'click',
     evt => {
@@ -536,7 +594,7 @@ function setupCtaTracking() {
       if (!target) return;
       const label = target.dataset.cta;
       if (!label) return;
-      trackEvent('CTA Click', { button: label });
+      trackCTA(label);
     },
     { capture: true }
   );
@@ -550,7 +608,9 @@ async function bootstrap() {
   setupCtaTracking();
   initFocusPanel();
   await loadManifest();
-  await loadProjects();
+  await mountProjects();
+  await applyHeadMetaHome();
+  wireCTAs();
   refreshImageEnhancements(document);
   updateFilterStatus(state.activeTag, getVisibleCount());
 }
