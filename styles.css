@@ -112,8 +112,8 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:var(--spacing-3) 0;
-  gap:var(--spacing-5);
+  padding:var(--spacing-2) 0;
+  gap:var(--spacing-4);
 }
 .brand{
   display:flex;
@@ -122,7 +122,7 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
   color:inherit;
 }
 .brand-avatar{
-  width:88px;
+  width:72px;
   aspect-ratio:1/1;
   border-radius:50%;
   overflow:hidden;
@@ -188,17 +188,17 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
 .chip.ghost{background:transparent;}
 
 .hero{
-  padding:var(--spacing-10) 0 var(--spacing-9);
+  padding:var(--spacing-8) 0 var(--spacing-7);
 }
 .hero-grid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:var(--spacing-8);
+  gap:var(--spacing-6);
   align-items:center;
 }
 .hero-media{display:flex;justify-content:center;}
 .hero-portrait{
-  width:min(420px,100%);
+  width:min(360px,100%);
   aspect-ratio:3/4;
   border-radius:var(--radius-lg);
   overflow:hidden;
@@ -209,7 +209,7 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
 
 .hero-content h2{
   margin:0 0 var(--spacing-4);
-  font-size:2.5rem;
+  font-size:2.25rem;
   line-height:1.2;
   color:var(--ink-strong);
   letter-spacing:-0.01em;
@@ -484,13 +484,13 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
 }
 
 @media (max-width:960px){
-  .header-bar{padding:var(--spacing-3) 0;}
-  .brand-meta h1{font-size:1.2rem;}
-  .brand-avatar{width:72px;}
+  .header-bar{padding:var(--spacing-2) 0;}
+  .brand-meta h1{font-size:1.15rem;}
+  .brand-avatar{width:64px;}
   .menu-toggle{display:inline-flex;}
   .main-nav{
     position:absolute;
-    inset:72px 16px auto;
+    inset:64px 16px auto;
     background:var(--surface);
     border:1px solid var(--stroke);
     border-radius:var(--radius-md);
@@ -503,9 +503,9 @@ a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:4px;}
   }
   .main-nav.open{display:flex;}
   .nav-actions{width:100%;justify-content:space-between;}
-  .hero{padding:var(--spacing-9) 0;}
-  .hero-grid{grid-template-columns:1fr;gap:var(--spacing-7);}
-  .hero-portrait{width:min(320px,100%);}
+  .hero{padding:var(--spacing-8) 0;}
+  .hero-grid{grid-template-columns:1fr;gap:var(--spacing-6);}
+  .hero-portrait{width:min(280px,100%);}
   .section{padding:var(--spacing-8) 0;}
 }
 
