@@ -1,39 +1,44 @@
 :root {
   color-scheme: dark;
   --surface-900: #0b1220;
-  --surface-880: #101a2c;
-  --surface-850: #141f35;
-  --surface-800: #1a263f;
-  --text-primary: #f8fbff;
-  --text-muted: rgba(220, 229, 246, 0.74);
+  --surface-800: #101a2c;
+  --surface-700: #1c273a;
+  --surface-600: #273246;
+  --surface-500: #2f3b53;
+  --surface-200: rgba(255, 255, 255, 0.08);
+  --surface-100: #f3f6fc;
+  --text-primary: #f5f8ff;
+  --text-muted: rgba(245, 248, 255, 0.78);
   --text-inverse: #0b1220;
-  --accent-500: #4a92ff;
-  --accent-400: #2f7bfd;
-  --accent-300: #5f9bff;
-  --accent-200: #aac7ff;
-  --border-200: rgba(108, 134, 176, 0.28);
-  --focus-ring: rgba(79, 150, 255, 0.72);
-  --text-on-accent: #06102a;
+  --accent-300: #74bbff;
+  --accent-400: #5ca5ff;
+  --accent-500: #3d8aff;
+  --accent-600: #2b6fcc;
+  --focus-ring: rgba(139, 196, 255, 0.8);
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --shadow-card: 0 24px 60px rgba(8, 15, 35, 0.26);
+  --shadow-soft: 0 32px 90px rgba(11, 17, 31, 0.35);
 }
 
-html[data-theme="light"] {
+html[data-theme='light'],
+body[data-theme='light'] {
   color-scheme: light;
-  --surface-900: #f7f9ff;
-  --surface-880: #ffffff;
-  --surface-850: #f1f5ff;
-  --surface-800: #e6edff;
-  --text-primary: #10213f;
-  --text-muted: rgba(47, 74, 117, 0.82);
-  --text-inverse: #f6f8ff;
-  --accent-500: #1e63d0;
-  --accent-400: #2f7bfd;
-  --accent-300: #5a98ff;
-  --accent-200: #1e63d0;
-  --border-200: rgba(61, 96, 157, 0.22);
-  --focus-ring: rgba(47, 123, 253, 0.5);
-  --text-on-accent: #ffffff;
-}
-
-html[data-theme="dark"] {
-  color-scheme: dark;
+  --surface-900: #f7f9fd;
+  --surface-800: #eef3fb;
+  --surface-700: #d9e3f7;
+  --surface-600: #c3d5f0;
+  --surface-500: #9bbce6;
+  --surface-200: rgba(21, 34, 61, 0.08);
+  --surface-100: #0b1220;
+  --text-primary: #15223d;
+  --text-muted: rgba(21, 34, 61, 0.7);
+  --text-inverse: #f5f8ff;
+  --accent-300: #4b8dff;
+  --accent-400: #2f74ff;
+  --accent-500: #1d57d9;
+  --accent-600: #143ea7;
+  --focus-ring: rgba(47, 116, 255, 0.35);
+  --border-soft: rgba(21, 34, 61, 0.12);
+  --shadow-card: 0 18px 45px rgba(16, 34, 64, 0.16);
+  --shadow-soft: 0 20px 70px rgba(71, 104, 152, 0.2);
 }
