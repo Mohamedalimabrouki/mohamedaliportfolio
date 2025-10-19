@@ -5,6 +5,7 @@
 ```bash
 npm install
 npm run build:images   # regenerate responsive assets & manifest
+npm run build:sitemap  # refresh sitemap.xml from JSON content
 npx playwright install # first run only, installs browsers
 npm run test:ui        # optional check that UI smoke tests pass
 ```
@@ -19,6 +20,10 @@ node tools/dev-server.mjs
 ## Image pipeline
 
 The Sharp-based pipeline lives in `tools/image-pipeline.mjs` and reads every JPG/PNG in `assets/`. It trims borders, applies attention-based crops, and emits AVIF/WEBP/JPEG renditions (320–1600px width) alongside `content/assets-manifest.json`. Run it whenever raw assets change.
+
+## Sitemap generator
+
+`npm run build:sitemap` rewrites `sitemap.xml` using the base URL from `content/config.json` and every slug in `content/projects.json`. Execute it after adding or removing projects so search crawlers stay in sync.
 
 ## Internationalisation
 

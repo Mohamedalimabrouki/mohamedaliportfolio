@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build:images": "node tools/image-pipeline.mjs",
+    "build:sitemap": "node scripts/generate-sitemap.mjs",
     "test": "npm run test:ui",
     "test:ui": "playwright test",
     "lighthouse": "lhci autorun"
