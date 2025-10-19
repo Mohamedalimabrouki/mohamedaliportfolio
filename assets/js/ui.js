@@ -156,7 +156,7 @@
     if (!container) return;
     const cards = Array.from(container.querySelectorAll('.project-card'));
     const selectStack = doc.querySelector('select[data-filter="stack"]');
-    const selectRole = doc.querySelector('select[data-filter="role"]');
+    const selectTag = doc.querySelector('select[data-filter="tag"]');
     const selectYear = doc.querySelector('select[data-filter="year"]');
     const status = doc.querySelector('[data-status]');
     if (!selectStack || !selectYear || !status) return;
@@ -178,17 +178,17 @@
 
     function applyFilters() {
       const stackValue = selectStack.value;
-      const roleValue = selectRole ? selectRole.value : 'all';
+      const tagValue = selectTag ? selectTag.value : 'all';
       const yearValue = selectYear.value;
       const visible = [];
       cards.forEach((card) => {
         const stackTokens = (card.dataset.stack || '').split(',').filter(Boolean);
+        const tagTokens = (card.dataset.tags || '').split(',').filter(Boolean);
         const year = card.dataset.year || '';
-        const roleToken = card.dataset.role || '';
         const matchesStack = stackValue === 'all' || stackTokens.includes(stackValue);
-        const matchesRole = roleValue === 'all' || roleToken === roleValue;
+        const matchesTag = tagValue === 'all' || tagTokens.includes(tagValue);
         const matchesYear = yearValue === 'all' || year === yearValue;
-        const isVisible = matchesStack && matchesRole && matchesYear;
+        const isVisible = matchesStack && matchesTag && matchesYear;
         card.style.display = isVisible ? '' : 'none';
         if (isVisible) visible.push(card);
       });
@@ -196,8 +196,8 @@
     }
 
     selectStack.addEventListener('change', applyFilters);
-    if (selectRole) {
-      selectRole.addEventListener('change', applyFilters);
+    if (selectTag) {
+      selectTag.addEventListener('change', applyFilters);
     }
     selectYear.addEventListener('change', applyFilters);
     const loadingLabel = status.dataset.statusLoading;

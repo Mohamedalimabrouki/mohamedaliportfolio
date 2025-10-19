@@ -54,6 +54,19 @@
       "fr": "Français"
     }
   },
+  "theme_switcher": {
+    "label": "Theme",
+    "options": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "descriptions": {
+      "light": "Switch to light theme",
+      "dark": "Switch to dark theme",
+      "system": "Follow system setting"
+    }
+  },
   "hero": {
     "eyebrow": "Euro 7 · WVTA · Wheel-End Launch",
     "headline": "Bring compliant multi-brand vans to market on schedule.",
@@ -279,19 +292,16 @@
   },
   "projects_page": {
     "title": "Projects",
-    "intro": "Filter projects by capability or year to explore relevant delivery proof.",
+    "intro": "Filter projects by capability, tag, or year to explore relevant delivery proof.",
     "filter_group_labels": {
       "stack": "Capability",
-      "role": "Role",
+      "tag": "Tag",
       "year": "Year"
     },
-    "filters": {
-      "all": "All",
-      "homologation": "Homologation",
-      "braking": "Braking",
-      "chassis": "Chassis",
-      "industrialisation": "Industrialisation",
-      "integration": "Integration"
+    "filter_defaults": {
+      "stack": "All capabilities",
+      "tag": "All tags",
+      "year": "All years"
     },
     "status_messages": {
       "loading": "Loading projects…",
@@ -484,6 +494,9 @@
     "skip_to_content": "Skip to content",
     "back_to_top": "Back to top",
     "reduce_motion": "Motion reduced for accessibility.",
-    "view_fr": "Afficher en français"
+    "view_fr": "Afficher en français",
+    "theme_status_light": "Light theme selected.",
+    "theme_status_dark": "Dark theme selected.",
+    "theme_status_system": "Theme follows system preference."
   }
 }

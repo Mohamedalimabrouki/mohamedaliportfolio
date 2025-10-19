@@ -54,6 +54,19 @@
       "fr": "Français"
     }
   },
+  "theme_switcher": {
+    "label": "Thème",
+    "options": {
+      "light": "Clair",
+      "dark": "Sombre",
+      "system": "Système"
+    },
+    "descriptions": {
+      "light": "Passer au thème clair",
+      "dark": "Passer au thème sombre",
+      "system": "Suivre le réglage système"
+    }
+  },
   "hero": {
     "eyebrow": "Euro 7 · WVTA · Lancement roue",
     "headline": "Mettre sur le marché des utilitaires multimarques conformes, dans les temps.",
@@ -279,19 +292,16 @@
   },
   "projects_page": {
     "title": "Projets",
-    "intro": "Filtrez par métier ou année pour explorer les références pertinentes.",
+    "intro": "Filtrez par capacité, étiquette ou année pour explorer les références pertinentes.",
     "filter_group_labels": {
       "stack": "Capacité",
-      "role": "Rôle",
+      "tag": "Étiquette",
       "year": "Année"
     },
-    "filters": {
-      "all": "Tous",
-      "homologation": "Homologation",
-      "braking": "Freinage",
-      "chassis": "Châssis",
-      "industrialisation": "Industrialisation",
-      "integration": "Intégration"
+    "filter_defaults": {
+      "stack": "Toutes les capacités",
+      "tag": "Toutes les étiquettes",
+      "year": "Toutes les années"
     },
     "status_messages": {
       "loading": "Chargement des projets…",
@@ -484,6 +494,9 @@
     "skip_to_content": "Aller au contenu",
     "back_to_top": "Retour en haut",
     "reduce_motion": "Animations réduites pour l'accessibilité.",
-    "view_fr": "Voir en français"
+    "view_fr": "Voir en français",
+    "theme_status_light": "Thème clair activé.",
+    "theme_status_dark": "Thème sombre activé.",
+    "theme_status_system": "Le thème suit le système."
   }
 }

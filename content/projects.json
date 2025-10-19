@@ -3,13 +3,18 @@
     "id": "ec-homologation-toyota-proace-city",
     "title_en": "EC Homologation — Toyota ProAce City",
     "title_fr": "Homologation CE — Toyota ProAce City",
-    "period": "2021-2023",
+    "period": "2021–2023",
     "role": "Type Approval Programme Lead · Chef de programme homologation",
     "client_or_brand": "Toyota Motor Europe",
     "stack": [
       "WVTA",
       "Regulatory Compliance",
       "LCV Programme"
+    ],
+    "tags": [
+      "Toyota",
+      "Type Approval",
+      "Utility Vans"
     ],
     "highlights_en": [
       "EC WVTA completion covering emissions, safety, and lighting annexes.",
@@ -44,13 +49,18 @@
     "id": "ec-homologation-peugeot-rifter-citroen-berlingo",
     "title_en": "EC Homologation — Peugeot Rifter & Citroën Berlingo",
     "title_fr": "Homologation CE — Peugeot Rifter & Citroën Berlingo",
-    "period": "2021-2023",
+    "period": "2021–2023",
     "role": "Multi-brand Type Approval Coordinator · Coordinateur homologation multi-marques",
     "client_or_brand": "Stellantis (Peugeot & Citroën)",
     "stack": [
       "Homologation",
       "Stellantis",
       "Data Governance"
+    ],
+    "tags": [
+      "Stellantis",
+      "Multi-brand",
+      "Type Approval"
     ],
     "highlights_en": [
       "Variant matrix definition and Certificate of Conformity data population.",
@@ -85,13 +95,18 @@
     "id": "ec-homologation-opel-combo",
     "title_en": "EC Homologation — Opel Combo",
     "title_fr": "Homologation CE — Opel Combo",
-    "period": "2021-2023",
+    "period": "2021–2023",
     "role": "Type Approval Programme Lead · Chef de programme homologation",
     "client_or_brand": "Opel / Vauxhall",
     "stack": [
       "Homologation",
       "LCV",
       "Compliance"
+    ],
+    "tags": [
+      "Opel",
+      "Compliance",
+      "Type Approval"
     ],
     "highlights_en": [
       "CoP and VIN label audits with harmonised variant data.",
@@ -126,13 +141,18 @@
     "id": "euro-7-braking-brake-by-wire-integration",
     "title_en": "Euro 7 Braking — Brake-by-Wire Integration",
     "title_fr": "Freinage Euro 7 — Intégration brake-by-wire",
-    "period": "2021-2023",
+    "period": "2021–2023",
     "role": "Euro 7 Brake-by-Wire Lead · Responsable freinage Euro 7",
     "client_or_brand": "Toyota & Stellantis Platforms",
     "stack": [
       "Euro 7",
       "Brake-by-Wire",
       "Diagnostics"
+    ],
+    "tags": [
+      "Euro 7",
+      "Brake Systems",
+      "Systems Integration"
     ],
     "highlights_en": [
       "System architecture review covering ABS/ESC interactions and redundancy.",
@@ -167,13 +187,18 @@
     "id": "brake-hardware-calipers-pads-carriers",
     "title_en": "Brake Hardware — Calipers, Pads, Carriers",
     "title_fr": "Freinage — Étriers, plaquettes, supports",
-    "period": "2020-2021",
+    "period": "2020–2021",
     "role": "Brake Hardware Industrialisation Lead · Responsable industrialisation freinage",
     "client_or_brand": "Multi-brand LCV Platform",
     "stack": [
       "Braking",
       "Industrialisation",
       "Supplier Readiness"
+    ],
+    "tags": [
+      "Braking",
+      "Industrialisation",
+      "Supplier Quality"
     ],
     "highlights_en": [
       "Pad/shim/noise countermeasures and bedding protocols.",
@@ -208,13 +233,18 @@
     "id": "renault-master-axles-wheel-assembly",
     "title_en": "Renault Master — Axles & Wheel Assembly Launch",
     "title_fr": "Renault Master — Lancement essieux & roue",
-    "period": "2018-2021",
+    "period": "2018–2021",
     "role": "Chassis & Wheel-End Launch Lead · Responsable lancement châssis",
     "client_or_brand": "Renault Master Programme",
     "stack": [
       "Chassis",
       "Wheel-End",
       "Supplier Launch"
+    ],
+    "tags": [
+      "Renault",
+      "Wheel-End",
+      "Launch"
     ],
     "highlights_en": [
       "Gen3 hub-bearing units: preload, sealing, ABS sensor integration.",
@@ -249,11 +279,16 @@
     "id": "wheel-end-hub-bearing-unit-gen3",
     "title_en": "Wheel-End — Hub Bearing Unit (Gen3)",
     "title_fr": "Roue — Roulement moyeu (Gen3)",
-    "period": "2018-2020",
+    "period": "2018–2020",
     "role": "Wheel-End Engineering Lead · Responsable ingénierie roue",
     "client_or_brand": "Renault & Tier-1 Suppliers",
     "stack": [
       "Wheel-End",
+      "Durability",
+      "Diagnostics"
+    ],
+    "tags": [
+      "Renault",
       "Durability",
       "Diagnostics"
     ],
@@ -290,13 +325,18 @@
     "id": "citroen-c3-exteriors-mounting",
     "title_en": "Citroën C3 Programme — Exteriors & Mounting",
     "title_fr": "Programme Citroën C3 — Extérieurs & fixations",
-    "period": "2016-2018",
+    "period": "2016–2018",
     "role": "Exterior Integration Lead · Responsable intégration extérieurs",
     "client_or_brand": "Citroën C3 Programme",
     "stack": [
       "Integration",
       "CAD to Tooling",
       "Validation"
+    ],
+    "tags": [
+      "Citroën",
+      "Body Exteriors",
+      "Industrialisation"
     ],
     "highlights_en": [
       "CAD to tooling: GD&T, draft, parting, ribs, bosses, minimum wall.",

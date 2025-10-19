@@ -29,7 +29,7 @@ for (const project of projects) {
   };
 }
 
-const criticalCss = `:root{--header-height:4rem;--max-width:1120px;--radius-base:16px;--radius-pill:999px;--shadow-soft:0 25px 80px rgba(8,15,35,.22);--shadow-card:0 16px 40px rgba(15,23,42,.16);--transition-base:0.35s cubic-bezier(.25,.8,.25,1);--surface-900:#0b1220;--surface-800:#101a2c;--surface-700:#1c273a;--surface-600:#273246;--surface-500:#2f3b53;--surface-100:#f3f6fc;--accent-400:#5ca5ff;--accent-500:#3d8aff;--accent-600:#2b6fcc;--text-primary:#f5f8ff;--text-muted:rgba(245,248,255,.78);--text-inverse:#0b1220;--focus-ring:#8bc4ff;--border-soft:rgba(255,255,255,.08);--gradient-hero:radial-gradient(circle at 20% 20%,rgba(92,165,255,.32),transparent 60%),radial-gradient(circle at 80% 0,rgba(255,120,80,.28),transparent 55%),linear-gradient(140deg,#0b1220 35%,#111c2f 100%);}*{box-sizing:border-box;}html{font-size:100%;scroll-behavior:smooth;background:var(--surface-900);}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";color:var(--text-primary);background:var(--surface-900);min-height:100vh;}img{display:block;max-width:100%;height:auto;}a{color:var(--accent-400);text-decoration:none;}a:hover,a:focus-visible{color:var(--accent-500);}button{font-family:inherit;}main{display:block;}section{padding-block:6rem;}@media (max-width: 768px){section{padding-block:4.5rem;}}.container{width:90%;max-width:var(--max-width);margin:0 auto;}::selection{background:rgba(92,165,255,.3);}body[data-reduced-motion="true"] *{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}
+const criticalCss = `:root{color-scheme:light dark;--header-height:4rem;--max-width:1120px;--radius-base:16px;--radius-pill:999px;--transition-base:.35s cubic-bezier(.25,.8,.25,1);--shadow-soft:0 24px 70px rgba(71,104,152,.18);--shadow-card:0 18px 45px rgba(16,34,64,.16);--surface-900:#f7f9fd;--surface-800:#eef3fb;--surface-700:#d9e3f7;--surface-600:#c3d5f0;--surface-500:#9bbce6;--surface-200:rgba(21,34,61,.08);--surface-100:#0b1220;--surface-overlay:rgba(255,255,255,.78);--surface-overlay-strong:rgba(255,255,255,.92);--surface-overlay-muted:rgba(21,34,61,.06);--surface-card:rgba(255,255,255,.92);--surface-card-border:rgba(21,34,61,.1);--surface-card-emphasis:rgba(47,72,123,.18);--badge-bg:rgba(47,116,255,.1);--badge-color:#1d57d9;--pill-bg:rgba(21,34,61,.06);--pill-border:rgba(21,34,61,.12);--chip-bg:rgba(21,34,61,.08);--chip-border:rgba(21,34,61,.1);--text-primary:#15223d;--text-muted:rgba(21,34,61,.7);--text-inverse:#f5f8ff;--accent-300:#4b8dff;--accent-400:#2f74ff;--accent-500:#1d57d9;--accent-600:#143ea7;--text-on-accent:#06102a;--focus-ring:rgba(47,116,255,.4);--border-soft:rgba(21,34,61,.12);--gradient-hero:radial-gradient(circle at 20% 20%,rgba(47,116,255,.18),transparent 55%),radial-gradient(circle at 80% 0,rgba(255,120,80,.16),transparent 50%),linear-gradient(140deg,#f7f9fd 25%,#e4ecfa 100%);--hero-texture-color:rgba(21,34,61,.08);}html[data-theme='dark']{color-scheme:dark;--surface-900:#0b1220;--surface-800:#101a2c;--surface-700:#1c273a;--surface-600:#273246;--surface-500:#2f3b53;--surface-200:rgba(255,255,255,.08);--surface-overlay:rgba(11,18,32,.78);--surface-overlay-strong:rgba(11,18,32,.92);--surface-overlay-muted:rgba(15,25,40,.45);--surface-card:rgba(18,26,42,.85);--surface-card-border:rgba(255,255,255,.05);--surface-card-emphasis:rgba(11,28,58,.45);--badge-bg:rgba(92,165,255,.12);--badge-color:#a6cbff;--pill-bg:rgba(255,255,255,.05);--pill-border:rgba(255,255,255,.1);--chip-bg:rgba(15,25,40,.6);--chip-border:rgba(255,255,255,.06);--text-primary:#f5f8ff;--text-muted:rgba(245,248,255,.78);--text-inverse:#0b1220;--accent-300:#74bbff;--accent-400:#5ca5ff;--accent-500:#3d8aff;--accent-600:#2b6fcc;--focus-ring:rgba(139,196,255,.6);--border-soft:rgba(255,255,255,.08);--shadow-card:0 24px 60px rgba(8,15,35,.3);--shadow-soft:0 30px 90px rgba(11,17,31,.38);--gradient-hero:radial-gradient(circle at 20% 20%,rgba(92,165,255,.32),transparent 60%),radial-gradient(circle at 80% 0,rgba(255,120,80,.24),transparent 55%),linear-gradient(140deg,#0b1220 35%,#111c2f 100%);--hero-texture-color:rgba(255,255,255,.08);}html[data-theme='light']{color-scheme:light;}*{box-sizing:border-box;}html{font-size:100%;scroll-behavior:smooth;background:var(--surface-900);}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";color:var(--text-primary);background:var(--surface-900);min-height:100vh;-webkit-font-smoothing:antialiased;transition:background-color var(--transition-base),color var(--transition-base);}img{display:block;max-width:100%;height:auto;}a{color:var(--accent-400);text-decoration:none;transition:color var(--transition-base);}a:hover,a:focus-visible{color:var(--accent-500);}button{font-family:inherit;}main{display:block;}section{padding-block:6rem;}@media(max-width:768px){section{padding-block:4.5rem;}}.container{width:90%;max-width:var(--max-width);margin:0 auto;}::selection{background:rgba(92,165,255,.25);}body[data-reduced-motion="true"] *{animation-duration:.01ms!important;transition-duration:.01ms!important;}
 `;
 
 function ensureDir(filePath) {
@@ -71,24 +71,92 @@ function buildLanguageButtons(currentLang) {
     .join('');
 }
 
-function pictureMarkup(basePath, alt, width, height, sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw', loading = 'lazy') {
-  const ext = path.extname(basePath);
-  const webpPath = basePath.replace(ext, '.webp');
-  const hasWebp = existsSync(path.join(root, webpPath.replace(/^\//, '')));
-  const jpgPath = basePath.startsWith('/') ? basePath : `/${basePath}`;
-  const webpSrc = hasWebp ? `<source srcset="${webpPath.startsWith('/') ? webpPath : '/' + webpPath}" type="image/webp">` : '';
+function buildThemeSwitcher(lang) {
+  const theme = languages[lang].theme_switcher;
+  const shared = languages[lang].shared;
+  const order = ['light', 'dark', 'system'];
+  const buttons = order
+    .map((mode) => {
+      const label = theme.options[mode];
+      const description = theme.descriptions[mode];
+      return `<button type="button" class="theme-switcher__btn" data-theme-option="${mode}" aria-pressed="false" aria-label="${description}" title="${description}">${label}</button>`;
+    })
+    .join('');
+  return `<div class="theme-switcher" data-theme-switcher role="group" aria-label="${theme.label}">
+    ${buttons}
+    <span class="sr-only" data-theme-status role="status" aria-live="polite" data-status-light="${shared.theme_status_light}" data-status-dark="${shared.theme_status_dark}" data-status-system="${shared.theme_status_system}"></span>
+  </div>`;
+}
+
+function pictureMarkup(basePath, alt, width, height, sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw', loading = 'lazy', fetchPriority = '') {
+  const normalized = basePath.startsWith('/') ? basePath : `/${basePath}`;
+  const ext = path.extname(normalized);
+  const baseName = path.basename(normalized, ext);
+  const optimizedDir = path.join(root, 'assets/optimized');
+  const candidateWidths = [320, 640, 960, 1280, 1600];
+  const formatMap = [
+    { ext: 'avif', type: 'image/avif' },
+    { ext: 'webp', type: 'image/webp' },
+    { ext: 'jpg', type: 'image/jpeg' }
+  ];
+
+  const sources = formatMap
+    .map(({ ext: formatExt, type }) => {
+      const variants = candidateWidths
+        .map((candidate) => {
+          const fileName = `${baseName}-${candidate}.${formatExt}`;
+          const fullPath = path.join(optimizedDir, fileName);
+          if (existsSync(fullPath)) {
+            return `/assets/optimized/${fileName} ${candidate}w`;
+          }
+          return null;
+        })
+        .filter(Boolean);
+      if (!variants.length) return null;
+      return { type, srcset: variants.join(', ') };
+    })
+    .filter(Boolean);
+
+  let fallbackSrc = normalized;
+  let fallbackSrcset = '';
+  const jpegSource = sources.find((source) => source.type === 'image/jpeg');
+  if (jpegSource) {
+    fallbackSrcset = jpegSource.srcset;
+    const largest = jpegSource.srcset
+      .split(',')
+      .map((entry) => entry.trim())
+      .filter(Boolean)
+      .sort((a, b) => {
+        const sizeA = Number(a.split(' ').pop()?.replace('w', '') || 0);
+        const sizeB = Number(b.split(' ').pop()?.replace('w', '') || 0);
+        return sizeB - sizeA;
+      })[0];
+    if (largest) {
+      const pathMatch = largest.split(' ')[0];
+      if (pathMatch) {
+        fallbackSrc = pathMatch;
+      }
+    }
+  }
+
+  const priorityAttr = fetchPriority ? ` fetchpriority="${fetchPriority}"` : '';
+  const srcsetAttr = fallbackSrcset ? ` srcset="${fallbackSrcset}"` : '';
+  const sizesAttr = fallbackSrcset ? ` sizes="${sizes}"` : '';
+  const sourcesMarkup = sources
+    .map((source) => `<source srcset="${source.srcset}" type="${source.type}" sizes="${sizes}">`)
+    .join('');
+
   return `<picture>
-    ${webpSrc}
-    <source srcset="${jpgPath}" type="image/jpeg">
-    <img src="${jpgPath}" alt="${alt}" width="${width}" height="${height}" loading="${loading}" decoding="async">
+    ${sourcesMarkup}
+    <img src="${fallbackSrc}"${srcsetAttr}${sizesAttr} alt="${alt}" width="${width}" height="${height}" loading="${loading}" decoding="async"${priorityAttr}>
   </picture>`;
 }
 
-function heroPortrait(lang) {
+function portraitMarkup(lang, { loading = 'lazy', fetchPriority = '', sizes = '(max-width: 960px) 60vw, 420px' } = {}) {
   const alt = lang === 'fr' ? 'Portrait de Mohamed Ali Mabrouki' : 'Portrait of Mohamed Ali Mabrouki';
   return `<picture>
-    <source srcset="/assets/img/avatar.jpg" type="image/jpeg">
-    <img src="/assets/img/avatar.jpg" alt="${alt}" width="800" height="800" loading="eager" fetchpriority="high" decoding="async">
+    <source srcset="/assets/img/avatar-circle-400.png 400w, /assets/img/avatar-circle.png 800w" type="image/png" sizes="${sizes}">
+    <img src="/assets/img/avatar-circle.png" srcset="/assets/img/avatar-circle-400.png 400w, /assets/img/avatar-circle.png 800w" sizes="${sizes}" alt="${alt}" width="800" height="800" loading="${loading}" decoding="async"${fetchPriority ? ` fetchpriority="${fetchPriority}"` : ''}>
   </picture>`;
 }
 
@@ -119,7 +187,7 @@ function renderHero(lang) {
         <dl class="hero__meta-grid" data-reveal>${stats}</dl>
       </div>
       <div class="hero__portrait" data-parallax-layer="0.3" data-reveal>
-        ${heroPortrait(lang)}
+        ${portraitMarkup(lang, { loading: 'eager', fetchPriority: 'high', sizes: '(max-width: 960px) 80vw, 420px' })}
       </div>
     </div>
   </section>`;
@@ -180,9 +248,9 @@ function projectCard(project, lang, { compact = false } = {}) {
     .join('');
   const stackLabels = project.stack.map((tag) => `<span class="badge">${tag}</span>`).join('');
   const stackTokens = project.stack.map((tag) => normalizeToken(tag));
-  const roleToken = normalizeToken(role);
+  const tagTokens = (project.tags || []).map((tag) => normalizeToken(tag));
   const year = deriveYear(project.period);
-  return `<article class="project-card tilt-card" data-reveal data-stack="${stackTokens.join(',')}" data-role="${roleToken}" data-year="${year}">
+  return `<article class="project-card tilt-card" data-reveal data-stack="${stackTokens.join(',')}" data-tags="${tagTokens.join(',')}" data-year="${year}">
     <a class="project-card__link" href="${href}">
       <div class="project-card__media">${picture}</div>
       <div class="project-card__body">
@@ -255,7 +323,6 @@ function renderExperience(lang) {
 function renderAbout(lang) {
   const data = languages[lang].about;
   const stats = data.stats.map((stat) => `<li><span class="stat__value">${stat.value}</span><span class="stat__label">${stat.label}</span></li>`).join('');
-  const portraitAlt = lang === 'fr' ? 'Portrait de Mohamed Ali Mabrouki' : 'Portrait of Mohamed Ali Mabrouki';
   return `<section id="about" class="section" data-section="about">
     <div class="container about__grid">
       <div class="about__copy" data-reveal>
@@ -265,10 +332,7 @@ function renderAbout(lang) {
         <ul class="stat-list">${stats}</ul>
       </div>
       <div class="about__media" data-reveal>
-        <picture>
-          <source srcset="/assets/img/avatar-circle.png" type="image/png">
-          <img src="/assets/img/avatar-circle.png" alt="${portraitAlt}" width="600" height="600" loading="lazy" decoding="async">
-        </picture>
+        ${portraitMarkup(lang, { loading: 'lazy', sizes: '(max-width: 960px) 80vw, 420px' })}
       </div>
     </div>
   </section>`;
@@ -365,6 +429,7 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
   const ogImage = fullUrl(site.url, data.seo.home.og_image);
   const navLinks = getNavLinks(lang, pageKey);
   const langButtons = buildLanguageButtons(lang);
+  const themeSwitcher = buildThemeSwitcher(lang);
   const mapJson = JSON.stringify(languageMap);
   const yearSpan = '${new Date().getFullYear()}';
   const websiteSchema = includeWebsiteSchema ? `<script type="application/ld+json">${JSON.stringify(data.structured_data.website, null, 2)}</script>` : '';
@@ -391,10 +456,13 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
   <meta name="twitter:title" content="${title}">
   <meta name="twitter:description" content="${description}">
   <meta name="twitter:image" content="${ogImage}">
-  <meta name="theme-color" content="#0b1220">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f9fd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-512.png">
   <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/img/favicon-512.png">
+  <script>(function(){try{var storage=localStorage.getItem('mam-theme');var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var preference=storage==='light'||storage==='dark'?storage:'system';var theme=preference==='light'?'light':preference==='dark'?'dark':(prefersDark?'dark':'light');document.documentElement.setAttribute('data-theme',theme);document.documentElement.dataset.themePreference=preference;}catch(error){var fallback=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',fallback);document.documentElement.dataset.themePreference='system';}})();</script>
   <style>${criticalCss}</style>
   <link rel="preload" href="/assets/css/base.css" as="style">
   <link rel="stylesheet" href="/assets/css/base.css">
@@ -407,6 +475,7 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
   ${extraHead}
   ${websiteSchema}
   ${personSchema}
+  <script defer src="/assets/js/theme.js"></script>
   <script id="language-map" type="application/json">${mapJson}</script>
   <script defer src="/assets/js/i18n.js"></script>
   <script defer src="/assets/js/ui.js"></script>
@@ -430,7 +499,10 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
       </button>
       <nav class="site-nav" id="primary-navigation" data-site-nav aria-label="Primary">
         <ul class="site-nav__list">${navLinks}</ul>
-        <div class="lang-switcher" role="group" aria-label="${data.language_switcher.label}">${langButtons}</div>
+        <div class="site-controls">
+          ${themeSwitcher}
+          <div class="lang-switcher" role="group" aria-label="${data.language_switcher.label}">${langButtons}</div>
+        </div>
       </nav>
     </div>
   </header>
@@ -448,23 +520,25 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
 function renderProjectsPage(lang) {
   const data = languages[lang].projects_page;
   const cards = projects.map((project) => projectCard(project, lang, { compact: false })).join('');
-  const filters = data.filters;
   const groupLabels = data.filter_group_labels;
+  const defaults = data.filter_defaults;
+  const stackMap = collectStackMap();
+  const tagMap = collectTagMap();
   const filterControls = `
     <div class="filters" data-reveal>
       <label>${groupLabels.stack}
         <select data-filter="stack">
-          ${buildFilterOptions(filters, 'all')}
+          ${buildOptionsFromMap(stackMap, defaults.stack)}
         </select>
       </label>
-      <label>${groupLabels.role}
-        <select data-filter="role">
-          ${buildRoleOptions(lang, filters.all)}
+      <label>${groupLabels.tag}
+        <select data-filter="tag">
+          ${buildOptionsFromMap(tagMap, defaults.tag)}
         </select>
       </label>
       <label>${groupLabels.year}
         <select data-filter="year">
-          ${buildYearOptions(filters.all)}
+          ${buildYearOptions(defaults.year)}
         </select>
       </label>
     </div>`;
@@ -477,7 +551,7 @@ function renderProjectsPage(lang) {
           <p>${data.intro}</p>
         </div>
         ${filterControls}
-        <p class="projects-status" data-reveal data-status data-status-loading="${data.status_messages.loading}" data-status-empty="${data.status_messages.empty}" data-status-all="${data.status_messages.count}" data-status-filtered="${data.status_messages.filtered}">${data.status_messages.loading}</p>
+        <p class="projects-status" data-reveal data-status role="status" aria-live="polite" data-status-loading="${data.status_messages.loading}" data-status-empty="${data.status_messages.empty}" data-status-all="${data.status_messages.count}" data-status-filtered="${data.status_messages.filtered}">${data.status_messages.loading}</p>
         <div class="projects-grid" data-project-list>${cards}</div>
         <div class="section__actions" data-reveal>
           <a class="btn btn--ghost" href="${lang === 'fr' ? '/fr/index.html' : '/index.html'}">${data.view_home_label}</a>
@@ -497,13 +571,40 @@ function renderProjectsPage(lang) {
   });
 }
 
-function buildFilterOptions(filters, defaultKey) {
-  return Object.entries(filters)
-    .map(([key, label]) => `<option value="${key}"${key === defaultKey ? ' selected' : ''}>${label}</option>`)
-    .join('');
+function collectStackMap() {
+  const map = new Map();
+  projects.forEach((project) => {
+    project.stack.forEach((item) => {
+      const token = normalizeToken(item);
+      if (!map.has(token)) {
+        map.set(token, item);
+      }
+    });
+  });
+  return map;
 }
 
-function buildYearOptions(defaultLabel = 'All') {
+function collectTagMap() {
+  const map = new Map();
+  projects.forEach((project) => {
+    (project.tags || []).forEach((item) => {
+      const token = normalizeToken(item);
+      if (!map.has(token)) {
+        map.set(token, item);
+      }
+    });
+  });
+  return map;
+}
+
+function buildOptionsFromMap(map, defaultLabel) {
+  const defaultOption = `<option value="all" selected>${defaultLabel}</option>`;
+  const entries = Array.from(map.entries()).sort((a, b) => a[1].localeCompare(b[1]));
+  const options = entries.map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
+  return `${defaultOption}${options}`;
+}
+
+function buildYearOptions(defaultLabel = 'All years') {
   const years = new Set();
   projects.forEach((project) => {
     const match = project.period.match(/\d{4}/g);
@@ -513,23 +614,6 @@ function buildYearOptions(defaultLabel = 'All') {
   });
   const sorted = Array.from(years).sort((a, b) => Number(b) - Number(a));
   return [`<option value="all" selected>${defaultLabel}</option>`, ...sorted.map((year) => `<option value="${year}">${year}</option>`)].join('');
-}
-
-function buildRoleOptions(lang, defaultLabel = 'All') {
-  const roles = new Set();
-  projects.forEach((project) => {
-    const roleSplit = project.role.split('·').map((part) => part.trim());
-    const roleValue = lang === 'fr' && roleSplit[1] ? roleSplit[1] : roleSplit[0];
-    roles.add(roleValue);
-  });
-  const sorted = Array.from(roles).sort((a, b) => a.localeCompare(b));
-  return [
-    `<option value="all" selected>${defaultLabel}</option>`,
-    ...sorted.map((role) => {
-      const token = normalizeToken(role);
-      return `<option value="${token}">${role}</option>`;
-    })
-  ].join('');
 }
 
 function renderProjectDetail(lang, project) {
@@ -543,7 +627,7 @@ function renderProjectDetail(lang, project) {
   const role = lang === 'fr' && roleSplit[1] ? roleSplit[1] : roleSplit[0];
   const stackList = project.stack.map((tag) => `<span class="badge">${tag}</span>`).join('');
   const coverAlt = lang === 'fr' ? project.cover_alt_fr : project.cover_alt_en;
-  const picture = pictureMarkup(project.cover.startsWith('/') ? project.cover : `/${project.cover}`, coverAlt, 1600, 900, '(max-width: 768px) 100vw, 960px', 'eager');
+  const picture = pictureMarkup(project.cover.startsWith('/') ? project.cover : `/${project.cover}`, coverAlt, 1600, 900, '(max-width: 768px) 100vw, 960px', 'eager', 'high');
   const highlightsMarkup = highlights.map((line) => `<li>${line}</li>`).join('');
   const metricsMarkup = metrics.map((line) => `<li>${line}</li>`).join('');
   const gallery = project.gallery
@@ -552,6 +636,31 @@ function renderProjectDetail(lang, project) {
       return `<figure class="gallery__item">${pictureMarkup(img.startsWith('/') ? img : `/${img}`, alt, 1600, 900)}</figure>`;
     })
     .join('');
+  const siteData = languages[lang].site;
+  const pageUrl = fullUrl(siteData.url, lang === 'fr' ? `/fr/projets/${project.id}.html` : `/projects/${project.id}.html`);
+  const fullImageUrl = fullUrl(siteData.url, project.cover.startsWith('/') ? project.cover : `/${project.cover}`);
+  const aboutTags = (project.tags && project.tags.length ? project.tags : project.stack).slice(0, 8);
+  const creativeWork = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: title,
+    description: summary,
+    url: pageUrl,
+    image: fullImageUrl,
+    about: aboutTags,
+    inLanguage: lang === 'fr' ? 'fr' : 'en',
+    creator: {
+      '@type': 'Person',
+      name: siteData.name,
+      url: siteData.url,
+      worksFor: {
+        '@type': 'Organization',
+        name: 'SEGULA Technologies'
+      }
+    },
+    keywords: Array.from(new Set([...(project.stack || []), ...(project.tags || [])])).join(', ')
+  };
+  const creativeWorkSchema = `<script type="application/ld+json">${JSON.stringify(creativeWork, null, 2)}</script>`;
   const intro = `
     <header class="project-hero" data-reveal>
       <div class="project-hero__copy">
@@ -599,7 +708,8 @@ function renderProjectDetail(lang, project) {
     description: seo.description_template.replace('{projectSummary}', summary),
     canonicalPath: lang === 'fr' ? `/fr/projets/${project.id}.html` : `/projects/${project.id}.html`,
     alternatePath: lang === 'fr' ? `/projects/${project.id}.html` : `/fr/projets/${project.id}.html`,
-    content
+    content,
+    extraHead: creativeWorkSchema
   });
 }
 

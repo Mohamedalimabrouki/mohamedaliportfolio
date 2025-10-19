@@ -181,6 +181,10 @@ main.cv {
 }
 
 @media print {
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
   body {
     background: #ffffff !important;
   }
