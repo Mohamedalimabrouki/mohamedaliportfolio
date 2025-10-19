@@ -55,14 +55,20 @@ function escapeHTML(value) {
     .replace(/>/g, '&gt;');
 }
 
-async function loadJSON(url, { cache = 'no-store' } = {}) {
+async function loadJSON(url, { cache = 'no-store', timeout = 6000 } = {}) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => {
+    controller.abort();
+  }, timeout);
   try {
-    const response = await fetch(url, { cache });
+    const response = await fetch(url, { cache, signal: controller.signal });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (err) {
     console.warn('Could not load', url, err);
     return null;
+  } finally {
+    clearTimeout(timer);
   }
 }
 
@@ -204,10 +210,11 @@ function renderProjects() {
   const grid = document.getElementById('project-grid');
   if (!grid) return;
   if (!state.projects.length) {
-    grid.innerHTML =
-      '<div class="card muted" role="note">Case studies will appear once content is published.</div>';
-    refreshImageEnhancements(grid);
     return;
+  }
+  grid.dataset.hydrated = '1';
+  if (grid.dataset.ssr) {
+    delete grid.dataset.ssr;
   }
   grid.innerHTML = state.projects.map(renderProjectCard).join('');
   refreshImageEnhancements(grid);
@@ -380,8 +387,23 @@ function updateFilterStatus(tag, visible) {
   const status = document.getElementById('filterStatus');
   if (!status) return;
   const total = state.projects.length;
+  const grid = document.getElementById('project-grid');
   const ui = state.i18n.ui || {};
   if (!total) {
+    if (grid && !grid.dataset.hydrated) {
+      const fallbackCount =
+        typeof visible === 'number' && visible >= 0
+          ? visible
+          : grid.querySelectorAll('.card[data-ssr]').length;
+      if (!fallbackCount && tag !== 'all') {
+        const tpl = ui.filter_status_none || 'No case studies for {tag} yet.';
+        status.textContent = tpl.replace('{tag}', tagLabel(tag));
+        return;
+      }
+      const tpl = ui.filter_status_ssr || 'Showing {count} featured case studies.';
+      status.textContent = tpl.replace('{count}', fallbackCount || 0);
+      return;
+    }
     status.textContent = ui.filter_status_empty || 'Case studies will appear soon.';
     return;
   }

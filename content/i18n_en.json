@@ -67,6 +67,7 @@
     "filter_status_none": "No case studies for {tag} yet.",
     "filter_status_all": "Showing {count} of {total} case studies.",
     "filter_status_tag": "Showing {count} of {total} case studies — {tag}.",
+    "filter_status_ssr": "Showing {count} featured case studies.",
     "experience_heading": "Experience snapshots",
     "experience_intro": "Highlights across OEM and supplier programs covering light commercial and passenger platforms.",
     "experience_item_1_title": "Toyota and Stellantis K9 platform",
@@ -91,6 +92,18 @@
     "project_additional": "Additional Notes",
     "project_kpis_fallback": "KPIs available on request.",
     "project_back": "← Back to projects",
-    "project_download_pdf": "Download PDF"
+    "project_download_pdf": "Download PDF",
+    "projects_ssr_proace_title": "EC Homologation — Toyota ProAce City",
+    "projects_ssr_proace_summary": "Recovered Toyota dossier milestones with complete annex packs, VIN schema alignment, and authority briefings.",
+    "projects_ssr_proace_point_1": "EC WVTA annex evidence assembled without rework.",
+    "projects_ssr_proace_point_2": "VIN labelling, markings, and CoP routines synchronised.",
+    "projects_ssr_mkc2_title": "Euro 7 Braking — Brake-by-Wire Integration",
+    "projects_ssr_mkc2_summary": "Brought Continental MK C2 and Bosch ESP10 systems into a common validation plan with particulate compliance on track.",
+    "projects_ssr_mkc2_point_1": "Joint calibration roadmap covering redundancy envelopes.",
+    "projects_ssr_mkc2_point_2": "Diagnostics and service readiness kit delivered with SOP.",
+    "projects_ssr_renault_title": "Renault Master — Wheel-End Industrialisation",
+    "projects_ssr_renault_summary": "Led hub and axle launch governance, sustaining zero launch-blocking findings across audits.",
+    "projects_ssr_renault_point_1": "Torque/runout analytics embedded into digital quality wall.",
+    "projects_ssr_renault_point_2": "Supplier war room cut defect recurrence by 75%."
   }
 }

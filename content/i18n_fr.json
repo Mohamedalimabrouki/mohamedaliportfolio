@@ -67,6 +67,7 @@
     "filter_status_none": "Aucune étude de cas pour {tag} pour le moment.",
     "filter_status_all": "{count} études de cas affichées sur {total}.",
     "filter_status_tag": "{count} études de cas affichées sur {total} — {tag}.",
+    "filter_status_ssr": "Affichage de {count} études de cas mises en avant.",
     "experience_heading": "Instantanés d’expérience",
     "experience_intro": "Points marquants sur programmes constructeurs et équipementiers (VUL et VP).",
     "experience_item_1_title": "Plateforme Toyota / Stellantis K9",
@@ -91,6 +92,18 @@
     "project_additional": "Compléments",
     "project_kpis_fallback": "Indicateurs disponibles sur demande.",
     "project_back": "← Retour aux projets",
-    "project_download_pdf": "Télécharger le PDF"
+    "project_download_pdf": "Télécharger le PDF",
+    "projects_ssr_proace_title": "Homologation CE — Toyota ProAce City",
+    "projects_ssr_proace_summary": "Rattrapage des jalons dossier Toyota avec annexes complètes, alignement VIN et ateliers autorités.",
+    "projects_ssr_proace_point_1": "Annexes WVTA montées sans retouche.",
+    "projects_ssr_proace_point_2": "Marquages, VIN et routines CoP synchronisés.",
+    "projects_ssr_mkc2_title": "Freinage Euro 7 — Intégration brake-by-wire",
+    "projects_ssr_mkc2_summary": "Intégration commune Continental MK C2 / Bosch ESP10 avec conformité particules sécurisée.",
+    "projects_ssr_mkc2_point_1": "Plan de calibration partagé couvrant la redondance.",
+    "projects_ssr_mkc2_point_2": "Kit diagnostics & service livré au SOP.",
+    "projects_ssr_renault_title": "Renault Master — Industrialisation roue",
+    "projects_ssr_renault_summary": "Pilotage lancement moyeux/essieux avec zéro non-conformité bloquante.",
+    "projects_ssr_renault_point_1": "Analytics couple/faux-rond intégrés au mur qualité.",
+    "projects_ssr_renault_point_2": "War room fournisseurs réduisant les récidives de 75 %."
   }
 }

@@ -9,8 +9,13 @@
   <link rel="canonical" href="https://mohamedalimabrouki.com/project.html">
   <link rel="alternate" hreflang="en" href="https://mohamedalimabrouki.com/project.html">
   <link rel="alternate" hreflang="fr" href="https://mohamedalimabrouki.com/project.html?lang=fr">
+  <link rel="alternate" hreflang="x-default" href="https://mohamedalimabrouki.com/project.html">
   <link rel="icon" href="/favicon.ico">
-  <link rel="preload" as="font" href="assets/fonts/Inter-latin.woff2" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap"></noscript>
   <link rel="preload" as="image" type="image/avif" href="assets/optimized/mabrouki-headshot-640.avif" imagesrcset="assets/optimized/mabrouki-headshot-320.avif 320w, assets/optimized/mabrouki-headshot-640.avif 640w, assets/optimized/mabrouki-headshot-960.avif 960w">
   <link rel="stylesheet" href="styles.css">
   <meta property="og:title" content="Project — Mohamed Ali Mabrouki">
@@ -88,11 +93,11 @@
           <div id="p-gallery" class="project-gallery grid" style="margin-top:16px"></div>
           <div class="project-columns">
             <section>
-              <h3 data-i18n-key="project_highlights">Key Highlights</h3>
+              <h2 data-i18n-key="project_highlights">Key Highlights</h2>
               <ul id="p-highlights"></ul>
             </section>
             <section>
-              <h3 data-i18n-key="project_kpis">KPIs</h3>
+              <h2 data-i18n-key="project_kpis">KPIs</h2>
               <ul id="p-kpis"></ul>
             </section>
           </div>
@@ -136,7 +141,7 @@
         '';
       const domain = 'https://mohamedalimabrouki.com';
       const canonicalUrl = `${domain}/project.html?p=${encodeURIComponent(project.slug)}${currentLang === 'fr' ? '&lang=fr' : ''}`;
-      document.title = `${title} - Case Study | Mohamed Ali Mabrouki`;
+      document.title = `${title} | Mohamed Ali Mabrouki`;
       document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
       const alternates = document.querySelectorAll('link[rel="alternate"]');
       alternates.forEach(link => {
@@ -144,13 +149,15 @@
           link.setAttribute('href', `${domain}/project.html?p=${encodeURIComponent(project.slug)}&lang=fr`);
         }else if(link.getAttribute('hreflang') === 'en'){
           link.setAttribute('href', `${domain}/project.html?p=${encodeURIComponent(project.slug)}`);
+        }else if(link.getAttribute('hreflang') === 'x-default'){
+          link.setAttribute('href', `${domain}/project.html?p=${encodeURIComponent(project.slug)}`);
         }
       });
       document.querySelector('meta[name="description"]').setAttribute('content', summary);
-      document.querySelector('meta[property="og:title"]').setAttribute('content', `${title} - Case Study | Mohamed Ali Mabrouki`);
+      document.querySelector('meta[property="og:title"]').setAttribute('content', `${title} | Mohamed Ali Mabrouki`);
       document.querySelector('meta[property="og:description"]').setAttribute('content', summary);
       document.querySelector('meta[property="og:url"]').setAttribute('content', canonicalUrl);
-      document.querySelector('meta[property="twitter:title"]').setAttribute('content', `${title} - Case Study | Mohamed Ali Mabrouki`);
+      document.querySelector('meta[property="twitter:title"]').setAttribute('content', `${title} | Mohamed Ali Mabrouki`);
       document.querySelector('meta[property="twitter:description"]').setAttribute('content', summary);
       document.querySelector('meta[property="twitter:url"]').setAttribute('content', canonicalUrl);
 
@@ -168,6 +175,12 @@
       const absoluteImage = `${domain}/${heroImage.replace(/^\//, '')}`;
       document.querySelector('meta[property="og:image"]').setAttribute('content', absoluteImage);
       document.querySelector('meta[property="twitter:image"]').setAttribute('content', absoluteImage);
+      if(!state.assetManifest){
+        const manifest = await loadJSON('content/assets-manifest.json');
+        if(manifest && manifest.images){
+          state.assetManifest = manifest;
+        }
+      }
       galleryEl.innerHTML = gallery
         .map((img, index) => imgBlock(img, {
           alt: `${title} visual ${index + 1}`,
