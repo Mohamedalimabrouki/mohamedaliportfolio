@@ -16,6 +16,14 @@ const languages = {
 const projects = JSON.parse(readFileSync(path.join(contentDir, 'projects.json'), 'utf8'));
 const projectIndex = new Map(projects.map((p) => [p.id, p]));
 
+let assetManifest = { images: {} };
+try {
+  assetManifest = JSON.parse(readFileSync(path.join(contentDir, 'assets-manifest.json'), 'utf8'));
+} catch (error) {
+  assetManifest = { images: {} };
+}
+const manifestImages = assetManifest.images || {};
+
 const languageMap = {
   home: { en: '/index.html', fr: '/fr/index.html' },
   projects: { en: '/projects/index.html', fr: '/fr/projets/index.html' },
@@ -29,8 +37,7 @@ for (const project of projects) {
   };
 }
 
-const criticalCss = `:root{color-scheme:light dark;--header-height:4rem;--max-width:1120px;--radius-base:16px;--radius-pill:999px;--transition-base:.35s cubic-bezier(.25,.8,.25,1);--shadow-soft:0 24px 70px rgba(71,104,152,.18);--shadow-card:0 18px 45px rgba(16,34,64,.16);--surface-900:#f7f9fd;--surface-800:#eef3fb;--surface-700:#d9e3f7;--surface-600:#c3d5f0;--surface-500:#9bbce6;--surface-200:rgba(21,34,61,.08);--surface-100:#0b1220;--surface-overlay:rgba(255,255,255,.78);--surface-overlay-strong:rgba(255,255,255,.92);--surface-overlay-muted:rgba(21,34,61,.06);--surface-card:rgba(255,255,255,.92);--surface-card-border:rgba(21,34,61,.1);--surface-card-emphasis:rgba(47,72,123,.18);--badge-bg:rgba(47,116,255,.1);--badge-color:#1d57d9;--pill-bg:rgba(21,34,61,.06);--pill-border:rgba(21,34,61,.12);--chip-bg:rgba(21,34,61,.08);--chip-border:rgba(21,34,61,.1);--text-primary:#15223d;--text-muted:rgba(21,34,61,.7);--text-inverse:#f5f8ff;--accent-300:#4b8dff;--accent-400:#2f74ff;--accent-500:#1d57d9;--accent-600:#143ea7;--text-on-accent:#06102a;--focus-ring:rgba(47,116,255,.4);--border-soft:rgba(21,34,61,.12);--gradient-hero:radial-gradient(circle at 20% 20%,rgba(47,116,255,.18),transparent 55%),radial-gradient(circle at 80% 0,rgba(255,120,80,.16),transparent 50%),linear-gradient(140deg,#f7f9fd 25%,#e4ecfa 100%);--hero-texture-color:rgba(21,34,61,.08);}html[data-theme='dark']{color-scheme:dark;--surface-900:#0b1220;--surface-800:#101a2c;--surface-700:#1c273a;--surface-600:#273246;--surface-500:#2f3b53;--surface-200:rgba(255,255,255,.08);--surface-overlay:rgba(11,18,32,.78);--surface-overlay-strong:rgba(11,18,32,.92);--surface-overlay-muted:rgba(15,25,40,.45);--surface-card:rgba(18,26,42,.85);--surface-card-border:rgba(255,255,255,.05);--surface-card-emphasis:rgba(11,28,58,.45);--badge-bg:rgba(92,165,255,.12);--badge-color:#a6cbff;--pill-bg:rgba(255,255,255,.05);--pill-border:rgba(255,255,255,.1);--chip-bg:rgba(15,25,40,.6);--chip-border:rgba(255,255,255,.06);--text-primary:#f5f8ff;--text-muted:rgba(245,248,255,.78);--text-inverse:#0b1220;--accent-300:#74bbff;--accent-400:#5ca5ff;--accent-500:#3d8aff;--accent-600:#2b6fcc;--focus-ring:rgba(139,196,255,.6);--border-soft:rgba(255,255,255,.08);--shadow-card:0 24px 60px rgba(8,15,35,.3);--shadow-soft:0 30px 90px rgba(11,17,31,.38);--gradient-hero:radial-gradient(circle at 20% 20%,rgba(92,165,255,.32),transparent 60%),radial-gradient(circle at 80% 0,rgba(255,120,80,.24),transparent 55%),linear-gradient(140deg,#0b1220 35%,#111c2f 100%);--hero-texture-color:rgba(255,255,255,.08);}html[data-theme='light']{color-scheme:light;}*{box-sizing:border-box;}html{font-size:100%;scroll-behavior:smooth;background:var(--surface-900);}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";color:var(--text-primary);background:var(--surface-900);min-height:100vh;-webkit-font-smoothing:antialiased;transition:background-color var(--transition-base),color var(--transition-base);}img{display:block;max-width:100%;height:auto;}a{color:var(--accent-400);text-decoration:none;transition:color var(--transition-base);}a:hover,a:focus-visible{color:var(--accent-500);}button{font-family:inherit;}main{display:block;}section{padding-block:6rem;}@media(max-width:768px){section{padding-block:4.5rem;}}.container{width:90%;max-width:var(--max-width);margin:0 auto;}::selection{background:rgba(92,165,255,.25);}body[data-reduced-motion="true"] *{animation-duration:.01ms!important;transition-duration:.01ms!important;}
-`;
+const criticalCss = `:root{color-scheme:light dark;--header-height:4rem;--max-width:1120px;--radius-base:16px;--radius-pill:999px;--transition-base:.35s cubic-bezier(.25,.8,.25,1);--shadow-soft:0 24px 70px rgba(71,104,152,.18);--shadow-card:0 18px 45px rgba(16,34,64,.16);--surface-900:#f7f9fd;--surface-800:#eef3fb;--surface-700:#d9e3f7;--surface-600:#c3d5f0;--surface-500:#9bbce6;--surface-200:rgba(21,34,61,.08);--surface-100:#0b1220;--surface-overlay:rgba(255,255,255,.78);--surface-overlay-strong:rgba(255,255,255,.92);--surface-overlay-muted:rgba(21,34,61,.06);--surface-card:rgba(255,255,255,.92);--surface-card-border:rgba(21,34,61,.1);--surface-card-emphasis:rgba(47,72,123,.18);--badge-bg:rgba(47,116,255,.1);--badge-color:#1d57d9;--pill-bg:rgba(21,34,61,.06);--pill-border:rgba(21,34,61,.12);--chip-bg:rgba(21,34,61,.08);--chip-border:rgba(21,34,61,.1);--text-primary:#15223d;--text-muted:rgba(21,34,61,.7);--text-inverse:#f5f8ff;--accent-300:#4b8dff;--accent-400:#2f74ff;--accent-500:#1d57d9;--accent-600:#143ea7;--text-on-accent:#06102a;--focus-ring:rgba(47,116,255,.4);--border-soft:rgba(21,34,61,.12);--gradient-hero:radial-gradient(circle at 20% 20%,rgba(47,116,255,.18),transparent 55%),radial-gradient(circle at 80% 0,rgba(255,120,80,.16),transparent 50%),linear-gradient(140deg,#f7f9fd 25%,#e4ecfa 100%);--hero-texture-color:rgba(21,34,61,.08);}html[data-theme='dark']{color-scheme:dark;--surface-900:#0b1220;--surface-800:#101a2c;--surface-700:#1c273a;--surface-600:#273246;--surface-500:#2f3b53;--surface-200:rgba(255,255,255,.08);--surface-overlay:rgba(11,18,32,.78);--surface-overlay-strong:rgba(11,18,32,.92);--surface-overlay-muted:rgba(15,25,40,.45);--surface-card:rgba(18,26,42,.85);--surface-card-border:rgba(255,255,255,.05);--surface-card-emphasis:rgba(11,28,58,.45);--badge-bg:rgba(92,165,255,.12);--badge-color:#a6cbff;--pill-bg:rgba(255,255,255,.05);--pill-border:rgba(255,255,255,.1);--chip-bg:rgba(15,25,40,.6);--chip-border:rgba(255,255,255,.06);--text-primary:#f5f8ff;--text-muted:rgba(245,248,255,.78);--text-inverse:#0b1220;--accent-300:#74bbff;--accent-400:#5ca5ff;--accent-500:#3d8aff;--accent-600:#2b6fcc;--focus-ring:rgba(139,196,255,.6);--border-soft:rgba(255,255,255,.08);--shadow-card:0 24px 60px rgba(8,15,35,.3);--shadow-soft:0 30px 90px rgba(11,17,31,.38);--gradient-hero:radial-gradient(circle at 20% 20%,rgba(92,165,255,.32),transparent 60%),radial-gradient(circle at 80% 0,rgba(255,120,80,.24),transparent 55%),linear-gradient(140deg,#0b1220 35%,#111c2f 100%);--hero-texture-color:rgba(255,255,255,.08);}html[data-theme='light']{color-scheme:light;}*{box-sizing:border-box;}html{font-size:100%;scroll-behavior:smooth;background:var(--surface-900);}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";color:var(--text-primary);background:var(--surface-900);min-height:100vh;-webkit-font-smoothing:antialiased;transition:background-color var(--transition-base),color var(--transition-base);}img{display:block;max-width:100%;height:auto;}a{color:var(--accent-400);text-decoration:none;transition:color var(--transition-base);}a:hover,a:focus-visible{color:var(--accent-500);}button{font-family:inherit;}main{display:block;}section{padding-block:6rem;}@media(max-width:768px){section{padding-block:4.5rem;}}.container{width:90%;max-width:var(--max-width);margin:0 auto;}::selection{background:rgba(92,165,255,.25);}body[data-reduced-motion="true"] *{animation-duration:.01ms!important;transition-duration:.01ms!important;}`;
 
 function ensureDir(filePath) {
   const dir = path.dirname(filePath);
@@ -48,6 +55,22 @@ function writeOutput(relPath, content) {
 function fullUrl(base, relPath) {
   const withSlash = relPath.startsWith('/') ? relPath : `/${relPath}`;
   return new URL(withSlash, base).href;
+}
+
+function escapeAttr(value = '') {
+  return value
+    .toString()
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+const normalizeAssetKey = (value = '') => value.replace(/^\//, '').replace(/\\/g, '/');
+
+function getManifestEntry(assetPath) {
+  const key = normalizeAssetKey(assetPath);
+  return manifestImages[key] || null;
 }
 
 function getNavLinks(lang, pageKey) {
@@ -79,7 +102,7 @@ function buildThemeSwitcher(lang) {
     .map((mode) => {
       const label = theme.options[mode];
       const description = theme.descriptions[mode];
-      return `<button type="button" class="theme-switcher__btn" data-theme-option="${mode}" aria-pressed="false" aria-label="${description}" title="${description}">${label}</button>`;
+      return `<button type="button" class="theme-switcher__btn" data-theme-set="${mode}" aria-pressed="false" aria-label="${description}" title="${description}">${label}</button>`;
     })
     .join('');
   return `<div class="theme-switcher" data-theme-switcher role="group" aria-label="${theme.label}">
@@ -90,65 +113,44 @@ function buildThemeSwitcher(lang) {
 
 function pictureMarkup(basePath, alt, width, height, sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw', loading = 'lazy', fetchPriority = '') {
   const normalized = basePath.startsWith('/') ? basePath : `/${basePath}`;
-  const ext = path.extname(normalized);
-  const baseName = path.basename(normalized, ext);
-  const optimizedDir = path.join(root, 'assets/optimized');
-  const candidateWidths = [320, 640, 960, 1280, 1600];
-  const formatMap = [
-    { ext: 'avif', type: 'image/avif' },
-    { ext: 'webp', type: 'image/webp' },
-    { ext: 'jpg', type: 'image/jpeg' }
-  ];
+  const manifestEntry = getManifestEntry(normalized);
+  const priorityAttr = fetchPriority ? ` fetchpriority="${fetchPriority}"` : '';
 
-  const sources = formatMap
-    .map(({ ext: formatExt, type }) => {
-      const variants = candidateWidths
-        .map((candidate) => {
-          const fileName = `${baseName}-${candidate}.${formatExt}`;
-          const fullPath = path.join(optimizedDir, fileName);
-          if (existsSync(fullPath)) {
-            return `/assets/optimized/${fileName} ${candidate}w`;
-          }
-          return null;
-        })
-        .filter(Boolean);
-      if (!variants.length) return null;
-      return { type, srcset: variants.join(', ') };
-    })
-    .filter(Boolean);
-
-  let fallbackSrc = normalized;
-  let fallbackSrcset = '';
-  const jpegSource = sources.find((source) => source.type === 'image/jpeg');
-  if (jpegSource) {
-    fallbackSrcset = jpegSource.srcset;
-    const largest = jpegSource.srcset
-      .split(',')
-      .map((entry) => entry.trim())
+  if (manifestEntry) {
+    const formatOrder = [
+      { ext: 'avif', type: 'image/avif' },
+      { ext: 'webp', type: 'image/webp' },
+      { ext: 'jpg', type: 'image/jpeg' }
+    ];
+    const sourcesMarkup = formatOrder
+      .map(({ ext, type }) => {
+        const record = manifestEntry.formats?.[ext];
+        if (!record?.srcset) return '';
+        return `<source srcset="${record.srcset}" type="${type}" sizes="${sizes}">`;
+      })
       .filter(Boolean)
-      .sort((a, b) => {
-        const sizeA = Number(a.split(' ').pop()?.replace('w', '') || 0);
-        const sizeB = Number(b.split(' ').pop()?.replace('w', '') || 0);
-        return sizeB - sizeA;
-      })[0];
-    if (largest) {
-      const pathMatch = largest.split(' ')[0];
-      if (pathMatch) {
-        fallbackSrc = pathMatch;
-      }
-    }
+      .join('');
+    const fallbackSrc = manifestEntry.fallback
+      ? (manifestEntry.fallback.startsWith('/') ? manifestEntry.fallback : `/${manifestEntry.fallback}`)
+      : normalized;
+    const fallbackSrcset =
+      manifestEntry.formats?.jpg?.srcset ||
+      manifestEntry.formats?.webp?.srcset ||
+      manifestEntry.formats?.avif?.srcset ||
+      '';
+    const widthAttr = manifestEntry.width || width;
+    const heightAttr = manifestEntry.height || height;
+    const placeholderAttr = manifestEntry.placeholder ? ` data-placeholder="${manifestEntry.placeholder}"` : '';
+    const srcsetAttr = fallbackSrcset ? ` srcset="${fallbackSrcset}"` : '';
+    const sizesAttr = fallbackSrcset ? ` sizes="${sizes}"` : '';
+    return `<picture>
+    ${sourcesMarkup}
+    <img src="${fallbackSrc}"${srcsetAttr}${sizesAttr} alt="${alt}" width="${widthAttr}" height="${heightAttr}" loading="${loading}" decoding="async"${priorityAttr}${placeholderAttr}>
+  </picture>`;
   }
 
-  const priorityAttr = fetchPriority ? ` fetchpriority="${fetchPriority}"` : '';
-  const srcsetAttr = fallbackSrcset ? ` srcset="${fallbackSrcset}"` : '';
-  const sizesAttr = fallbackSrcset ? ` sizes="${sizes}"` : '';
-  const sourcesMarkup = sources
-    .map((source) => `<source srcset="${source.srcset}" type="${source.type}" sizes="${sizes}">`)
-    .join('');
-
   return `<picture>
-    ${sourcesMarkup}
-    <img src="${fallbackSrc}"${srcsetAttr}${sizesAttr} alt="${alt}" width="${width}" height="${height}" loading="${loading}" decoding="async"${priorityAttr}>
+    <img src="${normalized}" alt="${alt}" width="${width}" height="${height}" loading="${loading}" decoding="async"${priorityAttr}>
   </picture>`;
 }
 
@@ -420,13 +422,14 @@ function renderHomePage(lang) {
   });
 }
 
-function layout({ lang, pageKey, title, description, canonicalPath, alternatePath, content, structuredData = '', includeWebsiteSchema = false, extraHead = '' }) {
+function layout({ lang, pageKey, title, description, canonicalPath, alternatePath, content, structuredData = '', includeWebsiteSchema = false, extraHead = '', ogImagePath = '' }) {
   const data = languages[lang];
   const site = data.site;
   const locale = lang === 'fr' ? 'fr_FR' : 'en_GB';
   const canonicalUrl = fullUrl(site.url, canonicalPath);
   const alternateUrl = fullUrl(site.url, alternatePath);
-  const ogImage = fullUrl(site.url, data.seo.home.og_image);
+  const imagePath = ogImagePath || data.seo.home.og_image;
+  const ogImage = imagePath.startsWith('http') ? imagePath : fullUrl(site.url, imagePath);
   const navLinks = getNavLinks(lang, pageKey);
   const langButtons = buildLanguageButtons(lang);
   const themeSwitcher = buildThemeSwitcher(lang);
@@ -434,6 +437,10 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
   const yearSpan = '${new Date().getFullYear()}';
   const websiteSchema = includeWebsiteSchema ? `<script type="application/ld+json">${JSON.stringify(data.structured_data.website, null, 2)}</script>` : '';
   const personSchema = structuredData ? `<script type="application/ld+json">${structuredData}</script>` : '';
+  const projectScript =
+    pageKey === 'projects' || pageKey.startsWith('project:')
+      ? '<script defer src="/assets/js/projects.js"></script>'
+      : '';
   return `<!doctype html>
 <html lang="${lang}" data-page="${pageKey}">
 <head>
@@ -472,6 +479,7 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="preload" href="/assets/css/components.css" as="style">
   <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="preload" href="/assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   ${extraHead}
   ${websiteSchema}
   ${personSchema}
@@ -479,6 +487,7 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
   <script id="language-map" type="application/json">${mapJson}</script>
   <script defer src="/assets/js/i18n.js"></script>
   <script defer src="/assets/js/ui.js"></script>
+  ${projectScript}
 </head>
 <body data-lang="${lang}">
   <a class="skip-link" href="#main">${data.shared.skip_to_content}</a>
@@ -519,40 +528,48 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
 
 function renderProjectsPage(lang) {
   const data = languages[lang].projects_page;
-  const cards = projects.map((project) => projectCard(project, lang, { compact: false })).join('');
   const groupLabels = data.filter_group_labels;
   const defaults = data.filter_defaults;
-  const stackMap = collectStackMap();
-  const tagMap = collectTagMap();
+  const totalProjects = projects.length;
+  const countLabel = data.count_label || 'projects';
+  const staticCards = projects.map((project) => projectCard(project, lang, { compact: false })).join('');
+  const countBadge = `
+        <div class="projects-count" data-reveal>
+          <span class="count-badge" data-project-count data-count-label="${escapeAttr(countLabel)}" aria-label="${totalProjects} ${countLabel}">
+            <strong>${totalProjects}</strong>
+            <span>${countLabel}</span>
+          </span>
+        </div>`;
   const filterControls = `
     <div class="filters" data-reveal>
       <label>${groupLabels.stack}
-        <select data-filter="stack">
-          ${buildOptionsFromMap(stackMap, defaults.stack)}
+        <select data-filter="stack" data-default-label="${escapeAttr(defaults.stack)}">
+          <option value="all" selected>${defaults.stack}</option>
         </select>
       </label>
       <label>${groupLabels.tag}
-        <select data-filter="tag">
-          ${buildOptionsFromMap(tagMap, defaults.tag)}
+        <select data-filter="tag" data-default-label="${escapeAttr(defaults.tag)}">
+          <option value="all" selected>${defaults.tag}</option>
         </select>
       </label>
       <label>${groupLabels.year}
-        <select data-filter="year">
-          ${buildYearOptions(defaults.year)}
+        <select data-filter="year" data-default-label="${escapeAttr(defaults.year)}">
+          <option value="all" selected>${defaults.year}</option>
         </select>
       </label>
     </div>`;
   const content = `
   <main id="main">
-    <section class="section projects-index">
+    <section class="section projects-index" data-projects-root data-render-source="static">
       <div class="container">
-        <div class="section__intro" data-reveal>
-          <h1>${data.title}</h1>
-          <p>${data.intro}</p>
-        </div>
-        ${filterControls}
-        <p class="projects-status" data-reveal data-status role="status" aria-live="polite" data-status-loading="${data.status_messages.loading}" data-status-empty="${data.status_messages.empty}" data-status-all="${data.status_messages.count}" data-status-filtered="${data.status_messages.filtered}">${data.status_messages.loading}</p>
-        <div class="projects-grid" data-project-list>${cards}</div>
+      <div class="section__intro" data-reveal>
+        <h1>${data.title}</h1>
+        <p>${data.intro}</p>
+      </div>
+      ${countBadge}
+      ${filterControls}
+        <p class="projects-status" data-reveal data-status role="status" aria-live="polite" data-status-loading="${data.status_messages.loading}" data-status-empty="${data.status_messages.empty}" data-status-all="${data.status_messages.count}" data-status-filtered="${data.status_messages.filtered}" data-status-error="${data.status_messages.error}">${data.status_messages.loading}</p>
+        <div class="projects-grid" data-project-list>${staticCards}</div>
         <div class="section__actions" data-reveal>
           <a class="btn btn--ghost" href="${lang === 'fr' ? '/fr/index.html' : '/index.html'}">${data.view_home_label}</a>
         </div>
@@ -569,51 +586,6 @@ function renderProjectsPage(lang) {
     alternatePath: lang === 'fr' ? languages.en.seo.projects_index.path : languages.fr.seo.projects_index.path,
     content
   });
-}
-
-function collectStackMap() {
-  const map = new Map();
-  projects.forEach((project) => {
-    project.stack.forEach((item) => {
-      const token = normalizeToken(item);
-      if (!map.has(token)) {
-        map.set(token, item);
-      }
-    });
-  });
-  return map;
-}
-
-function collectTagMap() {
-  const map = new Map();
-  projects.forEach((project) => {
-    (project.tags || []).forEach((item) => {
-      const token = normalizeToken(item);
-      if (!map.has(token)) {
-        map.set(token, item);
-      }
-    });
-  });
-  return map;
-}
-
-function buildOptionsFromMap(map, defaultLabel) {
-  const defaultOption = `<option value="all" selected>${defaultLabel}</option>`;
-  const entries = Array.from(map.entries()).sort((a, b) => a[1].localeCompare(b[1]));
-  const options = entries.map(([value, label]) => `<option value="${value}">${label}</option>`).join('');
-  return `${defaultOption}${options}`;
-}
-
-function buildYearOptions(defaultLabel = 'All years') {
-  const years = new Set();
-  projects.forEach((project) => {
-    const match = project.period.match(/\d{4}/g);
-    if (match) {
-      match.forEach((year) => years.add(year));
-    }
-  });
-  const sorted = Array.from(years).sort((a, b) => Number(b) - Number(a));
-  return [`<option value="all" selected>${defaultLabel}</option>`, ...sorted.map((year) => `<option value="${year}">${year}</option>`)].join('');
 }
 
 function renderProjectDetail(lang, project) {
@@ -661,8 +633,29 @@ function renderProjectDetail(lang, project) {
     keywords: Array.from(new Set([...(project.stack || []), ...(project.tags || [])])).join(', ')
   };
   const creativeWorkSchema = `<script type="application/ld+json">${JSON.stringify(creativeWork, null, 2)}</script>`;
+  const projectsHref = lang === 'fr' ? '/fr/projets/index.html' : '/projects/index.html';
+  const loadingMessage = data.loading_message || 'Loading project…';
+  const mainAttrs = [
+    'id="main"',
+    'data-project-detail',
+    `data-project-id="${escapeAttr(project.id)}"`,
+    `data-label-overview="${escapeAttr(data.overview_label)}"`,
+    `data-label-period="${escapeAttr(data.period_label)}"`,
+    `data-label-role="${escapeAttr(data.role_label)}"`,
+    `data-label-client="${escapeAttr(data.client_label)}"`,
+    `data-label-stack="${escapeAttr(data.stack_label)}"`,
+    `data-label-highlights="${escapeAttr(data.highlights_label)}"`,
+    `data-label-metrics="${escapeAttr(data.metrics_label)}"`,
+    `data-cta-contact="${escapeAttr(data.cta_contact)}"`,
+    `data-cta-projects="${escapeAttr(data.cta_projects)}"`,
+    `data-projects-href="${escapeAttr(projectsHref)}"`,
+    `data-contact-email="${escapeAttr(siteData.email || 'hello@mohamedalimabrouki.com')}"`,
+    `data-error-message="${escapeAttr(data.error_message || '')}"`,
+    `data-loading-message="${escapeAttr(loadingMessage)}"`,
+    'data-render-source="static"'
+  ].join(' ');
   const intro = `
-    <header class="project-hero" data-reveal>
+    <header class="project-hero" data-reveal data-project-hero>
       <div class="project-hero__copy">
         <p class="eyebrow">${data.overview_label}</p>
         <h1>${title}</h1>
@@ -675,29 +668,29 @@ function renderProjectDetail(lang, project) {
             <div><dt>${data.stack_label}</dt><dd>${stackList}</dd></div>
           </dl>
           <div class="project-hero__actions">
-            <a class="btn btn--primary" href="mailto:hello@mohamedalimabrouki.com">${data.cta_contact}</a>
-            <a class="btn btn--ghost" href="${lang === 'fr' ? '/fr/projets/index.html' : '/projects/index.html'}">${data.cta_projects}</a>
+            <a class="btn btn--primary" href="mailto:${siteData.email || 'hello@mohamedalimabrouki.com'}">${data.cta_contact}</a>
+            <a class="btn btn--ghost" href="${projectsHref}">${data.cta_projects}</a>
           </div>
         </div>
       </div>
       <div class="project-hero__media">${picture}</div>
     </header>`;
   const content = `
-  <main id="main">
+  <main ${mainAttrs}>
     <section class="section project-detail">
       <div class="container">
         ${intro}
         <div class="project-detail__grid">
-          <article class="card" data-reveal>
+          <article class="card" data-reveal data-project-highlights>
             <h2>${data.highlights_label}</h2>
             <ul>${highlightsMarkup}</ul>
           </article>
-          <article class="card" data-reveal>
+          <article class="card" data-reveal data-project-metrics>
             <h2>${data.metrics_label}</h2>
             <ul>${metricsMarkup}</ul>
           </article>
         </div>
-        <div class="gallery" data-reveal>${gallery}</div>
+        <div class="gallery" data-reveal data-project-gallery>${gallery}</div>
       </div>
     </section>
   </main>`;
@@ -709,7 +702,8 @@ function renderProjectDetail(lang, project) {
     canonicalPath: lang === 'fr' ? `/fr/projets/${project.id}.html` : `/projects/${project.id}.html`,
     alternatePath: lang === 'fr' ? `/projects/${project.id}.html` : `/fr/projets/${project.id}.html`,
     content,
-    extraHead: creativeWorkSchema
+    extraHead: creativeWorkSchema,
+    ogImagePath: project.cover.startsWith('/') ? project.cover : `/${project.cover}`
   });
 }
 

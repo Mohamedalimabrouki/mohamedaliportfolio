@@ -229,7 +229,7 @@
     "intro": "Access the detailed CV or request a tailored dossier.",
     "buttons": [
       {
-        "label": "Download CV (DOCX)",
+        "label": "Download CV",
         "href": "/assets/cv/Mohamed_Ali_Mabrouki_CV.docx",
         "download": true
       },
@@ -307,9 +307,11 @@
       "loading": "Loading projects…",
       "empty": "Projects will appear soon.",
       "count": "Showing {count} of {total} projects.",
-      "filtered": "Showing {count} of {total} projects."
+      "filtered": "Showing {count} of {total} projects.",
+      "error": "Unable to load projects. Please refresh."
     },
-    "view_home_label": "Back to home"
+    "view_home_label": "Back to home",
+    "count_label": "projects"
   },
   "project_detail": {
     "overview_label": "Overview",
@@ -320,7 +322,9 @@
     "period_label": "Period",
     "stack_label": "Focus",
     "cta_contact": "Book a call",
-    "cta_projects": "All projects"
+    "cta_projects": "All projects",
+    "loading_message": "Loading project…",
+    "error_message": "Project not found. Please return to the projects page."
   },
   "cv_page": {
     "title": "Curriculum Vitae",
@@ -415,7 +419,7 @@
       "Advanced analytics (Power BI, Tableau)",
       "Digital quality wall & traceability platforms"
     ],
-    "download_button": "Download CV (DOCX)"
+    "download_button": "Download CV"
   },
   "seo": {
     "home": {

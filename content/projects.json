@@ -36,9 +36,9 @@
       "Fuites défaut sous la cible",
       "Conformité PPAP/CoP fournisseurs 100 %"
     ],
-    "cover": "assets/img/projects/proace-city.jpg",
+    "cover": "assets/projects/ec-homologation-toyota-proace-city/cover.jpg",
     "gallery": [
-      "assets/img/projects/proace-city.jpg"
+      "assets/projects/ec-homologation-toyota-proace-city/detail-1.jpg"
     ],
     "summary_en": "Whole Vehicle Type Approval programme for Toyota's compact van derivative; documentation sets, annex evidence, markings, and CoP traceability.",
     "summary_fr": "Programme WVTA pour le fourgon compact Toyota ; constitution des dossiers, preuves annexes, marquages et traçabilité CoP.",
@@ -82,9 +82,9 @@
       "Fuites défaut sous la cible",
       "Conformité PPAP/CoP fournisseurs 100 %"
     ],
-    "cover": "assets/img/projects/rifter.jpg",
+    "cover": "assets/projects/ec-homologation-peugeot-rifter-citroen-berlingo/cover.jpg",
     "gallery": [
-      "assets/img/projects/rifter.jpg"
+      "assets/projects/ec-homologation-peugeot-rifter-citroen-berlingo/detail-1.jpg"
     ],
     "summary_en": "Stellantis compact van branch; aligning test evidence and dossiers across Peugeot Rifter and Citroën Berlingo programmes.",
     "summary_fr": "Branche fourgons compacts Stellantis ; alignement des preuves d'essais et dossiers pour Peugeot Rifter et Citroën Berlingo.",
@@ -128,9 +128,9 @@
       "Fuites défaut sous la cible",
       "Conformité PPAP/CoP fournisseurs 100 %"
     ],
-    "cover": "assets/img/projects/opel-combo.jpg",
+    "cover": "assets/projects/ec-homologation-opel-combo/cover.jpg",
     "gallery": [
-      "assets/img/projects/opel-combo.jpg"
+      "assets/projects/ec-homologation-opel-combo/detail-1.jpg"
     ],
     "summary_en": "Opel Combo branch of the multi-brand compact van family; ensuring type-approval consistency across body lengths and powertrains.",
     "summary_fr": "Branche Opel Combo de la famille multimarque ; cohérence d'homologation sur silhouettes et chaînes de traction.",
@@ -174,9 +174,9 @@
       "Couverture validation redondance > 95 %",
       "Dossier de preuves validé du premier coup"
     ],
-    "cover": "assets/img/projects/mkc2.jpg",
+    "cover": "assets/projects/euro-7-braking-brake-by-wire-integration/cover.jpg",
     "gallery": [
-      "assets/img/projects/mkc2.jpg"
+      "assets/projects/euro-7-braking-brake-by-wire-integration/detail-1.jpg"
     ],
     "summary_en": "Euro 7 brake-by-wire delivery integrating Continental and Bosch systems; particulate strategy, redundancy, and diagnostics alignment.",
     "summary_fr": "Livraison freinage Euro 7 intégrant solutions Continental et Bosch ; stratégie particules, redondance et diagnostics alignés.",
@@ -220,9 +220,9 @@
       "Fade thermique < 15 % sur les cycles",
       "Conformité PPAP/CoP fournisseurs 100 %"
     ],
-    "cover": "assets/img/projects/brake-caliper.jpg",
+    "cover": "assets/projects/brake-hardware-calipers-pads-carriers/cover.jpg",
     "gallery": [
-      "assets/img/projects/brake-caliper.jpg"
+      "assets/projects/brake-hardware-calipers-pads-carriers/detail-1.jpg"
     ],
     "summary_en": "Calipers, pads, and carriers industrialisation: conformity, material specifications, and endurance validation for LCV duty cycles.",
     "summary_fr": "Industrialisation étriers, plaquettes et supports : conformité, matériaux et validation endurance pour cycles VUL.",
@@ -266,9 +266,9 @@
       "Indice capabilité fournisseurs Cpk ≥ 1,33",
       "Taux d'incidents garantie sous la cible"
     ],
-    "cover": "assets/img/projects/renault-master.jpg",
+    "cover": "assets/projects/renault-master-axles-wheel-assembly/cover.jpg",
     "gallery": [
-      "assets/img/projects/renault-master.jpg"
+      "assets/projects/renault-master-axles-wheel-assembly/detail-1.jpg"
     ],
     "summary_en": "Axles and wheel-end industrialisation support on Renault Master; supplier readiness and torque/runout assurance for launch.",
     "summary_fr": "Industrialisation essieux et roue sur Renault Master ; préparation fournisseurs et tenue couple/faux-rond pour le lancement.",
@@ -312,9 +312,9 @@
       "Cpk ≥ 1,33 sur couple/faux-rond critiques",
       "Aucun écart en PPAP"
     ],
-    "cover": "assets/img/projects/hub-bearing-gen3.jpg",
+    "cover": "assets/projects/wheel-end-hub-bearing-unit-gen3/cover.jpg",
     "gallery": [
-      "assets/img/projects/hub-bearing-gen3.jpg"
+      "assets/projects/wheel-end-hub-bearing-unit-gen3/detail-1.jpg"
     ],
     "summary_en": "Gen-3 hub bearing units with integrated flanges; ensuring durability, diagnostics, and mating control for commercial vehicles.",
     "summary_fr": "Roulements de moyeu Gen3 avec brides intégrées ; durabilité, diagnostics et maîtrise d'assemblage pour véhicules utilitaires.",
@@ -358,9 +358,9 @@
       "Capabilité dimensionnelle ±0,3 mm",
       "Lancement sans modification d'ingénierie ouverte"
     ],
-    "cover": "assets/img/projects/citroen-c3-cc21.jpg",
+    "cover": "assets/projects/citroen-c3-exteriors-mounting/cover.jpg",
     "gallery": [
-      "assets/img/projects/citroen-c3-cc21.jpg"
+      "assets/projects/citroen-c3-exteriors-mounting/detail-1.jpg"
     ],
     "summary_en": "Citroën C3 exterior package: tail lamp brackets, bumpers, underbody protection, tow hook, and sensor mounts from CAD to tooling.",
     "summary_fr": "Programme Citroën C3 : package extérieurs (supports feux, pare-chocs, protections, attelage, capteurs) du CAD à l'outillage.",

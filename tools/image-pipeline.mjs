@@ -19,6 +19,7 @@ const FORMATS = [
 ];
 
 const DEFAULT_FOCUS = '50% 50%';
+const usedBases = new Set();
 
 async function ensureDir(dir) {
   await fs.mkdir(dir, { recursive: true });
@@ -41,20 +42,28 @@ function slugifySegment(segment) {
     .replace(/^-+|-+$/g, '');
 }
 
+const toPosixPath = (input) => input.split(path.sep).join('/');
+
 async function collectSourceImages() {
-  const entries = await fs.readdir(ASSETS_DIR, { withFileTypes: true });
   const files = [];
-  for (const entry of entries) {
-    if (entry.name.startsWith('.')) continue;
-    if (entry.isDirectory()) {
-      if (entry.name === 'optimized') continue;
-      // Nested directories can be added here if needed.
-      continue;
+  async function walk(currentDir) {
+    const entries = await fs.readdir(currentDir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (entry.name.startsWith('.')) continue;
+      const fullPath = path.join(currentDir, entry.name);
+      if (entry.isDirectory()) {
+        if (entry.name === 'optimized') continue;
+        await walk(fullPath);
+        continue;
+      }
+      const ext = path.extname(entry.name).toLowerCase();
+      if (!['.jpg', '.jpeg', '.png'].includes(ext)) continue;
+      const relative = toPosixPath(path.relative(ROOT, fullPath));
+      files.push(relative);
     }
-    const ext = path.extname(entry.name).toLowerCase();
-    if (!['.jpg', '.jpeg', '.png'].includes(ext)) continue;
-    files.push(path.join('assets', entry.name));
   }
+  await walk(ASSETS_DIR);
+  files.sort();
   return files;
 }
 
@@ -66,13 +75,19 @@ async function collectFocusOverrides() {
   projects.forEach(project => {
     const focus = project?.details?.focus || project?.focus;
     const image = project?.image;
+    const normalizedFocus = focus || DEFAULT_FOCUS;
+    const setFocus = (key) => {
+      if (!key) return;
+      const normalizedKey = key.replace(/^[./]+/, '').replace(/\\/g, '/');
+      focusMap.set(normalizedKey.startsWith('assets/') ? normalizedKey : `assets/${normalizedKey}`, normalizedFocus);
+    };
     if (image) {
-      focusMap.set(image, focus || DEFAULT_FOCUS);
+      setFocus(image);
     }
     const gallery = project?.details?.gallery;
     if (Array.isArray(gallery)) {
-      gallery.forEach(item => {
-        focusMap.set(item, focus || DEFAULT_FOCUS);
+      gallery.forEach((item) => {
+        setFocus(item);
       });
     }
   });
@@ -91,15 +106,23 @@ async function generatePlaceholder(sharpInstance) {
 
 async function processImage(relPath, focusMap) {
   const absolutePath = path.join(ROOT, relPath);
-  const baseName = path.basename(relPath, path.extname(relPath));
-  const safeBase = slugifySegment(baseName) || 'image';
+  const withoutExt = relPath.replace(/\.[^/.]+$/, '');
+  const segments = toPosixPath(withoutExt)
+    .split('/')
+    .filter(Boolean)
+    .slice(relPath.startsWith('assets/') ? 1 : 0)
+    .map((segment) => slugifySegment(segment))
+    .filter(Boolean);
+  const baseCandidate = segments.join('-') || 'image';
+  const safeBase = ensureUniqueBase(baseCandidate);
   const outputRecords = {};
 
   const source = sharp(absolutePath).trim();
   const metadata = await source.clone().metadata();
-  const aspectRatio = metadata.width && metadata.height
-    ? Number((metadata.width / metadata.height).toFixed(4))
-    : null;
+  const aspectRatio =
+    metadata.width && metadata.height
+      ? Number((metadata.width / metadata.height).toFixed(4))
+      : null;
   const placeholder = await generatePlaceholder(source);
   const focus = focusMap.get(relPath) || DEFAULT_FOCUS;
 
@@ -107,7 +130,6 @@ async function processImage(relPath, focusMap) {
     const variants = [];
     for (const width of WIDTHS) {
       if (metadata.width && width > metadata.width) {
-        // Avoid upscaling
         continue;
       }
       const filename = `${safeBase}-${width}.${format.ext}`;
@@ -123,12 +145,10 @@ async function processImage(relPath, focusMap) {
         .toFile(destPath);
       variants.push({
         width,
-        path: path.join('assets', 'optimized', filename)
+        path: toPosixPath(path.join('assets', 'optimized', filename))
       });
     }
 
-    // If the original image is smaller than the smallest target width,
-    // we still create a single rendition to keep the pipeline consistent.
     if (!variants.length && metadata.width) {
       const width = metadata.width;
       const filename = `${safeBase}-${width}.${format.ext}`;
@@ -143,25 +163,30 @@ async function processImage(relPath, focusMap) {
         .toFile(destPath);
       variants.push({
         width,
-        path: path.join('assets', 'optimized', filename)
+        path: toPosixPath(path.join('assets', 'optimized', filename))
       });
     }
 
     if (variants.length) {
       outputRecords[format.ext] = {
-        srcset: variants.map(v => `${v.path} ${v.width}w`).join(', '),
+        srcset: variants.map((v) => `/${v.path} ${v.width}w`).join(', '),
         sources: variants
       };
     }
   }
 
-  const fallback =
+  const fallbackPath =
     outputRecords.jpg?.sources?.[outputRecords.jpg.sources.length - 1]?.path ||
+    outputRecords.webp?.sources?.[outputRecords.webp.sources.length - 1]?.path ||
+    outputRecords.avif?.sources?.[outputRecords.avif.sources.length - 1]?.path ||
     relPath;
+  const fallback = fallbackPath.startsWith('/') ? fallbackPath : `/${fallbackPath}`;
 
   return {
     original: relPath,
     focus,
+    width: metadata.width || null,
+    height: metadata.height || null,
     aspectRatio,
     placeholder,
     formats: outputRecords,
@@ -169,8 +194,20 @@ async function processImage(relPath, focusMap) {
   };
 }
 
+function ensureUniqueBase(base) {
+  let candidate = base;
+  let suffix = 1;
+  while (usedBases.has(candidate)) {
+    candidate = `${base}-${suffix++}`;
+  }
+  usedBases.add(candidate);
+  return candidate;
+}
+
 async function run() {
+  await fs.rm(OPTIMIZED_DIR, { recursive: true, force: true });
   await ensureDir(OPTIMIZED_DIR);
+  usedBases.clear();
   const focusMap = await collectFocusOverrides();
   const sources = await collectSourceImages();
   const manifestEntries = {};

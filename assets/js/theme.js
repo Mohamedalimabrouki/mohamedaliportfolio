@@ -5,7 +5,7 @@
   const switcher = document.querySelector('[data-theme-switcher]');
   if (!switcher) return;
 
-  const buttons = Array.from(switcher.querySelectorAll('[data-theme-option]'));
+  const buttons = Array.from(switcher.querySelectorAll('[data-theme-set]'));
   const announcer = switcher.querySelector('[data-theme-status]');
   const validModes = new Set(['light', 'dark', 'system']);
 
@@ -42,7 +42,7 @@
 
   function syncButtons(mode) {
     buttons.forEach((button) => {
-      const value = button.dataset.themeOption;
+      const value = button.dataset.themeSet;
       const isActive = value === mode;
       button.classList.toggle('is-active', isActive);
       button.setAttribute('aria-pressed', String(isActive));
@@ -65,7 +65,7 @@
 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      const mode = button.dataset.themeOption || 'system';
+      const mode = button.dataset.themeSet || 'system';
       applyTheme(mode, { announceChange: true });
     });
   });

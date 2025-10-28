@@ -1,3 +1,4 @@
+/* Light & Dark theme variables. User override (via data-theme) takes priority over system. */
 :root {
   color-scheme: light dark;
   --surface-900: #f7f9fd;
@@ -31,8 +32,20 @@
   --border-soft: rgba(21, 34, 61, 0.12);
   --shadow-card: 0 18px 45px rgba(16, 34, 64, 0.16);
   --shadow-soft: 0 24px 70px rgba(71, 104, 152, 0.18);
-  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(47, 116, 255, 0.18), transparent 55%), radial-gradient(circle at 80% 0, rgba(255, 120, 80, 0.16), transparent 50%), linear-gradient(140deg, #f7f9fd 25%, #e4ecfa 100%);
+  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(47, 116, 255, 0.18), transparent 55%),
+    radial-gradient(circle at 80% 0, rgba(255, 120, 80, 0.16), transparent 50%),
+    linear-gradient(140deg, #f7f9fd 25%, #e4ecfa 100%);
   --hero-texture-color: rgba(21, 34, 61, 0.08);
+
+  /* Alias to the simplified token set used by base.css */
+  --bg: var(--surface-900);
+  --surface: var(--surface-card);
+  --text: var(--text-primary);
+  --muted: var(--text-muted);
+  --primary: var(--accent-400);
+  --primary-ink: var(--text-on-accent);
+  --border: var(--border-soft);
+  --focus: var(--focus-ring);
 }
 
 html[data-theme='dark'] {
@@ -68,8 +81,19 @@ html[data-theme='dark'] {
   --border-soft: rgba(255, 255, 255, 0.08);
   --shadow-card: 0 24px 60px rgba(8, 15, 35, 0.3);
   --shadow-soft: 0 30px 90px rgba(11, 17, 31, 0.38);
-  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(92, 165, 255, 0.32), transparent 60%), radial-gradient(circle at 80% 0, rgba(255, 120, 80, 0.24), transparent 55%), linear-gradient(140deg, #0b1220 35%, #111c2f 100%);
+  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(92, 165, 255, 0.32), transparent 60%),
+    radial-gradient(circle at 80% 0, rgba(255, 120, 80, 0.24), transparent 55%),
+    linear-gradient(140deg, #0b1220 35%, #111c2f 100%);
   --hero-texture-color: rgba(255, 255, 255, 0.08);
+
+  --bg: var(--surface-900);
+  --surface: var(--surface-card);
+  --text: var(--text-primary);
+  --muted: var(--text-muted);
+  --primary: var(--accent-400);
+  --primary-ink: var(--text-on-accent);
+  --border: var(--border-soft);
+  --focus: var(--focus-ring);
 }
 
 html[data-theme='light'] {
@@ -110,7 +134,18 @@ html[data-theme='light'] {
     --border-soft: rgba(255, 255, 255, 0.08);
     --shadow-card: 0 24px 60px rgba(8, 15, 35, 0.3);
     --shadow-soft: 0 30px 90px rgba(11, 17, 31, 0.38);
-    --gradient-hero: radial-gradient(circle at 20% 20%, rgba(92, 165, 255, 0.32), transparent 60%), radial-gradient(circle at 80% 0, rgba(255, 120, 80, 0.24), transparent 55%), linear-gradient(140deg, #0b1220 35%, #111c2f 100%);
+    --gradient-hero: radial-gradient(circle at 20% 20%, rgba(92, 165, 255, 0.32), transparent 60%),
+      radial-gradient(circle at 80% 0, rgba(255, 120, 80, 0.24), transparent 55%),
+      linear-gradient(140deg, #0b1220 35%, #111c2f 100%);
     --hero-texture-color: rgba(255, 255, 255, 0.08);
+
+    --bg: var(--surface-900);
+    --surface: var(--surface-card);
+    --text: var(--text-primary);
+    --muted: var(--text-muted);
+    --primary: var(--accent-400);
+    --primary-ink: var(--text-on-accent);
+    --border: var(--border-soft);
+    --focus: var(--focus-ring);
   }
 }

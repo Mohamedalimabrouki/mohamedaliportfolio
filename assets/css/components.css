@@ -1,3 +1,8 @@
+:root {
+  --avatar-size: clamp(200px, 26vw, 320px);
+  --avatar-ring: 1px solid var(--border, currentColor);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -230,4 +235,82 @@ body[data-reduced-motion="true"] [data-reveal] {
 
 body[data-reduced-motion="true"] .tilt-card {
   transform: none !important;
+}
+
+/* Hero avatar */
+.hero__portrait,
+.hero .avatar {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  background: transparent !important;
+  border: none;
+  border-radius: 24px;
+  padding: 0;
+  box-shadow: none;
+  display: grid;
+  place-items: center;
+}
+
+.hero__portrait picture,
+.hero .avatar picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__portrait img,
+.hero .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  display: block;
+  background: transparent;
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
+  -webkit-mask-image: radial-gradient(circle, #000 98%, transparent 100%);
+  mask-image: radial-gradient(circle, #000 98%, transparent 100%);
+  outline: var(--avatar-ring);
+  outline-offset: 0;
+}
+
+/* Project grid + cards parity */
+.projects-grid {
+  display: grid;
+  gap: clamp(16px, 2.4vw, 28px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags li {
+  list-style: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--surface-card, var(--surface));
+  border: 1px solid var(--border-soft, var(--border));
+  color: var(--text-muted);
+}
+
+/* CTA row */
+.cta-row,
+.section__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Responsive helpers */
+@media (max-width: 900px) {
+  :root {
+    --avatar-size: clamp(160px, 36vw, 220px);
+  }
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
 }

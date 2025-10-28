@@ -7,11 +7,15 @@
   const navLinks = Array.from(doc.querySelectorAll('.site-nav__link'));
   const sections = Array.from(doc.querySelectorAll('[data-section]'));
   const currentYearEl = doc.querySelector('[data-current-year]');
-  const revealElements = Array.from(doc.querySelectorAll('[data-reveal]'));
+  let revealElements = Array.from(doc.querySelectorAll('[data-reveal]'));
   const contactForm = doc.getElementById('contact-form');
 
   const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   const pointerFineQuery = window.matchMedia('(pointer: fine)');
+  const supportsIntersectionObserver = 'IntersectionObserver' in window;
+  let parallaxCleanup = null;
+  let tiltCleanup = null;
+  let revealObserver = null;
 
   let prefersReducedMotion = reduceMotionQuery.matches;
 
@@ -21,8 +25,21 @@
   }
 
   setReducedMotionState(prefersReducedMotion);
-  reduceMotionQuery.addEventListener('change', (event) => {
+  function attachMediaQueryListener(query, handler) {
+    if (typeof query.addEventListener === 'function') {
+      query.addEventListener('change', handler);
+    } else if (typeof query.addListener === 'function') {
+      query.addListener(handler);
+    }
+  }
+
+  attachMediaQueryListener(reduceMotionQuery, (event) => {
     setReducedMotionState(event.matches);
+    refreshMotionBehaviors();
+  });
+
+  attachMediaQueryListener(pointerFineQuery, () => {
+    refreshMotionBehaviors();
   });
 
   if (currentYearEl) {
@@ -49,7 +66,7 @@
     threshold: 0
   };
 
-  if ('IntersectionObserver' in window) {
+  if (supportsIntersectionObserver) {
     const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
@@ -62,23 +79,6 @@
     }, observerOptions);
 
     sections.forEach((section) => sectionObserver.observe(section));
-
-    const revealObserver = new IntersectionObserver((entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    if (!prefersReducedMotion) {
-      revealElements.forEach((el) => revealObserver.observe(el));
-    } else {
-      revealElements.forEach((el) => el.classList.add('is-visible'));
-    }
-  } else {
-    revealElements.forEach((el) => el.classList.add('is-visible'));
   }
 
   function updateHeaderState() {
@@ -90,9 +90,14 @@
   updateHeaderState();
   window.addEventListener('scroll', updateHeaderState, { passive: true });
 
-  function mountParallax() {
+  function setupParallax() {
+    if (typeof parallaxCleanup === 'function') {
+      parallaxCleanup();
+      parallaxCleanup = null;
+    }
+    if (prefersReducedMotion || !pointerFineQuery.matches) return;
     const root = doc.querySelector('[data-parallax-root]');
-    if (!root || prefersReducedMotion || !pointerFineQuery.matches) return;
+    if (!root) return;
     const layers = Array.from(root.querySelectorAll('[data-parallax-layer]'));
     if (!layers.length) return;
     let ticking = false;
@@ -115,96 +120,95 @@
         ticking = false;
       });
     }
-    root.addEventListener('pointermove', onPointerMove);
-    root.addEventListener('mouseleave', () => {
+    function resetLayers() {
       layers.forEach((layer) => {
         layer.style.transform = 'translate3d(0,0,0)';
       });
-    });
+    }
+    root.addEventListener('pointermove', onPointerMove);
+    root.addEventListener('mouseleave', resetLayers);
+    parallaxCleanup = () => {
+      root.removeEventListener('pointermove', onPointerMove);
+      root.removeEventListener('mouseleave', resetLayers);
+      resetLayers();
+    };
   }
 
-  function mountTilt() {
+  function setupTilt() {
+    if (typeof tiltCleanup === 'function') {
+      tiltCleanup();
+      tiltCleanup = null;
+    }
     if (prefersReducedMotion || !pointerFineQuery.matches) return;
     const cards = Array.from(doc.querySelectorAll('.tilt-card'));
+    if (!cards.length) return;
+    const cleanupFns = [];
     cards.forEach((card) => {
-      let interactive = true;
-      card.addEventListener('pointerenter', () => {
-        if (!interactive) return;
-        card.style.transition = 'transform 0.35s ease, box-shadow 0.35s ease';
-      });
-      card.addEventListener('pointermove', (event) => {
-        if (!interactive) return;
+      const onPointerEnter = () => {
+        card.style.transition = 'transform 0.35s ease';
+      };
+      const onPointerMove = (event) => {
         const rect = card.getBoundingClientRect();
         const x = (event.clientX - rect.left) / rect.width - 0.5;
         const y = (event.clientY - rect.top) / rect.height - 0.5;
         const rotateX = (y * -6).toFixed(2);
         const rotateY = (x * 6).toFixed(2);
         card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      });
-      card.addEventListener('pointerleave', () => {
+      };
+      const onPointerLeave = () => {
         card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+      };
+      card.addEventListener('pointerenter', onPointerEnter);
+      card.addEventListener('pointermove', onPointerMove);
+      card.addEventListener('pointerleave', onPointerLeave);
+      cleanupFns.push(() => {
+        card.removeEventListener('pointerenter', onPointerEnter);
+        card.removeEventListener('pointermove', onPointerMove);
+        card.removeEventListener('pointerleave', onPointerLeave);
+        card.style.transform = 'none';
+        card.style.transition = '';
       });
-      card.addEventListener('click', () => {
-        interactive = false;
-        card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+    tiltCleanup = () => {
+      cleanupFns.forEach((fn) => fn());
+      tiltCleanup = null;
+    };
+  }
+
+  function setupReveals() {
+    revealElements = Array.from(doc.querySelectorAll('[data-reveal]'));
+    if (!revealElements.length) return;
+    if (!supportsIntersectionObserver) {
+      revealElements.forEach((el) => el.classList.add('is-visible'));
+      return;
+    }
+    if (revealObserver) {
+      revealObserver.disconnect();
+      revealObserver = null;
+    }
+    if (prefersReducedMotion) {
+      revealElements.forEach((el) => el.classList.add('is-visible'));
+      return;
+    }
+    revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
       });
+    }, { threshold: 0.2 });
+    revealElements.forEach((el) => {
+      if (!el.classList.contains('is-visible')) {
+        revealObserver.observe(el);
+      }
     });
   }
 
-  function handleFilters() {
-    const container = doc.querySelector('[data-project-list]');
-    if (!container) return;
-    const cards = Array.from(container.querySelectorAll('.project-card'));
-    const selectStack = doc.querySelector('select[data-filter="stack"]');
-    const selectTag = doc.querySelector('select[data-filter="tag"]');
-    const selectYear = doc.querySelector('select[data-filter="year"]');
-    const status = doc.querySelector('[data-status]');
-    if (!selectStack || !selectYear || !status) return;
-
-    function updateStatus(visible) {
-      if (!status) return;
-      const total = cards.length;
-      if (!visible.length) {
-        const emptyLabel = status.dataset.statusEmpty || 'No projects match this filter yet.';
-        status.textContent = emptyLabel.replace('{count}', visible.length).replace('{total}', total);
-      } else if (visible.length === total) {
-        const allLabel = status.dataset.statusAll || `Showing ${visible.length} of ${total} projects.`;
-        status.textContent = allLabel.replace('{count}', visible.length).replace('{total}', total);
-      } else {
-        const filteredLabel = status.dataset.statusFiltered || `Showing ${visible.length} of ${total} projects.`;
-        status.textContent = filteredLabel.replace('{count}', visible.length).replace('{total}', total);
-      }
-    }
-
-    function applyFilters() {
-      const stackValue = selectStack.value;
-      const tagValue = selectTag ? selectTag.value : 'all';
-      const yearValue = selectYear.value;
-      const visible = [];
-      cards.forEach((card) => {
-        const stackTokens = (card.dataset.stack || '').split(',').filter(Boolean);
-        const tagTokens = (card.dataset.tags || '').split(',').filter(Boolean);
-        const year = card.dataset.year || '';
-        const matchesStack = stackValue === 'all' || stackTokens.includes(stackValue);
-        const matchesTag = tagValue === 'all' || tagTokens.includes(tagValue);
-        const matchesYear = yearValue === 'all' || year === yearValue;
-        const isVisible = matchesStack && matchesTag && matchesYear;
-        card.style.display = isVisible ? '' : 'none';
-        if (isVisible) visible.push(card);
-      });
-      updateStatus(visible);
-    }
-
-    selectStack.addEventListener('change', applyFilters);
-    if (selectTag) {
-      selectTag.addEventListener('change', applyFilters);
-    }
-    selectYear.addEventListener('change', applyFilters);
-    const loadingLabel = status.dataset.statusLoading;
-    if (loadingLabel) {
-      status.textContent = loadingLabel;
-    }
-    requestAnimationFrame(applyFilters);
+  function refreshMotionBehaviors() {
+    setupParallax();
+    setupTilt();
+    setupReveals();
   }
 
   function handleContactForm() {
@@ -223,9 +227,7 @@
   }
 
   function init() {
-    mountParallax();
-    mountTilt();
-    handleFilters();
+    refreshMotionBehaviors();
     handleContactForm();
   }
 
@@ -234,4 +236,7 @@
   } else {
     init();
   }
+  document.addEventListener('projects:hydrated', () => {
+    refreshMotionBehaviors();
+  });
 })();
