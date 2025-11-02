@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Mohamed Ali Mabrouki",
-    "tagline": "Leader homologation et châssis automobile",
+    "tagline": "",
     "description": "Freinage Euro 7, dossiers WVTA et lancements roue à bord orchestrés pour les programmes Toyota, Stellantis et Renault.",
     "keywords": [
       "Homologation automobile",
@@ -40,7 +40,7 @@
     },
     {
       "id": "downloads",
-      "label": "CV & Téléchargements"
+      "label": "CV"
     },
     {
       "id": "contact",

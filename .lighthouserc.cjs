@@ -1,10 +1,10 @@
 module.exports = {
   ci: {
     collect: {
-      staticDistDir: '.',
+      startServerCommand: 'sleep 5 && python3 -m http.server 3000',
       url: [
-        'index.html',
-        'project.html?p=ec-homologation-toyota-proace-city'
+        'http://localhost:3000/index.html',
+        'http://localhost:3000/projects/ec-homologation-toyota-proace-city.html'
       ],
       numberOfRuns: 1
     },

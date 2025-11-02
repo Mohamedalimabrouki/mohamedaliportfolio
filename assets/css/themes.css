@@ -1,41 +1,41 @@
 /* Light & Dark theme variables. User override (via data-theme) takes priority over system. */
 :root {
   color-scheme: light dark;
-  --surface-900: #f7f9fd;
-  --surface-800: #eef3fb;
-  --surface-700: #d9e3f7;
-  --surface-600: #c3d5f0;
-  --surface-500: #9bbce6;
-  --surface-200: rgba(21, 34, 61, 0.08);
-  --surface-100: #0b1220;
-  --surface-overlay: rgba(255, 255, 255, 0.78);
-  --surface-overlay-strong: rgba(255, 255, 255, 0.92);
-  --surface-overlay-muted: rgba(21, 34, 61, 0.06);
-  --surface-card: rgba(255, 255, 255, 0.92);
-  --surface-card-border: rgba(21, 34, 61, 0.1);
-  --surface-card-emphasis: rgba(47, 72, 123, 0.18);
-  --badge-bg: rgba(47, 116, 255, 0.1);
-  --badge-color: #1d57d9;
-  --pill-bg: rgba(21, 34, 61, 0.06);
-  --pill-border: rgba(21, 34, 61, 0.12);
-  --chip-bg: rgba(21, 34, 61, 0.08);
-  --chip-border: rgba(21, 34, 61, 0.1);
-  --text-primary: #15223d;
-  --text-muted: rgba(21, 34, 61, 0.7);
-  --text-inverse: #f5f8ff;
-  --accent-300: #4b8dff;
-  --accent-400: #2f74ff;
-  --accent-500: #1d57d9;
-  --accent-600: #143ea7;
-  --text-on-accent: #06102a;
-  --focus-ring: rgba(47, 116, 255, 0.4);
-  --border-soft: rgba(21, 34, 61, 0.12);
-  --shadow-card: 0 18px 45px rgba(16, 34, 64, 0.16);
-  --shadow-soft: 0 24px 70px rgba(71, 104, 152, 0.18);
-  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(47, 116, 255, 0.18), transparent 55%),
-    radial-gradient(circle at 80% 0, rgba(255, 120, 80, 0.16), transparent 50%),
-    linear-gradient(140deg, #f7f9fd 25%, #e4ecfa 100%);
-  --hero-texture-color: rgba(21, 34, 61, 0.08);
+  --surface-900: #fdfdfd;
+  --surface-800: #e0e0e0;
+  --surface-700: #c9c9c9;
+  --surface-600: #b2b2b2;
+  --surface-500: #9b9b9b;
+  --surface-200: rgba(26, 26, 26, 0.08);
+  --surface-100: #1a1a1a;
+  --surface-overlay: rgba(255, 255, 255, 0.85);
+  --surface-overlay-strong: rgba(255, 255, 255, 0.95);
+  --surface-overlay-muted: rgba(26, 26, 26, 0.05);
+  --surface-card: #ffffff;
+  --surface-card-border: rgba(26, 26, 26, 0.1);
+  --surface-card-emphasis: rgba(42, 58, 90, 0.15);
+  --badge-bg: rgba(200, 156, 60, 0.1);
+  --badge-color: #c89c3c;
+  --pill-bg: rgba(26, 26, 26, 0.05);
+  --pill-border: rgba(26, 26, 26, 0.1);
+  --chip-bg: rgba(26, 26, 26, 0.08);
+  --chip-border: rgba(26, 26, 26, 0.1);
+  --text-primary: #1a1a1a;
+  --text-muted: rgba(26, 26, 26, 0.7);
+  --text-inverse: #fdfdfd;
+  --accent-300: #8898b8;
+  --accent-400: #4a5a7a;
+  --accent-500: #2a3a5a;
+  --accent-600: #1a2a4a;
+  --text-on-accent: #ffffff;
+  --focus-ring: rgba(200, 156, 60, 0.4);
+  --border-soft: rgba(26, 26, 26, 0.12);
+  --shadow-card: 0 12px 25px rgba(0, 0, 0, 0.06);
+  --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.08);
+  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(42, 58, 90, 0.08), transparent 55%),
+    radial-gradient(circle at 80% 0, rgba(200, 156, 60, 0.08), transparent 50%),
+    linear-gradient(140deg, #fdfdfd 25%, #e0e0e0 100%);
+  --hero-texture-color: rgba(26, 26, 26, 0.05);
 
   /* Alias to the simplified token set used by base.css */
   --bg: var(--surface-900);
@@ -50,41 +50,41 @@
 
 html[data-theme='dark'] {
   color-scheme: dark;
-  --surface-900: #0b1220;
-  --surface-800: #101a2c;
-  --surface-700: #1c273a;
-  --surface-600: #273246;
-  --surface-500: #2f3b53;
-  --surface-200: rgba(255, 255, 255, 0.08);
-  --surface-100: #f3f6fc;
-  --surface-overlay: rgba(11, 18, 32, 0.78);
-  --surface-overlay-strong: rgba(11, 18, 32, 0.92);
-  --surface-overlay-muted: rgba(15, 25, 40, 0.45);
-  --surface-card: rgba(18, 26, 42, 0.85);
-  --surface-card-border: rgba(255, 255, 255, 0.05);
-  --surface-card-emphasis: rgba(11, 28, 58, 0.45);
-  --badge-bg: rgba(92, 165, 255, 0.12);
-  --badge-color: #a6cbff;
-  --pill-bg: rgba(255, 255, 255, 0.05);
-  --pill-border: rgba(255, 255, 255, 0.1);
-  --chip-bg: rgba(15, 25, 40, 0.6);
-  --chip-border: rgba(255, 255, 255, 0.06);
-  --text-primary: #f5f8ff;
-  --text-muted: rgba(245, 248, 255, 0.78);
-  --text-inverse: #0b1220;
-  --accent-300: #74bbff;
-  --accent-400: #5ca5ff;
-  --accent-500: #3d8aff;
-  --accent-600: #2b6fcc;
-  --text-on-accent: #06102a;
-  --focus-ring: rgba(139, 196, 255, 0.6);
-  --border-soft: rgba(255, 255, 255, 0.08);
-  --shadow-card: 0 24px 60px rgba(8, 15, 35, 0.3);
-  --shadow-soft: 0 30px 90px rgba(11, 17, 31, 0.38);
-  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(92, 165, 255, 0.32), transparent 60%),
-    radial-gradient(circle at 80% 0, rgba(255, 120, 80, 0.24), transparent 55%),
-    linear-gradient(140deg, #0b1220 35%, #111c2f 100%);
-  --hero-texture-color: rgba(255, 255, 255, 0.08);
+  --surface-900: #121212;
+  --surface-800: #1e1e1e;
+  --surface-700: #2a2a2a;
+  --surface-600: #363636;
+  --surface-500: #424242;
+  --surface-200: rgba(224, 224, 224, 0.08);
+  --surface-100: #e0e0e0;
+  --surface-overlay: rgba(18, 18, 18, 0.85);
+  --surface-overlay-strong: rgba(18, 18, 18, 0.95);
+  --surface-overlay-muted: rgba(30, 30, 30, 0.45);
+  --surface-card: rgba(30, 30, 30, 0.85);
+  --surface-card-border: rgba(224, 224, 224, 0.05);
+  --surface-card-emphasis: rgba(168, 184, 216, 0.15);
+  --badge-bg: rgba(240, 173, 78, 0.12);
+  --badge-color: #f0ad4e;
+  --pill-bg: rgba(224, 224, 224, 0.05);
+  --pill-border: rgba(224, 224, 224, 0.1);
+  --chip-bg: rgba(30, 30, 30, 0.6);
+  --chip-border: rgba(224, 224, 224, 0.06);
+  --text-primary: #e0e0e0;
+  --text-muted: rgba(224, 224, 224, 0.7);
+  --text-inverse: #121212;
+  --accent-300: #a8b8d8;
+  --accent-400: #8898b8;
+  --accent-500: #4a5a7a;
+  --accent-600: #2a3a5a;
+  --text-on-accent: #ffffff;
+  --focus-ring: rgba(240, 173, 78, 0.6);
+  --border-soft: rgba(224, 224, 224, 0.08);
+  --shadow-card: 0 12px 25px rgba(0, 0, 0, 0.2);
+  --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.25);
+  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(168, 184, 216, 0.15), transparent 60%),
+    radial-gradient(circle at 80% 0, rgba(240, 173, 78, 0.15), transparent 55%),
+    linear-gradient(140deg, #121212 35%, #1e1e1e 100%);
+  --hero-texture-color: rgba(224, 224, 224, 0.05);
 
   --bg: var(--surface-900);
   --surface: var(--surface-card);
@@ -103,41 +103,41 @@ html[data-theme='light'] {
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --surface-900: #0b1220;
-    --surface-800: #101a2c;
-    --surface-700: #1c273a;
-    --surface-600: #273246;
-    --surface-500: #2f3b53;
-    --surface-200: rgba(255, 255, 255, 0.08);
-    --surface-100: #f3f6fc;
-    --surface-overlay: rgba(11, 18, 32, 0.78);
-    --surface-overlay-strong: rgba(11, 18, 32, 0.92);
-    --surface-overlay-muted: rgba(15, 25, 40, 0.45);
-    --surface-card: rgba(18, 26, 42, 0.85);
-    --surface-card-border: rgba(255, 255, 255, 0.05);
-    --surface-card-emphasis: rgba(11, 28, 58, 0.45);
-    --badge-bg: rgba(92, 165, 255, 0.12);
-    --badge-color: #a6cbff;
-    --pill-bg: rgba(255, 255, 255, 0.05);
-    --pill-border: rgba(255, 255, 255, 0.1);
-    --chip-bg: rgba(15, 25, 40, 0.6);
-    --chip-border: rgba(255, 255, 255, 0.06);
-    --text-primary: #f5f8ff;
-    --text-muted: rgba(245, 248, 255, 0.78);
-    --text-inverse: #0b1220;
-    --accent-300: #74bbff;
-    --accent-400: #5ca5ff;
-    --accent-500: #3d8aff;
-    --accent-600: #2b6fcc;
-    --text-on-accent: #06102a;
-    --focus-ring: rgba(139, 196, 255, 0.6);
-    --border-soft: rgba(255, 255, 255, 0.08);
-    --shadow-card: 0 24px 60px rgba(8, 15, 35, 0.3);
-    --shadow-soft: 0 30px 90px rgba(11, 17, 31, 0.38);
-    --gradient-hero: radial-gradient(circle at 20% 20%, rgba(92, 165, 255, 0.32), transparent 60%),
-      radial-gradient(circle at 80% 0, rgba(255, 120, 80, 0.24), transparent 55%),
-      linear-gradient(140deg, #0b1220 35%, #111c2f 100%);
-    --hero-texture-color: rgba(255, 255, 255, 0.08);
+    --surface-900: #121212;
+    --surface-800: #1e1e1e;
+    --surface-700: #2a2a2a;
+    --surface-600: #363636;
+    --surface-500: #424242;
+    --surface-200: rgba(224, 224, 224, 0.08);
+    --surface-100: #e0e0e0;
+    --surface-overlay: rgba(18, 18, 18, 0.78);
+    --surface-overlay-strong: rgba(18, 18, 18, 0.92);
+    --surface-overlay-muted: rgba(30, 30, 30, 0.45);
+    --surface-card: rgba(30, 30, 30, 0.85);
+    --surface-card-border: rgba(224, 224, 224, 0.05);
+    --surface-card-emphasis: rgba(168, 184, 216, 0.45);
+    --badge-bg: rgba(240, 173, 78, 0.12);
+    --badge-color: #f0ad4e;
+    --pill-bg: rgba(224, 224, 224, 0.05);
+    --pill-border: rgba(224, 224, 224, 0.1);
+    --chip-bg: rgba(30, 30, 30, 0.6);
+    --chip-border: rgba(224, 224, 224, 0.06);
+    --text-primary: #e0e0e0;
+    --text-muted: rgba(224, 224, 224, 0.78);
+    --text-inverse: #121212;
+    --accent-300: #a8b8d8;
+    --accent-400: #8898b8;
+    --accent-500: #4a5a7a;
+    --accent-600: #2a3a5a;
+    --text-on-accent: #ffffff;
+    --focus-ring: rgba(240, 173, 78, 0.6);
+    --border-soft: rgba(224, 224, 224, 0.08);
+    --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.3);
+    --shadow-soft: 0 30px 90px rgba(0, 0, 0, 0.38);
+    --gradient-hero: radial-gradient(circle at 20% 20%, rgba(168, 184, 216, 0.32), transparent 60%),
+      radial-gradient(circle at 80% 0, rgba(240, 173, 78, 0.24), transparent 55%),
+      linear-gradient(140deg, #121212 35%, #1e1e1e 100%);
+    --hero-texture-color: rgba(224, 224, 224, 0.08);
 
     --bg: var(--surface-900);
     --surface: var(--surface-card);
