@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-28T21:50:45.474Z",
+  "generatedAt": "2025-11-03T23:13:01.888Z",
   "widths": [
     320,
     640,
@@ -1087,8 +1087,8 @@
       },
       "fallback": "/assets/optimized/img-projects-rifter-1600.jpg"
     },
-    "assets/mabrouki-headshot.jpg": {
-      "original": "assets/mabrouki-headshot.jpg",
+    "assets/mabrouki-headshot.JPG": {
+      "original": "assets/mabrouki-headshot.JPG",
       "focus": "50% 50%",
       "width": 1024,
       "height": 1024,
