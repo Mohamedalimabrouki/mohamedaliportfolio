@@ -1,5 +1,5 @@
 :root {
-  --avatar-size: clamp(200px, 26vw, 320px);
+  --avatar-size: clamp(220px, 28vw, 360px);
   --avatar-ring: 1px solid var(--border, currentColor);
 }
 

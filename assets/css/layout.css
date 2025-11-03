@@ -248,7 +248,7 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding-top: clamp(4rem, 8vw, 6.5rem);
+  padding-top: clamp(3rem, 7vw, 5.5rem);
   min-height: calc(100vh - var(--header-height));
 }
 
