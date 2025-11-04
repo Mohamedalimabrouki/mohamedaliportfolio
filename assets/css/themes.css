@@ -1,8 +1,8 @@
 /* Light & Dark theme variables. User override (via data-theme) takes priority over system. */
 :root {
   color-scheme: light dark;
-  --surface-900: #fdfdfd;
-  --surface-800: #e0e0e0;
+  --surface-900: #f7f7f7;
+  --surface-800: #e8e8e8;
   --surface-700: #c9c9c9;
   --surface-600: #b2b2b2;
   --surface-500: #9b9b9b;
@@ -14,8 +14,8 @@
   --surface-card: #ffffff;
   --surface-card-border: rgba(26, 26, 26, 0.1);
   --surface-card-emphasis: rgba(42, 58, 90, 0.15);
-  --badge-bg: rgba(200, 156, 60, 0.1);
-  --badge-color: #c89c3c;
+  --badge-bg: rgba(67, 90, 138, 0.1);
+  --badge-color: #435a8a;
   --pill-bg: rgba(26, 26, 26, 0.05);
   --pill-border: rgba(26, 26, 26, 0.1);
   --chip-bg: rgba(26, 26, 26, 0.08);
@@ -24,17 +24,17 @@
   --text-muted: rgba(26, 26, 26, 0.7);
   --text-inverse: #fdfdfd;
   --accent-300: #8898b8;
-  --accent-400: #4a5a7a;
-  --accent-500: #2a3a5a;
+  --accent-400: #435a8a;
+  --accent-500: #2f4a7a;
   --accent-600: #1a2a4a;
   --text-on-accent: #ffffff;
-  --focus-ring: rgba(200, 156, 60, 0.4);
+  --focus-ring: rgba(67, 90, 138, 0.4);
   --border-soft: rgba(26, 26, 26, 0.12);
   --shadow-card: 0 12px 25px rgba(0, 0, 0, 0.06);
   --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.08);
   --gradient-hero: radial-gradient(circle at 20% 20%, rgba(42, 58, 90, 0.08), transparent 55%),
-    radial-gradient(circle at 80% 0, rgba(200, 156, 60, 0.08), transparent 50%),
-    linear-gradient(140deg, #fdfdfd 25%, #e0e0e0 100%);
+    radial-gradient(circle at 80% 0, rgba(67, 90, 138, 0.08), transparent 50%),
+    linear-gradient(140deg, #f7f7f7 25%, #e8e8e8 100%);
   --hero-texture-color: rgba(26, 26, 26, 0.05);
 
   /* Alias to the simplified token set used by base.css */
@@ -50,40 +50,40 @@
 
 html[data-theme='dark'] {
   color-scheme: dark;
-  --surface-900: #121212;
-  --surface-800: #1e1e1e;
+  --surface-900: #1a1a1a;
+  --surface-800: #222222;
   --surface-700: #2a2a2a;
   --surface-600: #363636;
   --surface-500: #424242;
   --surface-200: rgba(224, 224, 224, 0.08);
   --surface-100: #e0e0e0;
-  --surface-overlay: rgba(18, 18, 18, 0.85);
-  --surface-overlay-strong: rgba(18, 18, 18, 0.95);
-  --surface-overlay-muted: rgba(30, 30, 30, 0.45);
-  --surface-card: rgba(30, 30, 30, 0.85);
+  --surface-overlay: rgba(26, 26, 26, 0.85);
+  --surface-overlay-strong: rgba(26, 26, 26, 0.95);
+  --surface-overlay-muted: rgba(34, 34, 34, 0.45);
+  --surface-card: rgba(34, 34, 34, 0.85);
   --surface-card-border: rgba(224, 224, 224, 0.05);
-  --surface-card-emphasis: rgba(168, 184, 216, 0.15);
-  --badge-bg: rgba(240, 173, 78, 0.12);
-  --badge-color: #f0ad4e;
+  --surface-card-emphasis: rgba(184, 200, 232, 0.15);
+  --badge-bg: rgba(184, 200, 232, 0.12);
+  --badge-color: #b8c8e8;
   --pill-bg: rgba(224, 224, 224, 0.05);
   --pill-border: rgba(224, 224, 224, 0.1);
-  --chip-bg: rgba(30, 30, 30, 0.6);
+  --chip-bg: rgba(34, 34, 34, 0.6);
   --chip-border: rgba(224, 224, 224, 0.06);
   --text-primary: #e0e0e0;
   --text-muted: rgba(224, 224, 224, 0.7);
-  --text-inverse: #121212;
-  --accent-300: #a8b8d8;
-  --accent-400: #8898b8;
-  --accent-500: #4a5a7a;
-  --accent-600: #2a3a5a;
+  --text-inverse: #1a1a1a;
+  --accent-300: #b8c8e8;
+  --accent-400: #98a8c8;
+  --accent-500: #435a8a;
+  --accent-600: #2f4a7a;
   --text-on-accent: #ffffff;
-  --focus-ring: rgba(240, 173, 78, 0.6);
+  --focus-ring: rgba(184, 200, 232, 0.6);
   --border-soft: rgba(224, 224, 224, 0.08);
   --shadow-card: 0 12px 25px rgba(0, 0, 0, 0.2);
   --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.25);
-  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(168, 184, 216, 0.15), transparent 60%),
-    radial-gradient(circle at 80% 0, rgba(240, 173, 78, 0.15), transparent 55%),
-    linear-gradient(140deg, #121212 35%, #1e1e1e 100%);
+  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(184, 200, 232, 0.15), transparent 60%),
+    radial-gradient(circle at 80% 0, rgba(184, 200, 232, 0.15), transparent 55%),
+    linear-gradient(140deg, #1a1a1a 35%, #222222 100%);
   --hero-texture-color: rgba(224, 224, 224, 0.05);
 
   --bg: var(--surface-900);
@@ -116,8 +116,8 @@ html[data-theme='light'] {
     --surface-card: rgba(30, 30, 30, 0.85);
     --surface-card-border: rgba(224, 224, 224, 0.05);
     --surface-card-emphasis: rgba(168, 184, 216, 0.45);
-    --badge-bg: rgba(240, 173, 78, 0.12);
-    --badge-color: #f0ad4e;
+    --badge-bg: rgba(168, 184, 216, 0.12);
+    --badge-color: #a8b8d8;
     --pill-bg: rgba(224, 224, 224, 0.05);
     --pill-border: rgba(224, 224, 224, 0.1);
     --chip-bg: rgba(30, 30, 30, 0.6);
@@ -130,12 +130,12 @@ html[data-theme='light'] {
     --accent-500: #4a5a7a;
     --accent-600: #2a3a5a;
     --text-on-accent: #ffffff;
-    --focus-ring: rgba(240, 173, 78, 0.6);
+    --focus-ring: rgba(168, 184, 216, 0.6);
     --border-soft: rgba(224, 224, 224, 0.08);
     --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.3);
     --shadow-soft: 0 30px 90px rgba(0, 0, 0, 0.38);
     --gradient-hero: radial-gradient(circle at 20% 20%, rgba(168, 184, 216, 0.32), transparent 60%),
-      radial-gradient(circle at 80% 0, rgba(240, 173, 78, 0.24), transparent 55%),
+      radial-gradient(circle at 80% 0, rgba(168, 184, 216, 0.24), transparent 55%),
       linear-gradient(140deg, #121212 35%, #1e1e1e 100%);
     --hero-texture-color: rgba(224, 224, 224, 0.08);
 

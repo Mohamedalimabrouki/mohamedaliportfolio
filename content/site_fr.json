@@ -68,9 +68,9 @@
     }
   },
   "hero": {
-    "eyebrow": "Euro 7 · WVTA · Lancement roue",
-    "headline": "Mettre sur le marché des utilitaires multimarques conformes, dans les temps.",
-    "lead": "Je synchronise dossiers réglementaires, intégration brake-by-wire et industrialisation roue afin que les programmes Toyota, Stellantis et Renault passent du freeze concept au SOP sans surprise.",
+    "eyebrow": "Leader de Programme Automobile",
+    "headline": "Livrer des véhicules conformes, dans les délais.",
+    "lead": "Spécialisé en homologation, systèmes de freinage et industrialisation de châssis pour les grandes marques automobiles.",
     "ctas": [
       {
         "variant": "primary",
@@ -105,9 +105,9 @@
       }
     ],
     "bullets": [
-      "Relance des dossiers WVTA multimarques sans rework pour Toyota, Peugeot, Citroën et Opel.",
-      "Alignement des roadmaps freinage Euro 7, conformité particules et validation redondance fournisseurs.",
-      "Sécurisation du lancement roue : analytics couple/faux-rond, maturité PPAP et plans de maîtrise fournisseurs."
+      "Expert en dossiers WVTA et homologation multi-marques pour Toyota, Stellantis et Renault.",
+      "Succès prouvé dans l'intégration du freinage brake-by-wire Euro 7 et la conformité des émissions de particules.",
+      "Garantir la préparation au lancement des trains roulants par une gestion rigoureuse des fournisseurs et un contrôle qualité."
     ]
   },
   "skills": {

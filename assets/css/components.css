@@ -9,7 +9,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.9rem 1.8rem;
-  border-radius: 999px;
+  border-radius: 12px;
   border: 1px solid transparent;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -28,18 +28,18 @@
 .btn--primary {
   background: linear-gradient(135deg, var(--accent-400), var(--accent-500));
   color: var(--text-on-accent, #06102a);
-  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
 }
 
 .btn--primary:hover,
 .btn--primary:focus-visible {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 40px rgba(0, 123, 255, 0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 25px rgba(0, 123, 255, 0.3);
 }
 
 .btn--ghost {
   border-color: var(--border-soft);
-  background: var(--surface-overlay-muted);
+  background: transparent;
   color: var(--text-primary);
 }
 
@@ -47,7 +47,7 @@
 .btn--ghost:focus-visible {
   border-color: var(--accent-400);
   color: var(--accent-400);
-  background: var(--surface-overlay);
+  background: var(--surface-overlay-muted);
 }
 
 .badge {
@@ -79,10 +79,10 @@
 
 .card {
   padding: 2rem;
-  border-radius: 18px;
+  border-radius: 12px;
   border: 1px solid var(--surface-card-border);
   background: var(--surface-card);
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   display: grid;
   gap: 1.2rem;
 }
@@ -99,7 +99,7 @@
 
 .tilt-card {
   position: relative;
-  border-radius: 18px;
+  border-radius: 12px;
   background: var(--surface-card);
   border: 1px solid var(--surface-card-border);
   box-shadow: var(--shadow-card);
@@ -149,7 +149,7 @@
 .project-card__media {
   position: relative;
   aspect-ratio: 16 / 9;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -202,7 +202,7 @@
 }
 
 .projects-grid > .project-card:hover {
-  transform: translateY(-6px);
+  transform: scale(1.02);
   box-shadow: 0 28px 80px var(--surface-card-emphasis);
 }
 
