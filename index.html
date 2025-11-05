@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="preload" href="/assets/css/components.css" as="style">
   <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/hero-v2.css">
   <link rel="preload" href="/assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   
   <script type="application/ld+json">{
@@ -99,26 +100,48 @@
   </header>
   
 <main id="main">
-  <section id="hero" class="hero" data-section="hero">
-    <div class="hero__background" aria-hidden="true">
-      <div class="hero__gradient"></div>
-      <div class="hero__texture"></div>
+  <section id="hero" class="hero hero-v2" data-section="hero">
+    <div class="hero-v2__portrait" data-reveal>
+      <picture>
+        <source srcset="/assets/img/avatar-circle-400.png 400w, /assets/img/avatar-circle.png 800w" type="image/png" sizes="(max-width: 960px) 80vw, 420px">
+        <img src="/assets/img/avatar-circle.png" srcset="/assets/img/avatar-circle-400.png 400w, /assets/img/avatar-circle.png 800w" sizes="(max-width: 960px) 80vw, 420px" alt="Portrait of Mohamed Ali Mabrouki" width="800" height="800" loading="eager" decoding="async" fetchpriority="high">
+      </picture>
     </div>
-    <div class="container hero__grid" data-parallax-root>
-      <div class="hero__copy" data-parallax-layer="0.15">
-        <p class="eyebrow" data-reveal>Automotive Programme Leader</p>
-        <h1 class="hero__headline" data-reveal>Delivering Compliant Vehicles, On Time.</h1>
-        <p class="hero__lead" data-reveal>Specializing in homologation, braking systems, and chassis industrialisation for leading automotive brands.</p>
-        <div class="hero__actions" data-reveal><a class="btn btn--primary hero__cta" href="#projects">View Projects</a><a class="btn btn--ghost hero__cta" href="#contact">Contact Me</a></div>
-        <ul class="hero__bullet-list" data-reveal><li>Expert in WVTA dossiers and multi-brand homologation for Toyota, Stellantis, and Renault.</li><li>Proven success in Euro 7 brake-by-wire integration and particulate compliance.</li><li>Ensuring wheel-end launch readiness through rigorous supplier management and quality control.</li></ul>
-        <dl class="hero__meta-grid" data-reveal><div class="hero__meta" data-reveal><dt>Base</dt><dd>Tunis, Tunisia</dd></div><div class="hero__meta" data-reveal><dt>Phone</dt><dd><a href="tel:+21625910020">+216 25 910 020</a></dd></div><div class="hero__meta" data-reveal><dt>Email</dt><dd><a href="mailto:hello@mohamedalimabrouki.com">hello@mohamedalimabrouki.com</a></dd></div><div class="hero__meta" data-reveal><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/mohamedalimabrouki/">linkedin.com/in/mohamedalimabrouki</a></dd></div></dl>
+    <div class="hero-v2__copy">
+      <p class="eyebrow" data-reveal>Automotive Programme Leader</p>
+      <h1 class="hero__headline" data-reveal>Delivering Compliant Vehicles, On Time.</h1>
+      <p class="hero__lead" data-reveal>Specializing in homologation, braking systems, and chassis industrialisation for leading automotive brands.</p>
+      <div class="hero__actions" data-reveal>
+        <a class="btn btn--primary hero__cta" href="#projects">View Projects</a>
+        <a class="btn btn--ghost hero__cta" href="#contact">Contact Me</a>
       </div>
-      <div class="hero__portrait" data-parallax-layer="0.3" data-reveal>
-        <picture>
-    <source srcset="/assets/img/avatar-circle-400.png 400w, /assets/img/avatar-circle.png 800w" type="image/png" sizes="(max-width: 960px) 80vw, 420px">
-    <img src="/assets/img/avatar-circle.png" srcset="/assets/img/avatar-circle-400.png 400w, /assets/img/avatar-circle.png 800w" sizes="(max-width: 960px) 80vw, 420px" alt="Portrait of Mohamed Ali Mabrouki" width="800" height="800" loading="eager" decoding="async" fetchpriority="high">
-  </picture>
-      </div>
+    </div>
+  </section>
+  <section class="professional-bullets">
+    <div class="container">
+      <ul class="fade-in-up-v2">
+        <li>Expert in WVTA dossiers and multi-brand homologation for Toyota, Stellantis, and Renault.</li>
+        <li>Proven success in Euro 7 brake-by-wire integration and particulate compliance.</li>
+        <li>Ensuring wheel-end launch readiness through rigorous supplier management and quality control.</li>
+      </ul>
+      <dl class="contact-meta">
+        <div class="contact-meta__item">
+          <div class="contact-meta__label">Base</div>
+          <div class="contact-meta__value">Tunis, Tunisia</div>
+        </div>
+        <div class="contact-meta__item">
+          <div class="contact-meta__label">Phone</div>
+          <div class="contact-meta__value"><a href="tel:+21625910020">+216 25 910 020</a></div>
+        </div>
+        <div class="contact-meta__item">
+          <div class="contact-meta__label">Email</div>
+          <div class="contact-meta__value"><a href="mailto:hello@mohamedalimabrouki.com">hello@mohamedalimabrouki.com</a></div>
+        </div>
+        <div class="contact-meta__item">
+          <div class="contact-meta__label">LinkedIn</div>
+          <div class="contact-meta__value"><a href="https://www.linkedin.com/in/mohamedalimabrouki/" target="_blank" rel="noopener noreferrer">linkedin.com/in/mohamedalimabrouki</a></div>
+        </div>
+      </dl>
     </div>
   </section>
   <section id="skills" class="section section--muted" data-section="skills">
@@ -355,8 +378,13 @@
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <p>© <span data-current-year></span> Mohamed Ali Mabrouki.</p>
+      <div class="site-footer__social-links">
+        <a href="mailto:hello@mohamedalimabrouki.com">Email</a>
+        <a href="https://www.linkedin.com/in/mohamedalimabrouki/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
       <a class="btn btn--ghost" href="/#hero">Back to top</a>
     </div>
   </footer>
+  <script defer src="/assets/js/hero-v2.js"></script>
 </body>
 </html>

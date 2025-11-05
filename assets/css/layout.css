@@ -324,6 +324,13 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.hero .eyebrow[data-reveal] { transition-delay: 0.1s; }
+.hero .hero__headline[data-reveal] { transition-delay: 0.2s; }
+.hero .hero__lead[data-reveal] { transition-delay: 0.3s; }
+.hero .hero__actions[data-reveal] { transition-delay: 0.4s; }
+.hero .hero__bullet-list[data-reveal] { transition-delay: 0.5s; }
+.hero .hero__meta-grid[data-reveal] { transition-delay: 0.6s; }
+
 .hero__meta dt {
   font-size: 0.85rem;
   letter-spacing: 0.25em;

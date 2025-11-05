@@ -233,37 +233,6 @@
     if (!magicLine) return;
 
     function updateMagicLine(target) {
-      if (!target) return;
-      const rect = target.getBoundingClientRect();
-      const parentRect = navList.getBoundingClientRect();
-      const left = rect.left - parentRect.left;
-      const width = rect.width;
-      magicLine.style.transform = `translateX(${left}px)`;
-      magicLine.style.width = `${width}px`;
-    }
-
-    navLinks.forEach(link => {
-      link.addEventListener('mouseenter', () => updateMagicLine(link));
-    });
-
-    navList.addEventListener('mouseleave', () => {
-      const activeLink = navList.querySelector('.site-nav__link[data-active="true"]');
-      updateMagicLine(activeLink);
-    });
-
-    const activeLink = navList.querySelector('.site-nav__link[data-active="true"]');
-    if (activeLink) {
-      setTimeout(() => updateMagicLine(activeLink), 100);
-    }
-  }
-
-  function handleMagicLine() {
-    const navList = doc.querySelector('.site-nav__list');
-    if (!navList) return;
-    const magicLine = navList.querySelector('.magic-line');
-    if (!magicLine) return;
-
-    function updateMagicLine(target) {
       if (!target) {
         magicLine.style.transform = 'translateX(0)';
         magicLine.style.width = '0px';
