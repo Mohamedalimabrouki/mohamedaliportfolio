@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Mohamed Ali Mabrouki",
-    "tagline": "Automotive Homologation & Chassis Leader",
+    "tagline": "",
     "description": "Euro 7 braking, WVTA dossiers, and wheel-end launches orchestrated for Toyota, Stellantis, and Renault programmes.",
     "keywords": [
       "Automotive homologation",
@@ -40,7 +40,7 @@
     },
     {
       "id": "downloads",
-      "label": "CV & Downloads"
+      "label": "CV"
     },
     {
       "id": "contact",
@@ -68,9 +68,9 @@
     }
   },
   "hero": {
-    "eyebrow": "Euro 7 · WVTA · Wheel-End Launch",
-    "headline": "Bring compliant multi-brand vans to market on schedule.",
-    "lead": "I synchronise regulatory dossiers, brake-by-wire integration, and wheel-end industrialisation so Toyota, Stellantis, and Renault programmes move from concept freeze to SOP without surprises.",
+    "eyebrow": "Automotive Programme Leader",
+    "headline": "Delivering Compliant Vehicles, On Time.",
+    "lead": "Specializing in homologation, braking systems, and chassis industrialisation for leading automotive brands.",
     "ctas": [
       {
         "variant": "primary",
@@ -105,9 +105,9 @@
       }
     ],
     "bullets": [
-      "Recovered multi-brand WVTA dossiers with zero rework across Toyota, Peugeot, Citroën, and Opel derivatives.",
-      "Align Euro 7 brake-by-wire roadmaps, particulate compliance, and redundancy validation across supplier stacks.",
-      "Secure wheel-end launch readiness: torque/runout analytics, PPAP maturity, and supplier control plans."
+      "Expert in WVTA dossiers and multi-brand homologation for Toyota, Stellantis, and Renault.",
+      "Proven success in Euro 7 brake-by-wire integration and particulate compliance.",
+      "Ensuring wheel-end launch readiness through rigorous supplier management and quality control."
     ]
   },
   "skills": {

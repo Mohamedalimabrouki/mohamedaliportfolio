@@ -466,9 +466,7 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f7f9fd" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-512.png">
-  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
-  <link rel="apple-touch-icon" href="/assets/img/favicon-512.png">
+  <link rel="icon" href="/assets/img/avatar-circle.png">
   <script>(function(){try{var storage=localStorage.getItem('mam-theme');var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var preference=storage==='light'||storage==='dark'?storage:'system';var theme=preference==='light'?'light':preference==='dark'?'dark':(prefersDark?'dark':'light');document.documentElement.setAttribute('data-theme',theme);document.documentElement.dataset.themePreference=preference;}catch(error){var fallback=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',fallback);document.documentElement.dataset.themePreference='system';}})();</script>
   <style>${criticalCss}</style>
   <link rel="preload" href="/assets/css/base.css" as="style">
@@ -495,7 +493,7 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
     <div class="container site-header__inner">
       <a class="brand" href="${lang === 'fr' ? '/fr/index.html#hero' : '/#hero'}">
         <span class="brand__mark" aria-hidden="true">
-          <svg width="44" height="44" viewBox="0 0 44 44" role="img" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="12" fill="url(#grad)"/><path d="M12 30V14h4l6 7 6-7h4v16h-4V21l-6 7-6-7v9h-4Z" fill="#fff"/><defs><linearGradient id="grad" x1="6" y1="6" x2="38" y2="38" gradientUnits="userSpaceOnUse"><stop stop-color="#3d8aff"/><stop offset="1" stop-color="#5ca5ff"/></linearGradient></defs></svg>
+          <img src="/assets/img/avatar.jpg" alt="Mohamed Ali Mabrouki's avatar" width="44" height="44" style="border-radius: 12px;">
         </span>
         <span class="brand__text">
           <span class="brand__name">${site.name}</span>
@@ -507,7 +505,10 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
         <span class="nav-toggle__bar"></span>
       </button>
       <nav class="site-nav" id="primary-navigation" data-site-nav aria-label="Primary">
-        <ul class="site-nav__list">${navLinks}</ul>
+        <ul class="site-nav__list">
+          ${navLinks}
+          <li class="magic-line" aria-hidden="true"></li>
+        </ul>
         <div class="site-controls">
           ${themeSwitcher}
           <div class="lang-switcher" role="group" aria-label="${data.language_switcher.label}">${langButtons}</div>
