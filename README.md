@@ -1,52 +1,73 @@
 # Mohamed Ali Mabrouki — Portfolio
 
-A lightweight, static portfolio for Mohamed Ali Mabrouki showcasing Euro 7 braking, WVTA dossier leadership, and wheel-end industrialisation programmes.
+Production-ready, bilingual (EN/FR) portfolio for Mohamed Ali Mabrouki covering Euro 7 braking, WVTA dossiers, and wheel-end industrialisation programmes.
 
-## Getting started
+## Quick start
 
-1. Clone the repository and open it in VS Code.
-2. Run the site with the built-in **Live Server** extension (right-click `index.html` → *Open with Live Server*). Any static file server works; no build step is required.
+```bash
+npm install   # first run only (installs Playwright + Lighthouse tooling)
+node tools/generate-pages.js
+npx serve .   # or use VS Code Live Server / any static server
+```
+
+Pages are generated from JSON content so copy updates stay centralised. Any time you edit content, rerun `node tools/generate-pages.js` to refresh the HTML outputs.
 
 ## Project structure
 
 ```
 assets/
-  css/          # base typography, layout, components, theme tokens, cv layout
-  img/          # avatar, favicons, social banner, responsive imagery
-  js/           # site enhancements (theme toggle, scroll spy, contact form)
-  cv/           # downloadable DOCX resume
-cv.html         # printer-friendly CV
-index.html      # main landing page
-project.html    # detailed K9 WVTA recovery case study
-robots.txt      # crawl directives
-sitemap.xml     # search discoverability
-site.webmanifest# PWA metadata for icons & colours
+  css/          # base tokens, layout, components, themed + CV styles
+  img/          # avatar, favicons, social banner, project imagery
+    projects/   # project hero + gallery assets (JPG + WebP pairs)
+  js/           # i18n + UI enhancements (parallax, filters, contact form)
+  cv/           # downloadable DOCX résumé
+content/
+  site_en.json  # English UI copy & metadata
+  site_fr.json  # French UI copy & metadata
+  projects.json # Case study data shared by generator & front-end JS
+tools/
+  generate-pages.js   # builds all HTML from the content layer
+scripts/
+  generate-sitemap.mjs # emits sitemap.xml with hreflang alternates
+index.html            # generated EN home page (do not hand-edit)
+fr/index.html         # generated FR home page
+projects/*.html       # generated EN project listing + detail pages
+fr/projets/*.html     # generated FR equivalents
+cv.html, fr/cv.html   # generated résumé pages
+robots.txt, sitemap.xml
 ```
 
-### Updating imagery
+## Editing content & translations
 
-* Hero portrait and about section use `/assets/img/avatar.jpg`. For new photos, export 400 px and 800 px squares and update the `srcset`.
-* Project tiles sit in `/assets/optimized`. Add 320/640/960/1280/1600 px JPEGs to keep responsive loading efficient.
-* The open-graph banner lives at `/assets/img/og-banner.jpg` (1200×630). Regenerate it if the brand colours or headshot change.
+1. **Projects** — update `content/projects.json`. Each object includes bilingual titles/summaries, role/period/client metadata, highlights/metrics arrays, and image references. Store 1600 × 900 JPG + WebP pairs in `/assets/img/projects/`.
+2. **UI copy** — edit `content/site_en.json` and `content/site_fr.json` in tandem. Keep keys identical; the page generator expects matching structure.
+3. Run `node tools/generate-pages.js` to rebuild every HTML page.
+4. Regenerate the sitemap (updates timestamps + hreflang) with `node scripts/generate-sitemap.mjs` after adding or removing public pages.
+5. Keep `/assets/cv/Mohamed_Ali_Mabrouki_CV.docx` aligned with `cv.html` / `fr/cv.html`.
 
-### Editing content
+### Imagery guidelines
 
-* Skills, projects, and experience copy reside directly in `index.html` for easy updates.
-* Update CV content both in `cv.html` and the downloadable `/assets/cv/Mohamed_Ali_Mabrouki_CV.docx` to keep them in sync.
-* Adjust the sitemap whenever you add or remove public pages.
+- Hero & about portrait: `/assets/img/avatar.jpg` (800 px square) + `/assets/img/avatar-circle.png` (transparent circle variant).
+- Project covers: `/assets/img/projects/{slug}.jpg` + `.webp` (1600 × 900). Names must match the `cover` field in `projects.json`.
+- Social preview: `/assets/img/og-banner.jpg` (1200 × 630). Update whenever brand palette or photography changes.
+
+## UI behaviour
+
+- **Language switcher** persists preference in `localStorage`, auto-detects browser language on first visit, and keeps the user on the equivalent route.
+- **Motion system** (parallax, tilt, reveals) respects `prefers-reduced-motion`; touch devices fall back to subtle scale/shadow interactions.
+- **Projects filters** operate client-side for capability, role, and year.
+- **Contact form** opens a `mailto:` draft with prefilled body fields—no data is stored server-side.
 
 ## Quality checklist
 
-Run these quick checks before shipping:
-
-| Check | Command / Tool | Target |
+| Audit | Command / Tool | Target |
 | --- | --- | --- |
-| Lighthouse | Chrome DevTools → Lighthouse (desktop) | ≥95 Performance, 100 SEO, Best Practices, Accessibility |
-| Axe DevTools | Browser extension | 0 serious violations |
-| W3C HTML | https://validator.w3.org/nu/ | No errors |
+| Lighthouse (desktop) | `npm run lighthouse` | ≥95 Performance · 100 SEO/Best Practices/Accessibility |
+| Accessibility | Axe DevTools / Lighthouse A11y | 0 serious issues |
+| HTML validation | https://validator.w3.org/nu/ | No errors |
 
-## Notes
+## Deployment notes
 
-* Theme toggle persists via `localStorage` and honours `prefers-color-scheme` by default.
-* Contact form opens a `mailto:` draft and surfaces direct links for phone/email/LinkedIn.
-* Styles respect `prefers-reduced-motion` to minimise animation for sensitive users.
+- All output is static-friendly—deploy via Netlify, Vercel, GitHub Pages, or any CDN.
+- Rerun `generate-pages` and `generate-sitemap` before publishing content edits.
+- `robots.txt` already references the sitemap and allows all crawlers; update only if crawl strategy changes.

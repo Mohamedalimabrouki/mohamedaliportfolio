@@ -1,0 +1,506 @@
+{
+  "site": {
+    "name": "Mohamed Ali Mabrouki",
+    "tagline": "",
+    "description": "Euro 7 braking, WVTA dossiers, and wheel-end launches orchestrated for Toyota, Stellantis, and Renault programmes.",
+    "keywords": [
+      "Automotive homologation",
+      "Euro 7 braking",
+      "Wheel-end industrialisation",
+      "Type approval",
+      "Programme leadership"
+    ],
+    "url": "https://mohamedalimabrouki.com",
+    "telephone_display": "+216 25 910 020",
+    "telephone_href": "tel:+21625910020",
+    "email": "hello@mohamedalimabrouki.com",
+    "location": "Tunis, Tunisia",
+    "linkedin": "https://www.linkedin.com/in/mohamedalimabrouki/"
+  },
+  "navigation": [
+    {
+      "id": "hero",
+      "label": "Overview"
+    },
+    {
+      "id": "skills",
+      "label": "Skills"
+    },
+    {
+      "id": "projects",
+      "label": "Projects"
+    },
+    {
+      "id": "experience",
+      "label": "Experience"
+    },
+    {
+      "id": "about",
+      "label": "About"
+    },
+    {
+      "id": "downloads",
+      "label": "CV"
+    },
+    {
+      "id": "contact",
+      "label": "Contact"
+    }
+  ],
+  "language_switcher": {
+    "label": "Language",
+    "options": {
+      "en": "English",
+      "fr": "Français"
+    }
+  },
+  "theme_switcher": {
+    "label": "Theme",
+    "options": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "descriptions": {
+      "light": "Switch to light theme",
+      "dark": "Switch to dark theme",
+      "system": "Follow system setting"
+    }
+  },
+  "hero": {
+    "eyebrow": "Automotive Programme Leader",
+    "headline": "Delivering Compliant Vehicles, On Time.",
+    "lead": "Specializing in homologation, braking systems, and chassis industrialisation for leading automotive brands.",
+    "ctas": [
+      {
+        "variant": "primary",
+        "label": "View Projects",
+        "href": "#projects"
+      },
+      {
+        "variant": "ghost",
+        "label": "Contact Me",
+        "href": "#contact"
+      }
+    ],
+    "highlights": [
+      {
+        "label": "Base",
+        "value": "Tunis, Tunisia"
+      },
+      {
+        "label": "Phone",
+        "value": "+216 25 910 020",
+        "href": "tel:+21625910020"
+      },
+      {
+        "label": "Email",
+        "value": "hello@mohamedalimabrouki.com",
+        "href": "mailto:hello@mohamedalimabrouki.com"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/mohamedalimabrouki",
+        "href": "https://www.linkedin.com/in/mohamedalimabrouki/"
+      }
+    ],
+    "bullets": [
+      "Expert in WVTA dossiers and multi-brand homologation for Toyota, Stellantis, and Renault.",
+      "Proven success in Euro 7 brake-by-wire integration and particulate compliance.",
+      "Ensuring wheel-end launch readiness through rigorous supplier management and quality control."
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "intro": "Delivery pillars that keep regulation, braking, and industrial tracks aligned.",
+    "categories": [
+      {
+        "title": "Type Approval Leadership",
+        "description": "WVTA strategy, annex evidence, VIN/CoC governance, and authority engagement.",
+        "items": [
+          "UTAC · CNRV liaison",
+          "Variant matrix design",
+          "Compliance dashboards"
+        ]
+      },
+      {
+        "title": "Euro 7 Brake Delivery",
+        "description": "Brake-by-wire integration, particulate analytics, diagnostics, and redundancy coverage.",
+        "items": [
+          "Continental MK C2",
+          "Bosch ESP10",
+          "Thermal & particulate validation"
+        ]
+      },
+      {
+        "title": "Wheel-End Industrialisation",
+        "description": "Axles, hubs, bearings, torque/runout analytics, and supplier readiness.",
+        "items": [
+          "Gen3 hub bearings",
+          "QCDP governance",
+          "SPC & traceability"
+        ]
+      },
+      {
+        "title": "Programme Governance",
+        "description": "Cross-brand steering cadence, KPI burn-down, and digital collaboration tooling.",
+        "items": [
+          "Risk burn-down",
+          "Executive gateways",
+          "Lessons learned workflows"
+        ]
+      }
+    ]
+  },
+  "projects_section": {
+    "title": "Projects",
+    "intro": "Featured case studies across homologation, braking, and chassis launch.",
+    "featured_ids": [
+      "ec-homologation-toyota-proace-city",
+      "euro-7-braking-brake-by-wire-integration",
+      "renault-master-axles-wheel-assembly",
+      "brake-hardware-calipers-pads-carriers",
+      "ec-homologation-peugeot-rifter-citroen-berlingo",
+      "wheel-end-hub-bearing-unit-gen3"
+    ],
+    "view_all_label": "View all projects",
+    "view_all_href": "/projects/index.html"
+  },
+  "experience": {
+    "title": "Experience",
+    "intro": "Programme leadership across OEM and supplier networks.",
+    "items": [
+      {
+        "period": "2021–Present",
+        "role": "Programme Leader",
+        "company": "Toyota Motor Europe",
+        "location": "Brussels & Valenciennes",
+        "details": [
+          "Recovered K9 WVTA dossiers spanning Toyota, Peugeot, Citroën, and Opel vans.",
+          "Built compliance dashboards linking annex evidence, VIN schemas, and CoC population.",
+          "Chaired joint UTAC/CNRV cadence securing approvals without timing slips."
+        ]
+      },
+      {
+        "period": "2018–2021",
+        "role": "Chassis Engineering Lead",
+        "company": "Renault Group",
+        "location": "Paris & Sandouville",
+        "details": [
+          "Industrialised Gen3 hub-bearing and axle modules with torque/runout analytics.",
+          "Ran supplier war rooms covering PPAP, CoP, and process capability.",
+          "Institutionalised wheel-end launch playbook adopted across alliance plants."
+        ]
+      },
+      {
+        "period": "2016–2018",
+        "role": "Consultant & Advisor",
+        "company": "Tier-1 & Investor Mandates",
+        "location": "EMEA",
+        "details": [
+          "Delivered homologation and braking due diligence for investment committees.",
+          "Facilitated executive sprints translating compliance gaps into funded plans.",
+          "Stood up cross-functional tooling for traceability and KPI reporting."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "tagline": "Engineering rigour with regulatory fluency.",
+    "body": "Mohamed Ali Mabrouki is an automotive programme leader specialising in type approval, Euro 7 braking, and chassis industrialisation. From dossier strategy to supplier war rooms, he keeps homologation, engineering, and production teams shipping on schedule.",
+    "stats": [
+      {
+        "label": "Programmes led",
+        "value": "25+"
+      },
+      {
+        "label": "OEMs supported",
+        "value": "Toyota · Stellantis · Renault"
+      },
+      {
+        "label": "Authority interfaces",
+        "value": "UTAC · CNRV · RDW"
+      }
+    ]
+  },
+  "cv_downloads": {
+    "title": "CV & Downloads",
+    "intro": "Access the detailed CV or request a tailored dossier.",
+    "buttons": [
+      {
+        "label": "Download CV",
+        "href": "/assets/cv/Mohamed_Ali_Mabrouki_CV.docx",
+        "download": true
+      },
+      {
+        "label": "View Web CV",
+        "href": "/cv.html"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Share your homologation, braking, or chassis brief — expect a reply within one business day.",
+    "channels": [
+      {
+        "label": "Email",
+        "value": "hello@mohamedalimabrouki.com",
+        "href": "mailto:hello@mohamedalimabrouki.com"
+      },
+      {
+        "label": "Phone / WhatsApp",
+        "value": "+216 25 910 020",
+        "href": "tel:+21625910020"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/mohamedalimabrouki",
+        "href": "https://www.linkedin.com/in/mohamedalimabrouki/"
+      }
+    ],
+    "form": {
+      "title": "Start a project",
+      "description": "Prefilled email opens in your mail client.",
+      "fields": [
+        {
+          "id": "name",
+          "label": "Name",
+          "placeholder": "Your name",
+          "type": "text"
+        },
+        {
+          "id": "email",
+          "label": "Email",
+          "placeholder": "you@example.com",
+          "type": "email"
+        },
+        {
+          "id": "message",
+          "label": "Project brief",
+          "placeholder": "Describe your brief and timelines…",
+          "type": "textarea"
+        }
+      ],
+      "privacy": "Emails open in your default mail client. No data is stored on this site.",
+      "cta_label": "Draft email",
+      "mailto": "mailto:hello@mohamedalimabrouki.com?subject=Project%20enquiry"
+    }
+  },
+  "footer": {
+    "copyright": "© "
+  },
+  "projects_page": {
+    "title": "Projects",
+    "intro": "Filter projects by capability, tag, or year to explore relevant delivery proof.",
+    "filter_group_labels": {
+      "stack": "Capability",
+      "tag": "Tag",
+      "year": "Year"
+    },
+    "filter_defaults": {
+      "stack": "All capabilities",
+      "tag": "All tags",
+      "year": "All years"
+    },
+    "status_messages": {
+      "loading": "Loading projects…",
+      "empty": "Projects will appear soon.",
+      "count": "Showing {count} of {total} projects.",
+      "filtered": "Showing {count} of {total} projects.",
+      "error": "Unable to load projects. Please refresh."
+    },
+    "view_home_label": "Back to home",
+    "count_label": "projects"
+  },
+  "project_detail": {
+    "overview_label": "Overview",
+    "highlights_label": "Highlights",
+    "metrics_label": "Metrics",
+    "role_label": "Role",
+    "client_label": "Client / Brand",
+    "period_label": "Period",
+    "stack_label": "Focus",
+    "cta_contact": "Book a call",
+    "cta_projects": "All projects",
+    "loading_message": "Loading project…",
+    "error_message": "Project not found. Please return to the projects page."
+  },
+  "cv_page": {
+    "title": "Curriculum Vitae",
+    "summary": "Automotive programme leader aligning Euro 7 braking, WVTA dossiers, and wheel-end industrialisation for multi-brand commercial vehicles.",
+    "sections": {
+      "summary": "Summary",
+      "competencies": "Core Competencies",
+      "experience": "Experience",
+      "education": "Education",
+      "certifications": "Certifications",
+      "languages": "Languages",
+      "tools": "Tools & Platforms"
+    },
+    "competencies": [
+      {
+        "title": "Homologation strategy",
+        "body": "WVTA annexes, VIN/CoC governance, authority engagement (UTAC, CNRV, RDW)."
+      },
+      {
+        "title": "Euro 7 brake-by-wire",
+        "body": "Continental MK C2, Bosch ESP10 integration, particulate analytics, redundancy validation."
+      },
+      {
+        "title": "Industrialisation",
+        "body": "Wheel-end launches, PPAP/CoP, run@rate, torque/runout analytics, supplier war rooms."
+      },
+      {
+        "title": "Programme governance",
+        "body": "Cross-functional sprint cadence, KPI dashboards, risk burn-down, executive gateway prep."
+      }
+    ],
+    "experience": [
+      {
+        "title": "Programme Leader — Toyota Motor Europe",
+        "period": "Brussels · 2021–Present",
+        "items": [
+          "Recovered K9 WVTA dossiers, restoring annex sign-off cadence across Toyota and Stellantis brands.",
+          "Stood up compliance dashboards covering VIN schemas, CoC population, and evidence status.",
+          "Coordinated UTAC / CNRV workshops to remove homologation blockers without timing slips."
+        ]
+      },
+      {
+        "title": "Chassis Engineering Lead — Renault Group",
+        "period": "Paris · 2018–2021",
+        "items": [
+          "Industrialised Gen3 hub-bearing for Renault Master with torque/runout analytics and supplier war room.",
+          "Deployed SPC dashboards linking process capability to launch gating for axle and wheel-end suppliers.",
+          "Created audit playbook adopted across alliance plants for wheel-end launch containment."
+        ]
+      },
+      {
+        "title": "Consulting & Advisory",
+        "period": "EMEA · 2016–2018",
+        "items": [
+          "Delivered braking, chassis, and homologation due diligence for investors assessing Tier-1 assets.",
+          "Moderated executive workshops translating compliance risks into action plans and KPI sets."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Master of Mechanical Engineering",
+        "subtitle": "National Engineering School of Tunis"
+      },
+      {
+        "title": "Lean Manufacturing Black Belt",
+        "subtitle": "SEGULA Technologies Academy"
+      }
+    ],
+    "certifications": [
+      "ISO 9001 Lead Auditor",
+      "Automotive SPICE Provisional Assessor",
+      "Functional Safety (ISO 26262) Practitioner"
+    ],
+    "languages": [
+      {
+        "title": "French",
+        "level": "Native"
+      },
+      {
+        "title": "English",
+        "level": "Fluent"
+      },
+      {
+        "title": "Arabic",
+        "level": "Fluent"
+      }
+    ],
+    "tools": [
+      "PPAP & CoP governance suites",
+      "SIL / HIL validation toolchains",
+      "Advanced analytics (Power BI, Tableau)",
+      "Digital quality wall & traceability platforms"
+    ],
+    "download_button": "Download CV"
+  },
+  "seo": {
+    "home": {
+      "title": "Mohamed Ali Mabrouki | Automotive Homologation & Chassis Leader",
+      "description": "Euro 7 braking, WVTA dossiers, and wheel-end launches orchestrated for Toyota, Stellantis, and Renault programmes.",
+      "path": "/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "home_fr": {
+      "title": "Mohamed Ali Mabrouki | Leader homologation et châssis automobile",
+      "description": "Freinage Euro 7, dossiers WVTA et lancements roue orchestrés pour les programmes Toyota, Stellantis et Renault.",
+      "path": "/fr/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "projects_index": {
+      "title": "Projects | Mohamed Ali Mabrouki",
+      "description": "Case studies detailing homologation, Euro 7 braking, and chassis industrialisation engagements.",
+      "path": "/projects/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "projects_index_fr": {
+      "title": "Projets | Mohamed Ali Mabrouki",
+      "description": "Études de cas sur l'homologation, le freinage Euro 7 et l'industrialisation châssis.",
+      "path": "/fr/projets/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "project_detail": {
+      "title_template": "{projectTitle} | Project | Mohamed Ali Mabrouki",
+      "description_template": "{projectSummary}",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "project_detail_fr": {
+      "title_template": "{projectTitle} | Projet | Mohamed Ali Mabrouki",
+      "description_template": "{projectSummary}",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "cv": {
+      "title": "CV | Mohamed Ali Mabrouki",
+      "description": "Download and print the full curriculum vitae of Mohamed Ali Mabrouki.",
+      "path": "/cv.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "cv_fr": {
+      "title": "CV | Mohamed Ali Mabrouki",
+      "description": "Téléchargez et imprimez le CV complet de Mohamed Ali Mabrouki.",
+      "path": "/fr/cv.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    }
+  },
+  "structured_data": {
+    "person": {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohamed Ali Mabrouki",
+      "jobTitle": "Automotive Homologation & Chassis Leader",
+      "url": "https://mohamedalimabrouki.com",
+      "telephone": "+216 25 910 020",
+      "email": "hello@mohamedalimabrouki.com",
+      "image": "https://mohamedalimabrouki.com/assets/img/avatar.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/mohamedalimabrouki/"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "SEGULA Technologies"
+      }
+    },
+    "website": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Mohamed Ali Mabrouki Portfolio",
+      "url": "https://mohamedalimabrouki.com"
+    }
+  },
+  "shared": {
+    "skip_to_content": "Skip to content",
+    "back_to_top": "Back to top",
+    "reduce_motion": "Motion reduced for accessibility.",
+    "view_fr": "Afficher en français",
+    "theme_status_light": "Light theme selected.",
+    "theme_status_dark": "Dark theme selected.",
+    "theme_status_system": "Theme follows system preference."
+  }
+}
