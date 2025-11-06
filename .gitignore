@@ -6,3 +6,5 @@ tools/output/
 playwright-report/
 test-results/
 .lighthouseci/
+.DS_Store
+.DS_Store
