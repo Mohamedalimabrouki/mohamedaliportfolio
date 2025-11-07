@@ -317,3 +317,7 @@ body[data-reduced-motion="true"] .tilt-card {
   outline: 1px solid var(--primary);
   outline-offset: 2px;
 }
+
+.avatar-rounded {
+  border-radius: 12px;
+}

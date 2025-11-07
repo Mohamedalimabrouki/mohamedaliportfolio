@@ -5,6 +5,10 @@
   "type": "module",
   "scripts": {
     "build:images": "node tools/image-pipeline.mjs",
+    "build:css": "node tools/build.mjs buildCss",
+    "build:js": "node tools/build.mjs buildJs",
+    "build": "node tools/build.mjs",
+    "postbuild": "node tools/update-html.mjs",
     "build:sitemap": "node scripts/generate-sitemap.mjs",
     "test": "npm run test:ui",
     "test:ui": "playwright test",
@@ -32,6 +36,8 @@
   "devDependencies": {
     "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.56.0",
-    "sharp": "^0.34.4"
+    "clean-css-cli": "^5.6.3",
+    "sharp": "^0.34.4",
+    "terser": "^5.44.1"
   }
 }
