@@ -38,6 +38,8 @@
     max-width: 320px;
     border-radius: 50%;
     margin-inline: auto;
+    outline: 1px solid var(--primary);
+    outline-offset: 2px;
 }
 
 /* Professional Bullet Points Section */
