@@ -8,17 +8,16 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.9rem 1.8rem;
-  border-radius: 12px;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
   border: 1px solid transparent;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
   transition:
-    transform var(--transition-base),
-    box-shadow var(--transition-base),
     background-color var(--transition-base),
     border-color var(--transition-base),
-    color var(--transition-base);
+    color var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .btn:focus-visible {
@@ -26,28 +25,28 @@
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--accent-400), var(--accent-500));
-  color: var(--text-on-accent, #06102a);
-  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+  background: linear-gradient(125deg, var(--accent-400), var(--accent-600));
+  border-color: transparent;
+  color: var(--primary-ink);
+  box-shadow: 0 12px 28px rgba(var(--accent-500-rgb, 81, 100, 214), 0.32);
 }
 
 .btn--primary:hover,
 .btn--primary:focus-visible {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 25px rgba(0, 123, 255, 0.3);
+  filter: brightness(1.03);
 }
 
 .btn--ghost {
   border-color: var(--border-soft);
-  background: transparent;
+  background: var(--surface-card);
   color: var(--text-primary);
 }
 
 .btn--ghost:hover,
 .btn--ghost:focus-visible {
-  border-color: var(--accent-400);
-  color: var(--accent-400);
-  background: var(--surface-overlay-muted);
+  color: var(--accent-500);
+  border-color: var(--accent-500);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
 }
 
 .badge {
@@ -79,10 +78,10 @@
 
 .card {
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 18px;
   border: 1px solid var(--surface-card-border);
   background: var(--surface-card);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-card);
   display: grid;
   gap: 1.2rem;
 }
@@ -99,28 +98,27 @@
 
 .tilt-card {
   position: relative;
-  border-radius: 12px;
+  border-radius: 18px;
   background: var(--surface-card);
   border: 1px solid var(--surface-card-border);
   box-shadow: var(--shadow-card);
-  transform: translateZ(0);
-  transition:
-    transform 0.5s cubic-bezier(0.19, 1, 0.22, 1),
-    box-shadow 0.5s cubic-bezier(0.19, 1, 0.22, 1),
-    border-color 0.35s ease;
+  transform: none;
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .tilt-card:hover {
-    box-shadow: 0 20px 60px var(--surface-card-emphasis);
+    box-shadow: 0 25px 60px var(--surface-card-emphasis);
     border-color: var(--accent-400);
   }
 }
 
 .skill-card {
   padding: 2rem;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
+  height: 100%;
 }
 
 .skill-card h3 {
@@ -129,21 +127,20 @@
 
 .skill-card p {
   color: var(--text-muted);
-}
-
-.project-card {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 1.5rem;
-  overflow: hidden;
+  flex-grow: 1;
 }
 
 .project-card__link {
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   color: inherit;
   padding: 1.5rem;
+  background: var(--surface-card);
+  border-radius: 20px;
+  border: 1px solid var(--surface-card-border);
+  box-shadow: var(--shadow-card);
+  height: 100%;
 }
 
 .project-card__media {
@@ -151,7 +148,8 @@
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
-  border: 2px solid var(--primary);
+  border: 1px solid var(--section-muted-border);
+  background: var(--section-muted-bg);
 }
 
 .project-card__media picture,
@@ -162,8 +160,10 @@
 }
 
 .project-card__body {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.2rem;
+  flex-grow: 1;
 }
 
 .project-card__summary {
@@ -199,11 +199,11 @@
 }
 
 .projects-grid > .project-card {
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  height: 100%;
+  transition: box-shadow var(--transition-base);
 }
 
 .projects-grid > .project-card:hover {
-  transform: scale(1.02);
   box-shadow: 0 28px 80px var(--surface-card-emphasis);
 }
 
@@ -238,37 +238,58 @@ body[data-reduced-motion="true"] .tilt-card {
   transform: none !important;
 }
 
-/* Hero avatar */
+/* Hero & about avatars */
 .hero__portrait,
-.hero .avatar {
+.hero .avatar,
+.about__media {
   width: var(--avatar-size);
-  height: var(--avatar-size);
-  background: transparent !important;
-  border: none;
-  border-radius: 20px;
-  padding: 0;
-  box-shadow: none;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  padding: 0.3rem;
+  background: radial-gradient(circle at 20% 0, rgba(255, 255, 255, 0.25), transparent 55%),
+              radial-gradient(circle at 80% 100%, rgba(81, 100, 214, 0.4), transparent 55%),
+              linear-gradient(135deg, var(--accent-400), var(--accent-600));
+  box-shadow: 0 22px 55px var(--shadow-soft);
   display: grid;
   place-items: center;
 }
 
 .hero__portrait picture,
-.hero .avatar picture {
+.hero .avatar picture,
+.about__media picture {
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--surface-card);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-card);
 }
 
+.hero__portrait img,
+.hero .avatar img,
 .about__media img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  aspect-ratio: 1 / 1;
-  display: block;
-  background: transparent;
   border-radius: 50%;
-  outline: 1px solid var(--primary);
-  outline-offset: 2px;
+}
+
+.about__media {
+  border-radius: 24px;
+}
+
+.about__media picture {
+  border-radius: 24px;
+}
+
+.about__media img {
+  border-radius: 24px;
+  transform: scaleX(-1);
+  filter: grayscale(0.08) contrast(1.05);
 }
 
 /* Project grid + cards parity */
@@ -309,6 +330,12 @@ body[data-reduced-motion="true"] .tilt-card {
   }
   .hero__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

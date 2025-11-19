@@ -1,53 +1,53 @@
 /* Light & Dark theme variables. User override (via data-theme) takes priority over system. */
 :root {
   color-scheme: light dark;
-  --surface-900: #f7f7f7;
-  --surface-800: #e8e8e8;
-  --surface-700: #c9c9c9;
-  --surface-600: #b2b2b2;
-  --surface-500: #9b9b9b;
-  --surface-200: rgba(26, 26, 26, 0.08);
-  --surface-100: #1a1a1a;
-  --surface-overlay: rgba(255, 255, 255, 0.85);
+  --surface-900: #f5f6f9;
+  --surface-800: #edeff5;
+  --surface-700: #e0e4ee;
+  --surface-600: #ccd3e2;
+  --surface-500: #b7c0d3;
+  --surface-200: rgba(31, 41, 55, 0.08);
+  --surface-100: #1f2937;
+  --surface-overlay: rgba(255, 255, 255, 0.9);
   --surface-overlay-strong: rgba(255, 255, 255, 0.95);
-  --surface-overlay-muted: rgba(26, 26, 26, 0.05);
+  --surface-overlay-muted: rgba(31, 41, 55, 0.05);
   --surface-card: #ffffff;
-  --surface-card-border: rgba(26, 26, 26, 0.1);
-  --surface-card-emphasis: rgba(42, 58, 90, 0.15);
-  --badge-bg: rgba(67, 90, 138, 0.1);
-  --badge-color: #435a8a;
-  --pill-bg: rgba(26, 26, 26, 0.05);
-  --pill-border: rgba(26, 26, 26, 0.1);
-  --chip-bg: rgba(26, 26, 26, 0.08);
-  --chip-border: rgba(26, 26, 26, 0.1);
-  --text-primary: #1a1a1a;
-  --text-muted: rgba(26, 26, 26, 0.7);
-  --text-inverse: #fdfdfd;
-  --accent-300: #8898b8;
-  --accent-400: #435a8a;
-  --accent-400-rgb: 67, 90, 138;
-  --accent-500: #2f4a7a;
-  --accent-500-rgb: 47, 74, 122;
-  --accent-600: #1a2a4a;
-  --accent-600-rgb: 26, 42, 74;
-  --text-on-accent: #ffffff;
-  --text-inverse: #fdfdfd;
-  --text-inverse-rgb: 253, 253, 253;
-  --focus-ring: rgba(67, 90, 138, 0.4);
-  --border-soft: rgba(26, 26, 26, 0.12);
-  --shadow-card: 0 12px 25px rgba(0, 0, 0, 0.06);
-  --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.08);
-  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(42, 58, 90, 0.08), transparent 55%),
-    radial-gradient(circle at 80% 0, rgba(67, 90, 138, 0.08), transparent 50%),
-    linear-gradient(140deg, #f7f7f7 25%, #e8e8e8 100%);
-  --hero-texture-color: rgba(26, 26, 26, 0.05);
+  --surface-card-border: rgba(15, 23, 42, 0.08);
+  --surface-card-emphasis: rgba(79, 103, 212, 0.12);
+  --badge-bg: rgba(79, 103, 212, 0.08);
+  --badge-color: #334155;
+  --pill-bg: rgba(31, 41, 55, 0.05);
+  --pill-border: rgba(31, 41, 55, 0.08);
+  --chip-bg: rgba(31, 41, 55, 0.06);
+  --chip-border: rgba(31, 41, 55, 0.12);
+  --text-primary: #1b2433;
+  --text-muted: rgba(27, 36, 51, 0.7);
+  --text-inverse: #f5f6f9;
+  --accent-300: #a2b3ff;
+  --accent-400: #6d82f3;
+  --accent-400-rgb: 109, 130, 243;
+  --accent-500: #5164d6;
+  --accent-500-rgb: 81, 100, 214;
+  --accent-600: #2e3f9d;
+  --accent-600-rgb: 46, 63, 157;
+  --text-on-accent: #f8fafc;
+  --focus-ring: rgba(81, 100, 214, 0.35);
+  --border-soft: rgba(27, 36, 51, 0.12);
+  --shadow-card: 0 16px 40px rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 25px 60px rgba(15, 23, 42, 0.12);
+  --gradient-hero: none;
+  --hero-texture-color: transparent;
+  --hero-surface: var(--surface-900);
+  --hero-border: rgba(27, 36, 51, 0.08);
+  --section-muted-bg: var(--surface-800);
+  --section-muted-border: rgba(27, 36, 51, 0.08);
+  --header-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
 
-  /* Alias to the simplified token set used by base.css */
   --bg: var(--surface-900);
   --surface: var(--surface-card);
   --text: var(--text-primary);
   --muted: var(--text-muted);
-  --primary: var(--accent-400);
+  --primary: var(--accent-500);
   --primary-ink: var(--text-on-accent);
   --border: var(--border-soft);
   --focus: var(--focus-ring);
@@ -55,54 +55,66 @@
 
 html[data-theme='dark'] {
   color-scheme: dark;
-  --surface-900: #1a1a1a;
-  --surface-800: #222222;
-  --surface-700: #2a2a2a;
-  --surface-600: #363636;
-  --surface-500: #424242;
-  --surface-200: rgba(224, 224, 224, 0.08);
-  --surface-100: #e0e0e0;
-  --surface-overlay: rgba(26, 26, 26, 0.85);
-  --surface-overlay-strong: rgba(26, 26, 26, 0.95);
-  --surface-overlay-muted: rgba(34, 34, 34, 0.45);
-  --surface-card: rgba(34, 34, 34, 0.85);
-  --surface-card-border: rgba(224, 224, 224, 0.05);
-  --surface-card-emphasis: rgba(184, 200, 232, 0.15);
-  --badge-bg: rgba(184, 200, 232, 0.12);
-  --badge-color: #b8c8e8;
-  --pill-bg: rgba(224, 224, 224, 0.05);
-  --pill-border: rgba(224, 224, 224, 0.1);
-  --chip-bg: rgba(34, 34, 34, 0.6);
-  --chip-border: rgba(224, 224, 224, 0.06);
-  --text-primary: #e0e0e0;
-  --text-muted: rgba(224, 224, 224, 0.7);
-  --accent-300: #b8c8e8;
-  --accent-400: #98a8c8;
-  --accent-400-rgb: 152, 168, 200;
-  --accent-500: #435a8a;
-  --accent-500-rgb: 67, 90, 138;
-  --accent-600: #2f4a7a;
-  --accent-600-rgb: 47, 74, 122;
-  --text-on-accent: #ffffff;
-  --text-inverse: #1a1a1a;
-  --text-inverse-rgb: 26, 26, 26;
-  --focus-ring: rgba(184, 200, 232, 0.6);
-  --border-soft: rgba(224, 224, 224, 0.08);
-  --shadow-card: 0 12px 25px rgba(0, 0, 0, 0.2);
-  --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.25);
-  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(184, 200, 232, 0.15), transparent 60%),
-    radial-gradient(circle at 80% 0, rgba(184, 200, 232, 0.15), transparent 55%),
-    linear-gradient(140deg, #1a1a1a 35%, #222222 100%);
-  --hero-texture-color: rgba(224, 224, 224, 0.05);
+  --surface-900: #0c1221;
+  --surface-800: #121a2e;
+  --surface-700: #18223b;
+  --surface-600: #1f2b49;
+  --surface-500: #253558;
+  --surface-200: rgba(255, 255, 255, 0.08);
+  --surface-100: #f5f6f9;
+  --surface-overlay: rgba(12, 18, 33, 0.9);
+  --surface-overlay-strong: rgba(12, 18, 33, 0.95);
+  --surface-overlay-muted: rgba(255, 255, 255, 0.04);
+  --surface-card: rgba(19, 27, 46, 0.95);
+  --surface-card-border: rgba(255, 255, 255, 0.08);
+  --surface-card-emphasis: rgba(68, 93, 200, 0.2);
+  --badge-bg: rgba(133, 161, 255, 0.1);
+  --badge-color: #d5dcff;
+  --pill-bg: rgba(255, 255, 255, 0.04);
+  --pill-border: rgba(255, 255, 255, 0.08);
+  --chip-bg: rgba(255, 255, 255, 0.06);
+  --chip-border: rgba(255, 255, 255, 0.12);
+  --text-primary: #e4e9f7;
+  --text-muted: rgba(228, 233, 247, 0.72);
+  --text-on-accent: #10162b;
+  --accent-300: #9ab0ff;
+  --accent-400: #7b93ff;
+  --accent-400-rgb: 123, 147, 255;
+  --accent-500: #6375ff;
+  --accent-500-rgb: 99, 117, 255;
+  --accent-600: #4b57d4;
+  --accent-600-rgb: 75, 87, 212;
+  --focus-ring: rgba(123, 147, 255, 0.5);
+  --border-soft: rgba(255, 255, 255, 0.1);
+  --shadow-card: 0 25px 60px rgba(0, 0, 0, 0.4);
+  --shadow-soft: 0 35px 80px rgba(0, 0, 0, 0.6);
+  --gradient-hero: none;
+  --hero-texture-color: transparent;
+  --hero-surface: var(--surface-900);
+  --hero-border: rgba(255, 255, 255, 0.06);
+  --section-muted-bg: rgba(255, 255, 255, 0.02);
+  --section-muted-border: rgba(255, 255, 255, 0.08);
+  --header-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 
   --bg: var(--surface-900);
   --surface: var(--surface-card);
   --text: var(--text-primary);
   --muted: var(--text-muted);
-  --primary: var(--accent-400);
+  --primary: var(--accent-500);
   --primary-ink: var(--text-on-accent);
   --border: var(--border-soft);
   --focus: var(--focus-ring);
+}
+
+html[data-theme='dark'] .contact__form input,
+html[data-theme='dark'] .contact__form textarea {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+}
+
+html[data-theme='dark'] .project-card__media img {
+  opacity: 0.92;
 }
 
 html[data-theme='light'] {
@@ -112,51 +124,52 @@ html[data-theme='light'] {
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --surface-900: #1a1a1a;
-    --surface-800: #222222;
-    --surface-700: #2a2a2a;
-    --surface-600: #363636;
-    --surface-500: #424242;
-    --surface-200: rgba(224, 224, 224, 0.08);
-    --surface-100: #e0e0e0;
-    --surface-overlay: rgba(26, 26, 26, 0.85);
-    --surface-overlay-strong: rgba(26, 26, 26, 0.95);
-    --surface-overlay-muted: rgba(34, 34, 34, 0.45);
-    --surface-card: rgba(34, 34, 34, 0.85);
-    --surface-card-border: rgba(224, 224, 224, 0.05);
-    --surface-card-emphasis: rgba(184, 200, 232, 0.15);
-    --badge-bg: rgba(184, 200, 232, 0.12);
-    --badge-color: #b8c8e8;
-    --pill-bg: rgba(224, 224, 224, 0.05);
-    --pill-border: rgba(224, 224, 224, 0.1);
-    --chip-bg: rgba(34, 34, 34, 0.6);
-    --chip-border: rgba(224, 224, 224, 0.06);
-    --text-primary: #e0e0e0;
-    --text-muted: rgba(224, 224, 224, 0.7);
-    --accent-300: #b8c8e8;
-    --accent-400: #98a8c8;
-    --accent-400-rgb: 136, 152, 184;
-    --accent-500: #435a8a;
-    --accent-500-rgb: 74, 90, 122;
-    --accent-600: #2f4a7a;
-    --accent-600-rgb: 42, 58, 90;
-    --text-on-accent: #ffffff;
-    --text-inverse: #121212;
-    --text-inverse-rgb: 18, 18, 18;
-    --focus-ring: rgba(184, 200, 232, 0.6);
-    --border-soft: rgba(224, 224, 224, 0.08);
-    --shadow-card: 0 12px 25px rgba(0, 0, 0, 0.2);
-    --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.25);
-    --gradient-hero: radial-gradient(circle at 20% 20%, rgba(184, 200, 232, 0.15), transparent 60%),
-      radial-gradient(circle at 80% 0, rgba(184, 200, 232, 0.15), transparent 55%),
-      linear-gradient(140deg, #1a1a1a 35%, #222222 100%);
-    --hero-texture-color: rgba(224, 224, 224, 0.08);
+    --surface-900: #0c1221;
+    --surface-800: #121a2e;
+    --surface-700: #18223b;
+    --surface-600: #1f2b49;
+    --surface-500: #253558;
+    --surface-200: rgba(255, 255, 255, 0.08);
+    --surface-100: #f5f6f9;
+    --surface-overlay: rgba(12, 18, 33, 0.9);
+    --surface-overlay-strong: rgba(12, 18, 33, 0.95);
+    --surface-overlay-muted: rgba(255, 255, 255, 0.04);
+    --surface-card: rgba(19, 27, 46, 0.95);
+    --surface-card-border: rgba(255, 255, 255, 0.08);
+    --surface-card-emphasis: rgba(68, 93, 200, 0.2);
+    --badge-bg: rgba(133, 161, 255, 0.1);
+    --badge-color: #d5dcff;
+    --pill-bg: rgba(255, 255, 255, 0.04);
+    --pill-border: rgba(255, 255, 255, 0.08);
+    --chip-bg: rgba(255, 255, 255, 0.06);
+    --chip-border: rgba(255, 255, 255, 0.12);
+    --text-primary: #e4e9f7;
+    --text-muted: rgba(228, 233, 247, 0.72);
+    --text-on-accent: #10162b;
+    --accent-300: #9ab0ff;
+    --accent-400: #7b93ff;
+    --accent-400-rgb: 123, 147, 255;
+    --accent-500: #6375ff;
+    --accent-500-rgb: 99, 117, 255;
+    --accent-600: #4b57d4;
+    --accent-600-rgb: 75, 87, 212;
+    --focus-ring: rgba(123, 147, 255, 0.5);
+    --border-soft: rgba(255, 255, 255, 0.1);
+    --shadow-card: 0 25px 60px rgba(0, 0, 0, 0.4);
+    --shadow-soft: 0 35px 80px rgba(0, 0, 0, 0.6);
+    --gradient-hero: linear-gradient(145deg, #0c1425 0%, #101b33 55%, #0b1220 100%);
+    --hero-texture-color: rgba(255, 255, 255, 0.08);
+    --hero-surface: #10172a;
+    --hero-border: rgba(255, 255, 255, 0.06);
+    --section-muted-bg: rgba(255, 255, 255, 0.02);
+    --section-muted-border: rgba(255, 255, 255, 0.08);
+    --header-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 
     --bg: var(--surface-900);
     --surface: var(--surface-card);
     --text: var(--text-primary);
     --muted: var(--text-muted);
-    --primary: var(--accent-400);
+    --primary: var(--accent-500);
     --primary-ink: var(--text-on-accent);
     --border: var(--border-soft);
     --focus: var(--focus-ring);

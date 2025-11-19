@@ -70,6 +70,10 @@
   "hero": {
     "eyebrow": "Leader de Programme Automobile",
     "headline": "Livrer des véhicules conformes, dans les délais.",
+    "headline_dynamic": {
+      "prefix": "Livrer des véhicules conformes,",
+      "default": "dans les délais."
+    },
     "lead": "Spécialisé en homologation, systèmes de freinage et industrialisation de châssis pour les grandes marques automobiles.",
     "ctas": [
       {

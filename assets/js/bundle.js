@@ -46,50 +46,18 @@
     currentYearEl.textContent = String(new Date().getFullYear());
   }
 
-  function setNavOpen(isOpen) {
-    if (!nav || !navToggle) return;
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-    nav.classList.toggle('is-open', isOpen);
-    body.classList.toggle('nav-open', isOpen);
-  }
-
   if (navToggle && nav) {
     navToggle.addEventListener('click', () => {
       const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      const nextState = !expanded;
-      setNavOpen(nextState);
-      if (nextState) {
-        const firstLink = nav.querySelector('.site-nav__link');
-        if (firstLink) {
-          firstLink.focus();
-        }
-      }
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-open', !expanded);
     });
 
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
-        setNavOpen(false);
+        navToggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
       });
-    });
-
-    doc.addEventListener('click', (event) => {
-      if (navToggle.getAttribute('aria-expanded') !== 'true') return;
-      const target = event.target;
-      if (!nav.contains(target) && !navToggle.contains(target)) {
-        setNavOpen(false);
-      }
-    });
-
-    doc.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        setNavOpen(false);
-      }
-    });
-
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 1200) {
-        setNavOpen(false);
-      }
     });
   }
 
@@ -320,3 +288,45 @@
     refreshMotionBehaviors();
   });
 })();
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(SplitText);
+
+export function animateHeadline() {
+  const headline = document.querySelector(".hero__headline");
+  if (!headline) return;
+
+  const split = new SplitText(headline, { type: "words,chars" });
+  const chars = split.chars;
+
+  gsap.from(chars, {
+    duration: 0.8,
+    opacity: 0,
+    y: 20,
+    ease: "power3.out",
+    stagger: 0.05,
+  });
+}
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+export function animateOnScroll() {
+  const elements = document.querySelectorAll("[data-reveal]");
+
+  elements.forEach((el) => {
+    gsap.from(el, {
+      opacity: 0,
+      y: 24,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+  });
+}

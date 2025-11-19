@@ -2,24 +2,24 @@ main.cv {
   display: flex;
   justify-content: center;
   padding: clamp(3rem, 6vw, 4.5rem) 0;
-  background: radial-gradient(circle at top, rgba(var(--accent-400-rgb), 0.12), transparent 55%);
+  background: radial-gradient(circle at top, rgba(67, 90, 138, 0.12), transparent 55%);
 }
 
 .cv-sheet {
   width: min(960px, calc(100% - 3rem));
-  background: var(--surface-card);
-  color: var(--accent-600);
+  background: #ffffff;
+  color: #1a2a4a;
   border-radius: 26px;
-  box-shadow: 0 32px 120px var(--surface-card-emphasis);
+  box-shadow: 0 32px 120px rgba(18, 42, 88, 0.15);
   overflow: hidden;
-  border: 1px solid rgba(var(--accent-400-rgb), 0.18);
+  border: 1px solid rgba(41, 82, 148, 0.18);
   display: grid;
   gap: 0;
 }
 
 .cv-header {
-  background: linear-gradient(135deg, var(--accent-400), var(--accent-600));
-  color: var(--text-inverse);
+  background: linear-gradient(135deg, #435a8a, #1a2a4a);
+  color: #f5f8ff;
   padding: clamp(2.5rem, 5vw, 3.25rem);
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -31,10 +31,10 @@ main.cv {
   width: 80px;
   height: 80px;
   border-radius: 22px;
-  background: rgba(var(--accent-600-rgb), 0.35);
+  background: rgba(10, 20, 40, 0.35);
   display: grid;
   place-items: center;
-  border: 1px solid rgba(var(--text-inverse-rgb), 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cv-heading h1 {
@@ -45,7 +45,7 @@ main.cv {
 .cv-heading p {
   margin: 0.35rem 0 0;
   font-size: 1.1rem;
-  color: rgba(var(--text-inverse-rgb), 0.8);
+  color: rgba(245, 248, 255, 0.8);
 }
 
 .cv-contact {
@@ -71,7 +71,7 @@ main.cv {
 
 .cv section {
   padding: clamp(2.2rem, 4vw, 3rem);
-  border-bottom: 1px solid rgba(var(--accent-600-rgb), 0.08);
+  border-bottom: 1px solid rgba(18, 42, 88, 0.08);
 }
 
 .cv section:last-of-type {
@@ -81,11 +81,11 @@ main.cv {
 .cv section h2 {
   font-size: 1.4rem;
   margin-bottom: 1.25rem;
-  color: var(--accent-600);
+  color: #1a2a4a;
 }
 
 .cv section p {
-  color: var(--accent-500);
+  color: #2f4a7a;
   font-size: 1.05rem;
 }
 
@@ -96,8 +96,8 @@ main.cv {
 }
 
 .cv-grid li {
-  background: rgba(var(--accent-400-rgb), 0.08);
-  border: 1px solid rgba(var(--accent-400-rgb), 0.18);
+  background: rgba(67, 90, 138, 0.08);
+  border: 1px solid rgba(67, 90, 138, 0.18);
   border-radius: 18px;
   padding: 1rem 1.2rem;
   display: grid;
@@ -117,20 +117,20 @@ main.cv {
 .cv-role h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: var(--accent-600);
+  color: #1a2a4a;
 }
 
 .cv-role__period {
   display: block;
   margin-top: 0.4rem;
-  color: var(--accent-400);
+  color: #435a8a;
   font-weight: 600;
 }
 
 .cv-role ul {
   margin: 0.85rem 0 0;
   padding-left: 1.2rem;
-  color: var(--accent-500);
+  color: #2f4a7a;
 }
 
 .cv-role li {
@@ -153,12 +153,12 @@ main.cv {
 
 .cv-columns li {
   padding-left: 0;
-  color: var(--accent-500);
+  color: #2f4a7a;
 }
 
 .cv-columns li strong {
   display: block;
-  color: var(--accent-600);
+  color: #1a2a4a;
 }
 
 @media (max-width: 900px) {

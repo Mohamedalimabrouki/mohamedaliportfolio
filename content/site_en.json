@@ -70,6 +70,10 @@
   "hero": {
     "eyebrow": "Automotive Programme Leader",
     "headline": "Delivering Compliant Vehicles, On Time.",
+    "headline_dynamic": {
+      "prefix": "Delivering compliant vehicles,",
+      "default": "On Time."
+    },
     "lead": "Specializing in homologation, braking systems, and chassis industrialisation for leading automotive brands.",
     "ctas": [
       {

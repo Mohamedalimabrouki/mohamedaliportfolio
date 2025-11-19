@@ -98,17 +98,32 @@ function buildThemeSwitcher(lang) {
   const theme = languages[lang].theme_switcher;
   const shared = languages[lang].shared;
   const order = ['light', 'dark', 'system'];
+  const iconMap = {
+    light: '☀',
+    dark: '☾',
+    system: '◎'
+  };
   const buttons = order
     .map((mode) => {
       const label = theme.options[mode];
       const description = theme.descriptions[mode];
-      return `<button type="button" class="theme-switcher__btn" data-theme-set="${mode}" aria-pressed="false" aria-label="${description}" title="${description}">${label}</button>`;
+      const icon = iconMap[mode] || '';
+      return `<button type="button" class="theme-switcher__btn" data-theme-set="${mode}" aria-pressed="false" aria-label="${description}" title="${description}"><span class="theme-switcher__icon" aria-hidden="true">${icon}</span><span class="sr-only">${label}</span></button>`;
     })
     .join('');
   return `<div class="theme-switcher" data-theme-switcher role="group" aria-label="${theme.label}">
     ${buttons}
     <span class="sr-only" data-theme-status role="status" aria-live="polite" data-status-light="${shared.theme_status_light}" data-status-dark="${shared.theme_status_dark}" data-status-system="${shared.theme_status_system}"></span>
   </div>`;
+}
+
+function heroHeadlineMarkup(heroData) {
+  if (heroData.headline_dynamic && heroData.headline_dynamic.prefix && heroData.headline_dynamic.default) {
+    const prefix = heroData.headline_dynamic.prefix;
+    const defaultText = heroData.headline_dynamic.default;
+    return `${prefix} <span class="dynamic-text-container" aria-live="polite" role="status"><span class="dynamic-text">${defaultText}</span><span class="dynamic-text-caret" aria-hidden="true">|</span></span>`;
+  }
+  return heroData.headline;
 }
 
 function pictureMarkup(basePath, alt, width, height, sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw', loading = 'lazy', fetchPriority = '') {
@@ -164,6 +179,7 @@ function portraitMarkup(lang, { loading = 'lazy', fetchPriority = '', sizes = '(
 
 function renderHero(lang) {
   const data = languages[lang].hero;
+  const headlineMarkup = heroHeadlineMarkup(data);
   const stats = data.highlights
     .map((item) => {
       const value = item.href ? `<a href="${item.href}">${item.value}</a>` : item.value;
@@ -182,14 +198,16 @@ function renderHero(lang) {
     <div class="container hero__grid" data-parallax-root>
       <div class="hero__copy" data-parallax-layer="0.15">
         <p class="eyebrow" data-reveal>${data.eyebrow}</p>
-        <h1 class="hero__headline" data-reveal>${data.headline}</h1>
+        <h1 class="hero__headline" data-reveal>${headlineMarkup}</h1>
         <p class="hero__lead" data-reveal>${data.lead}</p>
         <div class="hero__actions" data-reveal>${ctas}</div>
         <ul class="hero__bullet-list" data-reveal>${bullets}</ul>
-        <dl class="hero__meta-grid" data-reveal>${stats}</dl>
       </div>
-      <div class="hero__portrait" data-parallax-layer="0.3" data-reveal>
-        ${portraitMarkup(lang, { loading: 'eager', fetchPriority: 'high', sizes: '(max-width: 960px) 80vw, 420px' })}
+      <div class="hero__sidebar" data-parallax-layer="0.3">
+        <div class="hero__portrait" data-reveal>
+          ${portraitMarkup(lang, { loading: 'eager', fetchPriority: 'high', sizes: '(max-width: 960px) 80vw, 420px' })}
+        </div>
+        <dl class="hero__meta-grid" data-reveal>${stats}</dl>
       </div>
     </div>
   </section>`;
@@ -325,7 +343,7 @@ function renderExperience(lang) {
 function renderAbout(lang) {
   const data = languages[lang].about;
   const stats = data.stats.map((stat) => `<li><span class="stat__value">${stat.value}</span><span class="stat__label">${stat.label}</span></li>`).join('');
-  return `<section id="about" class="section" data-section="about">
+  return `<section id="about" class="section section--muted" data-section="about">
     <div class="container about__grid">
       <div class="about__copy" data-reveal>
         <h2>${data.title}</h2>
@@ -372,7 +390,7 @@ function renderContact(lang) {
       return `<label class="form-field"><span>${field.label}</span><input type="${field.type}" name="${field.id}" id="contact-${field.id}" placeholder="${field.placeholder}"></label>`;
     })
     .join('');
-  return `<section id="contact" class="section" data-section="contact">
+  return `<section id="contact" class="section section--muted" data-section="contact">
     <div class="container contact">
       <div class="contact__intro" data-reveal>
         <h2>${data.title}</h2>
@@ -435,6 +453,7 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
   const themeSwitcher = buildThemeSwitcher(lang);
   const mapJson = JSON.stringify(languageMap);
   const yearSpan = '${new Date().getFullYear()}';
+  const footerTagline = site.tagline ? ` ${site.tagline}.` : '';
   const websiteSchema = includeWebsiteSchema ? `<script type="application/ld+json">${JSON.stringify(data.structured_data.website, null, 2)}</script>` : '';
   const personSchema = structuredData ? `<script type="application/ld+json">${structuredData}</script>` : '';
   const projectScript =
@@ -477,6 +496,8 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="preload" href="/assets/css/components.css" as="style">
   <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="preload" href="/assets/css/animations.css" as="style">
+  <link rel="stylesheet" href="/assets/css/animations.css">
   <link rel="preload" href="/assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   ${extraHead}
   ${websiteSchema}
@@ -485,6 +506,8 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
   <script id="language-map" type="application/json">${mapJson}</script>
   <script defer src="/assets/js/i18n.js"></script>
   <script defer src="/assets/js/ui.js"></script>
+  <script defer src="/assets/js/headline-animation.js"></script>
+  <script defer src="/assets/js/scroll-animations.js"></script>
   ${projectScript}
 </head>
 <body data-lang="${lang}">
@@ -519,7 +542,7 @@ function layout({ lang, pageKey, title, description, canonicalPath, alternatePat
   ${content}
   <footer class="site-footer">
     <div class="container site-footer__inner">
-      <p>© <span data-current-year></span> ${site.name}. ${site.tagline}.</p>
+      <p>© <span data-current-year></span> ${site.name}.${footerTagline}</p>
       <a class="btn btn--ghost" href="${lang === 'fr' ? '/fr/index.html#hero' : '/#hero'}">${data.shared.back_to_top}</a>
     </div>
   </footer>
