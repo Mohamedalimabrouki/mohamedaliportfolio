@@ -1,0 +1,46 @@
+{
+  "id": "wheel-end-hub-bearing-unit-gen3",
+  "title_en": "Wheel-End — Hub Bearing Unit (Gen3)",
+  "title_fr": "Roue — Roulement moyeu (Gen3)",
+  "period": "2018–2020",
+  "role": "Wheel-End Engineering Lead · Responsable ingénierie roue",
+  "client_or_brand": "Renault & Tier-1 Suppliers",
+  "stack": [
+    "Wheel-End",
+    "Durability",
+    "Diagnostics"
+  ],
+  "tags": [
+    "Renault",
+    "Durability",
+    "Diagnostics"
+  ],
+  "highlights_en": [
+    "Disc thickness variation and runout control for brake mating.",
+    "Bearing life targets versus duty cycle; sealing and grease specification.",
+    "ABS encoder signal integrity and diagnostics."
+  ],
+  "highlights_fr": [
+    "Maîtrise épaisseur/couple pour appairage disque de frein.",
+    "Objectifs durée de vie roulement vs cycle ; spécification étanchéité & graisse.",
+    "Intégrité signal codeur ABS et diagnostics."
+  ],
+  "metrics_en": [
+    "Warranty claims below 30 ppm",
+    "Cpk ≥ 1.33 on critical torque/runout",
+    "Zero issues at PPAP"
+  ],
+  "metrics_fr": [
+    "Réclamations garantie < 30 ppm",
+    "Cpk ≥ 1,33 sur couple/faux-rond critiques",
+    "Aucun écart en PPAP"
+  ],
+  "cover": "src/assets/img/projects/hub-bearing-gen3.jpg",
+  "gallery": [
+    "src/assets/img/projects/hub-bearing-gen3.jpg"
+  ],
+  "summary_en": "Gen-3 hub bearing units with integrated flanges; ensuring durability, diagnostics, and mating control for commercial vehicles.",
+  "summary_fr": "Roulements de moyeu Gen3 avec brides intégrées ; durabilité, diagnostics et maîtrise d'assemblage pour véhicules utilitaires.",
+  "cover_alt_en": "Cutaway illustration of a third-generation hub bearing unit",
+  "cover_alt_fr": "Illustration d'un roulement de moyeu de troisième génération en coupe"
+}

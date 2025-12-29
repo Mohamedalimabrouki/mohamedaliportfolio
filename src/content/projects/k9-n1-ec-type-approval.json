@@ -1,0 +1,46 @@
+{
+  "id": "k9-n1-ec-type-approval",
+  "title_en": "K9 N1 EC Type Approval (Multi-brand)",
+  "title_fr": "Réception CE K9 N1 (multi-marques)",
+  "period": "Jul 2025–Present",
+  "role": "European Type Approval Engineer · Ingénieur réception communautaire",
+  "client_or_brand": "Stellantis & Toyota",
+  "stack": [
+    "WVTA",
+    "Compliance",
+    "LCV"
+  ],
+  "tags": [
+    "Type Approval",
+    "K9 N1",
+    "Multi-brand"
+  ],
+  "highlights_en": [
+    "Audit-ready documentation sets for Stellantis/Toyota N1 derivatives ahead of CNRV submission.",
+    "FCM/markings and VIN/CoC governance maintained across model families.",
+    "Authority interface with UTAC/CNRV and closure tracking on questions."
+  ],
+  "highlights_fr": [
+    "Dossiers prêts audit pour dérivés N1 Stellantis/Toyota avant soumission CNRV.",
+    "Gouvernance FCM/marquages et VIN/CoC sur les familles de modèles.",
+    "Interface UTAC/CNRV et suivi de clôture des questions autorités."
+  ],
+  "metrics_en": [
+    "CNRV submissions kept on planned cadence",
+    "Traceability dashboard updated weekly",
+    "FCM updates rolled across all derivatives without rework"
+  ],
+  "metrics_fr": [
+    "Soumissions CNRV tenues selon la cadence prévue",
+    "Dashboard de traçabilité mis à jour chaque semaine",
+    "Mises à jour FCM déployées sur tous les dérivés sans rework"
+  ],
+  "cover": "src/assets/img/projects/proace-city.jpg",
+  "gallery": [
+    "src/assets/img/projects/proace-city.jpg"
+  ],
+  "summary_en": "EC WVTA documentation and authority interface for K9 N1 multi-brand light commercial derivatives.",
+  "summary_fr": "Documentation WVTA CE et interface autorités pour les dérivés utilitaires K9 N1 multi-marques.",
+  "cover_alt_en": "Toyota ProAce City vans undergoing homologation checks",
+  "cover_alt_fr": "Fourgons Toyota ProAce City lors des vérifications d'homologation"
+}

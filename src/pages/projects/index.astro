@@ -1,15 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
-import { getEntry } from 'astro:content';
+import { getEntry, getCollection } from 'astro:content';
 
 const siteEntry = await getEntry('site', 'en');
-const projectsEntry = await getEntry('projects', 'all');
+const projectsEntries = await getCollection('projects');
+const projects = projectsEntries.map(e => e.data);
 
 const lang = 'en';
 const data = siteEntry.data.projects_page;
 const { seo } = siteEntry.data;
-const projects = projectsEntry.data;
 
 const groupLabels = data.filter_group_labels;
 const defaults = data.filter_defaults;

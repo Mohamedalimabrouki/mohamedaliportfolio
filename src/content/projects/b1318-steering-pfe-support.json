@@ -1,0 +1,46 @@
+{
+  "id": "b1318-steering-pfe-support",
+  "title_en": "B1318 Steering System PFE Support",
+  "title_fr": "Support PFE direction B1318",
+  "period": "Jul 2024–Jan 2025",
+  "role": "PFE Support — Steering System · Support PFE — direction",
+  "client_or_brand": "Programme B1318",
+  "stack": [
+    "Steering",
+    "Programme",
+    "Industrialisation"
+  ],
+  "tags": [
+    "Direction",
+    "PFE",
+    "Programme"
+  ],
+  "highlights_en": [
+    "Cross-functional orchestration across engineering, procurement, suppliers, logistics, and manufacturing.",
+    "ONEVAL progress, RGPQP milestones, and LUP deliverables administered for project readiness.",
+    "Decision logs maintained and parts/resources secured for builds."
+  ],
+  "highlights_fr": [
+    "Orchestration transverse ingénierie, achats, fournisseurs, logistique et industrialisation.",
+    "Avancement ONEVAL, jalons RGPQP et livrables LUP pilotés pour la maturité projet.",
+    "Logs décisionnels tenus et pièces/ressources sécurisées pour les builds."
+  ],
+  "metrics_en": [
+    "ONEVAL tracking kept on plan",
+    "RGPQP milestones met without slippage",
+    "Build readiness maintained with parts on hand"
+  ],
+  "metrics_fr": [
+    "Suivi ONEVAL tenu au plan",
+    "Jalons RGPQP respectés sans dérive",
+    "Prêt builds assuré avec pièces disponibles"
+  ],
+  "cover": "src/assets/img/projects/renault-master.jpg",
+  "gallery": [
+    "src/assets/img/projects/renault-master.jpg"
+  ],
+  "summary_en": "Steering system PFE support coordinating functions and suppliers while keeping ONEVAL/RGPQP on schedule.",
+  "summary_fr": "Support PFE direction coordonnant fonctions et fournisseurs tout en tenant ONEVAL/RGPQP au planning.",
+  "cover_alt_en": "Renault Master vans lined up after final assembly",
+  "cover_alt_fr": "Fourgons Renault Master alignés après assemblage final"
+}

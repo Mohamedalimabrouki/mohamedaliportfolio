@@ -1,0 +1,46 @@
+{
+  "id": "smart-car-exteriors-cc21-cc24",
+  "title_en": "SMART CAR Exteriors & Mounting (CC21/CC24)",
+  "title_fr": "Extérieurs & fixations SMART CAR (CC21/CC24)",
+  "period": "Oct 2021–Oct 2022",
+  "role": "Mechanical Design Engineer — SMART CAR Exteriors · Ingénieur conception plasturgie — SMART CAR",
+  "client_or_brand": "Stellantis SMART CAR",
+  "stack": [
+    "Plastics",
+    "Exteriors",
+    "CAD"
+  ],
+  "tags": [
+    "SMART CAR",
+    "CATIA V5",
+    "Exteriors"
+  ],
+  "highlights_en": [
+    "CATIA V5 design for tail-lamp bracket, rear bumper skins, skid plate, tow hook, side and sensor brackets.",
+    "Feasibility checks on draft, parting, thickness, rigidity, and mounting stack-ups.",
+    "Coordination with programme teams on shape-plan, tooling readiness, and corrosion mitigation."
+  ],
+  "highlights_fr": [
+    "Conception CATIA V5 du support feu AR, peaux de pare-chocs AR, ski, attelage, supports latéraux et supports capteurs.",
+    "Faisabilités sur dépouille, plans de joint, épaisseur, rigidité et chaînages de montage.",
+    "Coordination avec les équipes programme sur shape-plan, préparation outillage et mitigation corrosion."
+  ],
+  "metrics_en": [
+    "CAD to tooling feasibility approved",
+    "Mounting stack-ups validated with programme teams",
+    "Parts released to plan for CC21/CC24 builds"
+  ],
+  "metrics_fr": [
+    "Faisabilité CAD→outillage validée",
+    "Chaînages de montage validés avec les équipes programme",
+    "Pièces libérées selon plan pour les builds CC21/CC24"
+  ],
+  "cover": "src/assets/img/projects/citroen-c3-cc21.jpg",
+  "gallery": [
+    "src/assets/img/projects/citroen-c3-cc21.jpg"
+  ],
+  "summary_en": "SMART CAR exterior parts and mounting from CATIA V5 design to tooling feasibility and release.",
+  "summary_fr": "Pièces extérieures et fixations SMART CAR de la conception CATIA V5 à la faisabilité outillage et la libération.",
+  "cover_alt_en": "Citroën C3 exterior design in studio lighting",
+  "cover_alt_fr": "Citroën C3 présentée en studio"
+}

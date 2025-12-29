@@ -257,7 +257,7 @@ const siteCollection = defineCollection({
 
 const projectsCollection = defineCollection({
   type: 'data',
-  schema: z.array(z.object({
+  schema: z.object({
     id: z.string(),
     title_en: z.string(),
     title_fr: z.string(),
@@ -276,7 +276,7 @@ const projectsCollection = defineCollection({
     metrics_en: z.array(z.string()),
     metrics_fr: z.array(z.string()),
     gallery: z.array(z.string())
-  }))
+  })
 });
 
 export const collections = {

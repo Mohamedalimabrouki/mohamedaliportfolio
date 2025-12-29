@@ -1,0 +1,46 @@
+{
+  "id": "ec-homologation-opel-combo",
+  "title_en": "EC Homologation — Opel Combo",
+  "title_fr": "Homologation CE — Opel Combo",
+  "period": "2021–2023",
+  "role": "Type Approval Programme Lead · Chef de programme homologation",
+  "client_or_brand": "Opel / Vauxhall",
+  "stack": [
+    "Homologation",
+    "LCV",
+    "Compliance"
+  ],
+  "tags": [
+    "Opel",
+    "Compliance",
+    "Type Approval"
+  ],
+  "highlights_en": [
+    "CoP and VIN label audits with harmonised variant data.",
+    "Axle, brake, and steering data alignment with approval dossier.",
+    "Stakeholder cadence across engineering, quality, and validation."
+  ],
+  "highlights_fr": [
+    "Audits CoP et étiquetage VIN avec données variantes harmonisées.",
+    "Alignement données essieux, freinage et direction avec le dossier d'homologation.",
+    "Cadence de pilotage ingénierie, qualité et validation."
+  ],
+  "metrics_en": [
+    "On-time approval milestones (OTD)",
+    "Defect leakage below target",
+    "Supplier PPAP/CoP compliance 100%"
+  ],
+  "metrics_fr": [
+    "Jalons d'homologation tenus (OTD)",
+    "Fuites défaut sous la cible",
+    "Conformité PPAP/CoP fournisseurs 100 %"
+  ],
+  "cover": "src/assets/img/projects/opel-combo.jpg",
+  "gallery": [
+    "src/assets/img/projects/opel-combo.jpg"
+  ],
+  "summary_en": "Opel Combo branch of the multi-brand compact van family; ensuring type-approval consistency across body lengths and powertrains.",
+  "summary_fr": "Branche Opel Combo de la famille multimarque ; cohérence d'homologation sur silhouettes et chaînes de traction.",
+  "cover_alt_en": "Opel Combo commercial vehicles exported from the assembly plant",
+  "cover_alt_fr": "Utilitaires Opel Combo sortant de l'usine d'assemblage"
+}

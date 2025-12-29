@@ -1,0 +1,46 @@
+{
+  "id": "xdd-axles-wheel-assembly",
+  "title_en": "XDD Axles & Wheel Assembly",
+  "title_fr": "XDD Essieux & ensemble roue",
+  "period": "Feb 2022–Jun 2024",
+  "role": "Engineering Leader — Axles & Wheel Assembly · Responsable ingénierie essieux & roue",
+  "client_or_brand": "Renault XDD",
+  "stack": [
+    "Wheel-End",
+    "Chassis",
+    "Launch"
+  ],
+  "tags": [
+    "Axles",
+    "Wheel-End",
+    "Launch"
+  ],
+  "highlights_en": [
+    "Product/process development from TGA to MA following Renault Design System.",
+    "FTR/OTD delivery across design dossiers, BOM/DEVO, IMDS, and quality documentation (NRL, NDL, QDR, DDMRS-FMEA, RTC).",
+    "Validation plans/tests (ONEVAL) and usage recommendations covering hub bearings Gen2/Gen3, knuckles, discs, splash guards, rear axles, wheel carrier plates."
+  ],
+  "highlights_fr": [
+    "Développement produit/process de TGA à MA selon Renault Design System.",
+    "Livraison FTR/OTD sur dossiers de définition, BOM/DEVO, IMDS et documents qualité (NRL, NDL, QDR, DDMRS-FMEA, RTC).",
+    "Plans/tests de validation (ONEVAL) et recommandations usage couvrant roulements Gen2/Gen3, pivots, disques, flasques, essieux AR, plateaux roue."
+  ],
+  "metrics_en": [
+    "FTR/OTD maintained to gate expectations",
+    "Supplier PPAP/CoP readiness achieved before launch",
+    "End-of-line torque/runout governance in place"
+  ],
+  "metrics_fr": [
+    "FTR/OTD tenus selon attentes jalons",
+    "Préparation fournisseurs PPAP/CoP obtenue avant lancement",
+    "Gouvernance couple/faux-rond en fin de ligne en place"
+  ],
+  "cover": "src/assets/img/projects/hub-bearing-gen3.jpg",
+  "gallery": [
+    "src/assets/img/projects/hub-bearing-gen3.jpg"
+  ],
+  "summary_en": "Axles and wheel-end engineering leadership for Renault XDD, from definition through launch readiness.",
+  "summary_fr": "Pilotage essieux et ensemble roue pour Renault XDD, de la définition jusqu’à la préparation lancement.",
+  "cover_alt_en": "Cutaway illustration of a third-generation hub bearing unit",
+  "cover_alt_fr": "Illustration d'un roulement de moyeu de troisième génération en coupe"
+}

@@ -7,3 +7,4 @@ yarn-debug.log*
 yarn-error.log*
 test-results
 playwright-report.DS_Store
+\n*.png\n.lighthouseci

@@ -1,0 +1,46 @@
+{
+  "id": "euro7-brake-by-wire-b1318",
+  "title_en": "Euro 7 Brake-by-Wire Delivery (B1318 / R1312 / K1320)",
+  "title_fr": "Livraison brake-by-wire Euro 7 (B1318 / R1312 / K1320)",
+  "period": "Feb 2025–Jul 2025",
+  "role": "Braking System Engineering Leader · Responsable ingénierie freinage",
+  "client_or_brand": "B1318 / R1312 / K1320",
+  "stack": [
+    "Euro 7",
+    "Brake-by-Wire",
+    "Validation"
+  ],
+  "tags": [
+    "Freinage",
+    "Euro 7",
+    "Diagnostics"
+  ],
+  "highlights_en": [
+    "Validation strategy for CMFB (PFC lot) aligned to gate plan with secured parts and benches.",
+    "Component validation plans issued for BRAKE-DISK, Mastervac, ESP10, MKC2.",
+    "QCDP objectives, RTC/NRL checks, and OneTD/SIGNE compliance enforced for RL2."
+  ],
+  "highlights_fr": [
+    "Stratégie de validation CMFB (lot PFC) alignée au plan jalon avec pièces et bancs sécurisés.",
+    "Plans de validation composant émis pour BRAKE-DISK, Mastervac, ESP10, MKC2.",
+    "Objectifs QCDP, contrôles RTC/NRL et conformité OneTD/SIGNE tenus pour les RL2."
+  ],
+  "metrics_en": [
+    "Validation plan baselined to RL2",
+    "Bench and vehicle parts availability secured",
+    "RTC/NRL checkpoints closed before gate reviews"
+  ],
+  "metrics_fr": [
+    "Plan de validation figé pour RL2",
+    "Disponibilité pièces banc & véhicule sécurisée",
+    "Points RTC/NRL clôturés avant revues jalon"
+  ],
+  "cover": "src/assets/img/projects/mkc2.jpg",
+  "gallery": [
+    "src/assets/img/projects/mkc2.jpg"
+  ],
+  "summary_en": "Euro 7 brake-by-wire delivery integrating ESP10 and MK C2 with component validation and QCDP governance.",
+  "summary_fr": "Livraison brake-by-wire Euro 7 intégrant ESP10 et MK C2 avec validation composant et gouvernance QCDP.",
+  "cover_alt_en": "Close-up of Continental MK C2 brake-by-wire module",
+  "cover_alt_fr": "Gros plan sur un module brake-by-wire Continental MK C2"
+}

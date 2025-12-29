@@ -7,14 +7,14 @@ import Experience from '../components/Experience.astro';
 import About from '../components/About.astro';
 import Downloads from '../components/Downloads.astro';
 import Contact from '../components/Contact.astro';
-import { getEntry } from 'astro:content';
+import { getEntry, getCollection } from 'astro:content';
 
 const siteEntry = await getEntry('site', 'en');
-const projectsEntry = await getEntry('projects', 'all');
+const projectsEntries = await getCollection('projects');
 
 const lang = 'en';
 const data = siteEntry.data;
-const projects = projectsEntry.data;
+const projects = projectsEntries.map(e => e.data);
 const { seo } = data;
 ---
 

@@ -1,0 +1,46 @@
+{
+  "id": "brake-hardware-calipers-pads-carriers",
+  "title_en": "Brake Hardware — Calipers, Pads, Carriers",
+  "title_fr": "Freinage — Étriers, plaquettes, supports",
+  "period": "2020–2021",
+  "role": "Brake Hardware Industrialisation Lead · Responsable industrialisation freinage",
+  "client_or_brand": "Multi-brand LCV Platform",
+  "stack": [
+    "Braking",
+    "Industrialisation",
+    "Supplier Readiness"
+  ],
+  "tags": [
+    "Braking",
+    "Industrialisation",
+    "Supplier Quality"
+  ],
+  "highlights_en": [
+    "Pad/shim/noise countermeasures and bedding protocols.",
+    "Thermal cycles, fade performance, and rotor thickness variation limits.",
+    "Supplier PPAP and traceability packages."
+  ],
+  "highlights_fr": [
+    "Contre-mesures bruit plaquette/cale et protocoles de rodage.",
+    "Cycles thermiques, performance fade et limites variation d'épaisseur disque.",
+    "Dossiers PPAP fournisseurs et traçabilité."
+  ],
+  "metrics_en": [
+    "Noise performance within target bands",
+    "Thermal fade < 15% across duty cycles",
+    "Supplier PPAP/CoP compliance 100%"
+  ],
+  "metrics_fr": [
+    "Performance acoustique dans les bandes cibles",
+    "Fade thermique < 15 % sur les cycles",
+    "Conformité PPAP/CoP fournisseurs 100 %"
+  ],
+  "cover": "src/assets/img/projects/brake-caliper.jpg",
+  "gallery": [
+    "src/assets/img/projects/brake-caliper.jpg"
+  ],
+  "summary_en": "Calipers, pads, and carriers industrialisation: conformity, material specifications, and endurance validation for LCV duty cycles.",
+  "summary_fr": "Industrialisation étriers, plaquettes et supports : conformité, matériaux et validation endurance pour cycles VUL.",
+  "cover_alt_en": "Disc brake caliper and pad assembly on a workbench",
+  "cover_alt_fr": "Étrier de frein et plaquettes assemblés sur un établi"
+}
