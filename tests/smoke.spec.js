@@ -13,7 +13,7 @@ test.beforeEach(async ({ page }) => {
 
 test('Home hero renders and theme switcher toggles preference', async ({ page }) => {
   await goto(page, '/');
-  await expect(page.locator('#hero h1')).toContainText(/I help OEM teams/i);
+  await expect(page.locator('#hero h1')).toContainText(/Automotive/i);
   const currentTheme = await page.evaluate(() => document.documentElement.getAttribute('data-theme') || 'light');
   const targetButton =
     currentTheme === 'dark'
