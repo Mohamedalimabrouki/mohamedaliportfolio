@@ -1,0 +1,66 @@
+---
+import { Picture as AstroPicture } from 'astro:assets';
+
+const { 
+  src, 
+  alt, 
+  width, 
+  height, 
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw', 
+  loading = 'lazy', 
+  fetchPriority 
+} = Astro.props;
+
+// Load all images from src/assets/img
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/**/*.{jpeg,jpg,png,gif,webp}');
+
+// Normalize path to match glob keys
+// JSON paths are like "/assets/img/projects/foo.jpg" or "projects/foo.jpg"
+// We need to map them to "/src/assets/img/projects/foo.jpg"
+let imagePath = src;
+if (src.startsWith('/assets/img/')) {
+  imagePath = `/src${src}`;
+} else if (!src.startsWith('/src/assets/img/')) {
+  // Handle relative paths if any, assuming they start from assets root
+  const cleanPath = src.replace(/^\//, '');
+  imagePath = `/src/assets/img/${cleanPath}`;
+}
+
+// Try to find the image
+const imageLoader = images[imagePath];
+let localImage = null;
+
+if (imageLoader) {
+  localImage = (await imageLoader()).default;
+} else {
+  // Fallback for public assets if not found in src (e.g. if I missed copying something)
+  // But primarily we want src assets.
+  // console.warn(`Image not found in src/assets: ${imagePath}`);
+}
+---
+
+{localImage ? (
+  <AstroPicture 
+    src={localImage}
+    formats={['avif', 'webp']}
+    widths={[320, 640, 960, 1280, 1600]}
+    sizes={sizes}
+    alt={alt}
+    loading={loading}
+    decoding="async"
+    fetchpriority={fetchPriority}
+    width={width}
+    height={height}
+  />
+) : (
+  // Fallback to standard img tag if optimization fails (e.g. external URL or missing file)
+  <img 
+    src={src} 
+    alt={alt} 
+    width={width} 
+    height={height} 
+    loading={loading} 
+    decoding="async" 
+    fetchpriority={fetchPriority}
+  />
+)}

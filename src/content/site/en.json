@@ -1,0 +1,569 @@
+{
+  "site": {
+    "name": "Mohamed Ali Mabrouki",
+    "tagline": "Automotive engineering leader — homologation, braking & chassis",
+    "description": "Mechatronics engineer with 4 years across EC type approval, Euro 7 braking, steering support, and wheel-end industrialisation for European light commercial vehicles.",
+    "keywords": [
+      "EC type approval",
+      "Euro 7 braking",
+      "Wheel assembly",
+      "Steering systems",
+      "CATIA V5",
+      "Homologation"
+    ],
+    "url": "https://mohamedalimabrouki.com",
+    "telephone_display": "+216 25 910 020",
+    "telephone_href": "tel:+21625910020",
+    "email": "contact@mohamedalimabrouki.com",
+    "location": "Tunis, Tunisia",
+    "linkedin": "https://www.linkedin.com/in/mohamedalimabrouki/"
+  },
+  "navigation": [
+    {
+      "id": "hero",
+      "label": "Overview"
+    },
+    {
+      "id": "skills",
+      "label": "Skills"
+    },
+    {
+      "id": "projects",
+      "label": "Projects"
+    },
+    {
+      "id": "experience",
+      "label": "Experience"
+    },
+    {
+      "id": "about",
+      "label": "About"
+    },
+    {
+      "id": "downloads",
+      "label": "CV"
+    },
+    {
+      "id": "contact",
+      "label": "Contact"
+    }
+  ],
+  "language_switcher": {
+    "label": "Language",
+    "options": {
+      "en": "English",
+      "fr": "Français"
+    }
+  },
+  "theme_switcher": {
+    "label": "Theme",
+    "options": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "descriptions": {
+      "light": "Switch to light theme",
+      "dark": "Switch to dark theme",
+      "system": "Follow system setting"
+    }
+  },
+      "hero": {
+      "eyebrow": "Automotive Engineer & Consultant<span class=\"company-break\">SEGULA Technologies Tunis</span>",
+      "headline_dynamic": {
+        "prefix": "Automotive engineer for",
+        "default": "homologation."
+      },
+      "headline": "Automotive Homologation & Chassis Leader.",    "lead": "Mechatronics engineer delivering EC type approvals, braking systems, and wheel-end solutions for European OEMs.",
+    "ctas": [
+      {
+        "variant": "primary",
+        "label": "View Projects",
+        "href": "#projects"
+      },
+      {
+        "variant": "ghost",
+        "label": "Contact Me",
+        "href": "#contact"
+      }
+    ],
+    "highlights": [
+      {
+        "label": "Base",
+        "value": "Tunis, Tunisia"
+      },
+      {
+        "label": "Phone",
+        "value": "+216 25 910 020",
+        "href": "tel:+21625910020"
+      },
+      {
+        "label": "Email",
+        "value": "contact@mohamedalimabrouki.com",
+        "href": "mailto:contact@mohamedalimabrouki.com"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/mohamedalimabrouki",
+        "href": "https://www.linkedin.com/in/mohamedalimabrouki/"
+      }
+    ],
+    "bullets": [
+      "EC Whole Vehicle Type Approval (WVTA) support for compact vans: documentation, markings and authority dossiers.",
+      "Chassis and wheel assembly engineering on a European light commercial vehicle: axles, hubs and wheel systems.",
+      "Mechanical design of plastic exterior parts on a Citroën small car: bumpers, brackets and mounting points."
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "intro": "What I use day to day on approvals, braking, steering and wheel-end delivery.",
+    "categories": [
+      {
+        "title": "EC Type Approval",
+        "description": "Multi-brand WVTA dossiers, FCM/markings, UTAC/CNRV audits.",
+        "items": [
+          "Multi-brand K9 N1 documentation sets and FCM updates",
+          "VIN / CoC data governance and change control",
+          "Authority liaison (UTAC/CNRV) and traceability dashboards"
+        ]
+      },
+      {
+        "title": "Euro 7 Braking & Steering",
+        "description": "Brake-by-wire delivery and steering PFE support for B1318 / R1312 / K1320.",
+        "items": [
+          "ESP10 + MK C2 integration, diagnostics, redundancy checks",
+          "Validation plans for BRAKE-DISK, Mastervac, ESP10, MKC2",
+          "RTGFE, RTC / NRL tracking with suppliers and labs"
+        ]
+      },
+      {
+        "title": "Axles & Wheel-End",
+        "description": "Front/rear axles, hub bearings, torque and runout control.",
+        "items": [
+          "Gen2/Gen3 hub bearings: preload, sealing, encoder integrity",
+          "PPAP / CoP readiness, run@rate, end-of-line measurement",
+          "Torque/runout analytics and NVH countermeasures"
+        ]
+      },
+      {
+        "title": "Exteriors & Methods",
+        "description": "CATIA V5 exterior parts, feasibility, and programme governance.",
+        "items": [
+          "Bumper and bracket design to injection rules (CATIA V5)",
+          "Feasibility: draft, parting lines, GD&T, corrosion protection",
+          "Programme tooling and methods: NPDM/NPDMdoc, SIGNE, OneVAL"
+        ]
+      }
+    ]
+  },
+  "projects_section": {
+    "title": "Projects",
+    "intro": "Case studies proving authority sign-off, brake delivery, and wheel-end launch readiness.",
+    "featured_ids": [
+      "k9-n1-ec-type-approval",
+      "euro7-brake-by-wire-b1318",
+      "b1318-steering-pfe-support",
+      "xdd-axles-wheel-assembly",
+      "smart-car-exteriors-cc21-cc24",
+      "ec-homologation-opel-combo",
+      "brake-hardware-calipers-pads-carriers",
+      "wheel-end-hub-bearing-unit-gen3"
+    ],
+    "view_all_label": "View all projects",
+    "view_all_href": "/projects/index.html"
+  },
+  "experience": {
+    "title": "Experience",
+    "intro": "Roles and dates exactly as on my CV.",
+    "items": [
+      {
+        "period": "Jul 2025–Present",
+        "role": "European Type Approval Engineer (K9 N1 multi-brand)",
+        "company": "SEGULA Technologies (for Stellantis / Toyota)",
+        "location": "France/Tunisia (remote + on-site)",
+        "details": [
+          "Prepare and manage EC type-approval documentation for Stellantis/Toyota light commercial (N1) projects; ensure audit-ready dossiers before CNRV submission.",
+          "Maintain regulatory compliance and FCM/marking updates across model families; interface with UTAC/CNRV.",
+          "Own homologation databases, status tracking, and change management through the certification lifecycle."
+        ]
+      },
+      {
+        "period": "Feb 2025–Jul 2025",
+        "role": "Engineering Leader — Braking System (B1318 / R1312 / K1320)",
+        "company": "SEGULA Technologies",
+        "location": "France/Tunisia",
+        "details": [
+          "Built and executed validation strategy for CMFB (PFC lot) aligned to gate plan; secured parts availability and test resources.",
+          "Authored component validation plans for BRAKE-DISK, Mastervac, ESP10, MKC2; monitored system and customer performance KPIs.",
+          "Drove QCDP objectives; enforced RTC/NRL checks; ensured OneTD & SIGNE compliance for RL2 gates."
+        ]
+      },
+      {
+        "period": "Jul 2024–Jan 2025",
+        "role": "PFE Support — Steering System (B1318)",
+        "company": "SEGULA Technologies",
+        "location": "France/Tunisia",
+        "details": [
+          "Coordinated engineering, procurement, suppliers, logistics, and manufacturing for steering components from development to industrialisation.",
+          "Administered ONEVAL progress, RGPQP milestones, and LUP deliverables to maintain project readiness.",
+          "Kept decision logs and ensured availability of parts/resources for builds."
+        ]
+      },
+      {
+        "period": "Feb 2022–Jun 2024",
+        "role": "Engineering Leader — Axles & Wheel Assembly (XDD)",
+        "company": "SEGULA Technologies",
+        "location": "France/Tunisia",
+        "details": [
+          "Led product/process development from TGA to MA, meeting Renault Design System specs.",
+          "Delivered FTR/OTD across design dossiers, BOM/DEVO, IMDS, dimension chains, and quality docs (NRL, NDL, QDR, DDMRS-FMEA, RTC).",
+          "Owned validation plans/tests (ONEVAL) and usage recommendations; managed critical components (hub bearings Gen2/Gen3, knuckles, discs, splash guards, rear axles, wheel carrier plates)."
+        ]
+      },
+      {
+        "period": "Oct 2021–Oct 2022",
+        "role": "Mechanical Design Engineer — SMART CAR (CC21/CC24)",
+        "company": "Stellantis",
+        "location": "Tunisia/India (programme exposure)",
+        "details": [
+          "Designed and integrated plastic parts in CATIA V5 to injection rules (min thickness, draft, rigidity).",
+          "Key parts: tail-lamp bracket, rear bumper skins, skid plate, tow hook, side brackets, sensor brackets including central parking sensor.",
+          "Ran feasibility and shape-plan reviews and coordinated with programme teams."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "tagline": "Mechatronics engineer focused on real approvals, braking, steering, and wheel-end launch.",
+    "body": "I work from Tunis on EC approvals, brake-by-wire delivery, steering support, and wheel-end launch for European light commercial vehicles. I rely on OEM toolchains (Renault/Stellantis) and keep documentation, validation, and suppliers aligned to gate plans.",
+    "stats": [
+      {
+        "label": "Years of experience",
+        "value": "4"
+      },
+      {
+        "label": "Current focus",
+        "value": "K9 N1 EC type approval (multi-brand)"
+      },
+      {
+        "label": "Work location",
+        "value": "Remote from Tunis, Tunisia"
+      }
+    ]
+  },
+  "cv_downloads": {
+    "title": "CV & Downloads",
+    "intro": "Take the detailed CV or request a tailored evidence pack.",
+    "buttons": [
+      {
+        "label": "Download CV",
+        "href": "/assets/cv/Mohamed_Ali_Mabrouki_CV.docx",
+        "download": true
+      },
+      {
+        "label": "View Web CV",
+        "href": "/cv.html"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Share your homologation, braking, chassis or plastic parts brief — I usually reply within one business day.",
+    "channels": [
+      {
+        "label": "Email",
+        "value": "contact@mohamedalimabrouki.com",
+        "href": "mailto:contact@mohamedalimabrouki.com"
+      },
+      {
+        "label": "Phone / WhatsApp",
+        "value": "+216 25 910 020",
+        "href": "tel:+21625910020"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/mohamedalimabrouki",
+        "href": "https://www.linkedin.com/in/mohamedalimabrouki/"
+      }
+    ],
+    "form": {
+      "title": "Start a project",
+      "description": "Prefilled email opens in your mail client.",
+      "fields": [
+        {
+          "id": "name",
+          "label": "Name",
+          "placeholder": "Your name",
+          "type": "text"
+        },
+        {
+          "id": "email",
+          "label": "Email",
+          "placeholder": "you@example.com",
+          "type": "email"
+        },
+        {
+          "id": "message",
+          "label": "Project brief",
+          "placeholder": "Describe your brief and timelines…",
+          "type": "textarea"
+        }
+      ],
+      "privacy": "Emails open in your default mail client. No data is stored on this site.",
+      "cta_label": "Draft email",
+      "mailto": "mailto:contact@mohamedalimabrouki.com?subject=Project%20enquiry"
+    }
+  },
+  "footer": {
+    "copyright": "© "
+  },
+  "projects_page": {
+    "title": "Projects",
+    "intro": "Filter CV-backed projects by capability, tag, or year.",
+    "filter_group_labels": {
+      "stack": "Capability",
+      "tag": "Tag",
+      "year": "Year"
+    },
+    "filter_defaults": {
+      "stack": "All capabilities",
+      "tag": "All tags",
+      "year": "All years"
+    },
+    "status_messages": {
+      "loading": "Loading projects…",
+      "empty": "Projects will appear soon.",
+      "count": "Showing {count} of {total} projects.",
+      "filtered": "Showing {count} of {total} projects.",
+      "error": "Unable to load projects. Please refresh."
+    },
+    "view_home_label": "Back to home",
+    "count_label": "projects"
+  },
+  "project_detail": {
+    "overview_label": "Overview",
+    "highlights_label": "Highlights",
+    "metrics_label": "Metrics",
+    "role_label": "Role",
+    "client_label": "Client / Brand",
+    "period_label": "Period",
+    "stack_label": "Focus",
+    "cta_contact": "Book a call",
+    "cta_projects": "All projects",
+    "loading_message": "Loading project…",
+    "error_message": "Project not found. Please return to the projects page."
+  },
+  "cv_page": {
+    "title": "Curriculum Vitae",
+    "summary": "Mechatronics engineer with 4 years across EC type approval, Euro 7 braking, steering support, and wheel-end industrialisation for European light commercial vehicles; based in Tunis and working with EU teams.",
+    "sections": {
+      "summary": "Summary",
+      "competencies": "Core Competencies",
+      "experience": "Experience",
+      "education": "Education",
+      "certifications": "Certifications",
+      "languages": "Languages",
+      "tools": "Tools & Platforms"
+    },
+    "competencies": [
+      {
+        "title": "Homologation & regulation",
+        "body": "EC Whole Vehicle Type Approval (WVTA) dossiers, FCM/markings, VIN/CoC data, authority coordination (UTAC/CNRV)."
+      },
+      {
+        "title": "Braking & steering",
+        "body": "Euro 7 brake-by-wire delivery, steering PFE support, diagnostics and redundancy checks for B1318 / R1312 / K1320."
+      },
+      {
+        "title": "Axles & wheel assemblies",
+        "body": "Front/rear axles, Gen2/Gen3 hub bearings, torque/runout behaviour, PPAP/CoP readiness."
+      },
+      {
+        "title": "Exteriors & plastics",
+        "body": "CATIA V5 design of bumpers, brackets, mounts; feasibility (draft, parting, GD&T) and corrosion mitigation."
+      }
+    ],
+    "experience": [
+      {
+        "title": "European Type Approval Engineer — SEGULA Technologies",
+        "period": "France/Tunisia · Jul 2025–Present (K9 N1 multi-brand)",
+        "items": [
+          "Prepare and manage EC type-approval documentation for Stellantis/Toyota light commercial (N1) projects; ensure audit-ready dossiers before CNRV submission.",
+          "Maintain regulatory compliance and FCM/marking updates across model families; interface with UTAC/CNRV.",
+          "Own homologation databases, status tracking, and change management through the certification lifecycle."
+        ]
+      },
+      {
+        "title": "Engineering Leader — Braking System — SEGULA Technologies",
+        "period": "France/Tunisia · Feb 2025–Jul 2025 (B1318 / R1312 / K1320)",
+        "items": [
+          "Built and executed validation strategy for CMFB (PFC lot) aligned to gate plan; secured parts availability and test resources.",
+          "Authored component validation plans for BRAKE-DISK, Mastervac, ESP10, MKC2; monitored system and customer performance KPIs.",
+          "Drove QCDP objectives; enforced RTC/NRL checks; ensured OneTD & SIGNE compliance for RL2 gates."
+        ]
+      },
+      {
+        "title": "PFE Support — Steering System — SEGULA Technologies",
+        "period": "France/Tunisia · Jul 2024–Jan 2025 (B1318)",
+        "items": [
+          "Coordinated engineering, procurement, suppliers, logistics, and manufacturing for steering components from development to industrialisation.",
+          "Administered ONEVAL progress, RGPQP milestones, and LUP deliverables to maintain project readiness.",
+          "Kept decision logs and ensured availability of parts/resources for builds."
+        ]
+      },
+      {
+        "title": "Engineering Leader — Axles & Wheel Assembly — SEGULA Technologies",
+        "period": "France/Tunisia · Feb 2022–Jun 2024 (XDD)",
+        "items": [
+          "Led product/process development from TGA to MA, meeting Renault Design System specs.",
+          "Delivered FTR/OTD across design dossiers, BOM/DEVO, IMDS, dimension chains, and quality docs (NRL, NDL, QDR, DDMRS-FMEA, RTC).",
+          "Owned validation plans/tests (ONEVAL) and usage recommendations; managed critical components (hub bearings Gen2/Gen3, knuckles, discs, splash guards, rear axles, wheel carrier plates)."
+        ]
+      },
+      {
+        "title": "Mechanical Design Engineer — SMART CAR — Stellantis",
+        "period": "Tunisia/India · Oct 2021–Oct 2022 (CC21/CC24)",
+        "items": [
+          "Designed and integrated plastic parts in CATIA V5 to injection rules (min thickness, draft, rigidity).",
+          "Key parts: tail-lamp bracket, rear bumper skins, skid plate, tow hook, side brackets, sensor brackets including central parking sensor.",
+          "Ran feasibility and shape-plan reviews and coordinated with programme teams."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "National Engineer Diploma, Mechatronic Engineering",
+        "subtitle": "International Polytechnic School, Tunis (2019–2021)"
+      },
+      {
+        "title": "Engineer Cycle, Mechanical Engineering",
+        "subtitle": "National Engineering School of Tunis (2016–2019)"
+      },
+      {
+        "title": "Bachelor’s in Mechanical Engineering (Major of promotion)",
+        "subtitle": "ISET Nabeul (2013–2016)"
+      },
+      {
+        "title": "Technical Baccalaureate",
+        "subtitle": "2013"
+      }
+    ],
+    "certifications": [
+      "ISO 9001 Lead Auditor",
+      "Automotive SPICE Provisional Assessor",
+      "Functional Safety (ISO 26262) Practitioner",
+      "PMP® training completed (exam pending)",
+      "Internal Engineering Leader Training (Renault): role, maturity of deliverables, quality dashboard/PRM, NPDM processes/tools",
+      "Internal Plastic Equipment (RETEX BMC): input analysis, thickness drawings, fastening integration"
+    ],
+    "languages": [
+      {
+        "title": "Arabic",
+        "level": "Native"
+      },
+      {
+        "title": "French",
+        "level": "Fluent"
+      },
+      {
+        "title": "English",
+        "level": "Fluent"
+      },
+      {
+        "title": "German",
+        "level": "Beginner"
+      }
+    ],
+    "tools": [
+      "CATIA V5",
+      "SolidWorks",
+      "AutoCAD",
+      "Renault toolchain (NPDM/NPDMdoc, SIGNE, OneVAL, ONETD, ePARM, eCLEM, MATSUB, eNDL, OneVIEW, TOTEM, ANPQP/RGPQP, BOMC, LUP, GAR)",
+      "MS Office"
+    ],
+    "download_button": "Download CV"
+  },
+  "seo": {
+    "home": {
+      "title": "Mohamed Ali Mabrouki | Automotive Homologation & Chassis Engineer",
+      "description": "Mechatronics engineer with 4 years across EC type approval, Euro 7 braking, steering support, and wheel-end industrialisation for European light commercial vehicles.",
+      "path": "/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "home_fr": {
+      "title": "Mohamed Ali Mabrouki | Ingénieur homologation et châssis automobile",
+      "description": "Freinage brake-by-wire Euro 7, dossiers WVTA et lancements roue tenus à l'heure pour Toyota, Stellantis et Renault.",
+      "path": "/fr/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "projects_index": {
+      "title": "Projects | Mohamed Ali Mabrouki",
+      "description": "Case studies matching the CV: homologation, Euro 7 braking, steering support, wheel-end launch, and exteriors.",
+      "path": "/projects/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "projects_index_fr": {
+      "title": "Projets | Mohamed Ali Mabrouki",
+      "description": "Études de cas sur l'homologation, le freinage Euro 7 et l'industrialisation châssis.",
+      "path": "/fr/projets/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "project_detail": {
+      "title_template": "{projectTitle} | Project | Mohamed Ali Mabrouki",
+      "description_template": "{projectSummary}",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "project_detail_fr": {
+      "title_template": "{projectTitle} | Projet | Mohamed Ali Mabrouki",
+      "description_template": "{projectSummary}",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "cv": {
+      "title": "CV | Mohamed Ali Mabrouki",
+      "description": "Download and print the full curriculum vitae of Mohamed Ali Mabrouki.",
+      "path": "/cv.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "cv_fr": {
+      "title": "CV | Mohamed Ali Mabrouki",
+      "description": "Téléchargez et imprimez le CV complet de Mohamed Ali Mabrouki.",
+      "path": "/fr/cv.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    }
+  },
+  "structured_data": {
+    "person": {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohamed Ali Mabrouki",
+      "jobTitle": "Automotive engineering leader — homologation & chassis",
+      "url": "https://mohamedalimabrouki.com",
+      "telephone": "+216 25 910 020",
+      "email": "contact@mohamedalimabrouki.com",
+      "image": "https://mohamedalimabrouki.com/assets/img/avatar.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/mohamedalimabrouki/"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "SEGULA Technologies"
+      }
+    },
+    "website": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Mohamed Ali Mabrouki Portfolio",
+      "url": "https://mohamedalimabrouki.com"
+    }
+  },
+  "shared": {
+    "skip_to_content": "Skip to content",
+    "back_to_top": "Back to top",
+    "reduce_motion": "Motion reduced for accessibility.",
+    "view_fr": "Afficher en français",
+    "theme_status_light": "Light theme selected.",
+    "theme_status_dark": "Dark theme selected.",
+    "theme_status_system": "Theme follows system preference."
+  }
+}

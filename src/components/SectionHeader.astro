@@ -1,0 +1,8 @@
+---
+const { title, intro, align = 'center' } = Astro.props;
+---
+
+<div class:list={['section__intro', `align-${align}`]} data-reveal>
+  <h2>{title}</h2>
+  {intro && <p>{intro}</p>}
+</div>

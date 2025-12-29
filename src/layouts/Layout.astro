@@ -1,0 +1,174 @@
+---
+import '../styles/base.css';
+import '../styles/themes.css';
+import '../styles/layout.css';
+import '../styles/components.css';
+import '../styles/animations.css';
+
+import { getEntry } from 'astro:content';
+
+const { 
+  title, 
+  description, 
+  lang = 'en', 
+  pageKey = 'home',
+  alternatePath,
+  ogImage
+} = Astro.props;
+
+const siteEntry = await getEntry('site', lang);
+const data = siteEntry.data;
+const site = data.site;
+const navLinks = data.navigation;
+
+const locale = lang === 'fr' ? 'fr_FR' : 'en_GB';
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const altUrl = alternatePath ? new URL(alternatePath, Astro.site) : null;
+const resolvedOgImage = ogImage || data.seo.home.og_image;
+
+const homeHref = lang === 'fr' ? '/fr/' : '/';
+const currentPath = Astro.url.pathname;
+const englishHref = lang === 'en' ? currentPath : alternatePath || '/';
+const frenchHref = lang === 'fr' ? currentPath : alternatePath || '/fr/';
+---
+
+<!doctype html>
+<html lang={lang} data-page={pageKey}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonicalUrl}>
+  {altUrl && <link rel="alternate" hreflang={lang === 'en' ? 'fr' : 'en'} href={altUrl} />}
+  <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
+  
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content={site.name}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonicalUrl}>
+  <meta property="og:image" content={new URL(resolvedOgImage, Astro.site)}>
+  <meta property="og:locale" content={locale}>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={new URL(resolvedOgImage, Astro.site)}>
+  
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F4F7FB" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B1522" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/assets/img/avatar-circle.png">
+
+  <script is:inline>
+    (function(){try{var storage=localStorage.getItem('mam-theme');var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var preference=storage==='light'||storage==='dark'?storage:'system';var theme=preference==='light'?'light':preference==='dark'?'dark':(prefersDark?'dark':'light');document.documentElement.setAttribute('data-theme',theme);document.documentElement.dataset.themePreference=preference;}catch(error){var fallback=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',fallback);document.documentElement.dataset.themePreference='system';}})();
+  </script>
+  
+  <link rel="preload" href="/assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <slot name="head" />
+  
+  <!-- Re-hydrate the UI logic -->
+  <script src="../scripts/ui.js"></script>
+  <script src="../scripts/headline-animation.js"></script>
+  <script src="../scripts/scroll-animations.js"></script>
+  <script src="../scripts/theme.js"></script>
+</head>
+<body data-lang={lang}>
+  <a class="skip-link" href="#main">{data.shared.skip_to_content}</a>
+  
+  <header class="site-header" data-reveal>
+    <div class="container site-header__inner">
+      <a class="brand" href={lang === 'fr' ? '/fr/#hero' : '/#hero'}>
+        <span class="brand__mark" aria-hidden="true">
+          <img src="/assets/img/avatar.jpg" alt="Mohamed Ali Mabrouki's avatar" width="44" height="44" loading="lazy" decoding="async">
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">{site.name}</span>
+          <span class="brand__tagline">{site.tagline}</span>
+        </span>
+      </a>
+      
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      
+      <nav class="site-nav" id="primary-navigation" data-site-nav aria-label="Primary">
+        <ul class="site-nav__list">
+          {navLinks.map(item => (
+            <li>
+              <a 
+                class="site-nav__link" 
+                data-nav-target={item.id} 
+                href={pageKey === 'home' ? `#${item.id}` : `${homeHref}#${item.id}`}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+          <li class="magic-line" aria-hidden="true"></li>
+        </ul>
+        
+        <div class="site-controls">
+           <!-- Theme Switcher -->
+           <div class="theme-switcher" data-theme-switcher role="group" aria-label={data.theme_switcher.label}>
+             {['light', 'dark', 'system'].map(mode => (
+               <button type="button" class="theme-switcher__btn" data-theme-set={mode} aria-pressed="false" aria-label={data.theme_switcher.descriptions[mode]} title={data.theme_switcher.descriptions[mode]}>
+                 <span class="theme-switcher__icon" aria-hidden="true">{mode === 'light' ? '☀' : mode === 'dark' ? '☾' : '◎'}</span>
+                 <span class="sr-only">{data.theme_switcher.options[mode]}</span>
+               </button>
+             ))}
+             <span 
+               class="sr-only" 
+               data-theme-status 
+               role="status" 
+               aria-live="polite"
+               data-status-light={data.shared.theme_status_light}
+               data-status-dark={data.shared.theme_status_dark}
+               data-status-system={data.shared.theme_status_system}
+             ></span>
+           </div>
+
+           <!-- Language Switcher -->
+           <div class="lang-switcher" role="group" aria-label={data.language_switcher.label}>
+             <a 
+               href={englishHref} 
+               class={`lang-switcher__btn ${lang === 'en' ? 'is-active' : ''}`} 
+               aria-pressed={lang === 'en'}
+               hreflang="en"
+               lang="en"
+               aria-label={data.language_switcher.options.en}
+               title={data.language_switcher.options.en}
+             >
+               EN
+             </a>
+             <a 
+               href={frenchHref} 
+               class={`lang-switcher__btn ${lang === 'fr' ? 'is-active' : ''}`} 
+               aria-pressed={lang === 'fr'}
+               hreflang="fr"
+               lang="fr"
+               aria-label={data.language_switcher.options.fr}
+               title={data.language_switcher.options.fr}
+             >
+               FR
+             </a>
+           </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main">
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© <span data-current-year>{new Date().getFullYear()}</span> {site.name}. {site.tagline}.</p>
+      <a class="btn btn--ghost" href={lang === 'fr' ? '/fr/#hero' : '/#hero'}>{data.shared.back_to_top}</a>
+    </div>
+  </footer>
+</body>
+</html>

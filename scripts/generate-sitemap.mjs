@@ -5,8 +5,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
-const OUTPUT_PATH = path.join(ROOT, 'sitemap.xml');
-const CONTENT_PATH = path.join(ROOT, 'content', 'projects.json');
+const OUTPUT_PATH = path.join(ROOT, 'public', 'sitemap.xml');
+const CONTENT_PATH = path.join(ROOT, 'src', 'content', 'projects', 'all.json');
 const BASE_URL = 'https://mohamedalimabrouki.com';
 
 const readProjects = async () => {
@@ -17,21 +17,22 @@ const readProjects = async () => {
 const formatUrl = (pathSuffix) => {
   if (pathSuffix === '/' || pathSuffix === '') return `${BASE_URL}/`;
   const cleaned = pathSuffix.startsWith('/') ? pathSuffix : `/${pathSuffix}`;
-  return `${BASE_URL}${cleaned}`;
+  // Ensure trailing slash
+  return `${BASE_URL}${cleaned}${cleaned.endsWith('/') ? '' : '/'}`;
 };
 
 const today = new Date().toISOString().split('T')[0];
 
 const buildEntries = (projects) => {
   const basePages = [
-    { en: '/index.html', fr: '/fr/index.html', priority: '1.0' },
-    { en: '/projects/index.html', fr: '/fr/projets/index.html', priority: '0.8' },
-    { en: '/cv.html', fr: '/fr/cv.html', priority: '0.7' }
+    { en: '/', fr: '/fr/', priority: '1.0' },
+    { en: '/projects/', fr: '/fr/projets/', priority: '0.8' },
+    { en: '/cv/', fr: '/fr/cv/', priority: '0.7' }
   ];
 
   const projectPages = projects.map((project) => ({
-    en: `/projects/${project.id}.html`,
-    fr: `/fr/projets/${project.id}.html`,
+    en: `/projects/${project.id}/`,
+    fr: `/fr/projets/${project.id}/`,
     priority: '0.7'
   }));
 
@@ -48,7 +49,7 @@ const renderUrlEntry = ({ en, fr, priority }) => {
     priority ? `    <priority>${priority}</priority>` : null,
     `    <xhtml:link rel="alternate" hreflang="en" href="${url}" />`,
     `    <xhtml:link rel="alternate" hreflang="fr" href="${alt}" />`,
-    `    <xhtml:link rel="alternate" hreflang="x-default" href="${formatUrl('/index.html')}" />`,
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${formatUrl('/')}" />`,
     '  </url>'
   ]
     .filter(Boolean)

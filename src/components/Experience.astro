@@ -1,0 +1,27 @@
+---
+import SectionHeader from './SectionHeader.astro';
+
+const { data } = Astro.props;
+---
+
+<section id="experience" class="section section--muted" data-section="experience">
+  <div class="container">
+    <SectionHeader title={data.title} intro={data.intro} />
+    <div class="timeline">
+      {data.items.map(item => (
+        <article class="timeline__item" data-reveal>
+          <div class="timeline__meta">
+            <span class="timeline__period">{item.period}</span>
+            <span class="timeline__location">{item.location}</span>
+          </div>
+          <div class="timeline__body">
+            <h3>{item.role} · {item.company}</h3>
+            <ul>
+              {item.details.map(line => <li>{line}</li>)}
+            </ul>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

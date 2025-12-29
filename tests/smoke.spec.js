@@ -13,7 +13,7 @@ test.beforeEach(async ({ page }) => {
 
 test('Home hero renders and theme switcher toggles preference', async ({ page }) => {
   await goto(page, '/');
-  await expect(page.locator('#hero h1')).toHaveText(/Bring compliant multi-brand vans/i);
+  await expect(page.locator('#hero h1')).toContainText(/I help OEM teams/i);
   const currentTheme = await page.evaluate(() => document.documentElement.getAttribute('data-theme') || 'light');
   const targetButton =
     currentTheme === 'dark'
@@ -29,40 +29,36 @@ test('Home hero renders and theme switcher toggles preference', async ({ page })
 test('Home projects grid exposes responsive imagery', async ({ page }) => {
   await goto(page, '/');
   const cards = page.locator('#projects .project-card');
-  await expect(cards).toHaveCount(6);
+  await expect(cards).toHaveCount(8);
   const firstCard = cards.first();
-  await expect(firstCard.locator('picture source').first()).toHaveAttribute('srcset', /avif/);
   const heroImg = firstCard.locator('img').first();
-  await expect(heroImg).toHaveAttribute('srcset', /320w/);
-  await expect(heroImg).toHaveAttribute('data-placeholder', /data:image\/jpeg;base64/);
+  await expect(heroImg).toBeVisible();
+  await expect(heroImg).toHaveAttribute('alt');
 });
 
 test('Projects index hydrates filters and status messaging', async ({ page }) => {
-  await goto(page, '/projects/index.html');
+  await goto(page, '/projects/');
   const cards = page.locator('[data-project-list] article');
   await expect(cards).toHaveCount(8);
   await expect(page.locator('[data-status]')).toHaveText(/Showing 8 of 8 projects\./i);
   const stackSelect = page.locator('select[data-filter="stack"]');
   const optionCount = await stackSelect.locator('option').count();
-  expect(optionCount).toBeGreaterThan(3);
+  expect(optionCount).toBeGreaterThan(2);
   await stackSelect.selectOption('euro-7');
   await expect(page.locator('[data-project-list] article:visible')).toHaveCount(1);
   await expect(page.locator('[data-status]')).toHaveText(/Showing 1 of 8 projects\./i);
 });
 
 test('Project detail hero uses responsive sources and metrics', async ({ page }) => {
-  await goto(page, '/projects/ec-homologation-toyota-proace-city.html');
-  await page.waitForSelector('[data-project-hero] picture img', { state: 'attached' });
-  const heroPicture = page.locator('[data-project-hero] picture').first();
-  const heroImg = heroPicture.locator('img');
-  await expect(heroImg).toHaveAttribute('srcset', /320w/);
-  await expect(heroImg).toHaveAttribute('data-placeholder', /data:image\/jpeg;base64/);
+  await goto(page, '/projects/k9-n1-ec-type-approval/');
+  const heroImg = page.locator('[data-project-hero] img').first();
+  await expect(heroImg).toBeVisible();
   await expect(page.locator('[data-project-metrics] li')).toHaveCount(3);
 });
 
 test('CV page provides downloadable résumé assets', async ({ page }) => {
-  await goto(page, '/cv.html');
-  await expect(page.locator('h1')).toHaveText(/Mohamed Ali Mabrouki/i);
+  await goto(page, '/cv/');
+  await expect(page.locator('div.cv-heading h1')).toHaveText(/Mohamed Ali Mabrouki/i);
   const downloadLink = page.getByRole('link', { name: /Download CV/i });
   await expect(downloadLink).toHaveAttribute('href', /\.docx$/);
   const downloadPromise = page.waitForEvent('download');

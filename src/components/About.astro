@@ -1,0 +1,31 @@
+---
+import Portrait from './Portrait.astro';
+import SectionHeader from './SectionHeader.astro';
+
+const { data, lang } = Astro.props;
+---
+
+<section id="about" class="section section--muted" data-section="about">
+  <div class="container about__grid">
+    <div class="about__media" data-reveal>
+      <Portrait lang={lang} variant="circle" loading="lazy" sizes="(max-width: 960px) 80vw, 420px" />
+    </div>
+    
+    <div class="about__copy" data-reveal>
+      <SectionHeader title={data.title} align="left" />
+      <div class="about__content">
+        <p class="about__tagline">{data.tagline}</p>
+        <p class="about__body">{data.body}</p>
+      </div>
+      
+      <ul class="stat-list">
+        {data.stats.map(stat => (
+          <li>
+            <span class="stat__value">{stat.value}</span>
+            <span class="stat__label">{stat.label}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import Button from './Button.astro';
+
+const { data } = Astro.props;
+---
+
+<section id="contact" class="section section--muted" data-section="contact">
+  <div class="container contact">
+    <div class="contact__intro">
+      <SectionHeader title={data.title} intro={data.intro} align="left" />
+      <ul class="contact__channels" data-reveal>
+        {data.channels.map(channel => (
+          <li>
+            <span class="channel__label">{channel.label}</span>
+            <a href={channel.href}>{channel.value}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="contact__form tilt-card" data-reveal>
+      <h3>{data.form.title}</h3>
+      <p>{data.form.description}</p>
+      <form id="contact-form" data-mailto={data.form.mailto}>
+        {data.form.fields.map(field => (
+          <label class="form-field">
+            <span>{field.label}</span>
+            {field.type === 'textarea' ? (
+              <textarea name={field.id} id={`contact-${field.id}`} placeholder={field.placeholder}></textarea>
+            ) : (
+              <input type={field.type} name={field.id} id={`contact-${field.id}`} placeholder={field.placeholder} />
+            )}
+          </label>
+        ))}
+        <p class="form-privacy">{data.form.privacy}</p>
+        <Button type="submit" variant="primary">{data.form.cta_label}</Button>
+      </form>
+    </div>
+  </div>
+</section>

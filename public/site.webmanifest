@@ -1,0 +1,21 @@
+{
+  "name": "Mohamed Ali Mabrouki Portfolio",
+  "short_name": "MAM Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF2EA",
+  "theme_color": "#FAF2EA",
+  "description": "Automotive programme leadership for Euro 7 braking, WVTA dossiers, and wheel-end launches.",
+  "icons": [
+    {
+      "src": "/assets/img/favicon-512.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/assets/img/favicon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

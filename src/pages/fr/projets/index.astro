@@ -1,0 +1,94 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ProjectCard from '../../../components/ProjectCard.astro';
+import { getEntry } from 'astro:content';
+
+const siteEntry = await getEntry('site', 'fr');
+const projectsEntry = await getEntry('projects', 'all');
+
+const lang = 'fr';
+const data = siteEntry.data.projects_page;
+const { seo } = siteEntry.data;
+const projects = projectsEntry.data;
+
+const groupLabels = data.filter_group_labels;
+const defaults = data.filter_defaults;
+const totalProjects = projects.length;
+const countLabel = data.count_label || 'projects';
+---
+
+<Layout 
+  title={seo.projects_index.title} 
+  description={seo.projects_index.description} 
+  lang={lang} 
+  pageKey="projects"
+  ogImage={seo.projects_index.og_image}
+  alternatePath="/projects/"
+>
+  <main id="main">
+    <section class="section projects-index" data-projects-root data-render-source="static">
+      <div class="container">
+        <div class="section__intro" data-reveal>
+          <h1>{data.title}</h1>
+          <p>{data.intro}</p>
+        </div>
+        
+        <div class="projects-count" data-reveal>
+          <span class="count-badge" data-project-count data-count-label={countLabel} aria-label={`${totalProjects} ${countLabel}`}>
+            <strong>{totalProjects}</strong>
+            <span>{countLabel}</span>
+          </span>
+        </div>
+
+        <div class="filters" data-reveal>
+          <label>{groupLabels.stack}
+            <select data-filter="stack" data-default-label={defaults.stack}>
+              <option value="all" selected>{defaults.stack}</option>
+            </select>
+          </label>
+          <label>{groupLabels.tag}
+            <select data-filter="tag" data-default-label={defaults.tag}>
+              <option value="all" selected>{defaults.tag}</option>
+            </select>
+          </label>
+          <label>{groupLabels.year}
+            <select data-filter="year" data-default-label={defaults.year}>
+              <option value="all" selected>{defaults.year}</option>
+            </select>
+          </label>
+        </div>
+
+        <p 
+          class="projects-status" 
+          data-reveal 
+          data-status 
+          role="status" 
+          aria-live="polite" 
+          data-status-loading={data.status_messages.loading} 
+          data-status-empty={data.status_messages.empty} 
+          data-status-all={data.status_messages.count} 
+          data-status-filtered={data.status_messages.filtered} 
+          data-status-error={data.status_messages.error}
+        >
+          {data.status_messages.loading}
+        </p>
+
+        <div class="projects-grid" data-project-list>
+          {projects.map(project => (
+            <ProjectCard project={project} lang={lang} compact={false} />
+          ))}
+        </div>
+
+        <div class="section__actions" data-reveal>
+          <a class="btn btn--ghost" href="/fr/">{data.view_home_label}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../../scripts/projects.js"></script>
+
+  <script define:vars={{ projects }}>
+    window.PROJECTS_DATA = projects;
+  </script>
+</Layout>

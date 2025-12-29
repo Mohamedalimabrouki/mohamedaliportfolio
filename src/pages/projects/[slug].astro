@@ -1,0 +1,149 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Picture from '../../components/Picture.astro';
+import { getEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projectsEntry = await getEntry('projects', 'all');
+  return projectsEntry.data.map(project => ({
+    params: { slug: project.id },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+const siteEntry = await getEntry('site', 'en');
+const lang = 'en';
+const data = siteEntry.data.project_detail;
+const seo = siteEntry.data.seo.project_detail;
+const siteData = siteEntry.data.site;
+
+const title = project.title_en;
+const summary = project.summary_en;
+const highlights = project.highlights_en;
+const metrics = project.metrics_en;
+const coverPath = project.cover.startsWith('/') ? project.cover : `/${project.cover}`;
+const coverAlt = project.cover_alt_en;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/**/*.{jpeg,jpg,png,gif,webp}', { eager: true });
+const normalizeCoverPath = (pathValue = '') => {
+  if (pathValue.startsWith('/src/assets/img/')) return pathValue;
+  if (pathValue.startsWith('src/assets/img/')) return `/${pathValue}`;
+  if (pathValue.startsWith('/assets/img/')) return `/src${pathValue}`;
+  if (pathValue.startsWith('assets/img/')) return `/src/${pathValue}`;
+  const trimmed = pathValue.replace(/^\/+/, '');
+  return `/src/assets/img/${trimmed}`;
+};
+const normalizedCoverKey = normalizeCoverPath(project.cover);
+const projectOgImage = images[normalizedCoverKey]?.default?.src || seo.og_image;
+
+const roleSplit = project.role.split('·').map(p => p.trim());
+const role = roleSplit[0];
+
+const metaTitle = seo.title_template.replace('{projectTitle}', title);
+const metaDesc = seo.description_template.replace('{projectSummary}', summary);
+
+const creativeWork = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: title,
+  description: summary,
+  url: new URL(Astro.url.pathname, Astro.site).href,
+  image: new URL(coverPath, Astro.site).href,
+  about: (project.tags && project.tags.length ? project.tags : project.stack).slice(0, 8),
+  inLanguage: 'en',
+  creator: {
+    '@type': 'Person',
+    name: siteData.name,
+    url: siteData.url,
+    worksFor: {
+      '@type': 'Organization',
+      name: 'SEGULA Technologies'
+    }
+  },
+  keywords: [...(project.stack || []), ...(project.tags || [])].join(', ')
+};
+---
+
+<Layout 
+  title={metaTitle} 
+  description={metaDesc} 
+  lang={lang} 
+  pageKey={`project:${project.id}`}
+  alternatePath={`/fr/projets/${project.id}/`}
+  ogImage={projectOgImage}
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(creativeWork)} />
+
+  <main 
+    id="main" 
+    data-project-detail 
+    data-project-id={project.id}
+    data-label-overview={data.overview_label}
+    data-label-period={data.period_label}
+    data-label-role={data.role_label}
+    data-label-client={data.client_label}
+    data-label-stack={data.stack_label}
+    data-label-highlights={data.highlights_label}
+    data-label-metrics={data.metrics_label}
+    data-cta-contact={data.cta_contact}
+    data-cta-projects={data.cta_projects}
+    data-projects-href="/projects/"
+    data-contact-email={siteData.email || 'hello@mohamedalimabrouki.com'}
+    data-error-message={data.error_message || ''}
+    data-loading-message={data.loading_message || 'Loading project…'}
+    data-render-source="static"
+  >
+    <section class="section project-detail">
+      <div class="container">
+        <header class="project-hero" data-reveal data-project-hero>
+          <div class="project-hero__copy">
+            <p class="eyebrow">{data.overview_label}</p>
+            <h1>{title}</h1>
+            <p>{summary}</p>
+            <div class="project-hero__meta">
+              <dl>
+                <div><dt>{data.period_label}</dt><dd>{project.period}</dd></div>
+                <div><dt>{data.role_label}</dt><dd>{role}</dd></div>
+                <div><dt>{data.client_label}</dt><dd>{project.client_or_brand}</dd></div>
+                <div><dt>{data.stack_label}</dt><dd>{project.stack.map(tag => <span class="badge">{tag}</span>)}</dd></div>
+              </dl>
+              <div class="project-hero__actions">
+                <a class="btn btn--primary" href={`mailto:${siteData.email}`}>{data.cta_contact}</a>
+                <a class="btn btn--ghost" href="/projects/">{data.cta_projects}</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-hero__media">
+            <Picture src={coverPath} alt={coverAlt} width={1600} height={900} sizes="(max-width: 768px) 100vw, 960px" fetchPriority="high" loading="eager" />
+          </div>
+        </header>
+
+        <div class="project-detail__grid">
+          <article class="card" data-reveal data-project-highlights>
+            <h2>{data.highlights_label}</h2>
+            <ul>
+              {highlights.map(line => <li>{line}</li>)}
+            </ul>
+          </article>
+          <article class="card" data-reveal data-project-metrics>
+            <h2>{data.metrics_label}</h2>
+            <ul>
+              {metrics.map(line => <li>{line}</li>)}
+            </ul>
+          </article>
+        </div>
+
+        <div class="gallery" data-reveal data-project-gallery>
+          {project.gallery.map(img => (
+            <figure class="gallery__item">
+              <Picture src={img.startsWith('/') ? img : `/${img}`} alt={coverAlt} width={1600} height={900} />
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <script src="../../scripts/projects.js"></script>
+</Layout>

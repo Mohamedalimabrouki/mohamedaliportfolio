@@ -1,0 +1,65 @@
+---
+import { Picture } from 'astro:assets';
+import avatarCircle from '../assets/img/avatar-circle.png';
+import avatarSquare from '../assets/img/avatar.jpg';
+
+interface Props {
+  lang: string;
+  variant?: 'circle' | 'square';
+  loading?: "lazy" | "eager";
+  fetchPriority?: "high" | "low" | "auto";
+  sizes?: string;
+}
+
+const { 
+  lang, 
+  variant = 'circle',
+  loading = 'lazy', 
+  fetchPriority, 
+  sizes = '(max-width: 960px) 60vw, 420px' 
+} = Astro.props;
+
+const image = variant === 'circle' ? avatarCircle : avatarSquare;
+const alt = lang === 'fr' ? 'Portrait de Mohamed Ali Mabrouki' : 'Portrait of Mohamed Ali Mabrouki';
+---
+
+<div class={`portrait-wrapper portrait-wrapper--${variant}`}>
+  <Picture 
+    src={image}
+    formats={['avif', 'webp']}
+    widths={[320, 400, 640, 800]}
+    sizes={sizes}
+    alt={alt}
+    width={800}
+    height={800}
+    loading={loading}
+    decoding="async"
+    fetchpriority={fetchPriority}
+    class="portrait-img"
+  />
+</div>
+
+<style>
+  .portrait-wrapper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .portrait-wrapper--circle {
+    /* No extra styles needed if using the pre-masked circle png, 
+       but we can add a subtle border */
+  }
+  
+  .portrait-wrapper--square {
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .portrait-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+</style>

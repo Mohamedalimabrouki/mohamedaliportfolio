@@ -1,0 +1,22 @@
+---
+import SectionHeader from './SectionHeader.astro';
+
+const { data } = Astro.props;
+---
+
+<section id="skills" class="section section--muted" data-section="skills">
+  <div class="container">
+    <SectionHeader title={data.title} intro={data.intro} />
+    <div class="skills-grid">
+      {data.categories.map(cat => (
+        <article class="skill-card tilt-card" data-reveal>
+          <h3>{cat.title}</h3>
+          <p>{cat.description}</p>
+          <ul class="pill-list">
+            {cat.items.map(item => <li>{item}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

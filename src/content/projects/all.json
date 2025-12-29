@@ -1,0 +1,370 @@
+[
+  {
+    "id": "k9-n1-ec-type-approval",
+    "title_en": "K9 N1 EC Type Approval (Multi-brand)",
+    "title_fr": "Réception CE K9 N1 (multi-marques)",
+    "period": "Jul 2025–Present",
+    "role": "European Type Approval Engineer · Ingénieur réception communautaire",
+    "client_or_brand": "Stellantis & Toyota",
+    "stack": [
+      "WVTA",
+      "Compliance",
+      "LCV"
+    ],
+    "tags": [
+      "Type Approval",
+      "K9 N1",
+      "Multi-brand"
+    ],
+    "highlights_en": [
+      "Audit-ready documentation sets for Stellantis/Toyota N1 derivatives ahead of CNRV submission.",
+      "FCM/markings and VIN/CoC governance maintained across model families.",
+      "Authority interface with UTAC/CNRV and closure tracking on questions."
+    ],
+    "highlights_fr": [
+      "Dossiers prêts audit pour dérivés N1 Stellantis/Toyota avant soumission CNRV.",
+      "Gouvernance FCM/marquages et VIN/CoC sur les familles de modèles.",
+      "Interface UTAC/CNRV et suivi de clôture des questions autorités."
+    ],
+    "metrics_en": [
+      "CNRV submissions kept on planned cadence",
+      "Traceability dashboard updated weekly",
+      "FCM updates rolled across all derivatives without rework"
+    ],
+    "metrics_fr": [
+      "Soumissions CNRV tenues selon la cadence prévue",
+      "Dashboard de traçabilité mis à jour chaque semaine",
+      "Mises à jour FCM déployées sur tous les dérivés sans rework"
+    ],
+    "cover": "src/assets/img/projects/proace-city.jpg",
+    "gallery": [
+      "src/assets/img/projects/proace-city.jpg"
+    ],
+    "summary_en": "EC WVTA documentation and authority interface for K9 N1 multi-brand light commercial derivatives.",
+    "summary_fr": "Documentation WVTA CE et interface autorités pour les dérivés utilitaires K9 N1 multi-marques.",
+    "cover_alt_en": "Toyota ProAce City vans undergoing homologation checks",
+    "cover_alt_fr": "Fourgons Toyota ProAce City lors des vérifications d'homologation"
+  },
+  {
+    "id": "euro7-brake-by-wire-b1318",
+    "title_en": "Euro 7 Brake-by-Wire Delivery (B1318 / R1312 / K1320)",
+    "title_fr": "Livraison brake-by-wire Euro 7 (B1318 / R1312 / K1320)",
+    "period": "Feb 2025–Jul 2025",
+    "role": "Braking System Engineering Leader · Responsable ingénierie freinage",
+    "client_or_brand": "B1318 / R1312 / K1320",
+    "stack": [
+      "Euro 7",
+      "Brake-by-Wire",
+      "Validation"
+    ],
+    "tags": [
+      "Freinage",
+      "Euro 7",
+      "Diagnostics"
+    ],
+    "highlights_en": [
+      "Validation strategy for CMFB (PFC lot) aligned to gate plan with secured parts and benches.",
+      "Component validation plans issued for BRAKE-DISK, Mastervac, ESP10, MKC2.",
+      "QCDP objectives, RTC/NRL checks, and OneTD/SIGNE compliance enforced for RL2."
+    ],
+    "highlights_fr": [
+      "Stratégie de validation CMFB (lot PFC) alignée au plan jalon avec pièces et bancs sécurisés.",
+      "Plans de validation composant émis pour BRAKE-DISK, Mastervac, ESP10, MKC2.",
+      "Objectifs QCDP, contrôles RTC/NRL et conformité OneTD/SIGNE tenus pour les RL2."
+    ],
+    "metrics_en": [
+      "Validation plan baselined to RL2",
+      "Bench and vehicle parts availability secured",
+      "RTC/NRL checkpoints closed before gate reviews"
+    ],
+    "metrics_fr": [
+      "Plan de validation figé pour RL2",
+      "Disponibilité pièces banc & véhicule sécurisée",
+      "Points RTC/NRL clôturés avant revues jalon"
+    ],
+    "cover": "src/assets/img/projects/mkc2.jpg",
+    "gallery": [
+      "src/assets/img/projects/mkc2.jpg"
+    ],
+    "summary_en": "Euro 7 brake-by-wire delivery integrating ESP10 and MK C2 with component validation and QCDP governance.",
+    "summary_fr": "Livraison brake-by-wire Euro 7 intégrant ESP10 et MK C2 avec validation composant et gouvernance QCDP.",
+    "cover_alt_en": "Close-up of Continental MK C2 brake-by-wire module",
+    "cover_alt_fr": "Gros plan sur un module brake-by-wire Continental MK C2"
+  },
+  {
+    "id": "b1318-steering-pfe-support",
+    "title_en": "B1318 Steering System PFE Support",
+    "title_fr": "Support PFE direction B1318",
+    "period": "Jul 2024–Jan 2025",
+    "role": "PFE Support — Steering System · Support PFE — direction",
+    "client_or_brand": "Programme B1318",
+    "stack": [
+      "Steering",
+      "Programme",
+      "Industrialisation"
+    ],
+    "tags": [
+      "Direction",
+      "PFE",
+      "Programme"
+    ],
+    "highlights_en": [
+      "Cross-functional orchestration across engineering, procurement, suppliers, logistics, and manufacturing.",
+      "ONEVAL progress, RGPQP milestones, and LUP deliverables administered for project readiness.",
+      "Decision logs maintained and parts/resources secured for builds."
+    ],
+    "highlights_fr": [
+      "Orchestration transverse ingénierie, achats, fournisseurs, logistique et industrialisation.",
+      "Avancement ONEVAL, jalons RGPQP et livrables LUP pilotés pour la maturité projet.",
+      "Logs décisionnels tenus et pièces/ressources sécurisées pour les builds."
+    ],
+    "metrics_en": [
+      "ONEVAL tracking kept on plan",
+      "RGPQP milestones met without slippage",
+      "Build readiness maintained with parts on hand"
+    ],
+    "metrics_fr": [
+      "Suivi ONEVAL tenu au plan",
+      "Jalons RGPQP respectés sans dérive",
+      "Prêt builds assuré avec pièces disponibles"
+    ],
+    "cover": "src/assets/img/projects/renault-master.jpg",
+    "gallery": [
+      "src/assets/img/projects/renault-master.jpg"
+    ],
+    "summary_en": "Steering system PFE support coordinating functions and suppliers while keeping ONEVAL/RGPQP on schedule.",
+    "summary_fr": "Support PFE direction coordonnant fonctions et fournisseurs tout en tenant ONEVAL/RGPQP au planning.",
+    "cover_alt_en": "Renault Master vans lined up after final assembly",
+    "cover_alt_fr": "Fourgons Renault Master alignés après assemblage final"
+  },
+  {
+    "id": "xdd-axles-wheel-assembly",
+    "title_en": "XDD Axles & Wheel Assembly",
+    "title_fr": "XDD Essieux & ensemble roue",
+    "period": "Feb 2022–Jun 2024",
+    "role": "Engineering Leader — Axles & Wheel Assembly · Responsable ingénierie essieux & roue",
+    "client_or_brand": "Renault XDD",
+    "stack": [
+      "Wheel-End",
+      "Chassis",
+      "Launch"
+    ],
+    "tags": [
+      "Axles",
+      "Wheel-End",
+      "Launch"
+    ],
+    "highlights_en": [
+      "Product/process development from TGA to MA following Renault Design System.",
+      "FTR/OTD delivery across design dossiers, BOM/DEVO, IMDS, and quality documentation (NRL, NDL, QDR, DDMRS-FMEA, RTC).",
+      "Validation plans/tests (ONEVAL) and usage recommendations covering hub bearings Gen2/Gen3, knuckles, discs, splash guards, rear axles, wheel carrier plates."
+    ],
+    "highlights_fr": [
+      "Développement produit/process de TGA à MA selon Renault Design System.",
+      "Livraison FTR/OTD sur dossiers de définition, BOM/DEVO, IMDS et documents qualité (NRL, NDL, QDR, DDMRS-FMEA, RTC).",
+      "Plans/tests de validation (ONEVAL) et recommandations usage couvrant roulements Gen2/Gen3, pivots, disques, flasques, essieux AR, plateaux roue."
+    ],
+    "metrics_en": [
+      "FTR/OTD maintained to gate expectations",
+      "Supplier PPAP/CoP readiness achieved before launch",
+      "End-of-line torque/runout governance in place"
+    ],
+    "metrics_fr": [
+      "FTR/OTD tenus selon attentes jalons",
+      "Préparation fournisseurs PPAP/CoP obtenue avant lancement",
+      "Gouvernance couple/faux-rond en fin de ligne en place"
+    ],
+    "cover": "src/assets/img/projects/hub-bearing-gen3.jpg",
+    "gallery": [
+      "src/assets/img/projects/hub-bearing-gen3.jpg"
+    ],
+    "summary_en": "Axles and wheel-end engineering leadership for Renault XDD, from definition through launch readiness.",
+    "summary_fr": "Pilotage essieux et ensemble roue pour Renault XDD, de la définition jusqu’à la préparation lancement.",
+    "cover_alt_en": "Cutaway illustration of a third-generation hub bearing unit",
+    "cover_alt_fr": "Illustration d'un roulement de moyeu de troisième génération en coupe"
+  },
+  {
+    "id": "smart-car-exteriors-cc21-cc24",
+    "title_en": "SMART CAR Exteriors & Mounting (CC21/CC24)",
+    "title_fr": "Extérieurs & fixations SMART CAR (CC21/CC24)",
+    "period": "Oct 2021–Oct 2022",
+    "role": "Mechanical Design Engineer — SMART CAR Exteriors · Ingénieur conception plasturgie — SMART CAR",
+    "client_or_brand": "Stellantis SMART CAR",
+    "stack": [
+      "Plastics",
+      "Exteriors",
+      "CAD"
+    ],
+    "tags": [
+      "SMART CAR",
+      "CATIA V5",
+      "Exteriors"
+    ],
+    "highlights_en": [
+      "CATIA V5 design for tail-lamp bracket, rear bumper skins, skid plate, tow hook, side and sensor brackets.",
+      "Feasibility checks on draft, parting, thickness, rigidity, and mounting stack-ups.",
+      "Coordination with programme teams on shape-plan, tooling readiness, and corrosion mitigation."
+    ],
+    "highlights_fr": [
+      "Conception CATIA V5 du support feu AR, peaux de pare-chocs AR, ski, attelage, supports latéraux et supports capteurs.",
+      "Faisabilités sur dépouille, plans de joint, épaisseur, rigidité et chaînages de montage.",
+      "Coordination avec les équipes programme sur shape-plan, préparation outillage et mitigation corrosion."
+    ],
+    "metrics_en": [
+      "CAD to tooling feasibility approved",
+      "Mounting stack-ups validated with programme teams",
+      "Parts released to plan for CC21/CC24 builds"
+    ],
+    "metrics_fr": [
+      "Faisabilité CAD→outillage validée",
+      "Chaînages de montage validés avec les équipes programme",
+      "Pièces libérées selon plan pour les builds CC21/CC24"
+    ],
+    "cover": "src/assets/img/projects/citroen-c3-cc21.jpg",
+    "gallery": [
+      "src/assets/img/projects/citroen-c3-cc21.jpg"
+    ],
+    "summary_en": "SMART CAR exterior parts and mounting from CATIA V5 design to tooling feasibility and release.",
+    "summary_fr": "Pièces extérieures et fixations SMART CAR de la conception CATIA V5 à la faisabilité outillage et la libération.",
+    "cover_alt_en": "Citroën C3 exterior design in studio lighting",
+    "cover_alt_fr": "Citroën C3 présentée en studio"
+  },
+  {
+    "id": "ec-homologation-opel-combo",
+    "title_en": "EC Homologation — Opel Combo",
+    "title_fr": "Homologation CE — Opel Combo",
+    "period": "2021–2023",
+    "role": "Type Approval Programme Lead · Chef de programme homologation",
+    "client_or_brand": "Opel / Vauxhall",
+    "stack": [
+      "Homologation",
+      "LCV",
+      "Compliance"
+    ],
+    "tags": [
+      "Opel",
+      "Compliance",
+      "Type Approval"
+    ],
+    "highlights_en": [
+      "CoP and VIN label audits with harmonised variant data.",
+      "Axle, brake, and steering data alignment with approval dossier.",
+      "Stakeholder cadence across engineering, quality, and validation."
+    ],
+    "highlights_fr": [
+      "Audits CoP et étiquetage VIN avec données variantes harmonisées.",
+      "Alignement données essieux, freinage et direction avec le dossier d'homologation.",
+      "Cadence de pilotage ingénierie, qualité et validation."
+    ],
+    "metrics_en": [
+      "On-time approval milestones (OTD)",
+      "Defect leakage below target",
+      "Supplier PPAP/CoP compliance 100%"
+    ],
+    "metrics_fr": [
+      "Jalons d'homologation tenus (OTD)",
+      "Fuites défaut sous la cible",
+      "Conformité PPAP/CoP fournisseurs 100 %"
+    ],
+    "cover": "src/assets/img/projects/opel-combo.jpg",
+    "gallery": [
+      "src/assets/img/projects/opel-combo.jpg"
+    ],
+    "summary_en": "Opel Combo branch of the multi-brand compact van family; ensuring type-approval consistency across body lengths and powertrains.",
+    "summary_fr": "Branche Opel Combo de la famille multimarque ; cohérence d'homologation sur silhouettes et chaînes de traction.",
+    "cover_alt_en": "Opel Combo commercial vehicles exported from the assembly plant",
+    "cover_alt_fr": "Utilitaires Opel Combo sortant de l'usine d'assemblage"
+  },
+  {
+    "id": "brake-hardware-calipers-pads-carriers",
+    "title_en": "Brake Hardware — Calipers, Pads, Carriers",
+    "title_fr": "Freinage — Étriers, plaquettes, supports",
+    "period": "2020–2021",
+    "role": "Brake Hardware Industrialisation Lead · Responsable industrialisation freinage",
+    "client_or_brand": "Multi-brand LCV Platform",
+    "stack": [
+      "Braking",
+      "Industrialisation",
+      "Supplier Readiness"
+    ],
+    "tags": [
+      "Braking",
+      "Industrialisation",
+      "Supplier Quality"
+    ],
+    "highlights_en": [
+      "Pad/shim/noise countermeasures and bedding protocols.",
+      "Thermal cycles, fade performance, and rotor thickness variation limits.",
+      "Supplier PPAP and traceability packages."
+    ],
+    "highlights_fr": [
+      "Contre-mesures bruit plaquette/cale et protocoles de rodage.",
+      "Cycles thermiques, performance fade et limites variation d'épaisseur disque.",
+      "Dossiers PPAP fournisseurs et traçabilité."
+    ],
+    "metrics_en": [
+      "Noise performance within target bands",
+      "Thermal fade < 15% across duty cycles",
+      "Supplier PPAP/CoP compliance 100%"
+    ],
+    "metrics_fr": [
+      "Performance acoustique dans les bandes cibles",
+      "Fade thermique < 15 % sur les cycles",
+      "Conformité PPAP/CoP fournisseurs 100 %"
+    ],
+    "cover": "src/assets/img/projects/brake-caliper.jpg",
+    "gallery": [
+      "src/assets/img/projects/brake-caliper.jpg"
+    ],
+    "summary_en": "Calipers, pads, and carriers industrialisation: conformity, material specifications, and endurance validation for LCV duty cycles.",
+    "summary_fr": "Industrialisation étriers, plaquettes et supports : conformité, matériaux et validation endurance pour cycles VUL.",
+    "cover_alt_en": "Disc brake caliper and pad assembly on a workbench",
+    "cover_alt_fr": "Étrier de frein et plaquettes assemblés sur un établi"
+  },
+  {
+    "id": "wheel-end-hub-bearing-unit-gen3",
+    "title_en": "Wheel-End — Hub Bearing Unit (Gen3)",
+    "title_fr": "Roue — Roulement moyeu (Gen3)",
+    "period": "2018–2020",
+    "role": "Wheel-End Engineering Lead · Responsable ingénierie roue",
+    "client_or_brand": "Renault & Tier-1 Suppliers",
+    "stack": [
+      "Wheel-End",
+      "Durability",
+      "Diagnostics"
+    ],
+    "tags": [
+      "Renault",
+      "Durability",
+      "Diagnostics"
+    ],
+    "highlights_en": [
+      "Disc thickness variation and runout control for brake mating.",
+      "Bearing life targets versus duty cycle; sealing and grease specification.",
+      "ABS encoder signal integrity and diagnostics."
+    ],
+    "highlights_fr": [
+      "Maîtrise épaisseur/couple pour appairage disque de frein.",
+      "Objectifs durée de vie roulement vs cycle ; spécification étanchéité & graisse.",
+      "Intégrité signal codeur ABS et diagnostics."
+    ],
+    "metrics_en": [
+      "Warranty claims below 30 ppm",
+      "Cpk ≥ 1.33 on critical torque/runout",
+      "Zero issues at PPAP"
+    ],
+    "metrics_fr": [
+      "Réclamations garantie < 30 ppm",
+      "Cpk ≥ 1,33 sur couple/faux-rond critiques",
+      "Aucun écart en PPAP"
+    ],
+    "cover": "src/assets/img/projects/hub-bearing-gen3.jpg",
+    "gallery": [
+      "src/assets/img/projects/hub-bearing-gen3.jpg"
+    ],
+    "summary_en": "Gen-3 hub bearing units with integrated flanges; ensuring durability, diagnostics, and mating control for commercial vehicles.",
+    "summary_fr": "Roulements de moyeu Gen3 avec brides intégrées ; durabilité, diagnostics et maîtrise d'assemblage pour véhicules utilitaires.",
+    "cover_alt_en": "Cutaway illustration of a third-generation hub bearing unit",
+    "cover_alt_fr": "Illustration d'un roulement de moyeu de troisième génération en coupe"
+  }
+]

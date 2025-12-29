@@ -1,0 +1,24 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import SectionHeader from './SectionHeader.astro';
+import Button from './Button.astro';
+
+const { data, projects, lang } = Astro.props;
+
+// Find the projects by ID
+const featuredProjects = data.featured_ids.map(id => projects.find(p => p.id === id)).filter(Boolean);
+---
+
+<section id="projects" class="section" data-section="projects">
+  <div class="container">
+    <SectionHeader title={data.title} intro={data.intro} />
+    <div class="projects-grid">
+      {featuredProjects.map(project => (
+        <ProjectCard project={project} lang={lang} compact={true} />
+      ))}
+    </div>
+    <div class="section__actions" data-reveal>
+      <Button href={data.view_all_href} variant="ghost">{data.view_all_label}</Button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,515 @@
+{
+  "site": {
+    "name": "Mohamed Ali Mabrouki",
+    "tagline": "Ingénieur automobile & consultant — réception communautaire, freinage, systèmes roue, plasturgie",
+    "description": "Ingénieur automobile chez SEGULA Technologies Tunis accompagnant des équipes constructeurs européennes sur la réception communautaire, les systèmes de freinage, les ensembles roue et les pièces plastiques extérieures.",
+    "keywords": [
+      "Ingénieur automobile",
+      "Réception communautaire",
+      "WVTA",
+      "Homologation automobile",
+      "Freinage",
+      "Systèmes roue",
+      "Plasturgie",
+      "Consultant"
+    ],
+    "url": "https://mohamedalimabrouki.com",
+    "telephone_display": "+216 25 910 020",
+    "telephone_href": "tel:+21625910020",
+    "email": "contact@mohamedalimabrouki.com",
+    "location": "Tunis, Tunisie",
+    "linkedin": "https://www.linkedin.com/in/mohamedalimabrouki/"
+  },
+  "navigation": [
+    {
+      "id": "hero",
+      "label": "Vue d'ensemble"
+    },
+    {
+      "id": "skills",
+      "label": "Compétences"
+    },
+    {
+      "id": "projects",
+      "label": "Projets"
+    },
+    {
+      "id": "experience",
+      "label": "Expérience"
+    },
+    {
+      "id": "about",
+      "label": "À propos"
+    },
+    {
+      "id": "downloads",
+      "label": "CV"
+    },
+    {
+      "id": "contact",
+      "label": "Contact"
+    }
+  ],
+  "language_switcher": {
+    "label": "Langue",
+    "options": {
+      "en": "English",
+      "fr": "Français"
+    }
+  },
+  "theme_switcher": {
+    "label": "Thème",
+    "options": {
+      "light": "Clair",
+      "dark": "Sombre",
+      "system": "Système"
+    },
+    "descriptions": {
+      "light": "Passer au thème clair",
+      "dark": "Passer au thème sombre",
+      "system": "Suivre le réglage système"
+    }
+  },
+      "hero": {
+      "eyebrow": "Ingénieur automobile & consultant<span class=\"company-break\">SEGULA Technologies Tunis</span>",
+      "headline_dynamic": {
+        "prefix": "Ingénieur automobile pour",
+        "default": "l'homologation."
+      },
+      "headline": "Leader Homologation & Châssis Automobile.",    "lead": "Ingénieur mécatronique délivrant réceptions communautaires, systèmes de freinage et solutions de liaison au sol pour constructeurs européens.",
+    "ctas": [
+      {
+        "variant": "primary",
+        "label": "Voir les projets",
+        "href": "#projects"
+      },
+      {
+        "variant": "ghost",
+        "label": "Me contacter",
+        "href": "#contact"
+      }
+    ],
+    "highlights": [
+      {
+        "label": "Basé à",
+        "value": "Tunis, Tunisie"
+      },
+      {
+        "label": "Téléphone",
+        "value": "+216 25 910 020",
+        "href": "tel:+21625910020"
+      },
+      {
+        "label": "Email",
+        "value": "contact@mohamedalimabrouki.com",
+        "href": "mailto:contact@mohamedalimabrouki.com"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/mohamedalimabrouki",
+        "href": "https://www.linkedin.com/in/mohamedalimabrouki/"
+      }
+    ],
+    "bullets": [
+      "Support réception communautaire (WVTA) pour dérivés de fourgons compacts : dossiers, marquages et échanges autorités.",
+      "Ingénierie châssis et systèmes roue sur un utilitaire léger européen reconnu par des prix du secteur.",
+      "Conception de pièces plastiques extérieures sur une petite voiture Citroën : pare-chocs, supports et points de fixation."
+    ]
+  },
+  "skills": {
+    "title": "Compétences",
+    "intro": "Ce qui maintient réglementation, freinage et usine en phase.",
+    "categories": [
+      {
+        "title": "Stratégie homologation",
+        "description": "Playbooks WVTA, preuves annexes, gouvernance VIN / CoC, négociation autorités.",
+        "items": [
+          "Cadence UTAC · CNRV & witness prep",
+          "Conception matrice variantes / dérivés",
+          "Dashboards conformité & traçabilité"
+        ]
+      },
+      {
+        "title": "Livraison freinage Euro 7",
+        "description": "Intégration brake-by-wire, analytics particules, diagnostics et couverture redondance.",
+        "items": [
+          "Interplay Continental MK C2 · Bosch ESP10",
+          "Analytics validation thermique & particules",
+          "Alignement OBD, fail-operational & diag"
+        ]
+      },
+      {
+        "title": "Industrialisation roue",
+        "description": "Essieux, moyeux, roulements, analytics couple / faux-rond et préparation fournisseurs.",
+        "items": [
+          "Roulements Gen3 et courbes de couple",
+          "Gouvernance QCDP et run@rate fournisseurs",
+          "SPC, PPAP / CoP, traçabilité complète"
+        ]
+      },
+      {
+        "title": "Gouvernance programme",
+        "description": "Instances multi-marques, burn-downs et pilotage des outils digitaux collaboratifs.",
+        "items": [
+          "Burn-down risques & décisionnel",
+          "Packs jalons exécutifs",
+          "War rooms distantes & capitalisation"
+        ]
+      }
+    ]
+  },
+  "projects_section": {
+    "title": "Projets",
+    "intro": "Études de cas prouvant les sign-offs autorités, la livraison freinage et le lancement roue.",
+    "featured_ids": [
+      "k9-n1-ec-type-approval",
+      "euro7-brake-by-wire-b1318",
+      "b1318-steering-pfe-support",
+      "xdd-axles-wheel-assembly",
+      "smart-car-exteriors-cc21-cc24",
+      "ec-homologation-opel-combo",
+      "brake-hardware-calipers-pads-carriers",
+      "wheel-end-hub-bearing-unit-gen3"
+    ],
+    "view_all_label": "Voir tous les projets",
+    "view_all_href": "/fr/projets/index.html"
+  },
+  "experience": {
+    "title": "Expérience",
+    "intro": "Missions en tant qu’ingénieur SEGULA Technologies au service d’équipes constructeurs européennes.",
+    "items": [
+      {
+        "period": "2021-aujourd'hui",
+        "role": "Ingénieur homologation & réception communautaire (consultant)",
+        "company": "SEGULA Technologies (pour Toyota, Stellantis, Opel/Vauxhall)",
+        "location": "Tunis · en lien avec équipes UE",
+        "details": [
+          "Contribution aux dossiers de réception communautaire (WVTA) pour des dérivés de fourgons compacts Toyota, marques Stellantis et Opel/Vauxhall.",
+          "Préparation et vérification des preuves annexes, données de certificats de conformité (CoC), étiquettes VIN et marquages européens selon les standards constructeurs.",
+          "Collaboration à distance avec les équipes homologation en Europe et les autorités sur les questions et compléments de dossier."
+        ]
+      },
+      {
+        "period": "2018-2021",
+        "role": "Ingénieur châssis & systèmes roue (consultant)",
+        "company": "SEGULA Technologies (pour un programme utilitaire Renault)",
+        "location": "Tunis · collaboration avec équipes Renault",
+        "details": [
+          "Travail sur les ensembles roue, essieux avant/arrière et éléments de direction pour un utilitaire léger Renault primé.",
+          "Suivi du comportement couple/faux-rond, de la robustesse et des exigences de montage avec les équipes Renault et fournisseurs.",
+          "Utilisation des outils digitaux constructeur pour suivre industrialisation et validation depuis Tunis."
+        ]
+      },
+      {
+        "period": "2016-2018",
+        "role": "Ingénieur conception plasturgie (consultant)",
+        "company": "SEGULA Technologies (pour un programme petite voiture Citroën)",
+        "location": "Tunis & sites client",
+        "details": [
+          "Conception et évolution de pièces plastiques extérieures (pare-chocs, supports, fixations) pour une petite voiture Citroën.",
+          "Contrôle CAD pour la fabricabilité et le montage (cotation, dépouille, plans de joint, nervures, bosses).",
+          "Travail avec équipes carrosserie, éclairage et fournisseurs sur les évolutions et validations."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "À propos",
+    "tagline": "Ingénieur automobile reliant équipes constructeurs, réglementation et véhicules réels.",
+    "body": "Mohamed Ali Mabrouki est ingénieur automobile et consultant chez SEGULA Technologies Tunis. Il accompagne des équipes constructeurs européennes sur la réception communautaire, les systèmes de freinage, les ensembles roue et les pièces plastiques extérieures, en travaillant à distance depuis Tunis en lien étroit avec les équipes homologation et ingénierie.",
+    "stats": [
+      {
+        "label": "Programmes véhicules accompagnés",
+        "value": "5+"
+      },
+      {
+        "label": "Marques constructeurs",
+        "value": "Toyota · Stellantis · Renault · Opel/Vauxhall · Citroën"
+      },
+      {
+        "label": "Lieu de travail",
+        "value": "À distance depuis Tunis, Tunisie"
+      }
+    ]
+  },
+  "cv_downloads": {
+    "title": "CV & Téléchargements",
+    "intro": "Prenez le CV détaillé ou demandez un dossier de preuves ciblé.",
+    "buttons": [
+      {
+        "label": "Télécharger le CV",
+        "href": "/assets/cv/Mohamed_Ali_Mabrouki_CV.docx",
+        "download": true
+      },
+      {
+        "label": "Voir le CV en ligne",
+        "href": "/fr/cv.html"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Exposez votre besoin en homologation, freinage, châssis ou pièces plastiques — réponse sous un jour ouvré.",
+    "channels": [
+      {
+        "label": "Email",
+        "value": "contact@mohamedalimabrouki.com",
+        "href": "mailto:contact@mohamedalimabrouki.com"
+      },
+      {
+        "label": "Téléphone / WhatsApp",
+        "value": "+216 25 910 020",
+        "href": "tel:+21625910020"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/mohamedalimabrouki",
+        "href": "https://www.linkedin.com/in/mohamedalimabrouki/"
+      }
+    ],
+    "form": {
+      "title": "Démarrer un projet",
+      "description": "Un email prérempli s'ouvre dans votre messagerie.",
+      "fields": [
+        {
+          "id": "name",
+          "label": "Nom",
+          "placeholder": "Votre nom",
+          "type": "text"
+        },
+        {
+          "id": "email",
+          "label": "Email",
+          "placeholder": "vous@example.com",
+          "type": "email"
+        },
+        {
+          "id": "message",
+          "label": "Brief projet",
+          "placeholder": "Décrivez votre besoin et vos délais…",
+          "type": "textarea"
+        }
+      ],
+      "privacy": "Un email est ouvert dans votre messagerie. Aucune donnée n'est stockée sur ce site.",
+      "cta_label": "Composer l'email",
+      "mailto": "mailto:contact@mohamedalimabrouki.com?subject=Demande%20de%20projet"
+    }
+  },
+  "footer": {
+    "copyright": "© "
+  },
+  "projects_page": {
+    "title": "Projets",
+    "intro": "Filtrez par capacité, étiquette ou année pour faire ressortir les preuves dont vous avez besoin.",
+    "filter_group_labels": {
+      "stack": "Capacité",
+      "tag": "Étiquette",
+      "year": "Année"
+    },
+    "filter_defaults": {
+      "stack": "Toutes les capacités",
+      "tag": "Toutes les étiquettes",
+      "year": "Toutes les années"
+    },
+    "status_messages": {
+      "loading": "Chargement des projets…",
+      "empty": "Les projets arrivent bientôt.",
+      "count": "{count} projets sur {total}.",
+      "filtered": "{count} projets sur {total}.",
+      "error": "Impossible de charger les projets. Veuillez rafraîchir."
+    },
+    "view_home_label": "Retour à l'accueil",
+    "count_label": "projets"
+  },
+  "project_detail": {
+    "overview_label": "Présentation",
+    "highlights_label": "Faits saillants",
+    "metrics_label": "Indicateurs",
+    "role_label": "Rôle",
+    "client_label": "Client / Marque",
+    "period_label": "Période",
+    "stack_label": "Focal",
+    "cta_contact": "Planifier un appel",
+    "cta_projects": "Tous les projets",
+    "loading_message": "Chargement du projet…",
+    "error_message": "Projet introuvable. Merci de revenir à la page projets."
+  },
+  "cv_page": {
+    "title": "Curriculum vitae",
+    "summary": "Ingénieur automobile et consultant chez SEGULA Technologies Tunis accompagnant des équipes constructeurs européennes sur la réception communautaire, les systèmes de freinage, les ensembles roue et les pièces plastiques extérieures.",
+    "sections": {
+      "summary": "Résumé",
+      "competencies": "Compétences clés",
+      "experience": "Expérience",
+      "education": "Formation",
+      "certifications": "Certifications",
+      "languages": "Langues",
+      "tools": "Outils & plateformes"
+    },
+    "competencies": [
+      {
+        "title": "Homologation et réception communautaire",
+        "body": "Réception communautaire CE (WVTA), annexes, données VIN/CoC, marquages et coordination avec les autorités."
+      },
+      {
+        "title": "Systèmes de freinage",
+        "body": "Contribution à l’intégration et la validation de systèmes de freinage avec les équipes freinage et châssis constructeurs."
+      },
+      {
+        "title": "Châssis & ensembles roue",
+        "body": "Essieux, moyeux et ensembles roue pour utilitaires légers ; comportement couple/faux-rond et robustesse."
+      },
+      {
+        "title": "Pièces plastiques extérieures",
+        "body": "Conception de pare-chocs, supports et fixations extérieures, de la CAO à la faisabilité outillage."
+      }
+    ],
+    "experience": [
+      {
+        "title": "Ingénieur homologation & réception communautaire — SEGULA Technologies",
+        "period": "Tunis · 2021-aujourd'hui (pour Toyota, Stellantis, Opel/Vauxhall)",
+        "items": [
+          "Contribution aux dossiers WVTA pour des dérivés de fourgons compacts Toyota, marques Stellantis et Opel/Vauxhall.",
+          "Préparation et vérification des preuves annexes, données CoC, étiquettes VIN et marquages européens.",
+          "Travail à distance avec les équipes homologation en Europe et les autorités sur les questions et compléments de dossier."
+        ]
+      },
+      {
+        "title": "Ingénieur châssis & ensembles roue — SEGULA Technologies",
+        "period": "Tunis · 2018-2021 (pour un programme utilitaire Renault)",
+        "items": [
+          "Contribution aux ensembles roue, essieux avant/arrière et éléments de direction sur un utilitaire léger Renault récompensé.",
+          "Suivi du comportement couple/faux-rond, de la robustesse et des exigences de montage avec les équipes Renault et fournisseurs.",
+          "Suivi de l’industrialisation et de la validation via les outils digitaux du constructeur depuis Tunis."
+        ]
+      },
+      {
+        "title": "Ingénieur conception plasturgie — SEGULA Technologies",
+        "period": "Tunis & sites client · 2016-2018 (pour un programme petite voiture Citroën)",
+        "items": [
+          "Conception et évolution de pièces plastiques extérieures (pare-chocs, supports et fixations) pour une petite voiture Citroën.",
+          "Contrôle CAO pour la fabricabilité et le montage (cotation, dépouille, plans de joint, nervures, bosses).",
+          "Travail avec équipes carrosserie, éclairage et fournisseurs sur les évolutions et validations."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Master en génie mécanique",
+        "subtitle": "École Nationale d'Ingénieurs de Tunis"
+      },
+      {
+        "title": "Lean Manufacturing Black Belt",
+        "subtitle": "SEGULA Technologies Academy"
+      }
+    ],
+    "certifications": [
+      "Auditeur principal ISO 9001",
+      "Assesseur Automotive SPICE provisoire",
+      "Praticien sûreté de fonctionnement (ISO 26262)"
+    ],
+    "languages": [
+      {
+        "title": "Français",
+        "level": "Langue maternelle"
+      },
+      {
+        "title": "Anglais",
+        "level": "Courant"
+      },
+      {
+        "title": "Arabe",
+        "level": "Courant"
+      }
+    ],
+    "tools": [
+      "Suites PPAP & CoP",
+      "Chaînes SIL / HIL",
+      "Analytics avancée (Power BI, Tableau)",
+      "Plateformes mur qualité & traçabilité"
+    ],
+    "download_button": "Télécharger le CV"
+  },
+  "seo": {
+    "home": {
+      "title": "Mohamed Ali Mabrouki | Leader homologation et châssis automobile",
+      "description": "Ingénieur automobile et consultant chez SEGULA Technologies Tunis accompagnant des équipes européennes sur l’homologation, le freinage, les ensembles roue et les pièces plastiques extérieures.",
+      "path": "/fr/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "home_en": {
+      "title": "Mohamed Ali Mabrouki | Automotive Homologation & Chassis Leader",
+      "description": "Euro 7 brake-by-wire, WVTA dossiers, and wheel-end launches kept on schedule for Toyota, Stellantis, and Renault.",
+      "path": "/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "projects_index": {
+      "title": "Projets | Mohamed Ali Mabrouki",
+      "description": "Études de cas sur l'homologation, le freinage Euro 7 et l'industrialisation châssis.",
+      "path": "/fr/projets/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "projects_index_en": {
+      "title": "Projects | Mohamed Ali Mabrouki",
+      "description": "Case studies detailing homologation, Euro 7 braking, and chassis industrialisation engagements.",
+      "path": "/projects/index.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "project_detail": {
+      "title_template": "{projectTitle} | Projet | Mohamed Ali Mabrouki",
+      "description_template": "{projectSummary}",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "project_detail_en": {
+      "title_template": "{projectTitle} | Project | Mohamed Ali Mabrouki",
+      "description_template": "{projectSummary}",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "cv": {
+      "title": "CV | Mohamed Ali Mabrouki",
+      "description": "Téléchargez et imprimez le CV complet de Mohamed Ali Mabrouki.",
+      "path": "/fr/cv.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    },
+    "cv_en": {
+      "title": "CV | Mohamed Ali Mabrouki",
+      "description": "Download and print the full curriculum vitae of Mohamed Ali Mabrouki.",
+      "path": "/cv.html",
+      "og_image": "/assets/img/og-banner.jpg"
+    }
+  },
+  "structured_data": {
+    "person": {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohamed Ali Mabrouki",
+      "jobTitle": "Ingénieur automobile & consultant",
+      "url": "https://mohamedalimabrouki.com",
+      "telephone": "+216 25 910 020",
+      "email": "contact@mohamedalimabrouki.com",
+      "image": "https://mohamedalimabrouki.com/assets/img/avatar.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/mohamedalimabrouki/"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "SEGULA Technologies"
+      }
+    },
+    "website": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Portfolio Mohamed Ali Mabrouki",
+      "url": "https://mohamedalimabrouki.com"
+    }
+  },
+  "shared": {
+    "skip_to_content": "Aller au contenu",
+    "back_to_top": "Retour en haut",
+    "reduce_motion": "Animations réduites pour l'accessibilité.",
+    "view_fr": "Voir en français",
+    "theme_status_light": "Thème clair activé.",
+    "theme_status_dark": "Thème sombre activé.",
+    "theme_status_system": "Le thème suit le système."
+  }
+}

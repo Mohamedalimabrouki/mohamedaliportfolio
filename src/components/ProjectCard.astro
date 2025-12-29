@@ -1,0 +1,55 @@
+---
+import Picture from './Picture.astro';
+import Badge from './Badge.astro';
+
+const { project, lang, compact = false } = Astro.props;
+
+const summary = lang === 'fr' ? project.summary_fr : project.summary_en;
+const highlights = lang === 'fr' ? project.highlights_fr : project.highlights_en;
+const alt = lang === 'fr' ? project.cover_alt_fr : project.cover_alt_en;
+const title = lang === 'fr' ? project.title_fr : project.title_en;
+const coverPath = project.cover.startsWith('/') ? project.cover : `/${project.cover}`;
+const period = project.period;
+
+const roleSplit = project.role.split('·').map(p => p.trim());
+const role = (lang === 'fr' && roleSplit[1]) ? roleSplit[1] : roleSplit[0];
+
+const href = lang === 'fr' ? `/fr/projects/${project.id}/` : `/projects/${project.id}/`;
+const sizes = compact ? '(max-width: 720px) 100vw, (max-width: 1200px) 50vw, 33vw' : '(max-width: 720px) 100vw, 680px';
+
+const stackTokens = (project.stack || []).map(tag => tag.toLowerCase().replace(/[^a-z0-9]+/g, '-'));
+const tagTokens = (project.tags || []).map(tag => tag.toLowerCase().replace(/[^a-z0-9]+/g, '-'));
+const year = period.match(/\d{4}/g)?.pop() || 'n/a';
+---
+
+<article 
+  class="project-card tilt-card" 
+  data-reveal 
+  data-stack={stackTokens.join(',')} 
+  data-tags={tagTokens.join(',')} 
+  data-year={year}
+>
+  <a class="project-card__link" href={href}>
+    <div class="project-card__media">
+      <Picture src={coverPath} alt={alt} width={1600} height={900} sizes={sizes} />
+    </div>
+    <div class="project-card__body">
+      <div class="project-card__header">
+        <h3>{title}</h3>
+        <p class="project-card__summary">{summary}</p>
+      </div>
+      <ul class="project-card__highlights">
+        {(compact ? highlights.slice(0, 2) : highlights).map(line => (
+          <li>{line}</li>
+        ))}
+      </ul>
+      <div class="project-card__meta">
+        <span class="project-card__period">{period}</span>
+        <span class="project-card__role">{role}</span>
+      </div>
+      <div class="project-card__tags">
+        {project.stack.map(tag => <Badge label={tag} />)}
+      </div>
+    </div>
+  </a>
+</article>

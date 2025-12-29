@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Skills from '../../components/Skills.astro';
+import ProjectsGrid from '../../components/ProjectsGrid.astro';
+import Experience from '../../components/Experience.astro';
+import About from '../../components/About.astro';
+import Downloads from '../../components/Downloads.astro';
+import Contact from '../../components/Contact.astro';
+import { getEntry } from 'astro:content';
+
+const siteEntry = await getEntry('site', 'fr');
+const projectsEntry = await getEntry('projects', 'all');
+
+const lang = 'fr';
+const data = siteEntry.data;
+const projects = projectsEntry.data;
+const { seo } = data;
+---
+
+<Layout 
+  title={seo.home.title} 
+  description={seo.home.description} 
+  lang={lang} 
+  pageKey="home"
+  ogImage={seo.home.og_image}
+  alternatePath="/"
+>
+  <main id="main">
+    <Hero data={data.hero} lang={lang} />
+    <Skills data={data.skills} />
+    <ProjectsGrid data={data.projects_section} projects={projects} lang={lang} />
+    <Experience data={data.experience} />
+    <About data={data.about} lang={lang} />
+    <Downloads data={data.cv_downloads} />
+    <Contact data={data.contact} />
+  </main>
+</Layout>

@@ -10,10 +10,8 @@ export default defineConfig({
     viewport: { width: 1280, height: 720 }
   },
   webServer: {
-    command: 'node tools/dev-server.mjs',
-    port: 4173,
+    command: 'npm run preview',
+    url: 'http://127.0.0.1:4173',
     reuseExistingServer: !process.env.CI,
-    stdout: 'pipe',
-    stderr: 'pipe'
-  }
+  },
 });

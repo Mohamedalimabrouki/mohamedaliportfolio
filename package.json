@@ -4,11 +4,10 @@
   "description": "Mohamed Ali Mabrouki — premium automotive engineering portfolio",
   "type": "module",
   "scripts": {
-    "build:images": "node tools/image-pipeline.mjs",
-    "build:css": "node tools/build.mjs buildCss",
-    "build:js": "node tools/build.mjs buildJs",
-    "build": "node tools/build.mjs",
-    "postbuild": "node tools/update-html.mjs",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "build:sitemap": "node scripts/generate-sitemap.mjs",
     "test": "npm run test:ui",
     "test:ui": "playwright test",
@@ -36,9 +35,14 @@
   "devDependencies": {
     "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.56.0",
+    "astro": "^5.16.0",
     "clean-css-cli": "^5.6.3",
     "critical": "^7.2.1",
     "sharp": "^0.34.4",
     "terser": "^5.44.1"
+  },
+  "dependencies": {
+    "@types/three": "^0.181.0",
+    "three": "^0.181.2"
   }
 }

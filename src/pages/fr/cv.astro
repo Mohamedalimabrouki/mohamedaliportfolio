@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/cv.css';
+import { getEntry } from 'astro:content';
+
+const siteEntry = await getEntry('site', 'fr');
+const lang = 'fr';
+const data = siteEntry.data.cv_page;
+const { seo } = siteEntry.data;
+const siteData = siteEntry.data.site;
+---
+
+<Layout 
+  title={seo.cv.title} 
+  description={seo.cv.description} 
+  lang={lang} 
+  pageKey="cv"
+  ogImage={seo.cv.og_image}
+  alternatePath="/cv/"
+>
+  <main id="main" class="cv">
+    <article class="cv-sheet">
+      <header class="cv-header">
+        <div class="cv-mark" aria-hidden="true">
+          <svg width="64" height="64" viewBox="0 0 64 64" role="img" aria-hidden="true"><rect x="6" y="6" width="52" height="52" rx="16" fill="url(#gradCV)"/><path d="M18 42V22h6l8 9 8-9h6v20h-6V30l-8 9-8-9v12h-6Z" fill="#fff"/><defs><linearGradient id="gradCV" x1="12" y1="12" x2="52" y2="52" gradientUnits="userSpaceOnUse"><stop stop-color="#3d8aff"/><stop offset="1" stop-color="#5ca5ff"/></linearGradient></defs></svg>
+        </div>
+        <div class="cv-heading">
+          <h1>{siteData.name}</h1>
+          <p>{siteData.tagline}</p>
+        </div>
+        <div class="cv-contact">
+          <span>{siteData.location}</span>
+          <a href={siteData.telephone_href}>{siteData.telephone_display}</a>
+          <a href={`mailto:${siteData.email}`}>{siteData.email}</a>
+          <a href={siteData.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <a class="btn btn--ghost" href="/assets/cv/Mohamed_Ali_Mabrouki_CV.docx" download>{data.download_button}</a>
+      </header>
+      <section>
+        <h2>{data.sections.summary}</h2>
+        <p>{data.summary}</p>
+      </section>
+      <section>
+        <h2>{data.sections.competencies}</h2>
+        <ul class="cv-grid">
+          {data.competencies.map(item => (
+            <li><strong>{item.title}</strong><span>{item.body}</span></li>
+          ))}
+        </ul>
+      </section>
+      <section>
+        <h2>{data.sections.experience}</h2>
+        <div class="cv-timeline">
+          {data.experience.map(item => (
+            <article class="cv-role">
+              <h3>{item.title}</h3>
+              <span class="cv-role__period">{item.period}</span>
+              <ul>
+                {item.items.map(line => <li>{line}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section class="cv-columns">
+        <div>
+          <h2>{data.sections.education}</h2>
+          <ul>
+            {data.education.map(item => (
+              <li><strong>{item.title}</strong><span>{item.subtitle}</span></li>
+            ))}
+          </ul>
+          <h2>{data.sections.certifications}</h2>
+          <ul>
+            {data.certifications.map(item => <li>{item}</li>)}
+          </ul>
+        </div>
+        <div>
+          <h2>{data.sections.languages}</h2>
+          <ul>
+            {data.languages.map(item => (
+              <li><strong>{item.title}</strong><span>{item.level}</span></li>
+            ))}
+          </ul>
+          <h2>{data.sections.tools}</h2>
+          <ul>
+            {data.tools.map(item => <li>{item}</li>)}
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+</Layout>

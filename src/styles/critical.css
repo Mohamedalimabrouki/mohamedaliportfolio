@@ -1,0 +1,128 @@
+/* Critical CSS: Core variables & above-the-fold styles */
+:root {
+  color-scheme: light dark;
+
+  /* New Palette */
+  --palette-blue-gray: #B8CBD0;
+  --palette-mint: #C9E3CC;
+  --palette-sage: #B0B9A8;
+  --palette-olive: #606C5A;
+  --palette-charcoal: #424340;
+
+  /* RGB values for rgba composition if needed */
+  --palette-olive-rgb: 96, 108, 90;
+  --palette-charcoal-rgb: 66, 67, 64;
+  --palette-mint-rgb: 201, 227, 204;
+
+  /* Light Theme Mappings */
+  --surface-900: #F9FAF9; /* Very light off-white/sage tint */
+  --surface-800: #ffffff;
+  --surface-700: var(--palette-mint);
+  --surface-600: var(--palette-blue-gray);
+  
+  --surface-card: #ffffff;
+  --surface-card-border: rgba(96, 108, 90, 0.15); /* Olive low opacity */
+  --surface-card-emphasis: rgba(96, 108, 90, 0.05);
+
+  --surface-overlay: rgba(255, 255, 255, 0.9);
+  --surface-overlay-strong: rgba(255, 255, 255, 0.96);
+  --surface-overlay-muted: rgba(96, 108, 90, 0.05);
+  
+  /* Text */
+  --text-primary: var(--palette-charcoal);
+  --text-muted: var(--palette-olive); /* Sufficient contrast */
+  --text-inverse: #ffffff;
+  --text-on-accent: #ffffff;
+
+  /* Accents */
+  --primary: var(--palette-olive); /* Strong olive for buttons/links */
+  --accent-300: var(--palette-mint);
+  --accent-400: var(--palette-sage);
+  --accent-500: var(--palette-olive);
+  --accent-600: var(--palette-charcoal);
+
+  --focus-ring: rgba(96, 108, 90, 0.4);
+  --border-soft: rgba(96, 108, 90, 0.15);
+  --border-strong: rgba(96, 108, 90, 0.25);
+
+  --shadow-card: 0 24px 60px -32px rgba(66, 67, 64, 0.15);
+  --shadow-soft: 0 45px 100px -42px rgba(66, 67, 64, 0.1);
+
+  --gradient-hero: linear-gradient(160deg, var(--surface-900) 0%, #E8EFE9 100%);
+  --hero-texture-color: rgba(96, 108, 90, 0.05);
+  --hero-surface: var(--surface-900);
+  --hero-border: var(--border-soft);
+
+  --header-shadow: 0 10px 30px -10px rgba(66, 67, 64, 0.1);
+
+  /* Aliases */
+  --bg: var(--surface-900);
+  --surface: var(--surface-card);
+  --text: var(--text-primary);
+  --muted: var(--text-muted);
+  --primary-ink: var(--text-on-accent);
+  --border: var(--border-soft);
+  --focus: var(--focus-ring);
+}
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* Dark Theme Mappings */
+  --surface-900: var(--palette-charcoal); /* Main BG */
+  --surface-800: #353633; /* Slightly darker/different charcoal */
+  --surface-700: #2C2D2A;
+  --surface-600: rgba(255, 255, 255, 0.1);
+  --surface-500: rgba(255, 255, 255, 0.15);
+  --surface-200: rgba(255, 255, 255, 0.05);
+  --surface-100: #ffffff;
+  
+  --surface-card: #4E504C; /* Lightened charcoal for cards */
+  --surface-card-border: rgba(255, 255, 255, 0.1);
+  --surface-card-emphasis: rgba(201, 227, 204, 0.1);
+
+  --surface-overlay: rgba(66, 67, 64, 0.9);
+  --surface-overlay-strong: rgba(66, 67, 64, 0.95);
+  --surface-overlay-muted: rgba(255, 255, 255, 0.05);
+
+  /* Text */
+  --text-primary: #F0F4F1; /* Off-white */
+  --text-muted: #B8CBD0; /* Blue-gray for muted text */
+  --text-inverse: var(--palette-charcoal);
+  --text-on-accent: var(--palette-charcoal);
+
+  /* Accents */
+  --primary: var(--palette-mint); /* Mint pops on charcoal */
+  --accent-300: var(--palette-blue-gray);
+  --accent-400: var(--palette-sage);
+  --accent-500: var(--palette-mint);
+  --accent-600: #ffffff;
+
+  --focus-ring: rgba(201, 227, 204, 0.5);
+  --border-soft: rgba(255, 255, 255, 0.15);
+  --border-strong: rgba(255, 255, 255, 0.25);
+
+  --shadow-card: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+  --shadow-soft: 0 40px 80px -30px rgba(0, 0, 0, 0.6);
+
+  --gradient-hero: linear-gradient(to bottom, var(--palette-charcoal), #353633);
+  --hero-texture-color: rgba(255, 255, 255, 0.05);
+  --hero-surface: var(--surface-900);
+  --hero-border: var(--border-soft);
+
+  --header-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+
+  --bg: var(--surface-900);
+  --surface: var(--surface-card);
+  --text: var(--text-primary);
+  --muted: var(--text-muted);
+  --primary: var(--accent-500);
+  --primary-ink: var(--text-on-accent);
+  --border: var(--border-soft);
+  --focus: var(--focus-ring);
+}
+
+/* Mobile/Reset basics that might be in critical */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-sans, system-ui, sans-serif); background: var(--bg); color: var(--text); line-height: 1.5; }

@@ -1,0 +1,23 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import Button from './Button.astro';
+
+const { data } = Astro.props;
+---
+
+<section id="downloads" class="section section--muted" data-section="downloads">
+  <div class="container downloads">
+    <SectionHeader title={data.title} intro={data.intro} />
+    <div class="downloads__actions" data-reveal>
+      {data.buttons.map(btn => (
+        <Button 
+          href={btn.href} 
+          variant="primary" 
+          download={btn.download ? true : undefined}
+        >
+          {btn.label}
+        </Button>
+      ))}
+    </div>
+  </div>
+</section>

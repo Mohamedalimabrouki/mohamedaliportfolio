@@ -1,0 +1,63 @@
+---
+import Portrait from './Portrait.astro';
+import Button from './Button.astro';
+
+const { data, lang } = Astro.props;
+---
+
+<section id="hero" class="hero" data-section="hero">
+  <div class="hero__background" aria-hidden="true">
+    <div class="hero__gradient"></div>
+    <div class="hero__texture"></div>
+  </div>
+  <div class="container hero__grid" data-parallax-root>
+    <!-- Left Column: Text & Bullets -->
+    <div class="hero__col-left">
+      <div class="hero__intro">
+        <p class="eyebrow" data-reveal set:html={data.eyebrow} />
+        <h1 class="hero__headline" data-reveal>
+          {data.headline_dynamic ? (
+             <>
+               {data.headline_dynamic.prefix} <span class="dynamic-text-container" aria-live="polite" role="status"><span class="dynamic-text">{data.headline_dynamic.default}</span><span class="dynamic-text-caret" aria-hidden="true">|</span></span>
+             </>
+          ) : data.headline}
+        </h1>
+        <p class="hero__lead" data-reveal>{data.lead}</p>
+        <div class="hero__actions" data-reveal>
+          {data.ctas.map(cta => (
+            <Button 
+              href={cta.href} 
+              variant={cta.variant} 
+              class="hero__cta"
+            >
+              {cta.label}
+            </Button>
+          ))}
+        </div>
+      </div>
+      
+      <ul class="hero__bullet-list" data-reveal>
+        {data.bullets.map(line => <li>{line}</li>)}
+      </ul>
+    </div>
+
+    <!-- Right Column: Visuals & Meta -->
+    <div class="hero__col-right" data-parallax-layer="0.3">
+      <div class="hero__portrait" data-reveal>
+        <Portrait lang={lang} loading="eager" fetchPriority="high" sizes="(max-width: 960px) 80vw, 420px" />
+      </div>
+      
+      <dl class="hero__meta-grid" data-reveal>
+        {data.highlights.map(item => (
+          <div class="hero__meta" data-reveal>
+            <dt>{item.label}</dt>
+            <dd set:html={item.href ? `<a href="${item.href}">${item.value}</a>` : item.value} />
+          </div>
+        ))}
+      </dl>
+    </div>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+  </div>
+</section>

@@ -1,0 +1,168 @@
+<div id="hero-3d-container" class="hero-3d-container" aria-hidden="true"></div>
+
+<script>
+  import * as THREE from 'three';
+
+  const container = document.getElementById('hero-3d-container');
+
+  if (container) {
+    // 1. Scene Setup
+    const scene = new THREE.Scene();
+    // scene.background = new THREE.Color('#F9FAF9'); // "Warm Paper" - Match site bg (handled by CSS transparency)
+
+    // 2. Camera
+    const camera = new THREE.PerspectiveCamera(35, container.clientWidth / container.clientHeight, 0.1, 100);
+    camera.position.set(4, 3, 5); // Isometric-ish angle
+    camera.lookAt(0, 0, 0);
+
+    // 3. Renderer
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.2;
+    container.appendChild(renderer.domElement);
+
+    // 4. Materials ("Sweet Professional" Palette)
+    // Blue-Gray (#B8CBD0), Mint (#C9E3CC), Olive (#606C5A), Charcoal (#424340)
+    const matCeramicWhite = new THREE.MeshPhysicalMaterial({
+      color: 0xffffff,
+      roughness: 0.8,
+      metalness: 0.1,
+      clearcoat: 0.1,
+    });
+
+    const matBrushedSteel = new THREE.MeshPhysicalMaterial({
+      color: 0xeeeeee,
+      roughness: 0.4,
+      metalness: 0.8,
+      clearcoat: 0.5,
+    });
+
+    const matAccentMint = new THREE.MeshPhysicalMaterial({
+      color: 0xC9E3CC,
+      roughness: 0.5,
+      metalness: 0.1,
+      transparent: true,
+      opacity: 0.9,
+    });
+
+    const matAccentOlive = new THREE.MeshPhysicalMaterial({
+      color: 0x606C5A,
+      roughness: 0.7,
+      metalness: 0.2,
+    });
+
+    const matWireframe = new THREE.LineBasicMaterial({ color: 0xB8CBD0, transparent: true, opacity: 0.4 });
+
+    // 5. Geometry: Abstract "Wheel-End / Hub" Assembly
+    const group = new THREE.Group();
+
+    // Core Hub (Cylinder)
+    const hubGeo = new THREE.CylinderGeometry(0.6, 0.6, 0.5, 64);
+    const hub = new THREE.Mesh(hubGeo, matBrushedSteel);
+    hub.rotation.x = Math.PI / 2;
+    group.add(hub);
+
+    // Brake Disc (Flat Cylinder/Ring)
+    const discGeo = new THREE.CylinderGeometry(1.4, 1.4, 0.05, 64);
+    const disc = new THREE.Mesh(discGeo, matCeramicWhite); // Ceramic brake look
+    disc.rotation.x = Math.PI / 2;
+    group.add(disc);
+
+    // Disc Detail (Wireframe Rings to suggest tech)
+    const ringGeo1 = new THREE.TorusGeometry(1.2, 0.005, 16, 100);
+    const ring1 = new THREE.Mesh(ringGeo1, matAccentOlive);
+    group.add(ring1);
+
+    // Bearing Housing (Outer Ring)
+    const housingGeo = new THREE.TorusGeometry(0.8, 0.15, 16, 64);
+    const housing = new THREE.Mesh(housingGeo, matBrushedSteel);
+    group.add(housing);
+
+    // Floating "Exploded" Elements (Bolts/Sensors)
+    for (let i = 0; i < 5; i++) {
+      const boltGeo = new THREE.CylinderGeometry(0.08, 0.08, 0.2, 16);
+      const bolt = new THREE.Mesh(boltGeo, matAccentMint);
+      const angle = (i / 5) * Math.PI * 2;
+      bolt.position.set(Math.cos(angle) * 0.9, Math.sin(angle) * 0.9, 0.4); // Floating out
+      bolt.rotation.x = Math.PI / 2;
+      group.add(bolt);
+    }
+
+    // Tech Lines (Floating circles for "CAD" feel)
+    const techRingGeo = new THREE.RingGeometry(1.6, 1.61, 64);
+    const techRing = new THREE.Mesh(techRingGeo, matAccentOlive);
+    techRing.position.z = -0.2;
+    group.add(techRing);
+
+    scene.add(group);
+
+    // 6. Lighting (Soft Studio)
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
+    scene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+    dirLight.position.set(5, 10, 7);
+    scene.add(dirLight);
+
+    const backLight = new THREE.DirectionalLight(0xC9E3CC, 1); // Mint rim light
+    backLight.position.set(-5, 0, -5);
+    scene.add(backLight);
+
+    // 7. Animation Loop
+    const clock = new THREE.Clock();
+
+    function animate() {
+      requestAnimationFrame(animate);
+      
+      const t = clock.getElapsedTime();
+
+      // Gentle floating
+      group.position.y = Math.sin(t * 0.5) * 0.1;
+      
+      // Slow rotation (Showcase)
+      group.rotation.y = t * 0.2;
+      group.rotation.x = Math.PI * 0.1 + Math.cos(t * 0.3) * 0.05; // Subtle tilt
+
+      // Exploded view "breathing" (Bolts move in and out slightly)
+      const expansion = 1 + Math.sin(t * 0.8) * 0.05;
+      group.children.slice(4, 9).forEach((bolt, i) => { // Target the bolts
+         const angle = (i / 5) * Math.PI * 2;
+         bolt.position.x = Math.cos(angle) * 0.9 * expansion;
+         bolt.position.y = Math.sin(angle) * 0.9 * expansion;
+      });
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    // 8. Resize Handler
+    window.addEventListener('resize', () => {
+      if (!container) return;
+      camera.aspect = container.clientWidth / container.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(container.clientWidth, container.clientHeight);
+    });
+  }
+</script>
+
+<style>
+  .hero-3d-container {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    /* Ensure it sits nicely */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Fade in */
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
