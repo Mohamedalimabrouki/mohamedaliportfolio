@@ -39,12 +39,12 @@
     "Portefeuille complet de livrables : conception, BOM, IMDS, qualité, validation",
     "Conformité au Renault Design System et aux exigences de sécurité"
   ],
-  "cover": "src/assets/img/projects/renault-master.jpg",
+  "cover": "src/assets/img/projects/axles-wheel-assembly-renault-master.jpg",
   "gallery": [
-    "src/assets/img/projects/renault-master.jpg"
+    "src/assets/img/projects/axles-wheel-assembly-renault-master.jpg"
   ],
   "summary_en": "Engineering leadership of the front and rear axles of the new Renault Master, from definition to launch readiness.",
   "summary_fr": "Leadership ingénierie des trains avant et arrière du nouveau Renault Master, de la définition à la préparation du lancement.",
-  "cover_alt_en": "Renault Master vans lined up after final assembly",
-  "cover_alt_fr": "Fourgons Renault Master alignés après assemblage final"
+  "cover_alt_en": "Front and rear axle assemblies of a van with springs and hub carriers",
+  "cover_alt_fr": "Trains avant et arrière d'un utilitaire avec ressorts et porte-moyeux"
 }

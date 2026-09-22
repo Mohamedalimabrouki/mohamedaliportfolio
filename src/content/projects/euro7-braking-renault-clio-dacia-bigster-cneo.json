@@ -37,12 +37,12 @@
     "Fonction freinage validée selon les exigences Euro 7",
     "Passage RL2 avec conformité OneTD / SIGNE"
   ],
-  "cover": "src/assets/img/projects/mkc2.jpg",
+  "cover": "src/assets/img/projects/euro7-braking-renault-clio-dacia-bigster-cneo.jpg",
   "gallery": [
-    "src/assets/img/projects/mkc2.jpg"
+    "src/assets/img/projects/euro7-braking-renault-clio-dacia-bigster-cneo.jpg"
   ],
   "summary_en": "Leading the braking function of three Euro 7 programmes: validation plan, QCDP targets and milestone governance.",
   "summary_fr": "Pilotage de la fonction freinage de trois programmes Euro 7 : plan de validation, objectifs QCDP et gouvernance des jalons.",
-  "cover_alt_en": "Electro-hydraulic brake-by-wire module",
-  "cover_alt_fr": "Module de freinage électro-hydraulique brake-by-wire"
+  "cover_alt_en": "Exploded view of a complete car braking system: discs, calipers, booster and hydraulic unit",
+  "cover_alt_fr": "Vue éclatée d'un système de freinage complet : disques, étriers, assistance et bloc hydraulique"
 }

@@ -37,12 +37,12 @@
     "Règles d'injection appliquées dès la première boucle de conception",
     "Deux véhicules couverts : C3 et C3 Aircross"
   ],
-  "cover": "src/assets/img/projects/citroen-c3-cc21.jpg",
+  "cover": "src/assets/img/projects/exterior-plastic-parts-citroen-c3.jpg",
   "gallery": [
-    "src/assets/img/projects/citroen-c3-cc21.jpg"
+    "src/assets/img/projects/exterior-plastic-parts-citroen-c3.jpg"
   ],
   "summary_en": "Mechanical design of the rear exterior plastic parts of the Citroën C3 and C3 Aircross, from feasibility to CATIA V5 integration.",
   "summary_fr": "Conception mécanique des pièces plastiques extérieures arrière des Citroën C3 et C3 Aircross, de la faisabilité à l'intégration CATIA V5.",
-  "cover_alt_en": "Citroën C3 shown in studio lighting",
-  "cover_alt_fr": "Citroën C3 présentée en studio"
+  "cover_alt_en": "Translucent CAD view of a hatchback rear bumper with brackets and tow hook highlighted in orange",
+  "cover_alt_fr": "Vue CAO translucide d'un pare-chocs arrière avec supports et crochet de remorquage en orange"
 }

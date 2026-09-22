@@ -42,12 +42,12 @@
     "Veille réglementaire avec évaluation d'impact conformité",
     "Bases de données d'homologation administrées de bout en bout"
   ],
-  "cover": "src/assets/img/projects/rifter.jpg",
+  "cover": "src/assets/img/projects/ec-type-approval-stellantis-toyota-compact-vans.jpg",
   "gallery": [
-    "src/assets/img/projects/rifter.jpg"
+    "src/assets/img/projects/ec-type-approval-stellantis-toyota-compact-vans.jpg"
   ],
   "summary_en": "Steering the EC whole vehicle type approval of a multi-brand compact van platform, from dossier compilation to authority sign-off.",
   "summary_fr": "Pilotage de la réception communautaire européenne d'une plateforme de fourgons compacts multimarque, de la constitution du dossier à la réception par l'autorité.",
-  "cover_alt_en": "Peugeot Rifter compact van, one of the four brands of the platform",
-  "cover_alt_fr": "Peugeot Rifter, l'une des quatre marques de la plateforme"
+  "cover_alt_en": "Four unbranded compact vans in an inspection hall with a checklist in the foreground",
+  "cover_alt_fr": "Quatre fourgons compacts sans marque dans un hall d'inspection, check-list au premier plan"
 }

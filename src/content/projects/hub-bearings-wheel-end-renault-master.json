@@ -37,12 +37,12 @@
     "Plans de validation OneVAL en place pour chaque composant",
     "Gestion des risques partagée avec fournisseurs et qualité"
   ],
-  "cover": "src/assets/img/projects/hub-bearing-gen3.jpg",
+  "cover": "src/assets/img/projects/hub-bearings-wheel-end-renault-master.jpg",
   "gallery": [
-    "src/assets/img/projects/hub-bearing-gen3.jpg"
+    "src/assets/img/projects/hub-bearings-wheel-end-renault-master.jpg"
   ],
   "summary_en": "Development and validation of the wheel-end components of the new Renault Master, hub bearings first.",
   "summary_fr": "Développement et validation des composants de liaison au sol du nouveau Renault Master, roulements de moyeu en tête.",
-  "cover_alt_en": "Cutaway of a third-generation hub bearing unit",
-  "cover_alt_fr": "Roulement de moyeu de troisième génération en coupe"
+  "cover_alt_en": "Cutaway of a wheel hub bearing unit with integrated flange and ABS encoder ring",
+  "cover_alt_fr": "Roulement de moyeu en coupe avec bride intégrée et bague codeuse ABS"
 }

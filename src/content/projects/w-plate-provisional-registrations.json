@@ -37,12 +37,12 @@
     "Bases de données d'homologation cohérentes avec les dossiers",
     "Autorisations d'essais routiers obtenues dans les délais du programme"
   ],
-  "cover": "src/assets/img/projects/proace-city.jpg",
+  "cover": "src/assets/img/projects/w-plate-provisional-registrations.jpg",
   "gallery": [
-    "src/assets/img/projects/proace-city.jpg"
+    "src/assets/img/projects/w-plate-provisional-registrations.jpg"
   ],
   "summary_en": "Provisional W-plate registrations that let pre-approval prototypes drive on public roads, backed by well-kept homologation databases.",
   "summary_fr": "Immatriculations provisoires W permettant aux prototypes de rouler sur route ouverte avant réception, appuyées sur des bases de données d'homologation tenues à jour.",
-  "cover_alt_en": "Toyota ProAce City compact vans",
-  "cover_alt_fr": "Fourgons compacts Toyota ProAce City"
+  "cover_alt_en": "Camouflaged prototype van with a blank temporary plate on a test track",
+  "cover_alt_fr": "Prototype de fourgon camouflé avec plaque provisoire vierge sur piste d'essai"
 }

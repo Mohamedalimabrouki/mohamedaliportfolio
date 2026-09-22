@@ -37,12 +37,12 @@
     "Marquages alignés avec le dossier de réception",
     "Questions closes avec UTAC / CNRV avant réception"
   ],
-  "cover": "src/assets/img/projects/opel-combo.jpg",
+  "cover": "src/assets/img/projects/fcm-marking-conformity-opel-combo.jpg",
   "gallery": [
-    "src/assets/img/projects/opel-combo.jpg"
+    "src/assets/img/projects/fcm-marking-conformity-opel-combo.jpg"
   ],
   "summary_en": "Keeping the approved markings of the Opel Combo and its sister vans consistent with the type-approval dossier.",
   "summary_fr": "Maintenir les marquages homologués de l'Opel Combo et de ses fourgons frères cohérents avec le dossier de réception.",
-  "cover_alt_en": "Opel Combo vans leaving the assembly plant",
-  "cover_alt_fr": "Utilitaires Opel Combo sortant de l'usine d'assemblage"
+  "cover_alt_en": "Close-up of a blank metal identification plate riveted to a vehicle body",
+  "cover_alt_fr": "Gros plan sur une plaque d'identification métallique vierge rivetée sur une caisse"
 }

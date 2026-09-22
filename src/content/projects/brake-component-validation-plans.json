@@ -37,12 +37,12 @@
     "Validation Système et Prestation Client suivie sur trois programmes",
     "Disponibilité pièces et bancs alignée sur le plan jalon"
   ],
-  "cover": "src/assets/img/projects/brake-caliper.jpg",
+  "cover": "src/assets/img/projects/brake-component-validation-plans.jpg",
   "gallery": [
-    "src/assets/img/projects/brake-caliper.jpg"
+    "src/assets/img/projects/brake-component-validation-plans.jpg"
   ],
   "summary_en": "Component-level validation planning for the braking hardware of three Euro 7 programmes.",
   "summary_fr": "Planification de la validation composant du matériel de freinage de trois programmes Euro 7.",
-  "cover_alt_en": "Disc brake caliper and pad assembly",
-  "cover_alt_fr": "Étrier de frein à disque et plaquettes"
+  "cover_alt_en": "Brake disc and caliper on a test bench with a thermal camera",
+  "cover_alt_fr": "Disque et étrier de frein sur banc d'essai avec caméra thermique"
 }

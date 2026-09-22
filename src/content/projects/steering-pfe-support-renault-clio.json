@@ -37,12 +37,12 @@
     "Livrables OneVAL, RGPQP et LUP administrés",
     "Objectifs QCDP de la fonction Direction sécurisés"
   ],
-  "cover": "src/assets/img/projects/steering-system.jpg",
+  "cover": "src/assets/img/projects/steering-pfe-support-renault-clio.jpg",
   "gallery": [
-    "src/assets/img/projects/steering-system.jpg"
+    "src/assets/img/projects/steering-pfe-support-renault-clio.jpg"
   ],
   "summary_en": "Cross-functional support of the steering function on the new Renault Clio, keeping OneVAL, RGPQP and LUP deliverables on schedule.",
   "summary_fr": "Support transverse de la fonction direction sur la nouvelle Renault Clio, avec des livrables OneVAL, RGPQP et LUP tenus au planning.",
-  "cover_alt_en": "Schematic of a steering rack and column",
-  "cover_alt_fr": "Schéma d'une crémaillère et d'une colonne de direction"
+  "cover_alt_en": "Electric power steering rack with column, universal joint and steering wheel",
+  "cover_alt_fr": "Crémaillère de direction assistée électrique avec colonne, cardan et volant"
 }
