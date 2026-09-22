@@ -87,7 +87,7 @@ export function initMotion() {
       tiltCleanup = null;
     }
     if (prefersReducedMotion || !pointerFineQuery.matches) return;
-    const cards = Array.from(doc.querySelectorAll('.tilt-card'));
+    const cards = Array.from(doc.querySelectorAll('.tilt-card:not([data-no-tilt])'));
     if (!cards.length) return;
     const cleanupFns = [];
     cards.forEach((card) => {

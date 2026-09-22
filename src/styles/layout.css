@@ -839,28 +839,16 @@ html[data-theme='dark'] .stat-list li:hover {
   color: var(--accent-500);
 }
 
-.contact__form form {
-  display: grid;
-  gap: 1.75rem;
-  margin-top: 0; 
-  background: var(--surface-card);
-  border: 1px solid var(--border-soft);
+.contact__form {
+  padding: clamp(1.75rem, 4vw, 2.75rem);
   border-radius: 24px;
-  padding: clamp(2rem, 5vw, 3.5rem); /* Increased padding for breathing room */
   box-shadow: var(--shadow-lg);
-  align-content: start;
   position: relative;
   overflow: hidden;
 }
 
-html[data-theme='dark'] .contact__form form {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border-color: var(--glass-border);
-}
-
-/* Subtle accent line at the top of the form */
-.contact__form form::before {
+/* Accent line at the top of the card */
+.contact__form::before {
   content: "";
   position: absolute;
   top: 0;
@@ -871,6 +859,15 @@ html[data-theme='dark'] .contact__form form {
   opacity: 0.8;
 }
 
+.contact__form form {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-soft);
+  align-content: start;
+}
+
 .contact__form h3 {
   font-size: 1.75rem;
   font-weight: 800;
@@ -879,9 +876,9 @@ html[data-theme='dark'] .contact__form form {
   color: var(--text-primary);
 }
 
-.contact__form p {
+.contact__form > p {
   color: var(--text-muted);
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .form-field {
