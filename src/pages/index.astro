@@ -14,7 +14,7 @@ const projectsEntries = await getCollection('projects');
 
 const lang = 'en';
 const data = siteEntry.data;
-const projects = projectsEntries.map(e => e.data);
+const projects = projectsEntries.map(e => e.data).sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
 const { seo } = data;
 ---
 
@@ -33,6 +33,6 @@ const { seo } = data;
     <Experience data={data.experience} />
     <About data={data.about} lang={lang} />
     <Downloads data={data.cv_downloads} />
-    <Contact data={data.contact} />
+    <Contact data={data.contact} shared={data.shared} email={data.site.email} />
   </main>
 </Layout>

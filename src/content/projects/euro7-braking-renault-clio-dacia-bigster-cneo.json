@@ -1,0 +1,48 @@
+{
+  "id": "euro7-braking-renault-clio-dacia-bigster-cneo",
+  "order": 4,
+  "title_en": "Euro 7 braking system leadership - Renault Clio, Dacia Bigster & Dacia C-Neo",
+  "title_fr": "Leadership système de freinage Euro 7 - Renault Clio, Dacia Bigster et Dacia C-Neo",
+  "period": "Feb 2025 - Jul 2025",
+  "role": "Engineering Leader - Braking System · Leader Ingénierie - Système de freinage",
+  "client_or_brand": "Renault & Dacia (three concurrent programmes)",
+  "stack": [
+    "Braking",
+    "Euro 7",
+    "Validation"
+  ],
+  "tags": [
+    "Renault",
+    "Dacia",
+    "QCDP",
+    "CMFB"
+  ],
+  "highlights_en": [
+    "Directed validation-plan execution for the CMFB braking function within the PFC lot, aligned with strategic validation goals and parts availability.",
+    "Safeguarded QCDP targets: RTC and NRL milestone verifications, RTGFE alignment with the master schedule, OneTD / SIGNE conformity at the RL2 gate.",
+    "Synthesised technical input for stakeholders to enable critical decisions across three programmes running in parallel."
+  ],
+  "highlights_fr": [
+    "Piloter l'exécution du plan de validation de la fonction freinage CMFB (lot PFC), en cohérence avec les objectifs de validation et la disponibilité des pièces.",
+    "Sécuriser les objectifs QCDP : vérifications RTC et NRL aux jalons, alignement RTGFE sur le planning directeur, conformité OneTD / SIGNE au passage RL2.",
+    "Synthétiser les données techniques pour les parties prenantes et faciliter les décisions critiques sur trois programmes menés en parallèle."
+  ],
+  "metrics_en": [
+    "Three vehicle programmes steered simultaneously",
+    "Braking function validated to Euro 7 requirements",
+    "RL2 gate passed with OneTD / SIGNE conformity"
+  ],
+  "metrics_fr": [
+    "Trois programmes véhicules pilotés simultanément",
+    "Fonction freinage validée selon les exigences Euro 7",
+    "Passage RL2 avec conformité OneTD / SIGNE"
+  ],
+  "cover": "src/assets/img/projects/mkc2.jpg",
+  "gallery": [
+    "src/assets/img/projects/mkc2.jpg"
+  ],
+  "summary_en": "Leading the braking function of three Euro 7 programmes: validation plan, QCDP targets and milestone governance.",
+  "summary_fr": "Pilotage de la fonction freinage de trois programmes Euro 7 : plan de validation, objectifs QCDP et gouvernance des jalons.",
+  "cover_alt_en": "Electro-hydraulic brake-by-wire module",
+  "cover_alt_fr": "Module de freinage électro-hydraulique brake-by-wire"
+}

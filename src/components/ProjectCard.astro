@@ -14,7 +14,7 @@ const period = project.period;
 const roleSplit = project.role.split('·').map(p => p.trim());
 const role = (lang === 'fr' && roleSplit[1]) ? roleSplit[1] : roleSplit[0];
 
-const href = lang === 'fr' ? `/fr/projects/${project.id}/` : `/projects/${project.id}/`;
+const href = lang === 'fr' ? `/fr/projets/${project.id}/` : `/projects/${project.id}/`;
 const sizes = compact ? '(max-width: 720px) 100vw, (max-width: 1200px) 50vw, 33vw' : '(max-width: 720px) 100vw, 680px';
 
 const stackTokens = (project.stack || []).map(tag => tag.toLowerCase().replace(/[^a-z0-9]+/g, '-'));

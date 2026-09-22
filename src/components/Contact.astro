@@ -2,7 +2,7 @@
 import SectionHeader from './SectionHeader.astro';
 import Button from './Button.astro';
 
-const { data } = Astro.props;
+const { data, shared = {}, email = 'contact@mohamedalimabrouki.com' } = Astro.props;
 ---
 
 <section id="contact" class="section section--muted" data-section="contact">
@@ -13,7 +13,7 @@ const { data } = Astro.props;
         {data.channels.map(channel => (
           <li>
             <span class="channel__label">{channel.label}</span>
-            <a href={channel.href}>{channel.value}</a>
+            <a href={channel.href} rel={channel.href.startsWith('http') ? 'noopener' : undefined} target={channel.href.startsWith('http') ? '_blank' : undefined}>{channel.value}</a>
           </li>
         ))}
       </ul>
@@ -21,19 +21,26 @@ const { data } = Astro.props;
     <div class="contact__form tilt-card" data-reveal>
       <h3>{data.form.title}</h3>
       <p>{data.form.description}</p>
-      <form id="contact-form" data-mailto={data.form.mailto}>
+      <form
+        id="contact-form"
+        data-mailto={data.form.mailto}
+        data-email={email}
+        data-copied-message={shared.contact_copied || ''}
+        data-fallback-message={shared.contact_fallback || ''}
+      >
         {data.form.fields.map(field => (
           <label class="form-field">
             <span>{field.label}</span>
             {field.type === 'textarea' ? (
-              <textarea name={field.id} id={`contact-${field.id}`} placeholder={field.placeholder}></textarea>
+              <textarea name={field.id} id={`contact-${field.id}`} placeholder={field.placeholder} rows="5"></textarea>
             ) : (
-              <input type={field.type} name={field.id} id={`contact-${field.id}`} placeholder={field.placeholder} />
+              <input type={field.type} name={field.id} id={`contact-${field.id}`} placeholder={field.placeholder} autocomplete={field.id === 'email' ? 'email' : field.id === 'name' ? 'name' : undefined} />
             )}
           </label>
         ))}
         <p class="form-privacy">{data.form.privacy}</p>
         <Button type="submit" variant="primary">{data.form.cta_label}</Button>
+        <p class="form-status" data-contact-status role="status" aria-live="polite" hidden></p>
       </form>
     </div>
   </div>

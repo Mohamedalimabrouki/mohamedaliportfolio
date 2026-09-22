@@ -227,7 +227,9 @@ const siteCollection = defineCollection({
       theme_status_dark: z.string(),
       theme_status_system: z.string(),
       reduce_motion: z.string().optional(),
-      view_fr: z.string().optional()
+      view_fr: z.string().optional(),
+      contact_copied: z.string().optional(),
+      contact_fallback: z.string().optional()
     }),
     structured_data: z.object({
       person: z.object({
@@ -259,6 +261,7 @@ const projectsCollection = defineCollection({
   type: 'data',
   schema: z.object({
     id: z.string(),
+    order: z.number().optional(),
     title_en: z.string(),
     title_fr: z.string(),
     summary_en: z.string(),

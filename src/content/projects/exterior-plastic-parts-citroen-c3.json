@@ -1,0 +1,48 @@
+{
+  "id": "exterior-plastic-parts-citroen-c3",
+  "order": 9,
+  "title_en": "Exterior plastic parts in CATIA V5 - Citroën C3 & C3 Aircross",
+  "title_fr": "Pièces plastiques extérieures sous CATIA V5 - Citroën C3 et C3 Aircross",
+  "period": "Oct 2021 - Oct 2022",
+  "role": "Mechanical Design Engineer · Ingénieur Conception Mécanique",
+  "client_or_brand": "Citroën C3 & C3 Aircross (Smart Car programme)",
+  "stack": [
+    "Mechanical design",
+    "Plastics",
+    "CAD"
+  ],
+  "tags": [
+    "Citroën",
+    "CATIA V5",
+    "Injection moulding",
+    "Exteriors"
+  ],
+  "highlights_en": [
+    "Ran shape-plan analyses and feasibility studies for exterior plastic parts, applying injection-moulding rules: minimum thickness, draft, part rigidity.",
+    "Designed and integrated in CATIA V5 the tail-lamp bracket, rear bumper upper and lower skins, skid plate, tow hook, sensor and side brackets and lateral reinforcements.",
+    "Coordinated feasibility reviews with the programme teams."
+  ],
+  "highlights_fr": [
+    "Réaliser les analyses de plans de forme et les études de faisabilité de pièces plastiques extérieures, en appliquant les règles d'injection : épaisseur minimale, dépouille, rigidité.",
+    "Concevoir et intégrer sous CATIA V5 supports de feux arrière, peaux supérieure et inférieure de pare-chocs arrière, skid plate, crochet de remorquage, supports capteurs et latéraux, renforts latéraux.",
+    "Coordonner les revues de faisabilité avec les équipes programme."
+  ],
+  "metrics_en": [
+    "Eight exterior part families designed in CATIA V5",
+    "Injection-moulding rules applied from the first design loop",
+    "Two vehicles covered: C3 and C3 Aircross"
+  ],
+  "metrics_fr": [
+    "Huit familles de pièces extérieures conçues sous CATIA V5",
+    "Règles d'injection appliquées dès la première boucle de conception",
+    "Deux véhicules couverts : C3 et C3 Aircross"
+  ],
+  "cover": "src/assets/img/projects/citroen-c3-cc21.jpg",
+  "gallery": [
+    "src/assets/img/projects/citroen-c3-cc21.jpg"
+  ],
+  "summary_en": "Mechanical design of the rear exterior plastic parts of the Citroën C3 and C3 Aircross, from feasibility to CATIA V5 integration.",
+  "summary_fr": "Conception mécanique des pièces plastiques extérieures arrière des Citroën C3 et C3 Aircross, de la faisabilité à l'intégration CATIA V5.",
+  "cover_alt_en": "Citroën C3 shown in studio lighting",
+  "cover_alt_fr": "Citroën C3 présentée en studio"
+}

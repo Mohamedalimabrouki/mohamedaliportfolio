@@ -1,0 +1,53 @@
+{
+  "id": "ec-type-approval-stellantis-toyota-compact-vans",
+  "order": 1,
+  "title_en": "EC Whole Vehicle Type Approval - Stellantis & Toyota compact vans",
+  "title_fr": "Réception communautaire européenne - fourgons compacts Stellantis et Toyota",
+  "period": "Jul 2025 - Present",
+  "role": "European Type Approval Engineer · Ingénieur Homologation Type Europe",
+  "client_or_brand": "Stellantis & Toyota: Opel Combo, Peugeot Partner/Rifter, Citroën Berlingo, Toyota ProAce City",
+  "stack": [
+    "Type approval",
+    "Compliance",
+    "LCV"
+  ],
+  "tags": [
+    "Homologation",
+    "RCE",
+    "Multi-brand",
+    "CNRV",
+    "UTAC"
+  ],
+  "highlights_en": [
+    "Compile and steer the European Community Whole Vehicle Type Approval (RCE) dossiers for one N1 platform sold under four brands.",
+    "Check every dossier against EU regulatory requirements before submission to the French approval authority (CNRV).",
+    "Run regulatory watch on evolving European standards and directives and assess their impact on vehicle conformity.",
+    "Coordinate validation, audits and final approval sign-off with OEM engineering teams and the UTAC / CNRV authorities."
+  ],
+  "highlights_fr": [
+    "Constituer et piloter les dossiers de Réception Communautaire Européenne (RCE) d'une plateforme N1 vendue sous quatre marques.",
+    "Vérifier chaque dossier au regard des exigences réglementaires de l'UE avant soumission au CNRV.",
+    "Assurer la veille réglementaire sur les normes et directives européennes et en évaluer l'impact sur la conformité des véhicules.",
+    "Coordonner la validation, les audits et l'obtention des réceptions avec les équipes d'ingénierie OEM et les autorités UTAC / CNRV."
+  ],
+  "metrics_en": [
+    "Four brands, one multi-brand N1 platform",
+    "RCE dossiers submitted to the French authority (CNRV)",
+    "Regulatory watch with impact assessment on conformity",
+    "Homologation databases administered end to end"
+  ],
+  "metrics_fr": [
+    "Quatre marques, une plateforme N1 multimarque",
+    "Dossiers RCE soumis à l'autorité française (CNRV)",
+    "Veille réglementaire avec évaluation d'impact conformité",
+    "Bases de données d'homologation administrées de bout en bout"
+  ],
+  "cover": "src/assets/img/projects/rifter.jpg",
+  "gallery": [
+    "src/assets/img/projects/rifter.jpg"
+  ],
+  "summary_en": "Steering the EC whole vehicle type approval of a multi-brand compact van platform, from dossier compilation to authority sign-off.",
+  "summary_fr": "Pilotage de la réception communautaire européenne d'une plateforme de fourgons compacts multimarque, de la constitution du dossier à la réception par l'autorité.",
+  "cover_alt_en": "Peugeot Rifter compact van, one of the four brands of the platform",
+  "cover_alt_fr": "Peugeot Rifter, l'une des quatre marques de la plateforme"
+}

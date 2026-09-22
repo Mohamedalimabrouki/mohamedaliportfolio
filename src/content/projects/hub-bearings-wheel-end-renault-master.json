@@ -1,0 +1,48 @@
+{
+  "id": "hub-bearings-wheel-end-renault-master",
+  "order": 8,
+  "title_en": "Hub bearings Gen2/Gen3 and wheel-end components - Renault Master",
+  "title_fr": "Roulements de moyeu Gen2/Gen3 et composants de liaison au sol - Renault Master",
+  "period": "Feb 2023 - Jun 2024",
+  "role": "Engineering Leader - Axles & Wheel Assembly · Leader Ingénierie - Trains et liaison au sol",
+  "client_or_brand": "Renault Master",
+  "stack": [
+    "Chassis",
+    "Wheel-end",
+    "Validation"
+  ],
+  "tags": [
+    "Hub bearings",
+    "Knuckles",
+    "Discs",
+    "Rear axles"
+  ],
+  "highlights_en": [
+    "Oversaw development and validation of the critical chassis components: hub bearings Gen2/Gen3, steering knuckles, discs, splash guards, rear axles, wheel carrier plates and fasteners.",
+    "Defined and followed the OneVAL validation plans and usage recommendations for each component.",
+    "Strengthened design robustness through proactive risk management with suppliers and quality teams."
+  ],
+  "highlights_fr": [
+    "Piloter le développement et la validation des composants critiques de liaison au sol : roulements de moyeu Gen2/Gen3, pivots, disques, garde-boue, essieux arrière, platines porte-roue et fixations.",
+    "Définir et suivre les plans de validation OneVAL et les recommandations d'usage de chaque composant.",
+    "Renforcer la robustesse des conceptions par une gestion proactive des risques avec les fournisseurs et la qualité."
+  ],
+  "metrics_en": [
+    "Seven component families developed and validated",
+    "OneVAL validation plans in place for each component",
+    "Risk management shared with suppliers and quality"
+  ],
+  "metrics_fr": [
+    "Sept familles de composants développées et validées",
+    "Plans de validation OneVAL en place pour chaque composant",
+    "Gestion des risques partagée avec fournisseurs et qualité"
+  ],
+  "cover": "src/assets/img/projects/hub-bearing-gen3.jpg",
+  "gallery": [
+    "src/assets/img/projects/hub-bearing-gen3.jpg"
+  ],
+  "summary_en": "Development and validation of the wheel-end components of the new Renault Master, hub bearings first.",
+  "summary_fr": "Développement et validation des composants de liaison au sol du nouveau Renault Master, roulements de moyeu en tête.",
+  "cover_alt_en": "Cutaway of a third-generation hub bearing unit",
+  "cover_alt_fr": "Roulement de moyeu de troisième génération en coupe"
+}

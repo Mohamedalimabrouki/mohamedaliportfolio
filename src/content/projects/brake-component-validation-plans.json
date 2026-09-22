@@ -1,0 +1,48 @@
+{
+  "id": "brake-component-validation-plans",
+  "order": 5,
+  "title_en": "Brake component validation plans - disc, Mastervac, ESP10, MKC2",
+  "title_fr": "Plans de validation composants freinage - disque, Mastervac, ESP10, MKC2",
+  "period": "Feb 2025 - Jul 2025",
+  "role": "Engineering Leader - Braking System · Leader Ingénierie - Système de freinage",
+  "client_or_brand": "Renault Clio, Dacia Bigster, Dacia C-Neo",
+  "stack": [
+    "Braking",
+    "Validation",
+    "Components"
+  ],
+  "tags": [
+    "Brake disc",
+    "Mastervac",
+    "ESP10",
+    "MKC2"
+  ],
+  "highlights_en": [
+    "Devised the component validation plans for the critical braking elements: brake disc, Mastervac, ESP10 and MKC2.",
+    "Tracked System and Customer Performance validation across the three concurrent vehicle programmes.",
+    "Aligned test resources and parts availability with the validation plan and the gate schedule."
+  ],
+  "highlights_fr": [
+    "Élaborer les plans de validation des composants critiques du freinage : disque de frein, Mastervac, ESP10 et MKC2.",
+    "Suivre la validation Système et Prestation Client sur les trois projets véhicules simultanés.",
+    "Aligner les moyens d'essai et la disponibilité des pièces avec le plan de validation et le planning des jalons."
+  ],
+  "metrics_en": [
+    "Four critical components covered by validation plans",
+    "System and customer-performance validation tracked on three programmes",
+    "Parts and bench availability aligned with the gate plan"
+  ],
+  "metrics_fr": [
+    "Quatre composants critiques couverts par des plans de validation",
+    "Validation Système et Prestation Client suivie sur trois programmes",
+    "Disponibilité pièces et bancs alignée sur le plan jalon"
+  ],
+  "cover": "src/assets/img/projects/brake-caliper.jpg",
+  "gallery": [
+    "src/assets/img/projects/brake-caliper.jpg"
+  ],
+  "summary_en": "Component-level validation planning for the braking hardware of three Euro 7 programmes.",
+  "summary_fr": "Planification de la validation composant du matériel de freinage de trois programmes Euro 7.",
+  "cover_alt_en": "Disc brake caliper and pad assembly",
+  "cover_alt_fr": "Étrier de frein à disque et plaquettes"
+}

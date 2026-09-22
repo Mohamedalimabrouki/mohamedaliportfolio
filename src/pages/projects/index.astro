@@ -5,7 +5,7 @@ import { getEntry, getCollection } from 'astro:content';
 
 const siteEntry = await getEntry('site', 'en');
 const projectsEntries = await getCollection('projects');
-const projects = projectsEntries.map(e => e.data);
+const projects = projectsEntries.map(e => e.data).sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
 
 const lang = 'en';
 const data = siteEntry.data.projects_page;

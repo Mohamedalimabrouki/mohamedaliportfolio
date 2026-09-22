@@ -144,7 +144,7 @@ export function initMotion() {
           obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
     revealElements.forEach((el) => {
       if (!el.classList.contains('is-visible')) {
         revealObserver.observe(el);

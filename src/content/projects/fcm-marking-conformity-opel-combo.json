@@ -1,0 +1,48 @@
+{
+  "id": "fcm-marking-conformity-opel-combo",
+  "order": 3,
+  "title_en": "FCM marking conformity - Opel Combo and sister vans",
+  "title_fr": "Conformité des marquages (FCM) - Opel Combo et fourgons frères",
+  "period": "Jul 2025 - Present",
+  "role": "European Type Approval Engineer · Ingénieur Homologation Type Europe",
+  "client_or_brand": "Opel / Vauxhall and sister brands",
+  "stack": [
+    "Type approval",
+    "Compliance",
+    "Markings"
+  ],
+  "tags": [
+    "FCM",
+    "Opel",
+    "Markings",
+    "Conformity"
+  ],
+  "highlights_en": [
+    "Audit and update the Fiche de Contrôle de Marquage (FCM) that governs approved markings across several models.",
+    "Cross-check markings against the approval dossier and the applicable EU requirements.",
+    "Close marking questions with OEM engineering and the approval bodies before sign-off."
+  ],
+  "highlights_fr": [
+    "Contrôler et actualiser les Fiches de Contrôle de Marquage (FCM) régissant les marquages homologués sur plusieurs modèles.",
+    "Recouper les marquages avec le dossier de réception et les exigences européennes applicables.",
+    "Clore les questions de marquage avec l'ingénierie OEM et les autorités avant la réception."
+  ],
+  "metrics_en": [
+    "FCM documentation audited and updated across models",
+    "Markings aligned with the approval dossier",
+    "Questions closed with UTAC / CNRV before sign-off"
+  ],
+  "metrics_fr": [
+    "FCM contrôlées et actualisées sur plusieurs modèles",
+    "Marquages alignés avec le dossier de réception",
+    "Questions closes avec UTAC / CNRV avant réception"
+  ],
+  "cover": "src/assets/img/projects/opel-combo.jpg",
+  "gallery": [
+    "src/assets/img/projects/opel-combo.jpg"
+  ],
+  "summary_en": "Keeping the approved markings of the Opel Combo and its sister vans consistent with the type-approval dossier.",
+  "summary_fr": "Maintenir les marquages homologués de l'Opel Combo et de ses fourgons frères cohérents avec le dossier de réception.",
+  "cover_alt_en": "Opel Combo vans leaving the assembly plant",
+  "cover_alt_fr": "Utilitaires Opel Combo sortant de l'usine d'assemblage"
+}

@@ -7,10 +7,10 @@ import '../styles/animations.css';
 
 import { getEntry } from 'astro:content';
 
-const { 
-  title, 
-  description, 
-  lang = 'en', 
+const {
+  title,
+  description,
+  lang = 'en',
   pageKey = 'home',
   alternatePath,
   ogImage
@@ -30,6 +30,11 @@ const homeHref = lang === 'fr' ? '/fr/' : '/';
 const currentPath = Astro.url.pathname;
 const englishHref = lang === 'en' ? currentPath : alternatePath || '/';
 const frenchHref = lang === 'fr' ? currentPath : alternatePath || '/fr/';
+
+// Structured data (Person + WebSite) on the home pages only
+const structuredData = pageKey === 'home' && data.structured_data
+  ? [data.structured_data.person, data.structured_data.website]
+  : null;
 ---
 
 <!doctype html>
@@ -40,9 +45,10 @@ const frenchHref = lang === 'fr' ? currentPath : alternatePath || '/fr/';
   <title>{title}</title>
   <meta name="description" content={description}>
   <link rel="canonical" href={canonicalUrl}>
+  <link rel="alternate" hreflang={lang} href={canonicalUrl} />
   {altUrl && <link rel="alternate" hreflang={lang === 'en' ? 'fr' : 'en'} href={altUrl} />}
-  <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
-  
+  <link rel="alternate" hreflang="x-default" href={lang === 'en' ? canonicalUrl : (altUrl || new URL('/', Astro.site))} />
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content={site.name}>
   <meta property="og:title" content={title}>
@@ -54,20 +60,27 @@ const frenchHref = lang === 'fr' ? currentPath : alternatePath || '/fr/';
   <meta name="twitter:title" content={title}>
   <meta name="twitter:description" content={description}>
   <meta name="twitter:image" content={new URL(resolvedOgImage, Astro.site)}>
-  
+
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#F4F7FB" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0B1522" media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="/assets/img/avatar-circle.png">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-64.png" sizes="64x64" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  {structuredData && structuredData.map(item => (
+    <script type="application/ld+json" set:html={JSON.stringify(item)} />
+  ))}
 
   <script is:inline>
     (function(){try{var storage=localStorage.getItem('mam-theme');var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var preference=storage==='light'||storage==='dark'?storage:'system';var theme=preference==='light'?'light':preference==='dark'?'dark':(prefersDark?'dark':'light');document.documentElement.setAttribute('data-theme',theme);document.documentElement.dataset.themePreference=preference;}catch(error){var fallback=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',fallback);document.documentElement.dataset.themePreference='system';}})();
   </script>
-  
+
   <link rel="preload" href="/assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  
+
   <slot name="head" />
-  
+
   <!-- Re-hydrate the UI logic -->
   <script src="../scripts/ui.js"></script>
   <script src="../scripts/headline-animation.js"></script>
@@ -76,31 +89,31 @@ const frenchHref = lang === 'fr' ? currentPath : alternatePath || '/fr/';
 </head>
 <body data-lang={lang}>
   <a class="skip-link" href="#main">{data.shared.skip_to_content}</a>
-  
+
   <header class="site-header" data-reveal>
     <div class="container site-header__inner">
       <a class="brand" href={lang === 'fr' ? '/fr/#hero' : '/#hero'}>
         <span class="brand__mark" aria-hidden="true">
-          <img src="/assets/img/avatar.jpg" alt="Mohamed Ali Mabrouki's avatar" width="44" height="44" loading="lazy" decoding="async">
+          <img src="/assets/img/nav-avatar.webp" alt="" width="44" height="44" loading="eager" decoding="async">
         </span>
         <span class="brand__text">
           <span class="brand__name">{site.name}</span>
           <span class="brand__tagline">{site.tagline}</span>
         </span>
       </a>
-      
+
       <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-navigation">
         <span class="sr-only">Menu</span>
         <span class="nav-toggle__bar"></span>
       </button>
-      
+
       <nav class="site-nav" id="primary-navigation" data-site-nav aria-label="Primary">
         <ul class="site-nav__list">
           {navLinks.map(item => (
             <li>
-              <a 
-                class="site-nav__link" 
-                data-nav-target={item.id} 
+              <a
+                class="site-nav__link"
+                data-nav-target={item.id}
                 href={pageKey === 'home' ? `#${item.id}` : `${homeHref}#${item.id}`}
               >
                 {item.label}
@@ -109,7 +122,7 @@ const frenchHref = lang === 'fr' ? currentPath : alternatePath || '/fr/';
           ))}
           <li class="magic-line" aria-hidden="true"></li>
         </ul>
-        
+
         <div class="site-controls">
            <!-- Theme Switcher -->
            <div class="theme-switcher" data-theme-switcher role="group" aria-label={data.theme_switcher.label}>
@@ -119,10 +132,10 @@ const frenchHref = lang === 'fr' ? currentPath : alternatePath || '/fr/';
                  <span class="sr-only">{data.theme_switcher.options[mode]}</span>
                </button>
              ))}
-             <span 
-               class="sr-only" 
-               data-theme-status 
-               role="status" 
+             <span
+               class="sr-only"
+               data-theme-status
+               role="status"
                aria-live="polite"
                data-status-light={data.shared.theme_status_light}
                data-status-dark={data.shared.theme_status_dark}
@@ -132,9 +145,9 @@ const frenchHref = lang === 'fr' ? currentPath : alternatePath || '/fr/';
 
            <!-- Language Switcher -->
            <div class="lang-switcher" role="group" aria-label={data.language_switcher.label}>
-             <a 
-               href={englishHref} 
-               class={`lang-switcher__btn ${lang === 'en' ? 'is-active' : ''}`} 
+             <a
+               href={englishHref}
+               class={`lang-switcher__btn ${lang === 'en' ? 'is-active' : ''}`}
                aria-pressed={lang === 'en'}
                hreflang="en"
                lang="en"
@@ -143,9 +156,9 @@ const frenchHref = lang === 'fr' ? currentPath : alternatePath || '/fr/';
              >
                EN
              </a>
-             <a 
-               href={frenchHref} 
-               class={`lang-switcher__btn ${lang === 'fr' ? 'is-active' : ''}`} 
+             <a
+               href={frenchHref}
+               class={`lang-switcher__btn ${lang === 'fr' ? 'is-active' : ''}`}
                aria-pressed={lang === 'fr'}
                hreflang="fr"
                lang="fr"
@@ -159,10 +172,8 @@ const frenchHref = lang === 'fr' ? currentPath : alternatePath || '/fr/';
       </nav>
     </div>
   </header>
-  
-  <main id="main">
-    <slot />
-  </main>
+
+  <slot />
 
   <footer class="site-footer">
     <div class="container site-footer__inner">

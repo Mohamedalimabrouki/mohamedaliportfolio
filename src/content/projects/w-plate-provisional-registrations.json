@@ -1,0 +1,48 @@
+{
+  "id": "w-plate-provisional-registrations",
+  "order": 2,
+  "title_en": "Demande W - provisional W-plate registrations for prototype road tests",
+  "title_fr": "Demandes W - immatriculations provisoires pour essais routiers de prototypes",
+  "period": "Jul 2025 - Present",
+  "role": "European Type Approval Engineer · Ingénieur Homologation Type Europe",
+  "client_or_brand": "Stellantis & Toyota compact van programmes",
+  "stack": [
+    "Type approval",
+    "Registrations",
+    "Prototypes"
+  ],
+  "tags": [
+    "Demande W",
+    "W garage",
+    "Prototypes",
+    "Databases"
+  ],
+  "highlights_en": [
+    "Prepare the Demande W applications that grant provisional W-plate registrations to pre-approval prototypes.",
+    "Administer the homologation databases that feed each application and keep vehicle data consistent.",
+    "Secure the registrations that authorise road testing before the vehicle receives its final approval."
+  ],
+  "highlights_fr": [
+    "Établir les demandes W qui accordent des immatriculations provisoires « W garage » aux prototypes avant réception.",
+    "Administrer les bases de données d'homologation qui alimentent chaque demande et garantir la cohérence des données véhicule.",
+    "Sécuriser les immatriculations qui autorisent les essais routiers avant la réception définitive."
+  ],
+  "metrics_en": [
+    "Provisional registrations for pre-approval prototypes",
+    "Homologation databases kept consistent with the dossiers",
+    "Road-test authorisations secured on the programme's timeline"
+  ],
+  "metrics_fr": [
+    "Immatriculations provisoires pour prototypes avant réception",
+    "Bases de données d'homologation cohérentes avec les dossiers",
+    "Autorisations d'essais routiers obtenues dans les délais du programme"
+  ],
+  "cover": "src/assets/img/projects/proace-city.jpg",
+  "gallery": [
+    "src/assets/img/projects/proace-city.jpg"
+  ],
+  "summary_en": "Provisional W-plate registrations that let pre-approval prototypes drive on public roads, backed by well-kept homologation databases.",
+  "summary_fr": "Immatriculations provisoires W permettant aux prototypes de rouler sur route ouverte avant réception, appuyées sur des bases de données d'homologation tenues à jour.",
+  "cover_alt_en": "Toyota ProAce City compact vans",
+  "cover_alt_fr": "Fourgons compacts Toyota ProAce City"
+}

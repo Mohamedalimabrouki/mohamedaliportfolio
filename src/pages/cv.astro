@@ -21,9 +21,7 @@ const siteData = siteEntry.data.site;
   <main id="main" class="cv">
     <article class="cv-sheet">
       <header class="cv-header">
-        <div class="cv-mark" aria-hidden="true">
-          <svg width="64" height="64" viewBox="0 0 64 64" role="img" aria-hidden="true"><rect x="6" y="6" width="52" height="52" rx="16" fill="url(#gradCV)"/><path d="M18 42V22h6l8 9 8-9h6v20h-6V30l-8 9-8-9v12h-6Z" fill="#fff"/><defs><linearGradient id="gradCV" x1="12" y1="12" x2="52" y2="52" gradientUnits="userSpaceOnUse"><stop stop-color="#3d8aff"/><stop offset="1" stop-color="#5ca5ff"/></linearGradient></defs></svg>
-        </div>
+        <div class="cv-mark"><img src="/assets/img/nav-avatar.webp" alt="" width="88" height="88" loading="eager" decoding="async"></div>
         <div class="cv-heading">
           <h1>{siteData.name}</h1>
           <p>{siteData.tagline}</p>
@@ -34,7 +32,7 @@ const siteData = siteEntry.data.site;
           <a href={`mailto:${siteData.email}`}>{siteData.email}</a>
           <a href={siteData.linkedin} target="_blank" rel="noopener">LinkedIn</a>
         </div>
-        <a class="btn btn--ghost" href="/assets/cv/Mohamed_Ali_Mabrouki_CV.docx" download>{data.download_button}</a>
+        <div class="cv-actions"><a class="btn btn--primary" href="/assets/cv/Mohamed_Ali_Mabrouki_CV_EN.pdf" download>{data.download_button}</a><a class="btn btn--ghost" href="/assets/cv/Mohamed_Ali_Mabrouki_CV_FR.pdf" download>Version française (PDF)</a></div>
       </header>
       <section>
         <h2>{data.sections.summary}</h2>

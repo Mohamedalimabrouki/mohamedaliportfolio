@@ -1,0 +1,50 @@
+{
+  "id": "axles-wheel-assembly-renault-master",
+  "order": 7,
+  "title_en": "Front & rear axles / wheel assembly - new Renault Master",
+  "title_fr": "Trains avant et arrière / liaison au sol - nouveau Renault Master",
+  "period": "Feb 2023 - Jun 2024",
+  "role": "Engineering Leader - Axles & Wheel Assembly · Leader Ingénierie - Trains et liaison au sol",
+  "client_or_brand": "Renault Master (TGA to MA phases)",
+  "stack": [
+    "Chassis",
+    "Axles",
+    "Launch"
+  ],
+  "tags": [
+    "Renault",
+    "FTR",
+    "OTD",
+    "Renault Design System"
+  ],
+  "highlights_en": [
+    "Drove First Time Right and On-Time Delivery on 2D/3D design dossiers, BOM/DEVO, IMDS, dimension chains, interface contracts and OneVAL validation plans.",
+    "Owned the quality files of the function: NRL, NDL, QDR, DDMRS-FMEA and RTC.",
+    "Ensured product and process development met industry standards, legal safety regulations and the Renault Design System.",
+    "Brought technical expertise to design, logistics and quality teams and managed risks proactively."
+  ],
+  "highlights_fr": [
+    "Piloter la performance FTR et OTD sur dossiers de conception 2D/3D, BOM/DEVO, IMDS, chaînes de cotes, contrats d'interface et plans de validation OneVAL.",
+    "Porter les dossiers qualité de la fonction : NRL, NDL, QDR, DDMRS-AMDEC et RTC.",
+    "Assurer la conformité du développement produit/process aux référentiels métiers, réglementaires et au Renault Design System.",
+    "Apporter une expertise technique aux équipes conception, logistique et qualité et gérer les risques de façon proactive."
+  ],
+  "metrics_en": [
+    "Function led from TGA to MA phases",
+    "Full deliverable portfolio: design, BOM, IMDS, quality, validation",
+    "Compliance with Renault Design System and safety regulations"
+  ],
+  "metrics_fr": [
+    "Fonction pilotée des phases TGA à MA",
+    "Portefeuille complet de livrables : conception, BOM, IMDS, qualité, validation",
+    "Conformité au Renault Design System et aux exigences de sécurité"
+  ],
+  "cover": "src/assets/img/projects/renault-master.jpg",
+  "gallery": [
+    "src/assets/img/projects/renault-master.jpg"
+  ],
+  "summary_en": "Engineering leadership of the front and rear axles of the new Renault Master, from definition to launch readiness.",
+  "summary_fr": "Leadership ingénierie des trains avant et arrière du nouveau Renault Master, de la définition à la préparation du lancement.",
+  "cover_alt_en": "Renault Master vans lined up after final assembly",
+  "cover_alt_fr": "Fourgons Renault Master alignés après assemblage final"
+}

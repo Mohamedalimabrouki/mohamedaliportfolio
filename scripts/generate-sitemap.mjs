@@ -2,22 +2,29 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+// Builds public/sitemap.xml from the project content files.
+// Runs automatically before `astro build` (see package.json).
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
 const OUTPUT_PATH = path.join(ROOT, 'public', 'sitemap.xml');
-const CONTENT_PATH = path.join(ROOT, 'src', 'content', 'projects', 'all.json');
+const PROJECTS_DIR = path.join(ROOT, 'src', 'content', 'projects');
 const BASE_URL = 'https://mohamedalimabrouki.com';
 
 const readProjects = async () => {
-  const buffer = await fs.readFile(CONTENT_PATH, 'utf8');
-  return JSON.parse(buffer);
+  const files = (await fs.readdir(PROJECTS_DIR)).filter((f) => f.endsWith('.json'));
+  const projects = [];
+  for (const file of files) {
+    const raw = await fs.readFile(path.join(PROJECTS_DIR, file), 'utf8');
+    projects.push(JSON.parse(raw));
+  }
+  return projects.sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
 };
 
 const formatUrl = (pathSuffix) => {
   if (pathSuffix === '/' || pathSuffix === '') return `${BASE_URL}/`;
   const cleaned = pathSuffix.startsWith('/') ? pathSuffix : `/${pathSuffix}`;
-  // Ensure trailing slash
   return `${BASE_URL}${cleaned}${cleaned.endsWith('/') ? '' : '/'}`;
 };
 
@@ -27,33 +34,30 @@ const buildEntries = (projects) => {
   const basePages = [
     { en: '/', fr: '/fr/', priority: '1.0' },
     { en: '/projects/', fr: '/fr/projets/', priority: '0.8' },
-    { en: '/cv/', fr: '/fr/cv/', priority: '0.7' }
+    { en: '/cv/', fr: '/fr/cv/', priority: '0.8' }
   ];
-
   const projectPages = projects.map((project) => ({
     en: `/projects/${project.id}/`,
     fr: `/fr/projets/${project.id}/`,
-    priority: '0.7'
+    priority: '0.6'
   }));
-
   return [...basePages, ...projectPages];
 };
 
 const renderUrlEntry = ({ en, fr, priority }) => {
   const url = formatUrl(en);
   const alt = formatUrl(fr);
-  return [
+  const entry = (loc, self, other, selfLang, otherLang) => [
     '  <url>',
-    `    <loc>${url}</loc>`,
+    `    <loc>${loc}</loc>`,
     `    <lastmod>${today}</lastmod>`,
-    priority ? `    <priority>${priority}</priority>` : null,
-    `    <xhtml:link rel="alternate" hreflang="en" href="${url}" />`,
-    `    <xhtml:link rel="alternate" hreflang="fr" href="${alt}" />`,
-    `    <xhtml:link rel="alternate" hreflang="x-default" href="${formatUrl('/')}" />`,
+    `    <priority>${priority}</priority>`,
+    `    <xhtml:link rel="alternate" hreflang="${selfLang}" href="${self}" />`,
+    `    <xhtml:link rel="alternate" hreflang="${otherLang}" href="${other}" />`,
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${url}" />`,
     '  </url>'
-  ]
-    .filter(Boolean)
-    .join('\n');
+  ].join('\n');
+  return [entry(url, url, alt, 'en', 'fr'), entry(alt, alt, url, 'fr', 'en')].join('\n');
 };
 
 const buildSitemap = async () => {
@@ -64,7 +68,7 @@ const buildSitemap = async () => {
     `${entries}\n` +
     `</urlset>\n`;
   await fs.writeFile(OUTPUT_PATH, sitemap, 'utf8');
-  console.log(`Sitemap written to ${path.relative(ROOT, OUTPUT_PATH)}`);
+  console.log(`Sitemap written to ${path.relative(ROOT, OUTPUT_PATH)} (${projects.length} projects)`);
 };
 
 buildSitemap().catch((error) => {
